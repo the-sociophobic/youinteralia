@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.69687c35.chunk.css",
-    "main.js": "/youinteralia/static/js/main.f56f5989.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.f56f5989.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.48b2b02f.chunk.css",
+    "main.js": "/youinteralia/static/js/main.0187aa07.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.0187aa07.chunk.js.map",
     "runtime-main.js": "/youinteralia/static/js/runtime-main.eda270c9.js",
     "runtime-main.js.map": "/youinteralia/static/js/runtime-main.eda270c9.js.map",
-    "static/js/2.efad785c.chunk.js": "/youinteralia/static/js/2.efad785c.chunk.js",
-    "static/js/2.efad785c.chunk.js.map": "/youinteralia/static/js/2.efad785c.chunk.js.map",
+    "static/js/2.af03d2b2.chunk.js": "/youinteralia/static/js/2.af03d2b2.chunk.js",
+    "static/js/2.af03d2b2.chunk.js.map": "/youinteralia/static/js/2.af03d2b2.chunk.js.map",
     "static/js/3.eb859cea.chunk.js": "/youinteralia/static/js/3.eb859cea.chunk.js",
     "static/js/3.eb859cea.chunk.js.map": "/youinteralia/static/js/3.eb859cea.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.69687c35.chunk.css.map": "/youinteralia/static/css/main.69687c35.chunk.css.map",
-    "static/js/2.efad785c.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.efad785c.chunk.js.LICENSE.txt",
+    "static/css/main.48b2b02f.chunk.css.map": "/youinteralia/static/css/main.48b2b02f.chunk.css.map",
+    "static/js/2.af03d2b2.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.af03d2b2.chunk.js.LICENSE.txt",
     "static/media/index.sass": "/youinteralia/static/media/burger.5a705768.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.eda270c9.js",
-    "static/js/2.efad785c.chunk.js",
-    "static/css/main.69687c35.chunk.css",
-    "static/js/main.f56f5989.chunk.js"
+    "static/js/2.af03d2b2.chunk.js",
+    "static/css/main.48b2b02f.chunk.css",
+    "static/js/main.0187aa07.chunk.js"
   ]
 }
