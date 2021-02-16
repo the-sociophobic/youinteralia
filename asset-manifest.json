@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.6bcc98f0.chunk.css",
-    "main.js": "/youinteralia/static/js/main.38c6b088.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.38c6b088.chunk.js.map",
-    "runtime-main.js": "/youinteralia/static/js/runtime-main.67b14d66.js",
-    "runtime-main.js.map": "/youinteralia/static/js/runtime-main.67b14d66.js.map",
-    "static/js/2.e926b782.chunk.js": "/youinteralia/static/js/2.e926b782.chunk.js",
-    "static/js/2.e926b782.chunk.js.map": "/youinteralia/static/js/2.e926b782.chunk.js.map",
-    "static/js/3.58b01a4b.chunk.js": "/youinteralia/static/js/3.58b01a4b.chunk.js",
-    "static/js/3.58b01a4b.chunk.js.map": "/youinteralia/static/js/3.58b01a4b.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.1d63a28b.chunk.css",
+    "main.js": "/youinteralia/static/js/main.662b41a7.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.662b41a7.chunk.js.map",
+    "runtime-main.js": "/youinteralia/static/js/runtime-main.dca3cf6f.js",
+    "runtime-main.js.map": "/youinteralia/static/js/runtime-main.dca3cf6f.js.map",
+    "static/js/2.a915cf18.chunk.js": "/youinteralia/static/js/2.a915cf18.chunk.js",
+    "static/js/2.a915cf18.chunk.js.map": "/youinteralia/static/js/2.a915cf18.chunk.js.map",
+    "static/js/3.510f58a1.chunk.js": "/youinteralia/static/js/3.510f58a1.chunk.js",
+    "static/js/3.510f58a1.chunk.js.map": "/youinteralia/static/js/3.510f58a1.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.6bcc98f0.chunk.css.map": "/youinteralia/static/css/main.6bcc98f0.chunk.css.map",
-    "static/js/2.e926b782.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.e926b782.chunk.js.LICENSE.txt",
-    "static/media/index.sass": "/youinteralia/static/media/logo.3f8abc07.svg"
+    "static/css/main.1d63a28b.chunk.css.map": "/youinteralia/static/css/main.1d63a28b.chunk.css.map",
+    "static/js/2.a915cf18.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.a915cf18.chunk.js.LICENSE.txt",
+    "static/media/PEREMEN.373f1503.mp3": "/youinteralia/static/media/PEREMEN.373f1503.mp3",
+    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.67b14d66.js",
-    "static/js/2.e926b782.chunk.js",
-    "static/css/main.6bcc98f0.chunk.css",
-    "static/js/main.38c6b088.chunk.js"
+    "static/js/runtime-main.dca3cf6f.js",
+    "static/js/2.a915cf18.chunk.js",
+    "static/css/main.1d63a28b.chunk.css",
+    "static/js/main.662b41a7.chunk.js"
   ]
 }
