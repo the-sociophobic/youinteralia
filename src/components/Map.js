@@ -7,42 +7,40 @@ import {
 } from 'components/styles'
 
 
-// const AnyReactComponent = ({ text }) => <div>{text}</div>
- 
+const spb = {
+  center: {
+    lat: 59.95,
+    lng: 30.33,
+  },
+  zoom: 15,
+  mapStyle: PetersbourgStyle,
+}
+const gen = {
+  center: {
+    lat: 46.20921773163431,
+    lng: 6.15092970185338,
+  },
+  zoom: 16.8,
+  mapStyle: GenevaStyle,
+}
 
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      // lat: 59.95,
-      // lng: 30.33,
-      lat: 46.20921773163431,
-      lng: 6.15092970185338,
-    },
-    // zoom: 15,
-    zoom: 16.8,
-  }
 
-  state = {
-    // mapStyle: PetersbourgStyle,
-    mapStyle: GenevaStyle,
-  }
+class Map extends Component {
+  mapRef = React.createRef()
 
-  // componentDidMount = () =>
-  //   setTimeout(() =>
-  //     this.setState({
-  //       mapStyle: GenevaStyle,
-  //     }), 5000)
- 
   render() {
+    const city = this.props.currentCity == "gen" ? gen : spb
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100%', width: '100%' }}>
         <GoogleMapReact
+          ref={this.mapRef}
           bootstrapURLKeys={{ key: "AIzaSyDtnk19nAsbs98Rx81bCzvkF5jyD0o7W4w" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          center={city.center}
+          zoom={city.zoom}
           options={{
-            styles: this.state.mapStyle,
+            styles: city.mapStyle,
             disableDefaultUI: true
           }}    
         >
@@ -57,4 +55,4 @@ class SimpleMap extends Component {
   }
 }
  
-export default SimpleMap
+export default Map

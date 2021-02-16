@@ -349,7 +349,7 @@ const PetersbourgStyle = createMapStyle({
   "landscape.man_made.geometry.color": "#373b97",
   "landscape.man_made.geometry.fill.color": "#5c62b5",
   "landscape.natural.geometry.color": "#373b97",
-  "poi.park.geometry.color": "#008973",
+  "poi.park.geometry.color": "#373b97",
   "road.highway.geometry.fill.color": "#ffffff",
   "road.highway.geometry.stroke.color": "#ffffff",
   "road.arterial.geometry.fill.color": "#ffffff",
