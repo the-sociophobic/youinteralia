@@ -2,9 +2,7 @@ import React from 'react'
 
 import Div100vh from 'react-div-100vh'
 
-// import Map from 'components/Map'
-// import Map from 'components/Map_react-google-maps'
-import Map from 'components/Map_google-map-react'
+import Map from 'components/Map'
 
 
 function App() {
@@ -14,7 +12,7 @@ function App() {
         <Map />
       </div>
     </Div100vh>
-  );
+  )
 }
 
-export default App;
+export default App
