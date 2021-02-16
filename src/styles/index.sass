@@ -23,19 +23,17 @@
   top: 0
   left: 0
 
+.def-img
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
 .button
   padding: 0
   cursor: pointer
   outline: none
   border: none
   background-color: rgba(0, 0, 0, 0)
-
-*
-  font-family: Arial, Helvetica, sans-serif
-  color: $dark
-  margin: 0
-  padding: 0
-  box-sizing: border-box
 
 @function rem($px)
   @return calc(#{$px} / 16 * 1rem)
@@ -53,18 +51,25 @@ $gen-highlight: #00887A
 $menu-transition: .2s
 $border: 1px solid $dark
 
+
+
+*
+  font-family: Arial, Helvetica, sans-serif
+  color: $dark
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
 .App
   overflow: hidden
   width: 100%
   height: 100%
-
-
+  font-size: rem(24)
 
 .Map
   width: 100%
   height: 100%
-  @extend .noselect
-
+  overflow: hidden
 
 .Menu
   @extend .abs-cover
@@ -75,7 +80,6 @@ $border: 1px solid $dark
   &__header
     cursor: pointer
     position: absolute
-    font-size: rem(24)
     background-color: $light
     border: $border
     width: rem(334)
@@ -97,9 +101,7 @@ $border: 1px solid $dark
       width: rem(50)
       height: rem(50)
       background-image: url('./img/burger.svg')
-      background-repeat: no-repeat
-      background-position: center
-      background-size: cover
+      @extend .def-img
     &__switcher
       width: rem(77)
       overflow: hidden
@@ -127,14 +129,110 @@ $border: 1px solid $dark
           &--gen
             background-color: $gen
   &__content
-    background-color: $light
     height: 100vh
     width: rem(432)
+    overflow: hidden
     @include media-breakpoint-down(md)
       width: 100vw
-    position: absolute
-    top: 0
-    left: rem(-432)
-    transition: left $menu-transition
-    &--opened
-      left: 0
+    transition: width $menu-transition
+    &:not(&--opened)
+      width: 0
+    position: relative
+    &__container
+      background-color: $light
+      width: 100vw
+      height: 100vh
+      @extend .d-flex
+      @extend .flex-column
+      &__links
+        padding-top: rem(120)
+        padding-left: rem(65)
+        @include media-breakpoint-down(md)
+          padding-top: rem(93)
+          padding-left: rem(36)
+        @extend .d-flex
+        @extend .flex-column
+        @extend .flex-grow-1
+        @extend .align-items-start
+        .Link
+          line-height: rem(28)
+          &:not(&:last-of-type)
+            margin-bottom: rem(10)
+        &__item
+          position: relative
+          padding-left: rem(33)
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            width: rem(23)
+            height: rem(23)
+            border-radius: 100%
+            background-color: $dark
+          &:hover
+            text-decoration: underline
+          &--spb:hover
+            color: $spb-highlight
+            &::before
+              background-color: $spb-highlight
+          &--gen:hover
+            color: $gen-highlight
+            &::before
+              background-color: $gen-highlight
+      &__footer
+        width: 100%
+        height: rem(112)
+        padding-left: rem(50)
+        @extend .d-flex
+        @extend .flex-column
+        @extend .justify-content-center
+        @include media-breakpoint-down(md)
+          height: rem(60)
+          padding-left: rem(20)
+        &__logo
+          width: rem(131)
+          height: rem(20)
+          background-image: url(./img/logo.svg)
+          @extend .def-img
+
+
+.Link
+  display: inline
+  cursor: pointer
+
+$dropdown-transition: .15s
+.dropdown
+  @extend .d-flex
+  @extend .flex-column
+  @extend .align-items-start
+  &__title
+    cursor: pointer
+    position: relative
+    display: inline-block
+    line-height: rem(28)
+    margin-bottom: rem(10)
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%) rotate(180deg)
+      right: rem(-33)
+      width: rem(23)
+      height: rem(23)
+      background-image: url(./img/arrow-up-inline.svg)
+      @extend .def-img
+      // transition: transform .15s
+      .dropdown--opened &
+        transform: translateY(-50%)
+  &__content
+    width: 100%
+    overflow: hidden
+    transition: height $dropdown-transition
+    &__container
+      padding-top: rem(10)
+      padding-bottom: rem(20)
+      width: 100%
+      @extend .d-flex
+      @extend .flex-column

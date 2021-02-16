@@ -1,11 +1,18 @@
 import React from 'react'
 
+import Link from 'components/Link'
+import ExternalLink from 'components/ExternalLink'
+import Dropdown from 'components/Dropdown'
+import { StoreContext } from 'components/Store'
+
 
 class Menu extends React.Component {
   state = {
     opened: false,
     lang: "eng",
   }
+
+  static contextType = StoreContext
 
   toggleLang = () =>
     this.setState({
@@ -20,7 +27,7 @@ class Menu extends React.Component {
           opened: !this.state.opened
         })}
       >
-        youineralia
+        youinteralia
       </div>
       <div
         className="Menu__header__burger"
@@ -58,7 +65,34 @@ class Menu extends React.Component {
     <div className={`Menu__content ${
       this.state.opened && "Menu__content--opened"
     }`}>
-      
+      <div className="Menu__content__container">
+        <div className="Menu__content__container__links">
+          <Link to="about">
+            about the project
+          </Link>
+          <Dropdown title="artists and routes">
+            {this.context.artists[this.props.currentCity].map(artist =>
+              <Link
+                to={artist.link}
+                className={`Menu__content__container__links__item Menu__content__container__links__item--${this.props.currentCity}`}
+              >
+                {artist.name}
+              </Link>
+            )}
+          </Dropdown>
+          <Link to="archive">
+            archive
+          </Link>
+          <Link to="participate">
+            participate
+          </Link>
+        </div>
+        <div className="Menu__content__container__footer">
+          <ExternalLink to="https://prohelvetia.ru/en/" newTab >
+            <div className="Menu__content__container__footer__logo" />
+          </ExternalLink>
+        </div>
+      </div>
     </div>
 
   render = () =>

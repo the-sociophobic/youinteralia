@@ -32,24 +32,21 @@ class Map extends Component {
     const city = this.props.currentCity == "gen" ? gen : spb
 
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
-        <GoogleMapReact
-          ref={this.mapRef}
-          bootstrapURLKeys={{ key: "AIzaSyDtnk19nAsbs98Rx81bCzvkF5jyD0o7W4w" }}
-          center={city.center}
-          zoom={city.zoom}
-          options={{
-            styles: city.mapStyle,
-            disableDefaultUI: true
-          }}    
-        >
-          {/* <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          /> */}
-        </GoogleMapReact>
+      <div className="Map">
+        <div style={{ height: '110%', width: '100%' }}>
+          <GoogleMapReact
+            ref={this.mapRef}
+            bootstrapURLKeys={{ key: "AIzaSyDtnk19nAsbs98Rx81bCzvkF5jyD0o7W4w" }}
+            center={city.center}
+            zoom={city.zoom}
+            options={{
+              styles: city.mapStyle,
+              disableDefaultUI: true
+            }}    
+          >
+            {this.props.markers}
+          </GoogleMapReact>
+        </div>
       </div>
     )
   }
