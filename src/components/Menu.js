@@ -19,6 +19,10 @@ class Menu extends React.Component {
       lang: this.state.lang === "eng" ? "rus" : "eng"
     })
 
+  toggleCity = () => {
+    this.props.toggleCity()
+  }
+
   renderHeader = () =>
     <div className="Menu__header">
       <div
@@ -41,7 +45,7 @@ class Menu extends React.Component {
           this.state.opened ?
             this.toggleLang()
             :
-            this.props.toggleCity()}
+            this.toggleCity()}
       >
         <div className={`Menu__header__switcher__container ${
           this.state.opened && "Menu__header__switcher__container--lang"

@@ -12,16 +12,22 @@ class App extends React.Component {
     currentCity: "spb",
   }
 
+  mapRef = React.createRef()
+
   render = () =>
     <StoreProvider>
       <Div100vh>
         <div className="App">
-          <Map currentCity={this.state.currentCity} />
+          <Map
+            ref={this.mapRef}
+            currentCity={this.state.currentCity}
+          />
           <Menu
             currentCity={this.state.currentCity}
             toggleCity={() => this.setState({
               currentCity: this.state.currentCity === "gen" ? "spb" : "gen"
             })}
+            mapRef={this.mapRef}
           />
         </div>
       </Div100vh>

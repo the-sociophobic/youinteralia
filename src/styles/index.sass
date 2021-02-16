@@ -236,3 +236,79 @@ $dropdown-transition: .15s
       width: 100%
       @extend .d-flex
       @extend .flex-column
+
+.Marker
+  @extend .d-inline-flex
+  @extend .flex-row
+  transform: translate(rem(-25), rem(-25))
+  transition: transform $menu-transition
+  &--tiny
+    transform: translate(rem(-15), rem(-15))
+  &__dot
+    width: rem(50)
+    height: rem(50)
+    background-color: $start
+    border-radius: 100%
+    margin-right: rem(10)
+    transition: width $menu-transition, height $menu-transition
+    .Marker--tiny &
+      width: rem(30)
+      height: rem(30)
+  &__player
+    cursor: default
+    height: rem(70)
+    background-color: $light
+    @extend .d-inline-flex
+    @extend .flex-row
+    transition: opacity $menu-transition
+    .Marker--small &
+      opacity: 0
+    &__controls
+      @extend .d-flex
+      @extend .flex-column
+      @extend .align-items-center
+      &__button
+        @extend .button
+        width: rem(50)
+        height: rem(50)
+        @extend .def-img
+        background-image: url(./img/play.svg)
+        &--isPlaying
+          background-image: url(./img/pause.svg)
+        &:disabled
+          opacity: .5
+      &__time
+        font-size: rem(12)
+        line-height: 1
+        transform: translateY(rem(-5))
+    &__text
+      @extend .d-flex
+      @extend .flex-column
+      @extend .align-items-start
+      margin-left: rem(5)
+      margin-right: rem(7)
+      &__title
+        font-size: rem(24)
+        line-height: rem(28)
+        margin-top: rem(11)
+        margin-bottom: rem(4)
+        text-overflow: ellipsis
+      &__artist
+        font-size: rem(14)
+        line-height: 1
+        white-space: nowrap
+    &__arrow
+      width: rem(50)
+      height: rem(50)
+      @extend .def-img
+      background-image: url(./img/arrow-up.svg)
+      transform: rotate(90deg)
+      cursor: pointer
+    &__bar
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 0
+      height: rem(4)
+      background-color: $dark
+      z-index: 10

@@ -25,6 +25,16 @@ class StoreProvider extends React.Component {
       }),
 
       artists: artists,
+
+      URL: "",
+      setURL: _URL => this.setState({
+        URL: _URL,
+      }),
+
+      zoom: 0,
+      setZoom: zoom => this.setState({
+        zoom: zoom
+      })
     }
   }
 
