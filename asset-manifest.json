@@ -1,24 +1,30 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.396fb90f.chunk.css",
-    "main.js": "/youinteralia/static/js/main.9286f94d.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.9286f94d.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.9acd985f.chunk.css",
+    "main.js": "/youinteralia/static/js/main.ed8e8928.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.ed8e8928.chunk.js.map",
     "runtime-main.js": "/youinteralia/static/js/runtime-main.dca3cf6f.js",
     "runtime-main.js.map": "/youinteralia/static/js/runtime-main.dca3cf6f.js.map",
-    "static/js/2.a915cf18.chunk.js": "/youinteralia/static/js/2.a915cf18.chunk.js",
-    "static/js/2.a915cf18.chunk.js.map": "/youinteralia/static/js/2.a915cf18.chunk.js.map",
+    "static/js/2.ed8e6dea.chunk.js": "/youinteralia/static/js/2.ed8e6dea.chunk.js",
+    "static/js/2.ed8e6dea.chunk.js.map": "/youinteralia/static/js/2.ed8e6dea.chunk.js.map",
     "static/js/3.510f58a1.chunk.js": "/youinteralia/static/js/3.510f58a1.chunk.js",
     "static/js/3.510f58a1.chunk.js.map": "/youinteralia/static/js/3.510f58a1.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.396fb90f.chunk.css.map": "/youinteralia/static/css/main.396fb90f.chunk.css.map",
-    "static/js/2.a915cf18.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.a915cf18.chunk.js.LICENSE.txt",
+    "static/css/main.9acd985f.chunk.css.map": "/youinteralia/static/css/main.9acd985f.chunk.css.map",
+    "static/js/2.ed8e6dea.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.ed8e6dea.chunk.js.LICENSE.txt",
+    "static/media/Alena_walk.f107399d.mp3": "/youinteralia/static/media/Alena_walk.f107399d.mp3",
+    "static/media/Andrea_walk.18642714.mp3": "/youinteralia/static/media/Andrea_walk.18642714.mp3",
+    "static/media/Carla_Writing around.451dffb6.mp3": "/youinteralia/static/media/Carla_Writing around.451dffb6.mp3",
     "static/media/PEREMEN.373f1503.mp3": "/youinteralia/static/media/PEREMEN.373f1503.mp3",
-    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg"
+    "static/media/Roma_walk.08b7f692.mp3": "/youinteralia/static/media/Roma_walk.08b7f692.mp3",
+    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg",
+    "static/media/ivan_walk.3ea5a27e.mp3": "/youinteralia/static/media/ivan_walk.3ea5a27e.mp3",
+    "static/media/martina_walk.c8331541.mp3": "/youinteralia/static/media/martina_walk.c8331541.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.dca3cf6f.js",
-    "static/js/2.a915cf18.chunk.js",
-    "static/css/main.396fb90f.chunk.css",
-    "static/js/main.9286f94d.chunk.js"
+    "static/js/2.ed8e6dea.chunk.js",
+    "static/css/main.9acd985f.chunk.css",
+    "static/js/main.ed8e8928.chunk.js"
   ]
 }
