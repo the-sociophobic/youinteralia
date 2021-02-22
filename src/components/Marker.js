@@ -48,9 +48,10 @@ class Marker extends React.Component {
   }
 
   render = () =>
-    <div className={`Marker ${
-      this.context.zoom <= 12 && "Marker--small"} ${
-      this.context.zoom <= 11 && "Marker--tiny"}`}>
+    // <div className={`Marker ${
+    //   this.context.zoom <= 12 && "Marker--small"} ${
+    //   this.context.zoom <= 11 && "Marker--tiny"}`}>
+    <div className="Marker">
       <div className="Marker__dot" />
 
       <div className="Marker__player">
@@ -68,10 +69,10 @@ class Marker extends React.Component {
 
         <div className="Marker__player__text">
           <div className="Marker__player__text__title">
-            {this.props.title}
+            {this.props.title[this.context.locale === "rus" ? 0 : 1]}
           </div>
           <div className="Marker__player__text__artist">
-            {this.props.name}
+            {this.props.name[this.context.locale === "rus" ? 0 : 1]}
           </div>
         </div>
 

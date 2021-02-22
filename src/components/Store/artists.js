@@ -1,69 +1,77 @@
-import mp3 from 'audio/PEREMEN.mp3'
+import Alena from 'artists/Алена\ Терешко/Alena_walk.mp3'
+import Roma from 'artists/Роман\ Осминкин/Roma_walk.mp3'
+import Ivan from 'artists/Иван\ Курбаков/ivan_walk.mp3'
+import Olga from 'audio/PEREMEN.mp3'
+
+import Martina from 'artists/Martina\ Mächler/martina_walk.mp3'
+import Carla from 'artists/Carla\ Demierre/Carla_Writing\ around.mp3'
+import Andrea from 'artists/Andrea\ Marioni/Andrea_walk.mp3'
+import Francoise from 'audio/PEREMEN.mp3'
 
 
 const artists = {
   spb: [
     {
-      name: "Alena Tereshko",
-      title: "Перемен!",
+      name: ["Алена Терешко", "Alena Tereshko"],
+      title: ["Остров и гавань", "The island and the harbour"],
       lat: 59.90469616806995,
       lng: 30.217547243741553,
-      audio: mp3,
+      audio: Alena,
     },
     {
-      name: "Roman Osminkin",
-      title: "Перемен!",
+      name: ["Роман Осминкин", "Roman Osminkin"],
+      title: ["Что ты чувствуешь?", "What do you feel?"],
       lat: 59.93600763837134,
       lng: 30.286153729146147,
-      audio: mp3,
+      audio: Roma,
     },
     {
-      name: "Ivan Kurbakov",
-      title: "Перемен!",
+      name: ["Иван Курбаков", "Ivan Kurbakov"],
+      title: ["Северные полмира", "smell of memory, sound of oblivion"],
       lat: 59.94572683679983,
       lng: 30.37266762914453,
-      audio: mp3,
+      audio: Ivan,
     },
     {
-      name: "Olga Jitlina",
-      title: "Перемен!",
+      name: ["Ольга Житлина", "Olga Jitlina"],
+      title: ["Égalité", "Égalité"],
       lat: 59.92811584324123,
       lng: 30.346385042008638,
-      audio: mp3,
+      audio: Olga,
     },
   ],
+
   gen: [
     {
-      name: "Andrea Marioni",
-      title: "Перемен!",
+      name: ["Андреа Мариони", "Andrea Marioni"],
+      title: ["Sideways were open", "Sideways were open"],
       lat: 46.210541163964876,
       lng: 6.1429300354337535,
-      audio: mp3,
+      audio: Martina,
     },
     {
-      name: "Carla Demierre",
-      title: "Перемен!",
+      name: ["Карла Демьер", "Carla Demierre"],
+      title: ["Перемен!", "Writing around"],
       lat: 46.225952859615674,
       lng: 6.141753032514459,
-      audio: mp3,
+      audio: Carla,
     },
-    // {
-    //   name: "Martina Mächler",
-    //   title: "Перемен!",
-    //   lat: 10,
-    //   lng: 10,
-    //   audio: mp3,
-    // },
-    // {
-    //   name: "Françoise Caraco",
-    //   title: "Перемен!",
-    //   lat: 10,
-    //   lng: 10,
-    //   audio: mp3,
-    // },
+    {
+      name: ["Мартина Махлер", "Martina Mächler"],
+      title: ["капля падает на пол спальни", "blob drops on a bedroom floor"],
+      lat: 46.2,
+      lng: 6.12,
+      audio: Andrea,
+    },
+    {
+      name: ["Françoise Caraco", "Françoise Caraco"],
+      title: ["Перемен!", "Перемен!"],
+      lat: 46.19,
+      lng: 6.11,
+      audio: Francoise,
+    },
   ],
 }
-
 
 
 export default artists

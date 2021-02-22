@@ -13,7 +13,7 @@ class StoreProvider extends React.Component {
   constructor(props) {
     super(props)
 
-    const locale = props.locale || "ru"
+    const locale = props.locale || "rus"
     this.parsedMessages = arrayToLocale(flatten(defaultMessages))
     
     this.state = {

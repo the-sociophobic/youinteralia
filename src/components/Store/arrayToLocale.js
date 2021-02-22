@@ -4,15 +4,15 @@ import _ from 'lodash'
 const arrayToLocale =  obj => {
   var result = {}
 
-  result.ru = {}
-  result.fr = {}
-  result.en = {}
+  result.rus = {}
+  // result.fr = {}
+  result.eng = {}
 
   _.transform(obj,
     (res, value, key) => {
-      res.ru[key] = value[0]
-      res.fr[key] = value[1]
-      res.en[key] = value[2]
+      res.rus[key] = value[0]
+      // res.fr[key] = value[1]
+      res.eng[key] = value[1]
     }, result)
 
   return result

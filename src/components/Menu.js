@@ -3,21 +3,24 @@ import React from 'react'
 import Link from 'components/Link'
 import ExternalLink from 'components/ExternalLink'
 import Dropdown from 'components/Dropdown'
-import { StoreContext } from 'components/Store'
+import {
+  StoreContext,
+  FormattedMessage,
+  getMessage
+} from 'components/Store'
 
 
 class Menu extends React.Component {
   state = {
     opened: false,
-    lang: "eng",
   }
 
   static contextType = StoreContext
 
   toggleLang = () =>
-    this.setState({
-      lang: this.state.lang === "eng" ? "rus" : "eng"
-    })
+    this.context.setLocale(
+      this.context.locale === "eng" ? "rus" : "eng"
+    )
 
   toggleCity = () => {
     this.props.toggleCity()
@@ -51,7 +54,7 @@ class Menu extends React.Component {
           this.state.opened && "Menu__header__switcher__container--lang"
         }`}>
           <div className="Menu__header__switcher__container__lang">
-            {this.state.lang}
+            {this.context.locale}
           </div>
           <div className={`Menu__header__switcher__container__city ${
             this.props.currentCity === "spb" ?
@@ -72,23 +75,23 @@ class Menu extends React.Component {
       <div className="Menu__content__container">
         <div className="Menu__content__container__links">
           <Link to="about">
-            about the project
+            <FormattedMessage id="Menu.about" />
           </Link>
-          <Dropdown title="artists and routes">
+          <Dropdown title={getMessage(this, "Menu.artists")}>
             {this.context.artists[this.props.currentCity].map(artist =>
               <Link
                 to={artist.link}
                 className={`Menu__content__container__links__item Menu__content__container__links__item--${this.props.currentCity}`}
               >
-                {artist.name}
+                {artist.name[this.context.locale === "rus" ? 0 : 1]}
               </Link>
             )}
           </Dropdown>
           <Link to="archive">
-            archive
+            <FormattedMessage id="Menu.archive" />
           </Link>
           <Link to="participate">
-            participate
+            <FormattedMessage id="Menu.participate" />
           </Link>
         </div>
         <div className="Menu__content__container__footer">
