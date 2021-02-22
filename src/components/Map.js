@@ -7,15 +7,16 @@ import {
 } from 'components/styles'
 import { StoreContext } from 'components/Store'
 import Marker from 'components/Marker'
+import isMobile from 'utils/isMobile'
 
 
 const spb = {
   name: "spb",
   center: {
-    lat: 59.95,
-    lng: 30.33,
+    lat: isMobile() ? 59.939 : 59.939,
+    lng: isMobile() ? 30.368 : 30.338,
   },
-  zoom: 15,
+  zoom: isMobile() ? 13.1 : 14.25,
   maxZoom: 15 + 1,
   minZoom: 15 - 4,
   mapStyle: PetersbourgStyle,
@@ -50,51 +51,29 @@ const gen = {
 
 
 class Map extends Component {
-  state = {
-    // maxZoom: spb.maxZoom,
-    // minZoom: spb.minZoom,
-    // restriction: spb.restriction,
-    // setRestrictions: city =>
-    //   this.setState({
-    //     maxZoom: city.maxZoom,
-    //     minZoom: city.minZoom,
-    //     restriction: city.restriction,
-    //   })
-  }
-
-  // static getDerivedStateFromProps = (props, state) => {
-  //   state.maxZoom = undefined
-  //   state.minZoom = undefined
-  //   state.restriction = undefined
-
-  //   setTimeout(() => {
-  //     const city = state.maxZoom === spb.maxZoom ? gen : spb
-  //     state.setRestrictions && state.setRestrictions(city)
-  //   }, 100)
-
-  //   return state
-  // }
 
   static contextType = StoreContext
 
   spbRef = React.createRef()
   genRef = React.createRef()
 
-  // componentDidMount = () =>
-  //   this.watchZoomInterval = setInterval(() =>
-  //     this.context && this.mapRef.current &&
-  //       this.context.zoom !== this.mapRef.current.map_.zoom &&
-  //         this.context.setZoom(this.mapRef.current.map_.zoom)
-  //     , 200)
+  componentDidMount = () =>
+    this.watchZoomInterval = setInterval(() => {
+      const mapRef = this.props.currentCity === "spb" ? this.spbRef : this.genRef
 
-  // componentWillUnmount = () =>
-  //   clearInterval(this.watchZoomInterval)
+      this.context && mapRef.current &&
+        this?.context?.zoom !== mapRef?.current?.map_?.zoom &&
+          this?.context?.setZoom?.(mapRef?.current?.map_?.zoom)
+    }, 200)
+
+  componentWillUnmount = () =>
+    clearInterval(this.watchZoomInterval)
 
   renderCity = city =>
     <div className={`Map ${this.props.currentCity === city.name && "Map--current"}`}>
       <div style={{ height: '110%', width: '100%' }}>
         <GoogleMapReact
-          ref={this.mapRef}
+          ref={this[`${city.name}Ref`]}
           bootstrapURLKeys={{ key: "AIzaSyDtnk19nAsbs98Rx81bCzvkF5jyD0o7W4w" }}
           center={city.center}
           zoom={city.zoom}

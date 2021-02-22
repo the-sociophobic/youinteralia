@@ -18,11 +18,15 @@ class Menu extends React.Component {
   static contextType = StoreContext
 
   toggleLang = () =>
+    // this.context.setLocale(
+    //   this.context.locale === "eng" ? "rus" : "eng"
+    // )
+    {}
+
+  toggleCity = () => {
     this.context.setLocale(
       this.context.locale === "eng" ? "rus" : "eng"
     )
-
-  toggleCity = () => {
     this.props.toggleCity()
   }
 

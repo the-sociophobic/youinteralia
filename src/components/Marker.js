@@ -51,7 +51,10 @@ class Marker extends React.Component {
     // <div className={`Marker ${
     //   this.context.zoom <= 12 && "Marker--small"} ${
     //   this.context.zoom <= 11 && "Marker--tiny"}`}>
-    <div className="Marker">
+    <div className={`Marker ${
+      this.context.zoom <= 13 && "Marker--small"
+    }`}>
+    {/* <div className="Marker"> */}
       <div className="Marker__dot" />
 
       <div className="Marker__player">
