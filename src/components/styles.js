@@ -344,7 +344,7 @@ const createMapStyle = props => [
 ]
 
 
-const PetersbourgStyle = createMapStyle({
+const PetersbourgStyle_ = createMapStyle({
   // "landscape.geometry.hue": "#ff0000",
   "landscape.man_made.geometry.color": "#373b97",
   "landscape.man_made.geometry.fill.color": "#5c62b5",
@@ -360,7 +360,7 @@ const PetersbourgStyle = createMapStyle({
   "water.geometry.fill.color": "#eaeaea",
 })
 
-const GenevaStyle = createMapStyle({
+const GenevaStyle_ = createMapStyle({
   // "landscape.geometry.hue": "#ff0000",
   "landscape.man_made.geometry.color": "#007b66",
   "landscape.man_made.geometry.fill.color": "#007b66",
@@ -375,6 +375,223 @@ const GenevaStyle = createMapStyle({
   "water.geometry.color": "#dddddd",
   "water.geometry.fill.color": "#eeeeee",
 })
+
+
+
+
+
+const PetersbourgStyle = [
+  {
+      "featureType": "all",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#4056a1"
+          }
+      ]
+  },
+  {
+      "featureType": "all",
+      "elementType": "labels",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "landscape.man_made",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#6a7cbb"
+          }
+      ]
+  },
+  {
+      "featureType": "road",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#f1f0eb"
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#ffffff"
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#babfdd"
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#ffffff"
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#babfdd"
+          }
+      ]
+  },
+  {
+      "featureType": "road.local",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#babfdd"
+          }
+      ]
+  },
+  {
+      "featureType": "road.local",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "water",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#eeeeee"
+          }
+      ]
+  }
+]
+
+const GenevaStyle = [
+  {
+      "featureType": "all",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#d4d4d4"
+          }
+      ]
+  },
+  {
+      "featureType": "all",
+      "elementType": "labels",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "landscape.man_made",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#3e9583"
+          }
+      ]
+  },
+  {
+      "featureType": "poi.park",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#48a393"
+          }
+      ]
+  },
+  {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#ffffff"
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#7fc8b9"
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#7fc8b9"
+          }
+      ]
+  },
+  {
+      "featureType": "road.local",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#7fc8b9"
+          }
+      ]
+  },
+  {
+      "featureType": "road.local",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "water",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#eeeeee"
+          }
+      ]
+  }
+]
 
 
 export { PetersbourgStyle, GenevaStyle }
