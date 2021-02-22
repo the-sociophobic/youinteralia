@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.94e0e773.chunk.css",
-    "main.js": "/youinteralia/static/js/main.26c8e615.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.26c8e615.chunk.js.map",
-    "runtime-main.js": "/youinteralia/static/js/runtime-main.dca3cf6f.js",
-    "runtime-main.js.map": "/youinteralia/static/js/runtime-main.dca3cf6f.js.map",
-    "static/js/2.88b5a14d.chunk.js": "/youinteralia/static/js/2.88b5a14d.chunk.js",
-    "static/js/2.88b5a14d.chunk.js.map": "/youinteralia/static/js/2.88b5a14d.chunk.js.map",
-    "static/js/3.510f58a1.chunk.js": "/youinteralia/static/js/3.510f58a1.chunk.js",
-    "static/js/3.510f58a1.chunk.js.map": "/youinteralia/static/js/3.510f58a1.chunk.js.map",
-    "index.html": "/youinteralia/index.html",
-    "static/css/main.94e0e773.chunk.css.map": "/youinteralia/static/css/main.94e0e773.chunk.css.map",
-    "static/js/2.88b5a14d.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.88b5a14d.chunk.js.LICENSE.txt",
-    "static/media/Alena_walk.f107399d.mp3": "/youinteralia/static/media/Alena_walk.f107399d.mp3",
-    "static/media/Andrea_walk.18642714.mp3": "/youinteralia/static/media/Andrea_walk.18642714.mp3",
-    "static/media/Carla_Writing around.451dffb6.mp3": "/youinteralia/static/media/Carla_Writing around.451dffb6.mp3",
-    "static/media/PEREMEN.373f1503.mp3": "/youinteralia/static/media/PEREMEN.373f1503.mp3",
-    "static/media/Roma_walk.08b7f692.mp3": "/youinteralia/static/media/Roma_walk.08b7f692.mp3",
-    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg",
-    "static/media/ivan_walk.3ea5a27e.mp3": "/youinteralia/static/media/ivan_walk.3ea5a27e.mp3",
-    "static/media/martina_walk.c8331541.mp3": "/youinteralia/static/media/martina_walk.c8331541.mp3"
+    "main.css": "/static/css/main.005a7041.chunk.css",
+    "main.js": "/static/js/main.fc7e2a6b.chunk.js",
+    "main.js.map": "/static/js/main.fc7e2a6b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f71a53ad.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f71a53ad.js.map",
+    "static/js/2.88b5a14d.chunk.js": "/static/js/2.88b5a14d.chunk.js",
+    "static/js/2.88b5a14d.chunk.js.map": "/static/js/2.88b5a14d.chunk.js.map",
+    "static/js/3.510f58a1.chunk.js": "/static/js/3.510f58a1.chunk.js",
+    "static/js/3.510f58a1.chunk.js.map": "/static/js/3.510f58a1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.005a7041.chunk.css.map": "/static/css/main.005a7041.chunk.css.map",
+    "static/js/2.88b5a14d.chunk.js.LICENSE.txt": "/static/js/2.88b5a14d.chunk.js.LICENSE.txt",
+    "static/media/Alena_walk.f107399d.mp3": "/static/media/Alena_walk.f107399d.mp3",
+    "static/media/Andrea_walk.18642714.mp3": "/static/media/Andrea_walk.18642714.mp3",
+    "static/media/Carla_Writing around.451dffb6.mp3": "/static/media/Carla_Writing around.451dffb6.mp3",
+    "static/media/PEREMEN.373f1503.mp3": "/static/media/PEREMEN.373f1503.mp3",
+    "static/media/Roma_walk.08b7f692.mp3": "/static/media/Roma_walk.08b7f692.mp3",
+    "static/media/index.sass": "/static/media/play.1a3d27cb.svg",
+    "static/media/ivan_walk.3ea5a27e.mp3": "/static/media/ivan_walk.3ea5a27e.mp3",
+    "static/media/martina_walk.c8331541.mp3": "/static/media/martina_walk.c8331541.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.dca3cf6f.js",
+    "static/js/runtime-main.f71a53ad.js",
     "static/js/2.88b5a14d.chunk.js",
-    "static/css/main.94e0e773.chunk.css",
-    "static/js/main.26c8e615.chunk.js"
+    "static/css/main.005a7041.chunk.css",
+    "static/js/main.fc7e2a6b.chunk.js"
   ]
 }
