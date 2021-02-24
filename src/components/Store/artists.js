@@ -3,10 +3,21 @@ import Roma from 'artists/Роман Осминкин/Roma_walk.mp3'
 import Ivan from 'artists/Иван Курбаков/ivan_walk.mp3'
 import Olga from 'audio/PEREMEN.mp3'
 
+// import Alena from 'artists/Алена Терешко/Alena_walk.mp3'
+import RomaSVG from 'artists/Роман Осминкин/roman osminkin.svg'
+// import Ivan from 'artists/Иван Курбаков/ivan_walk.mp3'
+import OlgaSVG from 'artists/Ольга Житлина/olga zhitlina.svg'
+
+
 import Martina from 'artists/Martina Mächler/martina_walk.mp3'
 import Carla from 'artists/Carla Demierre/Carla_Writing around.mp3'
 import Andrea from 'artists/Andrea Marioni/Andrea_walk.mp3'
 import Francoise from 'audio/PEREMEN.mp3'
+
+import MartinaSVG from 'artists/Martina Mächler/martina machler.svg'
+import CarlaSVG from 'artists/Carla Demierre/carla demierre.svg'
+import AndreaSVG from 'artists/Andrea Marioni/andrea marioni.svg'
+// import Francoise from 'audio/PEREMEN.mp3'
 
 
 const artists = [
@@ -33,6 +44,7 @@ const artists = [
     lat: 59.93600763837134,
     lng: 30.286153729146147,
     src: Roma,
+    img: RomaSVG,
     aboutArtist: [
       "Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.  https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf",
       "Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books ‘Comrade-Thing’ (Kraft, 2010), ‘Comrade-Word’ (Kraft, 2012), ‘Texts with external objectives’ (NLO, 2015), ‘Not A Word About Politics!’ (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings have been translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.",
@@ -65,6 +77,7 @@ const artists = [
     lat: 59.92811584324123,
     lng: 30.346385042008638,
     src: Olga,
+    img: OlgaSVG,
     aboutArtist: [
       "Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 году в соавторстве с правозащитником Андреем Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 года вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина», результатом которой стали несколько выпусков газеты «Насреддин в России» и «Мобильная дискотека» (последний — в соавторстве с баскским художником Йоном Иригойеном). С 2015 года сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести Андрея Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).\nolgajitlina.info\n\nВлада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).\nЛейла Алиева — singer-songwriter, актриса, участница лаборатории “Вокруг да около”, выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом “Плоды побегов”; 2018, СПб, сингл “Муза”; 2020, Петербург. Звукорежиссура: “Спектакль в коробочке” 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.\nИгнат Хлобыстин (род. 1995, Санкт-Петербург) — музыкант-флейтист. Студент консерватории четвертого курса, лауреат международных конкурсов. Исполняет классическую, современную академическую и импровизационную музыку. Закончил школу импровизационной музыки при Галерее экспериментального звука (сейчас Музей звука). Участник Санкт-Петербургского оркестра импровизации и трио «Печальная свадьба».",
       "Olga Jitlina (b. 1982, Leningrad) is a graphic and performance artist, author of theater spectacles, founder and editor of the Utopian News Agency and of the Nasreddin in Russia newspaper. In 2011, together with co-author, human rights advocate Andrey Yakimov, she created a table game about labor migration called “Russia is the Country of Possibilities”. Since 2014, Jitlina, another artist Anna Tereshkina, a group of labor migrants, and representatives of creative professions have been working on the project Hodja Nasreddin Joke Contest, resulting in the publication of several issues of the newspaper Nasreddin in Russia, and in the realization of the project Mobile Discotheque (the latter co-authored with the Basque artist Jon Irigoyen). Since 2015, Jitlina has been collaborating with the Lampedusa in Hamburg group of refugee activists and opera singer Yulia Averina, bringing them together in the theatrical performance Translation based on Andrey Platonov’s novella Dzhan. Winner of the Henkel Young Artists Prize (2012) and the Lea and Hans Grundig Prize (2015).\n\nolgajitlina.info\n\nVlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the\nindependent art laboratory VOKRUG DA OKOLO. Teacher at St. Petersburg School of\nNew Cinema (Director’s Work with Actor course).\n\nLeila Alieva — a musical performer, an actress. Graduated at the Faculty of Liberal Arts and Sciences, St. PetersburgState University, Bard College NY. The selected projects: \nleila alieva. “Plody pobegov”. A debut album release. Saint Petersburg, Russia 2018\nleila alieva. “Muza” Single release.Saint Petersburg, Russia 2020\тSound-design “Play in the Box” 2021\n“Typhlo commentary on paintings by Aivazovsky and Bryullov” for Russian State Museum,\n2021\n\nIgnat Khlobystin (b. 1995, St. Petersburg) is a flautist, fourth-year student of the\nConservatoire, laureate of international competitions. Khlobystin performs classical,\ncontemporary academic and improvisational music. He graduated from the School of\nImprovisational Music at the Gallery of Experimental Sound (currently Museum of Sound).\nMember of the St. Petersburg Orchestra of Improvisation and the Pechalnaya Svadba\n(Sad Wedding) trio.",
@@ -81,7 +94,8 @@ const artists = [
     title: ["Sideways were open", "Sideways were open"],
     lat: 46.210541163964876,
     lng: 6.1429300354337535,
-    src: Martina,
+    src: Andrea,
+    img: AndreaSVG,
     aboutArtist: [
       <>
         Андреа Мариони родился в 1986 году, живет и работает в Биль-Бьене.<br />
@@ -146,6 +160,7 @@ const artists = [
     lat: 46.225952859615674,
     lng: 6.141753032514459,
     src: Carla,
+    img: CarlaSVG,
     aboutArtist: [
       <>
         Карла Демьер, родилась в 1980 году, изучала искусство в Женеве и художественное письмо (creative writing) в Монреале. В своей практике она работает с перформансом, письмом и звуком. Ее тексты смешивают поэзию и повествование, экспериментирование с формой и документальный монтаж. Последние книги Карлы: «Кто там?» (Qui est là?) — сборник рассказов о записи голоса и призраках (Art & Fiction, 2020) и «Авторадио» (Autoradio) — визуальная поэзия, созданная на печатной машинке (ред. Héros-Limite, 2019). С 2012 года она преподает художественное письмо в Женевском университете искусства и дизайна. Кроме того, Карла курирует литературные проекты в Женеве, среди которых ридинги Spoken worlds в Центре современного искусства в Женеве или подкаст-проект «Время чаепития» (L’Heure du thé) в арт-центре Le Grütli.
@@ -174,7 +189,8 @@ const artists = [
     title: ["капля падает на пол спальни", "blob drops on a bedroom floor"],
     lat: 46.2,
     lng: 6.12,
-    src: Andrea,
+    src: Martina,
+    img: MartinaSVG,
     aboutArtist: [
       <>
         Мартина Махлер (1991) получила степень бакалавра искусств в Цюрихском университете искусств (ZHdK). Затем в течение одного года училась на магистерской программе Art Praxis в Dutch Art Institute (ArtEZ) в Арнеме (Нидерланды). В своих преимущественно процессуальных перформативных проектах Мартина Махлер фокусируется на современных условиях труда, анализируя технические и психологические инструменты контроля и дисциплинирования субъекта.<br />

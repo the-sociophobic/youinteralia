@@ -2,26 +2,29 @@ import React from 'react'
 
 
 class Img extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      loaded: false
-    }
-
-    if (props.src) {
-      this.img = new Img()
-      this.img.onload = () => this.setState({ loaded: true })
-      this.img.src = props.src
-    }
+  state = {
+    portrait: undefined
   }
 
+  imgRef = React.createRef()
+  containerRef = React.createRef()
+
+  setOrientation = () =>
+    this.setState({
+      portrait: this.containerRef.current.offsetWidth / this.containerRef.current.offsetHeight >
+        this.imgRef.current.width / this.imgRef.current.height
+    })
+
   render = () =>
-    <div className={`lev-img ${this.props.className}`}>
+    <div
+      ref={this.containerRef}
+      className={`lev-img ${this.props.className}`}>
       <img
+        ref={this.imgRef}
         alt=""
         src={this.props.src}
-        className="lev-img__img"
+        className={`lev-img__img lev-img__img--${this.state.portrait ? "portrait" : "landscape"}`}
+        onLoad={this.setOrientation}
       />
     </div>
 }

@@ -78,7 +78,7 @@ class Artist extends React.Component {
                 <Dropdown
                   block
                   title={artist.name}
-                  titleRight={""}
+                  city={artist.city}
                   opened={this.state.artistInfoOpened}
                   toggleOpened={() => this.toggleArtistInfo()}
                   maxHeight={isMobile() ? undefined : this.state.textHeight - 172}
@@ -95,7 +95,7 @@ class Artist extends React.Component {
             <Img
               cover
               className="Artist__content__map"
-              src={artist.map}
+              src={artist.img}
             />
 
           </div>

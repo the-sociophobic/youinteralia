@@ -33,10 +33,14 @@ export default class Dropdown extends React.Component {
       ${this.props.block && "dropdown--block"}
     `}>
       <div
-        className="dropdown__title"
+        className={`dropdown__title ${this.props.city && "dropdown__title--city"}`}
         onClick={() => this.toggleOpened()}
       >
         {this.props.title}
+        {this.props.city &&
+          <div className={`dropdown__title__city dropdown__title__city--${this.props.city}`}>
+            {this.props.city}
+          </div>}
       </div>
       <div
         className="dropdown__content"

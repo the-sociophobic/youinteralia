@@ -3,10 +3,10 @@
 
 .desktop-only
   @include media-breakpoint-down(md)
-    display: none
+    display: none !important
 .mobile-only
   @include media-breakpoint-up(lg)
-    display: none
+    display: none !important
 
 .noselect
   -webkit-touch-callout: none  /* iOS Safari */
@@ -184,13 +184,13 @@ $border: 1px solid $dark
           &:hover
             text-decoration: underline
           &--spb:hover
-            color: $spb-highlight
+            color: $spb
             &::before
-              background-color: $spb-highlight
+              background-color: $spb
           &--gen:hover
-            color: $gen-highlight
+            color: $gen
             &::before
-              background-color: $gen-highlight
+              background-color: $gen
 
 
 .Footer
@@ -448,16 +448,30 @@ $dropdown-transition: .15s
             background-color: $big-menu-background
             &::after
               right: rem(14)
+            &--city
+              &::after
+                right: rem(91)
+            &__city
+              width: rem(77)
+              text-align: center
+              position: absolute
+              top: 0
+              right: 0
+              border-left: $border
+              &--spb
+                background-color: $spb
+              &--gen
+                background-color: $gen
           &__content
             margin-top: -1px
             padding-left: rem(15)
             padding-right: rem(15)
             overflow-y: scroll
-            line-height: 1.4
+            line-height: 1.25
+            
 
       .Player
         width: 100%
-        margin-top: -3px
         @include media-breakpoint-down(md)
           border-top: $border
           border-bottom: $border
@@ -467,3 +481,114 @@ $dropdown-transition: .15s
         height: rem(334)
         width: 100%
       
+
+.lev-img
+  position: relative
+  overflow: hidden
+  &__img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &--portrait
+      width: 100%
+      height: auto
+    &--landscape
+      width: auto
+      height: 100%
+
+
+
+
+
+
+.About
+  @extend .d-flex
+  @extend .flex-lg-row
+  @extend .flex-column
+  @extend .justify-content-between
+  height: 100%
+  &__first-block,
+  &__second-block
+    width: calc(50% - 10px)
+    height: 100%
+    @include media-breakpoint-down(md)
+      width: 100%
+      height: auto
+      margin-bottom: rem(20)
+    border: $border
+    background-color: $light
+  &__first-block
+    padding: rem(11) rem(14) rem(19)
+    @extend .d-flex
+    @extend .flex-column
+    @extend .justify-content-between
+    @include media-breakpoint-down(md)
+      padding: rem(12) rem(14) rem(10)
+      &__title
+        margin-bottom: rem(150)
+  &__second-block
+    @extend .d-flex
+    @extend .flex-column
+    @include media-breakpoint-down(md)
+      padding: rem(18) rem(14) rem(21)
+    &__title
+      width: 100%
+      height: rem(50)
+      line-height: rem(50)
+      @include media-breakpoint-up(lg)
+        padding-left: rem(15)
+        border-bottom: $border
+      @include media-breakpoint-down(md)
+        margin-bottom: rem(150)
+    &__columns
+      width: 100%
+      @extend .flex-grow-1
+      @extend .d-flex
+      @extend .flex-row
+      &__item
+        @extend .flex-grow-1
+        @extend .d-flex
+        @extend .flex-column
+        position: relative
+        &__row
+          width: 100%
+          height: rem(50)
+          line-height: rem(50)
+          @include media-breakpoint-up(lg)
+            padding-left: rem(15)
+          &:not(&:last-child)
+            @include media-breakpoint-up(lg)
+              border-bottom: $border
+          &:last-child  
+            bottom: 0
+            left: 0
+            position: absolute
+            width: 100%
+            @extend .desktop-only
+        &:first-of-type
+          @include media-breakpoint-up(lg)
+            border-right: $border
+          .About__second-block__columns__item__row
+            &:nth-child(1)
+              height: rem(100)
+  &__third-block
+    width: 100%
+    border: $border
+    background-color: $light
+    @extend .mobile-only
+    padding: rem(10) rem(14) rem(16)
+    &__title
+      margin-bottom: rem(150)
+  &__logo
+    width: calc(100% - 24px)
+    padding-top: calc((100% - 24px) / 267 * 41)
+    @include media-breakpoint-down(md)
+      width: 100%
+      padding-top: calc(100% / 267 * 41)
+    background-image: url(./img/logo.svg)
+    @extend .def-img
+
+
+              
+            

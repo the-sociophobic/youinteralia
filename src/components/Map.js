@@ -40,7 +40,7 @@ const gen = {
   },
   zoom: 16.8,
   maxZoom: 17 + 1,
-  minZoom: 17 - 2,
+  minZoom: 17 - 3,
   mapStyle: GenevaStyle,
   restriction: {
     latLngBounds: {
