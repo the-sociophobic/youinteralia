@@ -40,12 +40,12 @@
 
 // COLORS
 $dark: #474747
-$light: #F2F2F2
-$start: #ECFF14
+$light: white
+$pale: #FBF7EE
 
-$spb: #BABFDD
+$spb: #7C81FF
 $spb-highlight: #4056A1
-$gen: #98D8CB
+$gen: #D084FF
 $gen-highlight: #00887A
 
 $menu-transition: .2s
@@ -59,6 +59,7 @@ $border: 1px solid $dark
   margin: 0
   padding: 0
   box-sizing: border-box
+  -webkit-font-smoothing: antialiased
 
 .App
   overflow: hidden
@@ -145,6 +146,7 @@ $border: 1px solid $dark
     &:not(&--opened)
       width: 0
     position: relative
+    box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
     &__container
       background-color: $light
       width: 100vw
@@ -249,78 +251,96 @@ $dropdown-transition: .15s
   @extend .flex-row
   transform: translate(rem(-25), rem(-25))
   transition: transform $menu-transition
-  // &--tiny
-  //   transform: translate(rem(-15), rem(-15))
   &__dot
-    // width: rem(50)
-    // height: rem(50)
-    width: rem(40)
-    height: rem(40)
-    background-color: $start
+    width: rem(50)
+    height: rem(50)
     border-radius: 500px
     margin-right: rem(10)
     transition: width $menu-transition, height $menu-transition
-    .Marker--tiny &
-      width: rem(30)
-      height: rem(30)
-  &__player
-    position: relative
-    cursor: default
-    height: rem(70)
-    background-color: $light
-    @extend .d-inline-flex
-    @extend .flex-row
-    transition: opacity $menu-transition
-    .Marker--small &
-      opacity: 0
-      @extend .d-none
-    &__controls
-      @extend .d-flex
-      @extend .flex-column
-      @extend .align-items-center
-      &__button
-        @extend .button
-        width: rem(50)
-        height: rem(50)
-        @extend .def-img
-        background-image: url(./img/play.svg)
-        &--isPlaying
-          background-image: url(./img/pause.svg)
-        &:disabled
-          opacity: .5
-      &__time
-        font-size: rem(12)
-        line-height: 1
-        transform: translateY(rem(-5))
-    &__text
-      @extend .d-flex
-      @extend .flex-column
-      @extend .align-items-start
-      margin-left: rem(5)
-      margin-right: rem(7)
-      &__title
-        font-size: rem(24)
-        line-height: rem(28)
-        margin-top: rem(11)
-        margin-bottom: rem(4)
-        text-overflow: ellipsis
-        white-space: nowrap
-      &__artist
-        font-size: rem(14)
-        line-height: 1
-        white-space: nowrap
-    &__arrow
+    .Marker--spb &
+      background-color: $spb
+    .Marker--gen &
+      background-color: $gen
+
+
+.Player
+  position: relative
+  cursor: default
+  height: rem(70)
+  background-color: $light
+  @extend .d-inline-flex
+  @extend .flex-row
+  transition: opacity $menu-transition
+  &--compact
+    width: rem(280)
+    height: rem(50)
+  &--hidden
+    display: none !important
+  &__controls
+    @extend .d-flex
+    @extend .flex-column
+    @extend .align-items-center
+    .Player--compact &
+      @extend .flex-row
+    &__button
+      @extend .button
       width: rem(50)
       height: rem(50)
       @extend .def-img
-      background-image: url(./img/arrow-up.svg)
-      transform: rotate(90deg)
-      cursor: pointer
-    &__bar
-      position: absolute
-      left: 0
-      bottom: 0
-      width: 0
-      height: rem(4)
-      background-color: $dark
-      z-index: 20
+      background-image: url(./img/play.svg)
+      &--isPlaying
+        background-image: url(./img/pause.svg)
+      &:disabled
+        opacity: .5
+    &__time
+      line-height: 1
+      &:not(.Player--compact &)
+        font-size: rem(12)
+        transform: translateY(rem(-5))
+      .Player--compact &
+        font-size: rem(24)
+        padding-right: rem(7)
+        margin-right: rem(8)
+        border-right: 2px solid $dark
+  &__text
+    @extend .d-flex
+    @extend .flex-column
+    @extend .align-items-start
+    .Player--compact &
+      @extend .d-none
+    &__title
+      font-size: rem(24)
+      line-height: rem(28)
+      margin-top: rem(11)
+      margin-bottom: rem(4)
+      text-overflow: ellipsis
+      white-space: nowrap
+    &__artist
+      font-size: rem(14)
+      line-height: 1
+      white-space: nowrap
+  &__ticker
+    &:not(.Player--compact &)
+      @extend .d-none
+    @extend .flex-grow-1
+    overflow-y: hidden
+    height: rem(50)
+    &__content
+      font-size: rem(24)
+      white-space: nowrap
+      line-height: rem(50)
+  &__arrow
+    width: rem(50)
+    height: rem(50)
+    @extend .def-img
+    background-image: url(./img/arrow-up.svg)
+    transform: rotate(90deg)
+    cursor: pointer
+  &__bar
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 0
+    height: rem(4)
+    background-color: $dark
+    z-index: 20

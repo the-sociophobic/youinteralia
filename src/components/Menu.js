@@ -6,56 +6,44 @@ import Dropdown from 'components/Dropdown'
 import {
   StoreContext,
   FormattedMessage,
-  getMessage
+  getMessage,
+  getArtists,
 } from 'components/Store'
 
 
 class Menu extends React.Component {
-  state = {
-    opened: false,
-  }
 
   static contextType = StoreContext
 
   toggleLang = () =>
-    // this.context.setLocale(
-    //   this.context.locale === "eng" ? "rus" : "eng"
-    // )
-    {}
-
-  toggleCity = () => {
     this.context.setLocale(
-      this.context.locale === "eng" ? "rus" : "eng"
-    )
+      this.context.locale === "eng" ? "rus" : "eng")
+
+  toggleCity = () =>
     this.props.toggleCity()
-  }
 
   renderHeader = () =>
     <div className="Menu__header">
       <div
         className="Menu__header__logo"
-        onClick={() => this.setState({
-          opened: !this.state.opened
-        })}
+        onClick={this.props.toggleMenu}
       >
         youinteralia
       </div>
       <div
         className="Menu__header__burger"
-        onClick={() => this.setState({
-          opened: !this.state.opened
-        })}
+        onClick={this.props.toggleMenu}
       />
       <div
         className="Menu__header__switcher"
         onClick={() =>
-          this.state.opened ?
+          this.props.menuOpened ?
             this.toggleLang()
             :
             this.toggleCity()}
       >
         <div className={`Menu__header__switcher__container ${
-          this.state.opened && "Menu__header__switcher__container--lang"
+          this.props.menuOpened && "Menu__header__switcher__container--lang"
         }`}>
           <div className="Menu__header__switcher__container__lang">
             {this.context.locale}
@@ -74,7 +62,7 @@ class Menu extends React.Component {
 
   renderContent = () =>
     <div className={`Menu__content ${
-      this.state.opened && "Menu__content--opened"
+      this.props.menuOpened && "Menu__content--opened"
     }`}>
       <div className="Menu__content__container">
         <div className="Menu__content__container__links">
@@ -82,14 +70,16 @@ class Menu extends React.Component {
             <FormattedMessage id="Menu.about" />
           </Link>
           <Dropdown title={getMessage(this, "Menu.artists")}>
-            {this.context.artists[this.props.currentCity].map(artist =>
-              <Link
-                to={artist.link}
-                className={`Menu__content__container__links__item Menu__content__container__links__item--${this.props.currentCity}`}
-              >
-                {artist.name[this.context.locale === "rus" ? 0 : 1]}
-              </Link>
-            )}
+            {getArtists(this, this.props.currentCity)
+              .map(artist =>
+                <Link
+                  key={artist.id}
+                  to={`artist:${artist.id}`}
+                  className={`Menu__content__container__links__item Menu__content__container__links__item--${this.props.currentCity}`}
+                >
+                  {artist.name}
+                </Link>
+              )}
           </Dropdown>
           <Link to="archive">
             <FormattedMessage id="Menu.archive" />

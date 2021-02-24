@@ -5,7 +5,10 @@ import {
   PetersbourgStyle,
   GenevaStyle
 } from 'components/styles'
-import { StoreContext } from 'components/Store'
+import {
+  StoreContext,
+  getArtists,
+} from 'components/Store'
 import Marker from 'components/Marker'
 import isMobile from 'utils/isMobile'
 
@@ -36,8 +39,8 @@ const gen = {
     lng: 6.15092970185338,
   },
   zoom: 16.8,
-  maxZoom: 16.8 + 1,
-  minZoom: 16.8 - 3,
+  maxZoom: 17 + 1,
+  minZoom: 17 - 2,
   mapStyle: GenevaStyle,
   restriction: {
     latLngBounds: {
@@ -85,11 +88,15 @@ class Map extends Component {
             restriction: city.restriction,
           }}    
         >
-          {this.context.artists[this.props.currentCity].map(artist =>
-            <Marker
-              {...artist}
-              mapRef={this[`${city.name}Ref`]}
-            />
+          {getArtists(this, city.name)
+            .map(artist =>
+              <Marker
+                key={artist.id}
+                lat={artist.lat}
+                lng={artist.lng}
+                artist={artist}
+                mapRef={this[`${city.name}Ref`]}
+              />
           )}
         </GoogleMapReact>
       </div>
