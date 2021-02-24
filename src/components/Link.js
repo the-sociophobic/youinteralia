@@ -12,7 +12,7 @@ class Link extends React.Component {
       className={`Link ${this.props.className}`}
       onClick={() => {
         this.context.setURL(this.props.to)
-        this.props.onClick && this.props.onClick()
+        this?.props?.onClick?.()
       }}
     >
       {this.props.children}

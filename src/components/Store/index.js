@@ -92,11 +92,22 @@ class StoreProvider extends React.Component {
       URL: "",
       setURL: _URL => this.setState({
         URL: _URL,
+        menuOpened: false,
       }),
 
       zoom: 0,
       setZoom: zoom => this.setState({
         zoom: zoom
+      }),
+
+      menuOpened: false,
+      setMenu: _menuOpened => this.setState({
+        menuOpened: _menuOpened
+      }),
+
+      currentCity: "spb",
+      setCity: _currentCity => this.setState({
+        currentCity: _currentCity
       }),
 
       ...artistsState,

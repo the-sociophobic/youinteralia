@@ -6,6 +6,9 @@ const defaultMessages = {
     artists: ["художники и маршруты", "artists and routes"],
     archive: ["архив", "archive"],
     participate: ["участие", "participate"],
+  },
+  Artist: {
+    routeInfo: ["О маршруте", "Route info"]
   }
 }
 

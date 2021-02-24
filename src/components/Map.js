@@ -62,7 +62,7 @@ class Map extends Component {
 
   componentDidMount = () =>
     this.watchZoomInterval = setInterval(() => {
-      const mapRef = this.props.currentCity === "spb" ? this.spbRef : this.genRef
+      const mapRef = this.context.currentCity === "spb" ? this.spbRef : this.genRef
 
       this.context && mapRef.current &&
         this?.context?.zoom !== mapRef?.current?.map_?.zoom &&
@@ -73,7 +73,7 @@ class Map extends Component {
     clearInterval(this.watchZoomInterval)
 
   renderCity = city =>
-    <div className={`Map ${this.props.currentCity === city.name && "Map--current"}`}>
+    <div className={`Map ${this.context.currentCity === city.name && "Map--current"}`}>
       <div style={{ height: '110%', width: '100%' }}>
         <GoogleMapReact
           ref={this[`${city.name}Ref`]}

@@ -5,7 +5,7 @@
   @include media-breakpoint-down(md)
     display: none
 .mobile-only
-  @include media-breakpoint-up(md)
+  @include media-breakpoint-up(lg)
     display: none
 
 .noselect
@@ -42,6 +42,7 @@
 $dark: #474747
 $light: white
 $pale: #FBF7EE
+$big-menu-background: #F5F0E4
 
 $spb: #7C81FF
 $spb-highlight: #4056A1
@@ -190,21 +191,23 @@ $border: 1px solid $dark
             color: $gen-highlight
             &::before
               background-color: $gen-highlight
-      &__footer
-        width: 100%
-        height: rem(112)
-        padding-left: rem(50)
-        @extend .d-flex
-        @extend .flex-column
-        @extend .justify-content-center
-        @include media-breakpoint-down(md)
-          height: rem(60)
-          padding-left: rem(20)
-        &__logo
-          width: rem(131)
-          height: rem(20)
-          background-image: url(./img/logo.svg)
-          @extend .def-img
+
+
+.Footer
+  width: 100%
+  height: rem(112)
+  padding-left: rem(49)
+  @extend .d-flex
+  @extend .flex-column
+  @extend .justify-content-center
+  @include media-breakpoint-down(md)
+    height: rem(60)
+    padding-left: rem(20)
+  &__logo
+    width: rem(131)
+    height: rem(20)
+    background-image: url(./img/logo.svg)
+    @extend .def-img
 
 
 .Link
@@ -222,6 +225,7 @@ $dropdown-transition: .15s
     display: inline-block
     line-height: rem(28)
     margin-bottom: rem(10)
+    @extend .noselect
     &::after
       content: ''
       position: absolute
@@ -232,7 +236,6 @@ $dropdown-transition: .15s
       height: rem(23)
       background-image: url(./img/arrow-up-inline.svg)
       @extend .def-img
-      // transition: transform .15s
       .dropdown--opened &
         transform: translateY(-50%)
   &__content
@@ -245,6 +248,7 @@ $dropdown-transition: .15s
       width: 100%
       @extend .d-flex
       @extend .flex-column
+
 
 .Marker
   @extend .d-inline-flex
@@ -344,3 +348,122 @@ $dropdown-transition: .15s
     height: rem(4)
     background-color: $dark
     z-index: 20
+
+
+
+
+.BigMenu
+  position: fixed
+  z-index: 10
+  top: 0
+  right: 0
+  overflow: hidden
+  @include media-breakpoint-down(md)
+    transition: width $menu-transition
+    width: 0
+    height: 100vh
+    overflow-y: scroll
+  @include media-breakpoint-up(lg)
+    transition: height $menu-transition
+    width: 100vw
+    height: 0
+  &--opened
+    width: 100vw
+    height: 100vh
+  background-color: $big-menu-background
+  &__content
+    width: 100vw
+    @include media-breakpoint-up(lg)
+      height: 100%
+    @include media-breakpoint-down(md)
+      min-height: 100%
+    @extend .d-flex
+    @extend .flex-column
+    &__header
+      width: 100%
+      height: rem(90)
+      @include media-breakpoint-up(lg)
+        height: rem(117)
+        &__close
+          cursor: pointer
+          position: absolute
+          top: rem(49)
+          right: rem(49)
+          width: rem(50)
+          height: rem(50)
+          background-color: $light
+          background-image: url(./img/cross.svg)
+          background-position: center
+          background-repeat: no-repeat
+          border: $border
+    &__container
+      @extend .flex-grow-1
+      width: 100%
+      @include media-breakpoint-up(lg)
+        overflow: hidden
+      padding-left: rem(49)
+      padding-right: rem(49)
+      @include media-breakpoint-down(md)
+        padding-left: rem(21)
+        padding-right: rem(21)
+
+
+
+.Artist
+  width: 100%
+  @include media-breakpoint-up(lg)
+    height: 100%
+  &__content
+    width: 100%
+    height: 100%
+    @extend .d-flex
+    @extend .flex-lg-row
+    @extend .flex-column-reverse
+    border: $border
+    @include media-breakpoint-down(md)
+      border-bottom: 0
+      margin-left: -1px
+      width: calc(100% + 1px)
+    &__text
+      @include media-breakpoint-up(lg)
+        width: 50%
+        max-width: rem(601)
+        border-right: $border
+        height: 100%
+      @extend .d-flex
+      @extend .flex-lg-column
+      @extend .flex-column-reverse
+      &__dropdowns
+        @extend .flex-md-grow-1
+        .dropdown
+          position: relative
+          z-index: 9
+          border-bottom: $border
+          &__title
+            width: 100%
+            border-bottom: $border
+            line-height: rem(50)
+            padding-left: rem(13)
+            margin-bottom: 0
+            background-color: $big-menu-background
+            &::after
+              right: rem(14)
+          &__content
+            margin-top: -1px
+            padding-left: rem(15)
+            padding-right: rem(15)
+            overflow-y: scroll
+            line-height: 1.4
+
+      .Player
+        width: 100%
+        margin-top: -3px
+        @include media-breakpoint-down(md)
+          border-top: $border
+          border-bottom: $border
+    &__map
+      @extend .flex-grow-1
+      @include media-breakpoint-down(md)
+        height: rem(334)
+        width: 100%
+      
