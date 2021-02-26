@@ -21,7 +21,7 @@ const spb = {
   },
   zoom: isMobile() ? 13.1 : 14.25,
   maxZoom: 15 + 1,
-  minZoom: 15 - 4,
+  minZoom: 15 - 5,
   mapStyle: PetersbourgStyle,
   restriction: {
     latLngBounds: {

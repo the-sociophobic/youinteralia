@@ -5,10 +5,10 @@ const defaultMessages = {
     about: ["о проекте", "about the project"],
     artists: ["художники и маршруты", "artists and routes"],
     archive: ["архив", "archive"],
-    participate: ["участие", "participate"],
+    participate: ["участвовать", "participate"],
   },
   Artist: {
-    routeInfo: ["О маршруте", "Route info"]
+    routeInfo: ["о проекте", "about the project"]
   },
   About: {
     first: {

@@ -16,7 +16,7 @@ class Marker extends React.Component {
       <Player
         artist={this.props.artist}
         compact={isMobile()}
-        className={this.context.zoom <= 13 && "Player--hidden"}
+        className={this.context.zoom <= 12 && "Player--hidden"}
       />
     </div>
 }

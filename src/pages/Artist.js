@@ -71,7 +71,7 @@ class Artist extends React.Component {
                   title={getMessage(this, "Artist.routeInfo")}
                   opened={this.state.routeInfoOpened}
                   toggleOpened={() => this.toggleRouteInfo()}
-                  maxHeight={isMobile() ? undefined : this.state.textHeight - 172}
+                  maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
                 >
                   {artist.aboutRoute}
                 </Dropdown>
@@ -81,12 +81,13 @@ class Artist extends React.Component {
                   city={artist.city}
                   opened={this.state.artistInfoOpened}
                   toggleOpened={() => this.toggleArtistInfo()}
-                  maxHeight={isMobile() ? undefined : this.state.textHeight - 172}
+                  maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
                 >
                   {artist.aboutArtist}
                 </Dropdown>
               </div>
               <Player
+                compact
                 hideArrow
                 artist={artist}
               />

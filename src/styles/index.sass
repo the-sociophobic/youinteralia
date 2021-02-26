@@ -38,6 +38,11 @@
 @function rem($px)
   @return calc(#{$px} / 16 * 1rem)
 
+.default-font
+  font-size: rem(21)
+  @include media-breakpoint-down(lg)
+    font-size: rem(18)
+
 // COLORS
 $dark: #474747
 $light: white
@@ -66,7 +71,7 @@ $border: 1px solid $dark
   overflow: hidden
   width: 100%
   height: 100%
-  font-size: rem(24)
+  @extend .default-font
 
 .Map
   width: 100%
@@ -101,6 +106,9 @@ $border: 1px solid $dark
       width: calc(100vw - 40 / 16 * 1rem)
       top: rem(20)
       left: rem(20)
+    @media screen and ( max-width: 350px )
+      width: calc(100vw - 16 / 16 * 1rem)
+      left: rem(8)
     @extend .d-flex
     @extend .flex-row
     &__logo
@@ -138,18 +146,21 @@ $border: 1px solid $dark
           &--gen
             background-color: $gen
   &__content
-    height: 100vh
+    min-height: 100vh
     width: rem(432)
-    overflow: hidden
+    background-color: $light
+    @extend .d-flex
+    @extend .flex-column
+    overflow-y: scroll
     @include media-breakpoint-down(lg)
       width: 100vw
     transition: width $menu-transition
     &:not(&--opened)
+      overflow: hidden
       width: 0
     position: relative
     box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
     &__container
-      background-color: $light
       width: 100vw
       height: 100vh
       @extend .d-flex
@@ -160,6 +171,8 @@ $border: 1px solid $dark
         @include media-breakpoint-down(lg)
           padding-top: rem(93)
           padding-left: rem(36)
+        @media screen and ( max-width: 350px )
+          padding-left: rem(24)
         @extend .d-flex
         @extend .flex-column
         @extend .flex-grow-1
@@ -191,18 +204,24 @@ $border: 1px solid $dark
             color: $gen
             &::before
               background-color: $gen
+  .dropdown
+    text-transform: lowercase
 
 
 .Footer
   width: 100%
-  height: rem(112)
+  min-height: rem(112)
   padding-left: rem(49)
+  margin-top: rem(49)
   @extend .d-flex
   @extend .flex-column
   @extend .justify-content-center
   @include media-breakpoint-down(lg)
-    height: rem(60)
+    min-height: rem(60)
     padding-left: rem(20)
+    margin-top: rem(20)
+  @media screen and ( max-width: 350px )
+    padding-left: rem(16)
   &__logo
     width: rem(131)
     height: rem(20)
@@ -226,6 +245,7 @@ $dropdown-transition: .15s
     line-height: rem(28)
     margin-bottom: rem(10)
     @extend .noselect
+    text-transform: lowercase
     &::after
       content: ''
       position: absolute
@@ -302,7 +322,7 @@ $dropdown-transition: .15s
         font-size: rem(12)
         transform: translateY(rem(-5))
       .Player--compact &
-        font-size: rem(24)
+        @extend .default-font
         padding-right: rem(7)
         margin-right: rem(8)
         border-right: 2px solid $dark
@@ -313,7 +333,7 @@ $dropdown-transition: .15s
     .Player--compact &
       @extend .d-none
     &__title
-      font-size: rem(24)
+      @extend .default-font
       line-height: rem(28)
       margin-top: rem(11)
       margin-bottom: rem(4)
@@ -328,7 +348,7 @@ $dropdown-transition: .15s
       @extend .d-none
     @extend .flex-grow-1
     height: rem(50)
-    font-size: rem(24)
+    @extend .default-font
     line-height: rem(50)
   &__arrow
     width: rem(50)
@@ -403,6 +423,9 @@ $dropdown-transition: .15s
       @include media-breakpoint-down(lg)
         padding-left: rem(21)
         padding-right: rem(21)
+      @media screen and ( max-width: 350px )
+        padding-left: rem(9)
+        padding-right: rem(8)
 
 
 
@@ -465,6 +488,8 @@ $dropdown-transition: .15s
             padding-right: rem(15)
             overflow-y: scroll
             line-height: 1.25
+            &__container
+              hyphens: auto
             
 
       .Player
@@ -532,6 +557,8 @@ $dropdown-transition: .15s
     @extend .flex-column
     @include media-breakpoint-down(lg)
       padding: rem(18) rem(14) rem(21)
+    @media screen and ( max-width: 350px )
+      padding: rem(18) rem(14) rem(8)
     &__title
       width: 100%
       height: rem(50)
@@ -594,9 +621,11 @@ $dropdown-transition: .15s
             
 .Ticker
   overflow: hidden
+  position: relative
   &__content
+    @extend .d-flex
     white-space: nowrap
-    position: relative
+    position: absolute
     top: 0
     font-size: inherit
     line-height: inherit

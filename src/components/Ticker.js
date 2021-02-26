@@ -40,6 +40,14 @@ class Ticker extends React.Component {
   }
 
   animate = timeStamp => {
+    if (this.state.contentWidth < this.state.tickerWidth) {
+      this.setState({
+        currentContentOffset: 0,
+        startTimeStamp: timeStamp,
+      })
+      return
+    }
+
     const timePassed = (timeStamp - this.state.startTimeStamp) / 25
 
     this.setState({
