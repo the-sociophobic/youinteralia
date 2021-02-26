@@ -477,10 +477,12 @@ $dropdown-transition: .15s
       @include media-breakpoint-down(md)
         height: rem(334)
         width: 100%
+      position: relative
+      overflow: hidden
       
 
 .lev-img
-  position: relative
+  @extend .abs-cover
   overflow: hidden
   &__img
     position: absolute

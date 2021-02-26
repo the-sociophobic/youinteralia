@@ -1,18 +1,25 @@
 import React from 'react'
 
+import ResizeObserver from 'resize-observer-polyfill'
+
 
 class Img extends React.Component {
   state = {
-    portrait: undefined
+    portrait: undefined,
+    containerRatio: 0,
   }
 
   imgRef = React.createRef()
   containerRef = React.createRef()
 
+  componentDidMount = () =>
+    this.resizeObs = new ResizeObserver(this.setOrientation.bind(this))
+      .observe(this.containerRef.current)
+
   setOrientation = () =>
     this.setState({
-      portrait: this.containerRef.current.offsetWidth / this.containerRef.current.offsetHeight >
-        this.imgRef.current.width / this.imgRef.current.height
+      portrait: this.containerRef?.current?.offsetWidth / this.containerRef?.current?.offsetHeight >
+        this.imgRef?.current?.width / this.imgRef?.current?.height
     })
 
   render = () =>

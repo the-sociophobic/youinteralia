@@ -162,7 +162,7 @@ const getArtist = (_this, id) => {
 
 const getArtists = (_this, city) =>
   _this.context.artistsConstants
-    .filter(artist => artist.city === city)
+    .filter(artist => !city || artist.city === city)
     .map(artist => getArtist(_this, artist.id))
 
 

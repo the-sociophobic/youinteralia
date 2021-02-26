@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1391 1200" style="enable-background:new 0 0 1391 1200;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#D084FF;}
+	.st2{fill:none;stroke:#D084FF;stroke-width:6;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" width="1391" height="1200"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st0">
+				
+					<image style="overflow:visible;enable-background:new    ;" width="3000" height="2586" xlink:href="carla.png"  transform="matrix(0.5057 0 0 0.5057 -88.6655 -29.9235)">
+				</image>
+			</g>
+		</g>
+	</g>
+</g>
+<circle class="st1" cx="292.3" cy="210" r="35"/>
+<polyline class="st2" points="282.3,210 303,224 304.3,235 306.3,259 304.3,267 302.3,272 313.3,276 332.3,278 365.3,381 365.3,391 
+	385.3,451 384.3,465 379.3,481 405.3,498 411.3,488 430.3,500 451.3,518 463.3,521 463.3,559 458.3,579 450.3,587 1058.3,923 "/>
+<circle class="st1" cx="1068.3" cy="923" r="35"/>
+</svg>

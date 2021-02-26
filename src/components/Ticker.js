@@ -1,10 +1,7 @@
-import { times } from 'lodash'
 import React from 'react'
 
 import ResizeObserver from 'resize-observer-polyfill'
 
-
-const pauseInMs = 300
 
 class Ticker extends React.Component {
   constructor(props) {

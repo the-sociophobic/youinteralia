@@ -92,11 +92,16 @@ class Artist extends React.Component {
               />
             </div>
 
-            <Img
-              cover
-              className="Artist__content__map"
-              src={artist.img}
-            />
+            <div className="Artist__content__map">
+              <Img
+                cover
+                src={artist.png}
+              />
+              <Img
+                cover
+                src={artist.svg}
+              />
+            </div>
 
           </div>
 
