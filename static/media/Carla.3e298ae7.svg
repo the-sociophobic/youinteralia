@@ -9,16 +9,18 @@
 </style>
 <g>
 	<g>
-		<defs>
-			<rect id="SVGID_1_" width="1391" height="1200"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-		</clipPath>
-		<g class="st0">
-			
-				<image style="overflow:visible;enable-background:new    ;" width="3000" height="2586" xlink:href="../../../../../Users/arina/Desktop/carla.png"  transform="matrix(0.5057 0 0 0.5057 -88.6655 -29.9235)">
-			</image>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" width="1391" height="1200"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st0">
+				
+					<image style="overflow:visible;enable-background:new    ;" width="3000" height="2586" xlink:href="carla.png"  transform="matrix(0.5057 0 0 0.5057 -88.6655 -29.9235)">
+				</image>
+			</g>
 		</g>
 	</g>
 </g>

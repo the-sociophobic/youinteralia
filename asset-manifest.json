@@ -1,28 +1,33 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.7e370a47.chunk.css",
-    "main.js": "/youinteralia/static/js/main.34551c1e.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.34551c1e.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.77f7ddbf.chunk.css",
+    "main.js": "/youinteralia/static/js/main.2d08d448.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.2d08d448.chunk.js.map",
     "runtime-main.js": "/youinteralia/static/js/runtime-main.892f668d.js",
     "runtime-main.js.map": "/youinteralia/static/js/runtime-main.892f668d.js.map",
-    "static/js/2.b07d4346.chunk.js": "/youinteralia/static/js/2.b07d4346.chunk.js",
-    "static/js/2.b07d4346.chunk.js.map": "/youinteralia/static/js/2.b07d4346.chunk.js.map",
+    "static/js/2.2267b106.chunk.js": "/youinteralia/static/js/2.2267b106.chunk.js",
+    "static/js/2.2267b106.chunk.js.map": "/youinteralia/static/js/2.2267b106.chunk.js.map",
     "static/js/3.c1766306.chunk.js": "/youinteralia/static/js/3.c1766306.chunk.js",
     "static/js/3.c1766306.chunk.js.map": "/youinteralia/static/js/3.c1766306.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.7e370a47.chunk.css.map": "/youinteralia/static/css/main.7e370a47.chunk.css.map",
-    "static/js/2.b07d4346.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.b07d4346.chunk.js.LICENSE.txt",
-    "static/media/andrea marioni.44611eef.svg": "/youinteralia/static/media/andrea marioni.44611eef.svg",
-    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg",
-    "static/media/carla demierre.9a711600.svg": "/youinteralia/static/media/carla demierre.9a711600.svg",
-    "static/media/martina machler.2547af9f.svg": "/youinteralia/static/media/martina machler.2547af9f.svg",
-    "static/media/olga zhitlina.8068aba2.svg": "/youinteralia/static/media/olga zhitlina.8068aba2.svg",
-    "static/media/roman osminkin.92bd1823.svg": "/youinteralia/static/media/roman osminkin.92bd1823.svg"
+    "static/css/main.77f7ddbf.chunk.css.map": "/youinteralia/static/css/main.77f7ddbf.chunk.css.map",
+    "static/js/2.2267b106.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.2267b106.chunk.js.LICENSE.txt",
+    "static/media/Andrea.09e0b815.png": "/youinteralia/static/media/Andrea.09e0b815.png",
+    "static/media/Andrea.a156cf6e.svg": "/youinteralia/static/media/Andrea.a156cf6e.svg",
+    "static/media/Carla.2a9b782a.png": "/youinteralia/static/media/Carla.2a9b782a.png",
+    "static/media/Carla.3e298ae7.svg": "/youinteralia/static/media/Carla.3e298ae7.svg",
+    "static/media/Martina.2547af9f.svg": "/youinteralia/static/media/Martina.2547af9f.svg",
+    "static/media/Martina.738a6809.png": "/youinteralia/static/media/Martina.738a6809.png",
+    "static/media/Olga.4faab2ab.svg": "/youinteralia/static/media/Olga.4faab2ab.svg",
+    "static/media/Olga.9767e03d.png": "/youinteralia/static/media/Olga.9767e03d.png",
+    "static/media/Roman.69bafb56.svg": "/youinteralia/static/media/Roman.69bafb56.svg",
+    "static/media/Roman.9bd0e59e.png": "/youinteralia/static/media/Roman.9bd0e59e.png",
+    "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.892f668d.js",
-    "static/js/2.b07d4346.chunk.js",
-    "static/css/main.7e370a47.chunk.css",
-    "static/js/main.34551c1e.chunk.js"
+    "static/js/2.2267b106.chunk.js",
+    "static/css/main.77f7ddbf.chunk.css",
+    "static/js/main.2d08d448.chunk.js"
   ]
 }
