@@ -88,7 +88,7 @@ class Map extends Component {
             restriction: city.restriction,
           }}    
         >
-          {getArtists(this, city.name)
+          {getArtists(this, city.name, this.context.currentCity === "gen" ? "eng" : "rus")
             .map(artist =>
               <Marker
                 key={artist.id}

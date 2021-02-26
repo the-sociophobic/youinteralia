@@ -142,7 +142,7 @@ class FormattedMessage extends React.Component {
 }
 
 
-const getArtist = (_this, id) => {
+const getArtist = (_this, id, locale) => {
   const artistAudio = _this.context.artistsConstants[id].audio
 
   return {
@@ -152,7 +152,12 @@ const getArtist = (_this, id) => {
         ,
         (value, key) =>
           Array.isArray(value) ?
-            value[_this.context.locale === "rus" ? 0 : 1]
+            value[
+              locale ?
+                locale === "rus" ? 0 : 1
+                :
+                _this.context.locale === "rus" ? 0 : 1
+              ]
             :
             value
       ),
@@ -160,10 +165,10 @@ const getArtist = (_this, id) => {
   }
 }
 
-const getArtists = (_this, city) =>
+const getArtists = (_this, city, locale) =>
   _this.context.artistsConstants
     .filter(artist => !city || artist.city === city)
-    .map(artist => getArtist(_this, artist.id))
+    .map(artist => getArtist(_this, artist.id, locale))
 
 
 
