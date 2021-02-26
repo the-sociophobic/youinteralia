@@ -95,7 +95,7 @@ class StoreProvider extends React.Component {
       // getMessage: id => getMessage(this, id),
 
       URL: "",
-      setURL: _URL => this.setState({
+      setURL: (_URL = "") => this.setState({
         URL: _URL,
         menuOpened: false,
       }),

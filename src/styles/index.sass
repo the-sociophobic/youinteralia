@@ -2,10 +2,10 @@
 
 
 .desktop-only
-  @include media-breakpoint-down(md)
+  @include media-breakpoint-down(lg)
     display: none !important
 .mobile-only
-  @include media-breakpoint-up(lg)
+  @include media-breakpoint-up(xl)
     display: none !important
 
 .noselect
@@ -97,7 +97,7 @@ $border: 1px solid $dark
     line-height: rem(50)
     top: rem(50)
     left: rem(50)
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       width: calc(100vw - 40 / 16 * 1rem)
       top: rem(20)
       left: rem(20)
@@ -141,7 +141,7 @@ $border: 1px solid $dark
     height: 100vh
     width: rem(432)
     overflow: hidden
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       width: 100vw
     transition: width $menu-transition
     &:not(&--opened)
@@ -157,7 +157,7 @@ $border: 1px solid $dark
       &__links
         padding-top: rem(120)
         padding-left: rem(65)
-        @include media-breakpoint-down(md)
+        @include media-breakpoint-down(lg)
           padding-top: rem(93)
           padding-left: rem(36)
         @extend .d-flex
@@ -200,7 +200,7 @@ $border: 1px solid $dark
   @extend .d-flex
   @extend .flex-column
   @extend .justify-content-center
-  @include media-breakpoint-down(md)
+  @include media-breakpoint-down(lg)
     height: rem(60)
     padding-left: rem(20)
   &__logo
@@ -355,12 +355,12 @@ $dropdown-transition: .15s
   top: 0
   right: 0
   overflow: hidden
-  @include media-breakpoint-down(md)
+  @include media-breakpoint-down(lg)
     transition: width $menu-transition
     width: 0
     height: 100vh
     overflow-y: scroll
-  @include media-breakpoint-up(lg)
+  @include media-breakpoint-up(xl)
     transition: height $menu-transition
     width: 100vw
     height: 0
@@ -370,16 +370,16 @@ $dropdown-transition: .15s
   background-color: $big-menu-background
   &__content
     width: 100vw
-    @include media-breakpoint-up(lg)
+    @include media-breakpoint-up(xl)
       height: 100%
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       min-height: 100%
     @extend .d-flex
     @extend .flex-column
     &__header
       width: 100%
       height: rem(90)
-      @include media-breakpoint-up(lg)
+      @include media-breakpoint-up(xl)
         height: rem(117)
         &__close
           cursor: pointer
@@ -396,11 +396,11 @@ $dropdown-transition: .15s
     &__container
       @extend .flex-grow-1
       width: 100%
-      @include media-breakpoint-up(lg)
+      @include media-breakpoint-up(xl)
         overflow: hidden
       padding-left: rem(49)
       padding-right: rem(49)
-      @include media-breakpoint-down(md)
+      @include media-breakpoint-down(lg)
         padding-left: rem(21)
         padding-right: rem(21)
 
@@ -408,30 +408,30 @@ $dropdown-transition: .15s
 
 .Artist
   width: 100%
-  @include media-breakpoint-up(lg)
+  @include media-breakpoint-up(xl)
     height: 100%
   &__content
     width: 100%
     height: 100%
     @extend .d-flex
-    @extend .flex-lg-row
+    @extend .flex-xl-row
     @extend .flex-column-reverse
     border: $border
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       border-bottom: 0
       margin-left: -1px
       width: calc(100% + 1px)
     &__text
-      @include media-breakpoint-up(lg)
+      @include media-breakpoint-up(xl)
         width: 50%
         max-width: rem(601)
         border-right: $border
         height: 100%
       @extend .d-flex
-      @extend .flex-lg-column
+      @extend .flex-xl-column
       @extend .flex-column-reverse
       &__dropdowns
-        @extend .flex-md-grow-1
+        @extend .flex-lg-grow-1
         .dropdown
           position: relative
           z-index: 9
@@ -469,13 +469,14 @@ $dropdown-transition: .15s
 
       .Player
         width: 100%
-        @include media-breakpoint-down(md)
+        @include media-breakpoint-down(lg)
           border-top: $border
           border-bottom: $border
     &__map
       @extend .flex-grow-1
-      @include media-breakpoint-down(md)
-        height: rem(334)
+      @include media-breakpoint-down(lg)
+        // height: rem(334)
+        padding-top: 100%
         width: 100%
       position: relative
       overflow: hidden
@@ -503,7 +504,7 @@ $dropdown-transition: .15s
 
 .About
   @extend .d-flex
-  @extend .flex-lg-row
+  @extend .flex-xl-row
   @extend .flex-column
   @extend .justify-content-between
   height: 100%
@@ -511,7 +512,7 @@ $dropdown-transition: .15s
   &__second-block
     width: calc(50% - 10px)
     height: 100%
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       width: 100%
       height: auto
       margin-bottom: rem(20)
@@ -522,23 +523,23 @@ $dropdown-transition: .15s
     @extend .d-flex
     @extend .flex-column
     @extend .justify-content-between
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       padding: rem(12) rem(14) rem(10)
       &__title
         margin-bottom: rem(150)
   &__second-block
     @extend .d-flex
     @extend .flex-column
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       padding: rem(18) rem(14) rem(21)
     &__title
       width: 100%
       height: rem(50)
       line-height: rem(50)
-      @include media-breakpoint-up(lg)
+      @include media-breakpoint-up(xl)
         padding-left: rem(15)
         border-bottom: $border
-      @include media-breakpoint-down(md)
+      @include media-breakpoint-down(lg)
         margin-bottom: rem(150)
     &__columns
       width: 100%
@@ -554,10 +555,10 @@ $dropdown-transition: .15s
           width: 100%
           height: rem(50)
           line-height: rem(50)
-          @include media-breakpoint-up(lg)
+          @include media-breakpoint-up(xl)
             padding-left: rem(15)
           &:not(&:last-child)
-            @include media-breakpoint-up(lg)
+            @include media-breakpoint-up(xl)
               border-bottom: $border
           &:last-child  
             bottom: 0
@@ -566,7 +567,7 @@ $dropdown-transition: .15s
             width: 100%
             @extend .desktop-only
         &:first-of-type
-          @include media-breakpoint-up(lg)
+          @include media-breakpoint-up(xl)
             border-right: $border
           .About__second-block__columns__item__row
             &:nth-child(1)
@@ -582,7 +583,7 @@ $dropdown-transition: .15s
   &__logo
     width: calc(100% - 24px)
     padding-top: calc((100% - 24px) / 267 * 41)
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       width: 100%
       padding-top: calc(100% / 267 * 41)
     background-image: url(./img/logo.svg)

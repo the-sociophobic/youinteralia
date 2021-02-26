@@ -13,7 +13,7 @@ import {
 
 
 const isMobile = () =>
-  window.innerWidth < 992
+  window.innerWidth < 1200
 
 
 class Artist extends React.Component {

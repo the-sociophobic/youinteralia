@@ -34,7 +34,7 @@ class Menu extends React.Component {
     <div className="Menu__header">
       <div
         className="Menu__header__logo"
-        onClick={() => this.toggleMenu()}
+        onClick={() => this.context.setURL()}
       >
         youinteralia
       </div>
