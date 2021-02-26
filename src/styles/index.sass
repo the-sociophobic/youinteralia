@@ -327,12 +327,9 @@ $dropdown-transition: .15s
     &:not(.Player--compact &)
       @extend .d-none
     @extend .flex-grow-1
-    overflow-y: hidden
     height: rem(50)
-    &__content
-      font-size: rem(24)
-      white-space: nowrap
-      line-height: rem(50)
+    font-size: rem(24)
+    line-height: rem(50)
   &__arrow
     width: rem(50)
     height: rem(50)
@@ -592,3 +589,11 @@ $dropdown-transition: .15s
 
               
             
+.Ticker
+  overflow: hidden
+  &__content
+    white-space: nowrap
+    position: relative
+    top: 0
+    font-size: inherit
+    line-height: inherit

@@ -1,5 +1,6 @@
 import React from 'react'
-import Ticker from 'react-ticker'
+
+import Ticker from 'components/Ticker'
 
 import Link from 'components/Link'
 import { StoreContext } from 'components/Store'
@@ -37,18 +38,10 @@ class Player extends React.Component {
           </div>
         </div>
 
-        <div className="Player__ticker">
-          <Ticker
-            mode="await"
-            speed={4}
-          >
-            {({index}) =>
-              <div className="Player__ticker__content">
-                {artist.title} — {artist.name}
-              </div>
-            }
-          </Ticker>
-        </div>
+        <Ticker
+          className="Player__ticker"
+          text={`${artist.title} — ${artist.name}`}
+        />
 
         {!this.props.hideArrow &&
           <Link to={`artist:${artist.id}`}>

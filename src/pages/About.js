@@ -1,6 +1,7 @@
+import React from 'react'
+
 import ExternalLink from 'components/ExternalLink'
 import { FormattedMessage } from 'components/Store'
-import React from 'react'
 
 
 class About extends React.Component {
