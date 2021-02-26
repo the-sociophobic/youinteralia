@@ -33,6 +33,11 @@ class StoreProvider extends React.Component {
           [`${id}.duration`]: audio.duration,
           [`${id}.canPlay`]: true,
         }))
+      audio.addEventListener('canplay',
+        () => this.setState({
+          [`${id}.duration`]: audio.duration,
+          [`${id}.canPlay`]: true,
+        }))
 
       audio.addEventListener('play', () => {
         this.artistsConstants.forEach(artist =>
@@ -116,8 +121,10 @@ class StoreProvider extends React.Component {
   }
 
   componentDidMount = () =>
-    this.artistsConstants.forEach(artist =>
-      artist.audio.src = artist.src)
+    this.artistsConstants.forEach(artist => {
+      artist.audio.src = artist.src
+      artist.audio.load()
+    })
 
   render = () =>
     <StoreContext.Provider value={this.state}>

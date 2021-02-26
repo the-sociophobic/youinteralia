@@ -1,23 +1,9 @@
-import Alena from 'artists/Алена Терешко/Alena_walk.mp3'
-import Roma from 'artists/Роман Осминкин/Roma_walk.mp3'
-import Ivan from 'artists/Иван Курбаков/ivan_walk.mp3'
-import Olga from 'audio/PEREMEN.mp3'
-
-// import Alena from 'artists/Алена Терешко/Alena_walk.mp3'
 import RomaSVG from 'artists/Роман Осминкин/roman osminkin.svg'
-// import Ivan from 'artists/Иван Курбаков/ivan_walk.mp3'
 import OlgaSVG from 'artists/Ольга Житлина/olga zhitlina.svg'
-
-
-import Martina from 'artists/Martina Mächler/martina_walk.mp3'
-import Carla from 'artists/Carla Demierre/Carla_Writing around.mp3'
-import Andrea from 'artists/Andrea Marioni/Andrea_walk.mp3'
-import Francoise from 'audio/PEREMEN.mp3'
 
 import MartinaSVG from 'artists/Martina Mächler/martina machler.svg'
 import CarlaSVG from 'artists/Carla Demierre/carla demierre.svg'
 import AndreaSVG from 'artists/Andrea Marioni/andrea marioni.svg'
-// import Francoise from 'audio/PEREMEN.mp3'
 
 
 const artists = [
@@ -27,7 +13,7 @@ const artists = [
     title: ["Остров и гавань", "The island and the harbour"],
     lat: 59.90469616806995,
     lng: 30.217547243741553,
-    src: Alena,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Alena.mp3",
     aboutArtist: [
       "Алена Терешко родилась в 1986 году городе Ишим, Тюменской области, жила в Челябинске, Санкт-Петербурге.  Училась в Санкт-Петербургской Художественно-Промышленной Академии им. Штиглица и школе молодого художника Про Арте. Окончила в 2013 году. Работаю с перформансом, видео, графикой. Часто объектом моих исследований является тело. Меня интересуют традиции и современность, изображение и восприятие, вообще противоположные категории и их точки соприкосновения. Принимала участие в выставках в России и за рубежом.",
       "Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She has participated in numerous exhibitions in Russia and abroad.",
@@ -43,7 +29,7 @@ const artists = [
     title: ["Что ты чувствуешь?", "What do you feel?"],
     lat: 59.93600763837134,
     lng: 30.286153729146147,
-    src: Roma,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Roman.mp3",
     img: RomaSVG,
     aboutArtist: [
       "Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.  https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf",
@@ -60,7 +46,7 @@ const artists = [
     title: ["Северные полмира", "smell of memory, sound of oblivion"],
     lat: 59.94572683679983,
     lng: 30.37266762914453,
-    src: Ivan,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Ivan.mp3",
     aboutArtist: [
       "Иван Курбаков — писатель, музыкант, кинорежиссер. Живет в Москве.\nУчился в Литературном институте (семинар поэзии И. Ростовцевой, 2006-2011), окончил факультет кинорежиссуры Московской школы нового кино (2013-2016). Стихи и эссе публиковались в журнале [Транслит], «Лиterraтура», «Здесь», на портале Syg.ma. Автор книг стихов «Путь поет» (издательство Арго-Риск, 2019), «Сады и молнии» (издательство «всегоничего», 2020). Соредактор альманаха-огня.\nСреди сольных и совместных музыкальных проектов: Ian Kubra (cd «current double, hermetic songs» 2018); mpala garoo (кассетные релизы, винил «ou du monde» 2012, «vaya adelante» cd 2019); kon tiki gemini (кассетные релизы); «Линга Шарира» и др. Записи выходили в США, Канаде, Бельгии, Бразилии, Голландии.",
       "Ivan Kurbakov is a Moscow-based writer, musician, and a film director.\nHe studied at the Literary Institute (I. Rostovtseva's Poetry Seminar, 2006-2011) in Moscow and at the director’s laboratory of the Moscow School of New Cinema (2013-2016). Ivan’s poems and essays were published in the magazine [Translit], «Лиterraтура», «Здесь», as well as at Syg.ma. He is an author of books of poems «Путь поет»  (Argo-Risk publishing house, 2019), «Сады и молнии» (vsegonichego publishing house, 2020) and is a co-editor of the almanac-fire (http://fajro.online/).\nIvan’s solo and collaborative music projects include: Ian Kubra (CD «current double, hermetic songs» 2018); mpala garoo (cassette releases, vinyl «ou du monde» 2012, «Vaya Adelante» CD 2019); kon tiki gemini (cassette releases); «Линга Шарира», etc. Recordings were released in the United States, Canada, Belgium, Brazil, and the Netherlands.",
@@ -76,7 +62,7 @@ const artists = [
     title: ["Égalité", "Égalité"],
     lat: 59.92811584324123,
     lng: 30.346385042008638,
-    src: Olga,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Olga.mp3",
     img: OlgaSVG,
     aboutArtist: [
       "Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 году в соавторстве с правозащитником Андреем Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 года вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина», результатом которой стали несколько выпусков газеты «Насреддин в России» и «Мобильная дискотека» (последний — в соавторстве с баскским художником Йоном Иригойеном). С 2015 года сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести Андрея Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).\nolgajitlina.info\n\nВлада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).\nЛейла Алиева — singer-songwriter, актриса, участница лаборатории “Вокруг да около”, выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом “Плоды побегов”; 2018, СПб, сингл “Муза”; 2020, Петербург. Звукорежиссура: “Спектакль в коробочке” 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.\nИгнат Хлобыстин (род. 1995, Санкт-Петербург) — музыкант-флейтист. Студент консерватории четвертого курса, лауреат международных конкурсов. Исполняет классическую, современную академическую и импровизационную музыку. Закончил школу импровизационной музыки при Галерее экспериментального звука (сейчас Музей звука). Участник Санкт-Петербургского оркестра импровизации и трио «Печальная свадьба».",
@@ -94,7 +80,7 @@ const artists = [
     title: ["Sideways were open", "Sideways were open"],
     lat: 46.210541163964876,
     lng: 6.1429300354337535,
-    src: Andrea,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Andrea.mp3",
     img: AndreaSVG,
     aboutArtist: [
       <>
@@ -159,7 +145,7 @@ const artists = [
     title: ["Перемен!", "Writing around"],
     lat: 46.225952859615674,
     lng: 6.141753032514459,
-    src: Carla,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Carla.mp3",
     img: CarlaSVG,
     aboutArtist: [
       <>
@@ -189,7 +175,7 @@ const artists = [
     title: ["капля падает на пол спальни", "blob drops on a bedroom floor"],
     lat: 46.2,
     lng: 6.12,
-    src: Martina,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Martina.mp3",
     img: MartinaSVG,
     aboutArtist: [
       <>
@@ -217,7 +203,7 @@ const artists = [
     title: ["Перемен!", "Перемен!"],
     lat: 46.19,
     lng: 6.11,
-    src: Francoise,
+    src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/PEREMEN.mp3",
     aboutArtist: [
       "Françoise Caraco, born in 1972, is a visual artist, living in Zurich, Switzerland. The basis of her artistic works is research into family histories, historical events and places steeped in history.\nThe voices of contemporary witnesses, as well as excerpts from compiled documentary material and sound, have formed her artistic work for several years now. Françoise Caraco has been dealing with her own family history for years. Her interest lies in the construction of memory in its reverberations between individual experiences and the collective past. Caraco interweaves facts and fiction in her audio and video works or performances, thereby bringing them to reflect current themes or circumstances.",
       "Françoise Caraco, born in 1972, is a visual artist, living in Zurich, Switzerland. The basis of her artistic works is research into family histories, historical events and places steeped in history.\nThe voices of contemporary witnesses, as well as excerpts from compiled documentary material and sound, have formed her artistic work for several years now. Françoise Caraco has been dealing with her own family history for years. Her interest lies in the construction of memory in its reverberations between individual experiences and the collective past. Caraco interweaves facts and fiction in her audio and video works or performances, thereby bringing them to reflect current themes or circumstances.",
