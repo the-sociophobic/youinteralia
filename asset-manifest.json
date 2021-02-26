@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.a5a4bf82.chunk.css",
+    "main.css": "/youinteralia/static/css/main.db1c86ad.chunk.css",
     "main.js": "/youinteralia/static/js/main.5052282d.chunk.js",
     "main.js.map": "/youinteralia/static/js/main.5052282d.chunk.js.map",
     "runtime-main.js": "/youinteralia/static/js/runtime-main.892f668d.js",
@@ -10,7 +10,7 @@
     "static/js/3.c1766306.chunk.js": "/youinteralia/static/js/3.c1766306.chunk.js",
     "static/js/3.c1766306.chunk.js.map": "/youinteralia/static/js/3.c1766306.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.a5a4bf82.chunk.css.map": "/youinteralia/static/css/main.a5a4bf82.chunk.css.map",
+    "static/css/main.db1c86ad.chunk.css.map": "/youinteralia/static/css/main.db1c86ad.chunk.css.map",
     "static/js/2.2267b106.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.2267b106.chunk.js.LICENSE.txt",
     "static/media/Andrea.09e0b815.png": "/youinteralia/static/media/Andrea.09e0b815.png",
     "static/media/Andrea.a156cf6e.svg": "/youinteralia/static/media/Andrea.a156cf6e.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.892f668d.js",
     "static/js/2.2267b106.chunk.js",
-    "static/css/main.a5a4bf82.chunk.css",
+    "static/css/main.db1c86ad.chunk.css",
     "static/js/main.5052282d.chunk.js"
   ]
 }
