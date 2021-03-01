@@ -8,10 +8,11 @@ import {
   getMessage,
   getArtist,
 } from 'components/Store'
-import Particapate from 'pages/Particapate'
+import Participate from 'pages/Participate'
 import Archive from 'pages/Archive'
 import Artist from 'pages/Artist'
 import About from 'pages/About'
+import Privacy from 'pages/Privacy'
 import Footer from 'components/Footer'
 
 
@@ -32,8 +33,11 @@ class BigMenu extends React.Component {
       case this.context.URL === "archive":
         page = <Archive />
         break
-      case this.context.URL === "particapate":
-        page = <Particapate />
+      case this.context.URL === "participate":
+        page = <Participate />
+        break
+      case this.context.URL === "privacy":
+        page = <Privacy />
         break
       default:
         break;

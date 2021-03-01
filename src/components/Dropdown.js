@@ -2,6 +2,10 @@ import React from 'react'
 
 import ResizeObserver from 'resize-observer-polyfill'
 
+import {
+  StoreContext,
+} from 'components/Store'
+
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -14,6 +18,8 @@ export default class Dropdown extends React.Component {
 
     this.contentRef = React.createRef()
   }
+
+  static contextType = StoreContext
 
   componentDidMount() {
     this.resizeObs = new ResizeObserver(this.updateContentHeight.bind(this))
@@ -38,7 +44,13 @@ export default class Dropdown extends React.Component {
       >
         {this.props.title}
         {this.props.city &&
-          <div className={`dropdown__title__city dropdown__title__city--${this.props.city}`}>
+          <div
+            className={`dropdown__title__city dropdown__title__city--${this.props.city}`}
+            onClick={() => {
+              this.context.setCity(this.context.currentCity === "spb" ? "gen" : "spb")
+              this.context.setURL()
+            }}
+          >
             {this.props.city}
           </div>}
       </div>

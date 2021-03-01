@@ -1,6 +1,7 @@
 import React from 'react'
-import _ from 'lodash'
+import _, { toInteger } from 'lodash'
 
+import clamp from 'utils/clamp'
 import flatten from 'utils/flatten'
 import getAttribsFromFlatten from 'utils/getAttribsFromFlatten'
 import addNewLines from 'utils/addNewLines'
@@ -9,8 +10,11 @@ import defaultMessages from './defaultMessages'
 import artists from './artists'
 
 
+const determineStorage = _this =>
+  _this?.state?.hasOwnProperty("setLocale") ? _this.state : _this.context
+
 const getMessage = (_this, id) =>
-  _this.context.messages[id] || ""
+  determineStorage(_this).messages[id] || ""
 
 
 const StoreContext = React.createContext("messages")
@@ -95,10 +99,30 @@ class StoreProvider extends React.Component {
       // getMessage: id => getMessage(this, id),
 
       URL: "",
-      setURL: (_URL = "") => this.setState({
-        URL: _URL,
-        menuOpened: false,
-      }),
+      setURL: (_URL = "", pushHistory = true) => {
+        const artist = _URL.includes("artist:") && getArtist(this, _URL.split(":")[1])
+
+        console.log(this.state)
+        this.setState({
+          URL: _URL.replace(':', '/'),
+          menuOpened: false,
+        })
+
+        if (pushHistory)
+          this.setState({
+            history: [...this.state.history.slice(0, this.state.currentHistoryIndex + 1), _URL.replace(':', '/')],
+            currentHistoryIndex: this.state.currentHistoryIndex + 1,
+          })
+
+        if (artist) {
+          this.setState({ currentCity: artist.city })
+          // this.props.mapRef?.current?.[`${artist.city}Ref`]?.
+        }
+
+        window.history.pushState(this.state.history, 'youinteralia', _URL.replace(':', '/'))
+      },
+      history: [window.location.pathname],
+      currentHistoryIndex: 0,
 
       zoom: 0,
       setZoom: zoom => this.setState({
@@ -120,11 +144,35 @@ class StoreProvider extends React.Component {
     }
   }
 
-  componentDidMount = () =>
+  componentDidMount = () => {
     this.artistsConstants.forEach(artist => {
       artist.audio.src = artist.src
       artist.audio.load()
     })
+
+    window.onpopstate = this.onPopState.bind(this)
+    window.onpushstate = this.onPushState.bind(this)    
+  }
+
+  onPopState = e => {
+    const newIndex = clamp(this.state.currentHistoryIndex - 1, 0, e.length)
+
+    this.state.setURL(this.state.history[newIndex], false)
+
+    this.setState({
+      currentHistoryIndex: newIndex
+    })
+  }
+
+  onPushState = e => {
+    const newIndex = clamp(this.state.currentHistoryIndex + 1, 0, e.length)
+
+    this.state.setURL(this.state.history[newIndex], false)
+
+    this.setState({
+      currentHistoryIndex: newIndex
+    })
+  }
 
   render = () =>
     <StoreContext.Provider value={this.state}>
@@ -143,12 +191,12 @@ class FormattedMessage extends React.Component {
 
 
 const getArtist = (_this, id, locale) => {
-  const artistAudio = _this.context.artistsConstants[id].audio
+  const artistAudio = determineStorage(_this).artistsConstants[toInteger(id)].audio
 
   return {
-    ...getAttribsFromFlatten(_this.context, id),
+    ...getAttribsFromFlatten(determineStorage(_this), id),
     ..._.mapValues(
-        _this.context.artistsConstants[id]
+        determineStorage(_this).artistsConstants[id]
         ,
         (value, key) =>
           Array.isArray(value) ?
@@ -156,7 +204,7 @@ const getArtist = (_this, id, locale) => {
               locale ?
                 locale === "rus" ? 0 : 1
                 :
-                _this.context.locale === "rus" ? 0 : 1
+                determineStorage(_this).locale === "rus" ? 0 : 1
               ]
             :
             value
@@ -166,7 +214,7 @@ const getArtist = (_this, id, locale) => {
 }
 
 const getArtists = (_this, city, locale) =>
-  _this.context.artistsConstants
+  determineStorage(_this).artistsConstants
     .filter(artist => !city || artist.city === city)
     .map(artist => getArtist(_this, artist.id, locale))
 

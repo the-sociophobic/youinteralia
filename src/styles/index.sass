@@ -285,6 +285,13 @@ $dropdown-transition: .15s
       background-color: $spb
     .Marker--gen &
       background-color: $gen
+  &--small
+    transform: translate(rem(-15), rem(-15))
+    .Marker__dot
+      width: rem(30)
+      height: rem(30)
+
+
 
 
 .Player
@@ -296,8 +303,10 @@ $dropdown-transition: .15s
   @extend .flex-row
   transition: opacity $menu-transition
   &--compact
-    width: rem(280)
     height: rem(50)
+    width: rem(350)
+    @include media-breakpoint-down(lg)
+      width: rem(280)
   &--hidden
     display: none !important
   &__controls
@@ -629,3 +638,15 @@ $dropdown-transition: .15s
     top: 0
     font-size: inherit
     line-height: inherit
+
+
+
+
+.Participate
+  @extend .d-flex
+  @extend .flex-column
+  @extend .flex-lg-row
+  &__desc
+    @extend .col
+  &__form
+    @extend .col

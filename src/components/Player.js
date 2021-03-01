@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Ticker from 'components/Ticker'
-
 import Link from 'components/Link'
 import { StoreContext } from 'components/Store'
 import secondsParse from 'utils/secondsParse'
