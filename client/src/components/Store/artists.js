@@ -158,7 +158,7 @@ const artists = [
       <>
         Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 г. в соавторстве с правозащитником А. Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 г. вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина». С 2015 г. сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести А. Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).
         <br />
-        <ExternalLink newTab to="olgajitlina.info">olgajitlina.info</ExternalLink>
+        <ExternalLink newTab to="https://olgajitlina.info">olgajitlina.info</ExternalLink>
         <br /><br />
         Голос:<br />
         Влада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).
@@ -172,7 +172,7 @@ const artists = [
       <>
         Olga Jitlina (b. 1982, Leningrad) is a graphic and performance artist, author of theater productions, a founder and an editor of the Utopian News Agency and of the Nasreddin in Russia newspaper. In 2011, together with human rights advocate Andrey Yakimov she co-authored a board game about labor migration called “Russia is the Country of Possibilities”. Since 2014, Jitlina, another artist—Anna Tereshkina, a group of labor migrants, and representatives of creative professions have been working on the project Hodja Nasreddin Joke Contest, resulting in the publication of several issues of the newspaper Nasreddin in Russia, and in the realization of the project Mobile Discotheque (the latter co-authored with the Basque artist Jon Irigoyen). Since 2015, Jitlina has been collaborating with the Lampedusa in Hamburg group of refugee activists and opera singer Yulia Averina, bringing them together in the theatrical performance Translation based on Andrey Platonov’s novella Dzhan. Winner of the Henkel Young Artists Prize (2012) and the Lea and Hans Grundig Prize (2015).
         <br />
-        <ExternalLink newTab to="olgajitlina.info">olgajitlina.info</ExternalLink>
+        <ExternalLink newTab to="https://olgajitlina.info">olgajitlina.info</ExternalLink>
         <br /><br />
         Voice:<br />
         Vlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the<br />
