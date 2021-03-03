@@ -1,6 +1,9 @@
 import React from 'react'
 
-import Link from 'components/Link'
+import {
+  Link,
+  withRouter,
+} from 'react-router-dom'
 import Footer from 'components/Footer'
 import Dropdown from 'components/Dropdown'
 import {
@@ -15,6 +18,10 @@ class Menu extends React.Component {
 
   static contextType = StoreContext
 
+  componentDidMount = () =>
+    this.props.history.listen((location, action) =>
+      action == "PUSH" && this.context.setMenu(false))
+
   toggleLang = () =>
     this.context.setLocale(
       this.context.locale === "eng" ? "rus" : "eng")
@@ -27,17 +34,17 @@ class Menu extends React.Component {
     this.context.setMenu(!this.context.menuOpened)
 
   canSwitchLang = () =>
-    this.context.menuOpened || this.context.URL !== ""
+    this.context.menuOpened || this.props.location.pathname !== "/"
 
 
   renderHeader = () =>
     <div className="Menu__header">
-      <div
+      <Link
+        to="/"
         className="Menu__header__logo"
-        onClick={() => this.context.setURL()}
       >
         youinteralia
-      </div>
+      </Link>
       <div
         className="Menu__header__burger"
         onClick={() => this.toggleMenu()}
@@ -108,4 +115,4 @@ class Menu extends React.Component {
 }
 
 
-export default Menu
+export default withRouter(Menu)

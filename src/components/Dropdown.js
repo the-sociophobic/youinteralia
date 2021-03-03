@@ -48,7 +48,6 @@ export default class Dropdown extends React.Component {
             className={`dropdown__title__city dropdown__title__city--${this.props.city}`}
             onClick={() => {
               this.context.setCity(this.context.currentCity === "spb" ? "gen" : "spb")
-              this.context.setURL()
             }}
           >
             {this.props.city}

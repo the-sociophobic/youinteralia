@@ -35,6 +35,14 @@
   border: none
   background-color: rgba(0, 0, 0, 0)
 
+a
+  color: $dark
+  text-decoration: none
+  &:hover
+    color: $dark
+    text-decoration: none
+
+
 @function rem($px)
   @return calc(#{$px} / 16 * 1rem)
 
@@ -177,7 +185,7 @@ $border: 1px solid $dark
         @extend .flex-column
         @extend .flex-grow-1
         @extend .align-items-start
-        .Link
+        a
           line-height: rem(28)
           &:not(&:last-of-type)
             margin-bottom: rem(10)

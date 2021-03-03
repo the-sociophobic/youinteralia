@@ -2,8 +2,8 @@ import React from 'react'
 
 import { StoreContext } from 'components/Store'
 import Player from 'components/Player'
-import isMobile from 'utils/isMobile'
-import Link from 'components/Link'
+// import isMobile from 'utils/isMobile'
+import { Link } from 'react-router-dom'
 
 
 class Marker extends React.Component {

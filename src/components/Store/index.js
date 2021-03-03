@@ -89,10 +89,6 @@ class StoreProvider extends React.Component {
       .reduce((a, b) => ({...a, ...b}))
     //ADD ARTISTS STATE END
 
-    const URL = window.location.pathname
-    // const history = window.localStorage.getItem('history') || [window.location.pathname]
-    // const currentHistoryIndex = window.localStorage.getItem('currentHistoryIndex') || 0
-
     this.state = {
       locale: locale,
       messages: this.parsedMessages[locale],
@@ -100,37 +96,6 @@ class StoreProvider extends React.Component {
         locale: _locale,
         messages: this.parsedMessages[_locale],
       }),
-      // getMessage: id => getMessage(this, id),
-
-      URL: URL,
-      setURL: (_URL = "", pushHistory = true) => {
-        if (_URL === this.state.URL)
-          return
-
-        const artist = _URL.includes("/artist") && getArtist(this, _URL.split("t/")[1])
-
-        console.log(_URL)
-        this.setState({
-          URL: _URL,
-          menuOpened: false,
-        })
-
-        // if (pushHistory)
-        //   this.setState({
-        //     history: [...this.state.history.slice(0, this.state.currentHistoryIndex + 1), _URL.replace(':', '/')],
-        //     currentHistoryIndex: this.state.currentHistoryIndex + 1,
-        //   })
-
-        if (artist) {
-          this.setState({ currentCity: artist.city })
-          // this.props.mapRef?.current?.[`${artist.city}Ref`]?.
-        }
-
-        if (pushHistory)
-          window.history.pushState(this.state.history, 'youinteralia', _URL)
-      },
-      // history: history,
-      // currentHistoryIndex: currentHistoryIndex,
 
       zoom: 0,
       setZoom: zoom => this.setState({
@@ -165,24 +130,14 @@ class StoreProvider extends React.Component {
   }
 
   onPopState = e => {
-    // const newIndex = clamp(this.state.currentHistoryIndex - 1, 0, e.length)
-    console.log(e)
-    
-    this.state.setURL(e.state && e.state.length > 1 ? e.state[e.state.length - 1] : "", false)
-
-    // this.setState({
-    //   currentHistoryIndex: newIndex
-    // })
+    // console.log(e)
   }
 
   onPushState = e => {
-    // const newIndex = clamp(this.state.currentHistoryIndex + 1, 0, e.length)
-
-    this.state.setURL(e.state[e.state.length - 1], false)
-
-    // this.setState({
-    //   currentHistoryIndex: newIndex
-    // })
+    // console.log(e)
+    this.setState({
+      menuOpened: false
+    })
   }
 
   render = () =>

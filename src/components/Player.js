@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Ticker from 'components/Ticker'
-import Link from 'components/Link'
+import { Link } from 'react-router-dom'
 import { StoreContext } from 'components/Store'
 import secondsParse from 'utils/secondsParse'
 
@@ -43,7 +43,7 @@ class Player extends React.Component {
         />
 
         {!this.props.hideArrow &&
-          <Link to={`artist:${artist.id}`}>
+          <Link to={`artist/${artist.id}`}>
             <div className="Player__arrow" />
           </Link>
         }

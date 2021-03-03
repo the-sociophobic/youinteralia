@@ -1,11 +1,12 @@
 import React from 'react'
 
-import Link from 'components/Link'
-import ExternalLink from 'components/ExternalLink'
+import {
+  Link,
+  withRouter,
+} from 'react-router-dom'
+
 import {
   StoreContext,
-  FormattedMessage,
-  getMessage,
   getArtist,
 } from 'components/Store'
 import Participate from 'pages/Participate'
@@ -24,19 +25,19 @@ class BigMenu extends React.Component {
     let page
 
     switch (true) {
-      case this.context.URL.includes('artist'):
-        page = <Artist artist={getArtist(this, this.context.URL.split('/')[1])} />
+      case this.props.location.pathname.includes('artist'):
+        page = <Artist artist={getArtist(this, this.props.location.pathname.split("/")[2])} />
         break
-      case this.context.URL === "/about":
+      case this.props.location.pathname === "/about":
         page = <About />
         break
-      case this.context.URL === "/archive":
+      case this.props.location.pathname === "/archive":
         page = <Archive />
         break
-      case this.context.URL === "/participate":
+      case this.props.location.pathname === "/participate":
         page = <Participate />
         break
-      case this.context.URL === "/privacy":
+      case this.props.location.pathname === "/privacy":
         page = <Privacy />
         break
       default:
@@ -47,9 +48,9 @@ class BigMenu extends React.Component {
       <div className={`BigMenu ${page && "BigMenu--opened"}`}>
         <div className="BigMenu__content">
           <div className="BigMenu__content__header">
-            <div
+            <Link
+              to="/"
               className="BigMenu__content__header__close"
-              onClick={() => this.context.setURL("")}
             />
           </div>
 
@@ -65,4 +66,4 @@ class BigMenu extends React.Component {
 }
 
 
-export default BigMenu
+export default withRouter(BigMenu)
