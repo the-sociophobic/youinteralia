@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.6c24d706.chunk.css",
-    "main.js": "/youinteralia/static/js/main.37f73506.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.37f73506.chunk.js.map",
-    "runtime-main.js": "/youinteralia/static/js/runtime-main.36dd1af8.js",
-    "runtime-main.js.map": "/youinteralia/static/js/runtime-main.36dd1af8.js.map",
-    "static/js/2.b19872f7.chunk.js": "/youinteralia/static/js/2.b19872f7.chunk.js",
-    "static/js/2.b19872f7.chunk.js.map": "/youinteralia/static/js/2.b19872f7.chunk.js.map",
-    "static/js/3.ea7adcfb.chunk.js": "/youinteralia/static/js/3.ea7adcfb.chunk.js",
-    "static/js/3.ea7adcfb.chunk.js.map": "/youinteralia/static/js/3.ea7adcfb.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.7212da96.chunk.css",
+    "main.js": "/youinteralia/static/js/main.47829997.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.47829997.chunk.js.map",
+    "runtime-main.js": "/youinteralia/static/js/runtime-main.9f31ef7b.js",
+    "runtime-main.js.map": "/youinteralia/static/js/runtime-main.9f31ef7b.js.map",
+    "static/js/2.04e6de4b.chunk.js": "/youinteralia/static/js/2.04e6de4b.chunk.js",
+    "static/js/2.04e6de4b.chunk.js.map": "/youinteralia/static/js/2.04e6de4b.chunk.js.map",
+    "static/js/3.0b5b8b55.chunk.js": "/youinteralia/static/js/3.0b5b8b55.chunk.js",
+    "static/js/3.0b5b8b55.chunk.js.map": "/youinteralia/static/js/3.0b5b8b55.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.6c24d706.chunk.css.map": "/youinteralia/static/css/main.6c24d706.chunk.css.map",
-    "static/js/2.b19872f7.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.b19872f7.chunk.js.LICENSE.txt",
+    "static/css/main.7212da96.chunk.css.map": "/youinteralia/static/css/main.7212da96.chunk.css.map",
+    "static/js/2.04e6de4b.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.04e6de4b.chunk.js.LICENSE.txt",
     "static/media/Andrea.a156cf6e.svg": "/youinteralia/static/media/Andrea.a156cf6e.svg",
     "static/media/Andrea.ccc03b2e.jpg": "/youinteralia/static/media/Andrea.ccc03b2e.jpg",
     "static/media/Carla.3e298ae7.svg": "/youinteralia/static/media/Carla.3e298ae7.svg",
@@ -27,9 +27,9 @@
     "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.36dd1af8.js",
-    "static/js/2.b19872f7.chunk.js",
-    "static/css/main.6c24d706.chunk.css",
-    "static/js/main.37f73506.chunk.js"
+    "static/js/runtime-main.9f31ef7b.js",
+    "static/js/2.04e6de4b.chunk.js",
+    "static/css/main.7212da96.chunk.css",
+    "static/js/main.47829997.chunk.js"
   ]
 }
