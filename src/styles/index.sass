@@ -529,6 +529,9 @@ $dropdown-transition: .15s
 .lev-img
   @extend .abs-cover
   overflow: hidden
+  transition: opacity $menu-transition
+  &--hidden
+    opacity: 0
   &__img
     position: absolute
     top: 50%

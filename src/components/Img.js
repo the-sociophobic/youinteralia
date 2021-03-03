@@ -25,7 +25,12 @@ class Img extends React.Component {
   render = () =>
     <div
       ref={this.containerRef}
-      className={`lev-img ${this.props.className}`}>
+      className={`
+        lev-img
+        ${this.props.className}
+        ${typeof this.state.portrait === "undefined" && "lev-img--hidden"}
+      `}
+    >
       <img
         ref={this.imgRef}
         alt=""

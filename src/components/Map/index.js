@@ -19,7 +19,7 @@ const spb = {
   // zoom: isMobile() ? 13.1 : 14.25,
   zoom: 12,
   maxZoom: 15 + 1,
-  minZoom: 15 - 4,
+  minZoom: 15 - 3,
   restriction: {
     latLngBounds: {
       north: 59.95 + .2,

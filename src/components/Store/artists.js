@@ -1,14 +1,16 @@
 import RomanSVG from 'img/artists/Roman.svg'
-import RomanPNG from 'img/artists/Roman.png'
+import RomanPNG from 'img/artists/Roman.jpg'
 import OlgaSVG from 'img/artists/Olga.svg'
-import OlgaPNG from 'img/artists/Olga.png'
+import OlgaPNG from 'img/artists/Olga.jpg'
 
 import MartinaSVG from 'img/artists/Martina.svg'
-import MartinaPNG from 'img/artists/Martina.png'
+import MartinaPNG from 'img/artists/Martina.jpg'
 import CarlaSVG from 'img/artists/Carla.svg'
-import CarlaPNG from 'img/artists/Carla.png'
+import CarlaPNG from 'img/artists/Carla.jpg'
 import AndreaSVG from 'img/artists/Andrea.svg'
-import AndreaPNG from 'img/artists/Andrea.png'
+import AndreaPNG from 'img/artists/Andrea.jpg'
+import FrancoiseSVG from 'img/artists/Francoise.svg'
+import FrancoisePNG from 'img/artists/Francoise.jpg'
 
 
 const artists = [
@@ -227,6 +229,8 @@ const artists = [
     lat: 46.19,
     lng: 6.11,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Francoise.mp3",
+    svg: FrancoiseSVG,
+    png: FrancoisePNG,
     aboutArtist: [
       "Франсуаз Карако (р. 1972) — художница из Цюриха, Швейцария. Основой ее художественных работ являются исследования семейных историй, событий и мест, пропитанных духом истории.\nСвидетельства очевидцев, а также отрывки из собранного документального материала, звукового в том числе, уже несколько лет формируют ее художественную практику. Помимо прочего, Франсуаз уже долгое время занимается историей своей семьи. Ее интерес заключается в вопросе конструирования памяти на пересечениях индивидуального опыта и коллективного прошлого. В своих аудио и видео работах или перформансах Карако переплетает факты и вымысел, и стремится затронуть темы и обстоятельства, актуальные для сегодняшнего дня.\n\nwww.francoise.caraco.ch",
       "Françoise Caraco, born in 1972, is a visual artist, living in Zurich, Switzerland. The basis of her artistic works is research into family histories, historical events and places steeped in history.\nThe voices of contemporary witnesses, as well as excerpts from compiled documentary material and sound, have formed her artistic work for several years now. Françoise Caraco has been dealing with her own family history for years. Her interest lies in the construction of memory in its reverberations between individual experiences and the collective past. Caraco interweaves facts and fiction in her audio and video works or performances, thereby bringing them to reflect current themes or circumstances.",

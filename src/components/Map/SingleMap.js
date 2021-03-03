@@ -61,13 +61,14 @@ class Map extends Component {
                 lat: point[0],
                 lng: point[1],
                 disableLink: true,
-                focus: () => this.setState({
-                  zoom: this.props.city === "spb" ? 16 : 18,
-                  center: {
-                    lat: artist.lat,
-                    lng: artist.lng,
-                  }
-                })
+                focus: () =>
+                  this.setState({
+                    zoom: this.props.city === "spb" ? 16 : 18,
+                    center: {
+                      lat: artist.lat,
+                      lng: artist.lng,
+                    }
+                  })
               })
             )
           ]
@@ -75,13 +76,14 @@ class Map extends Component {
           this.renderArtist({
             ...artist,
             key: artist.id,
-            focus: () => this.setState({
-              zoom: this.props.city === "spb" ? 16 : 18,
-              center: {
-                lat: artist.lat,
-                lng: artist.lng,
-              }
-            })
+            focus: () =>
+              this.setState({
+                zoom: this.props.city === "spb" ? 16 : 18,
+                center: {
+                  lat: artist.lat,
+                  lng: artist.lng,
+                }
+              })
           })
       ).reduce((a, b) =>
         Array.isArray(a) ?
