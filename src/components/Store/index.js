@@ -109,15 +109,27 @@ class StoreProvider extends React.Component {
 
       ...artistsState,
       artistsConstants: this.artistsConstants, //StoreProvider doesn't provide this. (((
+
+      mapLoaded: false,
+      mapsLoaded: 0,
+      setMapLoaded: () => {
+        if (!this.state.mapLoaded) {
+          this.setState({
+            mapsLoaded: this.state.mapsLoaded + 1,
+          })
+          if (this.state.mapsLoaded === 4) {
+            console.log("map loaded")
+            this.startLoadingAudio()
+            this.setState({
+              mapLoaded: true
+            })    
+          }
+        }
+      }
     }
   }
 
   componentDidMount = () => {
-    this.artistsConstants.forEach(artist => {
-      artist.audio.src = artist.src
-      artist.audio.load()
-    })
-
     window.onpopstate = this.onPopState.bind(this)
     window.onpushstate = this.onPushState.bind(this)
   }
@@ -135,6 +147,12 @@ class StoreProvider extends React.Component {
       menuOpened: false
     })
   }
+
+  startLoadingAudio = () =>
+    this.artistsConstants.forEach(artist => {
+      artist.audio.src = artist.src
+      artist.audio.load()
+    })
 
   render = () =>
     <StoreContext.Provider value={this.state}>

@@ -44,15 +44,6 @@ class Player extends React.Component {
           </div>
         }
 
-        <div className="Player__text">
-          <div className="Player__text__title">
-            {artist.title}
-          </div>
-          <div className="Player__text__artist">
-            {artist.name}
-          </div>
-        </div>
-
         <Ticker
           className="Player__ticker"
           text={`${artist.title} — ${artist.name}`}

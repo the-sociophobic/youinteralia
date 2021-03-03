@@ -50,9 +50,11 @@ class About extends React.Component {
               <FormattedMessage id="About.second.lev" />
             </div>
             <div className="About__second-block__columns__item__row">
-              <ExternalLink to="https://prohelvetia.ru/en/" newTab >
-                <div className="About__logo" />
-              </ExternalLink>
+              <ExternalLink
+                className="About__logo"
+                to="https://prohelvetia.ru/en/"
+                newTab
+              />
             </div>
           </div>
         </div>
@@ -62,9 +64,11 @@ class About extends React.Component {
         <div className="About__third-block__title">
           <FormattedMessage id="About.second.sponsor" />
         </div>
-        <ExternalLink to="https://prohelvetia.ru/en/" newTab >
-          <div className="About__logo" />
-        </ExternalLink>
+        <ExternalLink
+          className="About__logo"
+          to="https://prohelvetia.ru/en/"
+          newTab
+        />
       </div>
 
     </div>

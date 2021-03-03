@@ -2,6 +2,8 @@ import React from 'react'
 
 import ResizeObserver from 'resize-observer-polyfill'
 
+import requestAnimationFramePolyfill from 'utils/requestAnimationFramePolyfill'
+
 
 class Ticker extends React.Component {
   constructor(props) {
