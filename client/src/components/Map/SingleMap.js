@@ -50,7 +50,7 @@ class Map extends Component {
     />
 
   renderArtists = () =>
-    getArtists(this, this.props.city, this.props.locale)
+    getArtists(this, this.props.city, this.props.city === "spb" ? "rus" : "eng")
     .map(artist =>
       artist.multiplePoints ? 
         [
