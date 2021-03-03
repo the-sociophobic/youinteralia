@@ -28,6 +28,21 @@
   background-position: center
   background-size: cover
 
+.d-flex-polyfill
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+.flex-grow-1-polyfill
+  -webkit-box-flex: 1
+  -moz-box-flex: 1
+  // height: 20%
+  -webkit-flex: 1
+  -ms-flex: 1
+  flex: 1
+
 .button
   padding: 0
   cursor: pointer
@@ -137,10 +152,10 @@ $border: 1px solid $dark
     @media screen and ( max-width: 350px )
       width: calc(100vw - 16 / 16 * 1rem)
       left: rem(8)
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-row
     &__logo
-      @extend .flex-grow-1
+      @extend .flex-grow-1-polyfill
       padding-left: rem(15)
     &__burger
       width: rem(50)
@@ -154,7 +169,7 @@ $border: 1px solid $dark
       position: relative
       &__container
         position: absolute
-        @extend .d-flex
+        @extend .d-flex-polyfill
         @extend .flex-row
         height: 100%
         right: 0
@@ -177,7 +192,7 @@ $border: 1px solid $dark
     min-height: 100vh
     width: rem(432)
     background-color: $light
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     overflow-y: scroll
     @include media-breakpoint-down(lg)
@@ -191,7 +206,7 @@ $border: 1px solid $dark
     &__container
       width: 100vw
       height: 100vh
-      @extend .d-flex
+      @extend .d-flex-polyfill
       @extend .flex-column
       &__links
         padding-top: rem(120)
@@ -201,9 +216,9 @@ $border: 1px solid $dark
           padding-left: rem(36)
         @media screen and ( max-width: 350px )
           padding-left: rem(24)
-        @extend .d-flex
+        @extend .d-flex-polyfill
         @extend .flex-column
-        @extend .flex-grow-1
+        @extend .flex-grow-1-polyfill
         @extend .align-items-start
         a
           line-height: rem(28)
@@ -241,7 +256,7 @@ $border: 1px solid $dark
   min-height: rem(112)
   padding-left: rem(49)
   margin-top: rem(49)
-  @extend .d-flex
+  @extend .d-flex-polyfill
   @extend .flex-column
   @extend .justify-content-center
   @include media-breakpoint-down(lg)
@@ -259,7 +274,7 @@ $border: 1px solid $dark
 
 $dropdown-transition: .15s
 .dropdown
-  @extend .d-flex
+  @extend .d-flex-polyfill
   @extend .flex-column
   @extend .align-items-start
   &__title
@@ -268,9 +283,9 @@ $dropdown-transition: .15s
     display: inline-block
     line-height: rem(28)
     margin-bottom: rem(10)
-    @extend .d-flex
+    @extend .d-flex-polyfill
     &__text
-      @extend .flex-grow-1
+      @extend .flex-grow-1-polyfill
       @extend .noselect
       text-transform: lowercase
       &::after
@@ -293,7 +308,7 @@ $dropdown-transition: .15s
       padding-top: rem(10)
       padding-bottom: rem(20)
       width: 100%
-      @extend .d-flex
+      @extend .d-flex-polyfill
       @extend .flex-column
 
 
@@ -344,7 +359,7 @@ $dropdown-transition: .15s
     @include media-breakpoint-down(lg)
       width: rem(210) !important
   &__controls
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     @extend .align-items-center
     .Player--compact &
@@ -380,7 +395,7 @@ $dropdown-transition: .15s
           height: rem(17)
           background-color: $dark
   &__text
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     @extend .align-items-start
     .Player--compact &
@@ -399,7 +414,7 @@ $dropdown-transition: .15s
   &__ticker
     &:not(.Player--compact &)
       @extend .d-none
-    @extend .flex-grow-1
+    @extend .flex-grow-1-polyfill
     height: rem(50)
     @extend .default-font
     line-height: rem(50)
@@ -447,7 +462,7 @@ $dropdown-transition: .15s
       height: 100%
     @include media-breakpoint-down(lg)
       min-height: 100%
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     &__header
       width: 100%
@@ -467,7 +482,7 @@ $dropdown-transition: .15s
           background-repeat: no-repeat
           border: $border
     &__container
-      @extend .flex-grow-1
+      @extend .flex-grow-1-polyfill
       width: 100%
       @include media-breakpoint-up(xl)
         overflow: hidden
@@ -489,7 +504,7 @@ $dropdown-transition: .15s
   &__content
     width: 100%
     height: 100%
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-xl-row
     @extend .flex-column-reverse
     border: $border
@@ -504,14 +519,14 @@ $dropdown-transition: .15s
         max-width: rem(601)
         border-right: $border
         height: 100%
-      @extend .d-flex
+      @extend .d-flex-polyfill
       @extend .flex-xl-column
       @extend .flex-column-reverse
       &__dropdowns
         @extend .flex-lg-grow-1
         position: relative
         &__container
-          @extend .d-flex
+          @extend .d-flex-polyfill
           @extend .flex-column
           position: relative
           @include media-breakpoint-up(xl)
@@ -532,10 +547,10 @@ $dropdown-transition: .15s
               line-height: rem(50)
               margin-bottom: 0
               background-color: $big-menu-background
-              @extend .d-flex
+              @extend .d-flex-polyfill
               @extend .flex-row
               &__text
-                @extend .flex-grow-1
+                @extend .flex-grow-1-polyfill
                 @extend .noselect
                 padding-left: rem(13)
                 position: relative
@@ -568,7 +583,7 @@ $dropdown-transition: .15s
           border-top: $border
           border-bottom: $border
     &__map
-      @extend .flex-grow-1
+      @extend .flex-grow-1-polyfill
       @include media-breakpoint-down(lg)
         // height: rem(334)
         padding-top: 100%
@@ -602,7 +617,7 @@ $dropdown-transition: .15s
 
 
 .About
-  @extend .d-flex
+  @extend .d-flex-polyfill
   @extend .flex-xl-row
   @extend .flex-column
   @extend .justify-content-between
@@ -621,7 +636,7 @@ $dropdown-transition: .15s
     background-color: $light
   &__first-block
     padding: rem(11) rem(14) rem(19)
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     @extend .justify-content-between
     @include media-breakpoint-down(lg)
@@ -629,7 +644,7 @@ $dropdown-transition: .15s
       &__title
         margin-bottom: rem(150)
   &__second-block
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     @include media-breakpoint-down(lg)
       padding: rem(18) rem(14) rem(21)
@@ -646,12 +661,12 @@ $dropdown-transition: .15s
         margin-bottom: rem(150)
     &__columns
       width: 100%
-      @extend .flex-grow-1
-      @extend .d-flex
+      @extend .flex-grow-1-polyfill
+      @extend .d-flex-polyfill
       @extend .flex-row
       &__item
-        @extend .flex-grow-1
-        @extend .d-flex
+        @extend .flex-grow-1-polyfill
+        @extend .d-flex-polyfill
         @extend .flex-column
         position: relative
         &__row
@@ -701,7 +716,7 @@ $dropdown-transition: .15s
   overflow: hidden
   position: relative
   &__content
-    @extend .d-flex
+    @extend .d-flex-polyfill
     white-space: nowrap
     position: absolute
     top: 0
@@ -712,7 +727,7 @@ $dropdown-transition: .15s
 
 
 .Participate
-  @extend .d-flex
+  @extend .d-flex-polyfill
   @extend .flex-column
   @extend .flex-lg-row
   &__desc
