@@ -97,11 +97,6 @@ class StoreProvider extends React.Component {
         messages: this.parsedMessages[_locale],
       }),
 
-      zoom: 0,
-      setZoom: zoom => this.setState({
-        zoom: zoom
-      }),
-
       menuOpened: false,
       setMenu: _menuOpened => this.setState({
         menuOpened: _menuOpened
@@ -165,7 +160,7 @@ const getArtist = (_this, id, locale) => {
         determineStorage(_this).artistsConstants[id]
         ,
         (value, key) =>
-          Array.isArray(value) ?
+          Array.isArray(value) && key !== "multiplePoints" ?
             value[
               locale ?
                 locale === "rus" ? 0 : 1

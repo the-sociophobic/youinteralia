@@ -6,7 +6,7 @@ import {
   StoreContext,
   getMessage,
 } from 'components/Store'
-import { Link } from 'react-router-dom'
+import Link from 'components/CustomLink'
 
 
 const inputs = [

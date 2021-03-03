@@ -1,9 +1,8 @@
 import React from 'react'
 
-import {
-  Link,
-  withRouter,
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+
+import Link from 'components/CustomLink'
 import Footer from 'components/Footer'
 import Dropdown from 'components/Dropdown'
 import {
