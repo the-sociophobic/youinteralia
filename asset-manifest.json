@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/youinteralia/static/css/main.6fbc7ba7.chunk.css",
-    "main.js": "/youinteralia/static/js/main.43b2da94.chunk.js",
-    "main.js.map": "/youinteralia/static/js/main.43b2da94.chunk.js.map",
+    "main.css": "/youinteralia/static/css/main.fa96d4c6.chunk.css",
+    "main.js": "/youinteralia/static/js/main.188fb3f5.chunk.js",
+    "main.js.map": "/youinteralia/static/js/main.188fb3f5.chunk.js.map",
     "runtime-main.js": "/youinteralia/static/js/runtime-main.36dd1af8.js",
     "runtime-main.js.map": "/youinteralia/static/js/runtime-main.36dd1af8.js.map",
     "static/js/2.82ee6989.chunk.js": "/youinteralia/static/js/2.82ee6989.chunk.js",
@@ -10,24 +10,26 @@
     "static/js/3.ea7adcfb.chunk.js": "/youinteralia/static/js/3.ea7adcfb.chunk.js",
     "static/js/3.ea7adcfb.chunk.js.map": "/youinteralia/static/js/3.ea7adcfb.chunk.js.map",
     "index.html": "/youinteralia/index.html",
-    "static/css/main.6fbc7ba7.chunk.css.map": "/youinteralia/static/css/main.6fbc7ba7.chunk.css.map",
+    "static/css/main.fa96d4c6.chunk.css.map": "/youinteralia/static/css/main.fa96d4c6.chunk.css.map",
     "static/js/2.82ee6989.chunk.js.LICENSE.txt": "/youinteralia/static/js/2.82ee6989.chunk.js.LICENSE.txt",
-    "static/media/Andrea.09e0b815.png": "/youinteralia/static/media/Andrea.09e0b815.png",
     "static/media/Andrea.a156cf6e.svg": "/youinteralia/static/media/Andrea.a156cf6e.svg",
-    "static/media/Carla.2a9b782a.png": "/youinteralia/static/media/Carla.2a9b782a.png",
+    "static/media/Andrea.ccc03b2e.jpg": "/youinteralia/static/media/Andrea.ccc03b2e.jpg",
     "static/media/Carla.3e298ae7.svg": "/youinteralia/static/media/Carla.3e298ae7.svg",
+    "static/media/Carla.538531a7.jpg": "/youinteralia/static/media/Carla.538531a7.jpg",
+    "static/media/Francoise.158887a8.jpg": "/youinteralia/static/media/Francoise.158887a8.jpg",
+    "static/media/Francoise.ebf97088.svg": "/youinteralia/static/media/Francoise.ebf97088.svg",
     "static/media/Martina.2547af9f.svg": "/youinteralia/static/media/Martina.2547af9f.svg",
-    "static/media/Martina.738a6809.png": "/youinteralia/static/media/Martina.738a6809.png",
+    "static/media/Martina.d7060202.jpg": "/youinteralia/static/media/Martina.d7060202.jpg",
     "static/media/Olga.4faab2ab.svg": "/youinteralia/static/media/Olga.4faab2ab.svg",
-    "static/media/Olga.9767e03d.png": "/youinteralia/static/media/Olga.9767e03d.png",
+    "static/media/Olga.f68269ed.jpg": "/youinteralia/static/media/Olga.f68269ed.jpg",
+    "static/media/Roman.158a24a6.jpg": "/youinteralia/static/media/Roman.158a24a6.jpg",
     "static/media/Roman.69bafb56.svg": "/youinteralia/static/media/Roman.69bafb56.svg",
-    "static/media/Roman.9bd0e59e.png": "/youinteralia/static/media/Roman.9bd0e59e.png",
     "static/media/index.sass": "/youinteralia/static/media/play.1a3d27cb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.36dd1af8.js",
     "static/js/2.82ee6989.chunk.js",
-    "static/css/main.6fbc7ba7.chunk.css",
-    "static/js/main.43b2da94.chunk.js"
+    "static/css/main.fa96d4c6.chunk.css",
+    "static/js/main.188fb3f5.chunk.js"
   ]
 }
