@@ -99,7 +99,7 @@ class Menu extends React.Component {
               .map(artist =>
                 <Link
                   key={artist.id}
-                  to={`artist/${artist.id}`}
+                  to={`/artist/${artist.id}`}
                   onClick={() => {
                     this.context.setCity(artist.city)
                     //TODO focus

@@ -57,7 +57,7 @@ class Player extends React.Component {
 
         {!this.props.hideArrow &&
           <Link
-            to={`artist/${artist.id}`}
+            to={`/artist/${artist.id}`}
             onClick={() => this.props.focus?.()}
             disabled={secondaryMarker}
           >
