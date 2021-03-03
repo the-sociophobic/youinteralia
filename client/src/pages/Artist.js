@@ -66,25 +66,27 @@ class Artist extends React.Component {
               className="Artist__content__text"
             >
               <div className="Artist__content__text__dropdowns">
-                <Dropdown
-                  block
-                  title={getMessage(this, "Artist.routeInfo")}
-                  opened={this.state.routeInfoOpened}
-                  toggleOpened={() => this.toggleRouteInfo()}
-                  maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
-                >
-                  {artist.aboutRoute}
-                </Dropdown>
-                <Dropdown
-                  block
-                  citySwitcher
-                  title={artist.name}
-                  opened={this.state.artistInfoOpened}
-                  toggleOpened={() => this.toggleArtistInfo()}
-                  maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
-                >
-                  {artist.aboutArtist}
-                </Dropdown>
+                <div className="Artist__content__text__dropdowns__container">
+                  <Dropdown
+                    block
+                    title={getMessage(this, "Artist.routeInfo")}
+                    opened={this.state.routeInfoOpened}
+                    toggleOpened={() => this.toggleRouteInfo()}
+                    maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
+                  >
+                    {artist.aboutRoute}
+                  </Dropdown>
+                  <Dropdown
+                    block
+                    citySwitcher
+                    title={artist.name}
+                    opened={this.state.artistInfoOpened}
+                    toggleOpened={() => this.toggleArtistInfo()}
+                    maxHeight={isMobile() ? undefined : this.state.textHeight - 152}
+                  >
+                    {artist.aboutArtist}
+                  </Dropdown>
+                </div>
               </div>
               <Player
                 compact

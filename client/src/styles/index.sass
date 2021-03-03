@@ -493,9 +493,10 @@ $dropdown-transition: .15s
     @extend .flex-xl-row
     @extend .flex-column-reverse
     border: $border
+    margin-left: rem(1)
     @include media-breakpoint-down(lg)
       border-bottom: 0
-      margin-left: -1px
+      margin-left: rem(-1)
       width: calc(100% + 1px)
     &__text
       @include media-breakpoint-up(xl)
@@ -508,42 +509,57 @@ $dropdown-transition: .15s
       @extend .flex-column-reverse
       &__dropdowns
         @extend .flex-lg-grow-1
-        .dropdown
+        position: relative
+        &__container
+          @extend .d-flex
+          @extend .flex-column
           position: relative
-          z-index: 9
-          border-bottom: $border
-          &__title
+          @include media-breakpoint-up(xl)
+            position: absolute
+            top: 0
+            left: 0
             width: 100%
+            height: 100%
+          .dropdown
+            position: relative
+            z-index: 9
             border-bottom: $border
-            line-height: rem(50)
-            margin-bottom: 0
-            background-color: $big-menu-background
-            @extend .d-flex
-            @extend .flex-row
-            &__text
-              @extend .flex-grow-1
-              @extend .noselect
-              padding-left: rem(13)
-              position: relative
-              text-transform: lowercase
-              &::after
-                right: rem(14)
-            &__city
-              width: rem(77)
-              text-align: center
-              border-left: $border
-              &--spb
-                background-color: $spb
-              &--gen
-                background-color: $gen
-          &__content
-            margin-top: -1px
-            padding-left: rem(15)
-            padding-right: rem(15)
-            overflow-y: scroll
-            line-height: 1.25
-            &__container
-              hyphens: auto
+            &--opened
+              @extend .flex-lg-grow-1
+            &__title
+              width: 100%
+              border-bottom: $border
+              line-height: rem(50)
+              margin-bottom: 0
+              background-color: $big-menu-background
+              @extend .d-flex
+              @extend .flex-row
+              &__text
+                @extend .flex-grow-1
+                @extend .noselect
+                padding-left: rem(13)
+                position: relative
+                text-transform: lowercase
+                &::after
+                  right: rem(14)
+              &__city
+                width: rem(77)
+                text-align: center
+                border-left: $border
+                &--spb
+                  background-color: $spb
+                &--gen
+                  background-color: $gen
+            &__content
+              margin-top: -1px
+              padding-left: rem(15)
+              padding-right: rem(15)
+              overflow-y: scroll
+              line-height: 1.25
+              &__container
+                hyphens: auto
+                .Link
+                  text-decoration: underline !important
             
 
       .Player
