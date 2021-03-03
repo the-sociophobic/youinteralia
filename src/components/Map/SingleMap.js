@@ -33,7 +33,7 @@ class Map extends Component {
       center={this.state.center}
       zoom={this.state.zoom}
       city={this.props.city}
-      disableLink={props.disableLink}
+      secondaryMarker={props.secondaryMarker}
       focus={props.focus}
     />
 
@@ -60,7 +60,7 @@ class Map extends Component {
                 key: `${artist.id}.${index}`,
                 lat: point[0],
                 lng: point[1],
-                disableLink: true,
+                secondaryMarker: true,
                 focus: () =>
                   this.setState({
                     zoom: this.props.city === "spb" ? 16 : 18,

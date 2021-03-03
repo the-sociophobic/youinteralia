@@ -36,7 +36,7 @@ class Ticker extends React.Component {
     this.contentResizeObs = new ResizeObserver(this.updateContentWidth.bind(this))
       .observe(this.contentRef.current)
 
-    this.animationFrameId = window.requestAnimationFrame(this.animate)
+    this.animationFrameId = requestAnimationFrame(this.animate)
   }
 
   componentWillUnmount = () =>

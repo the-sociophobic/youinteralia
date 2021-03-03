@@ -5,7 +5,6 @@ import ResizeObserver from 'resize-observer-polyfill'
 import Img from 'components/Img'
 import Player from 'components/Player'
 import Dropdown from 'components/Dropdown'
-// import isMobile from 'utils/isMobile'
 import {
   StoreContext,
   getMessage
@@ -77,8 +76,8 @@ class Artist extends React.Component {
                 </Dropdown>
                 <Dropdown
                   block
+                  citySwitcher
                   title={artist.name}
-                  city={artist.city}
                   opened={this.state.artistInfoOpened}
                   toggleOpened={() => this.toggleArtistInfo()}
                   maxHeight={isMobile() ? undefined : this.state.textHeight - 152}

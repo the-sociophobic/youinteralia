@@ -12,17 +12,11 @@ const Marker = props =>
       ${props.zoom <= (props.city === "spb" ? 12 : 14) && "Marker--small"}
     `}
   >
-    <Link
-      to={`/artist/${props.artist.id}`}
-      onClick={() => props.focus()}
-      disabled={props.disableLink}
-    >
-      <div className={`Marker__dot`} />
-    </Link>
+    <div className={`Marker__dot`} />
 
     <Player
-      compact={true}
       className={props.zoom <= (props.city === "spb" ? 13 : 15) && "Player--hidden"}
+      compact={true}
       {...props}
     />
   </div>

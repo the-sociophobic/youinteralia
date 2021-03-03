@@ -3,7 +3,7 @@ import React from 'react'
 
 const ExternalLink = props =>
   <a
-    className={`external-link ${props.className}`}
+    className={`Link ${props.className}`}
     href={props.to}
     target={props.newTab ? "_blank" : ""}
     rel="noopener noreferrer"

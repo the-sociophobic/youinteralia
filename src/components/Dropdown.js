@@ -2,6 +2,7 @@ import React from 'react'
 
 import ResizeObserver from 'resize-observer-polyfill'
 
+import Link from 'components/CustomLink'
 import {
   StoreContext,
 } from 'components/Store'
@@ -39,19 +40,27 @@ export default class Dropdown extends React.Component {
       ${this.props.block && "dropdown--block"}
     `}>
       <div
-        className={`dropdown__title ${this.props.city && "dropdown__title--city"}`}
-        onClick={() => this.toggleOpened()}
+        className={`
+          dropdown__title
+          ${this.props.city && "dropdown__title--city"}
+        `}  
       >
-        {this.props.title}
-        {this.props.city &&
-          <div
-            className={`dropdown__title__city dropdown__title__city--${this.props.city}`}
-            onClick={() => {
+        <div
+          className="dropdown__title__text"
+          onClick={() => this.toggleOpened()}
+        >
+          {this.props.title}
+        </div>
+        {this.props.citySwitcher &&
+          <Link
+            to="/"
+            className={`dropdown__title__city dropdown__title__city--${this.context.currentCity}`}
+            onClick={() =>
               this.context.setCity(this.context.currentCity === "spb" ? "gen" : "spb")
-            }}
+            }
           >
-            {this.props.city}
-          </div>}
+            {this.context.currentCity}
+          </Link>}
       </div>
       <div
         className="dropdown__content"

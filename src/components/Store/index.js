@@ -1,7 +1,7 @@
 import React from 'react'
-import _, { toInteger } from 'lodash'
 
-import clamp from 'utils/clamp'
+import _ from 'lodash'
+
 import flatten from 'utils/flatten'
 import getAttribsFromFlatten from 'utils/getAttribsFromFlatten'
 import addNewLines from 'utils/addNewLines'
@@ -120,12 +120,13 @@ class StoreProvider extends React.Component {
 
     window.onpopstate = this.onPopState.bind(this)
     window.onpushstate = this.onPushState.bind(this)
-
-
   }
 
   onPopState = e => {
-    // console.log(e)
+    if (window.location.pathname.includes('artist'))
+      this.setState({
+        currentCity: parseInt(window.location.pathname.replace('/artist/')) > 3 ? "gen" : "spb"
+      })
   }
 
   onPushState = e => {
@@ -152,7 +153,7 @@ class FormattedMessage extends React.Component {
 
 
 const getArtist = (_this, id, locale) => {
-  const artistAudio = determineStorage(_this).artistsConstants[toInteger(id)].audio
+  const artistAudio = determineStorage(_this).artistsConstants[parseInt(id)].audio
 
   return {
     ...getAttribsFromFlatten(determineStorage(_this), id),

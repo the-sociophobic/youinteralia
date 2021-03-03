@@ -32,8 +32,13 @@ class Menu extends React.Component {
   toggleMenu = () =>
     this.context.setMenu(!this.context.menuOpened)
 
-  canSwitchLang = () =>
-    this.context.menuOpened || this.props.location.pathname !== "/"
+  canSwitchCity = () =>
+    !this.context.menuOpened
+    && (
+      this.props.location.pathname === "/"
+      ||
+      this.props.location.pathname === "/youinteralia"
+    )
 
 
   renderHeader = () =>
@@ -51,23 +56,28 @@ class Menu extends React.Component {
       <div
         className="Menu__header__switcher"
         onClick={() =>
-          this.canSwitchLang() ?
-            this.toggleLang()
+          this.canSwitchCity() ?
+            this.toggleCity()
             :
-            this.toggleCity()}
+            this.toggleLang()
+        }
       >
-        <div className={`Menu__header__switcher__container ${
-          this.canSwitchLang() && "Menu__header__switcher__container--lang"
-        }`}>
+        <div className={`
+          Menu__header__switcher__container
+          ${!this.canSwitchCity() && "Menu__header__switcher__container--lang"}`
+        }>
           <div className="Menu__header__switcher__container__lang">
             {this.context.locale}
           </div>
-          <div className={`Menu__header__switcher__container__city ${
-            this.context.currentCity === "spb" ?
-              "Menu__header__switcher__container__city--spb"
-              :
-              "Menu__header__switcher__container__city--gen"
-          }`}>
+          <div className={`
+            Menu__header__switcher__container__city
+            ${
+              this.context.currentCity === "spb" ?
+                "Menu__header__switcher__container__city--spb"
+                :
+                "Menu__header__switcher__container__city--gen"
+            }
+          `}>
             {this.context.currentCity}
           </div>
         </div>
@@ -75,9 +85,10 @@ class Menu extends React.Component {
     </div>
 
   renderContent = () =>
-    <div className={`Menu__content ${
-      this.context.menuOpened && "Menu__content--opened"
-    }`}>
+    <div className={`
+      Menu__content
+      ${this.context.menuOpened && "Menu__content--opened"}
+    `}>
       <div className="Menu__content__container">
         <div className="Menu__content__container__links">
           <Link to="/about">
@@ -89,7 +100,14 @@ class Menu extends React.Component {
                 <Link
                   key={artist.id}
                   to={`artist/${artist.id}`}
-                  className={`Menu__content__container__links__item Menu__content__container__links__item--${artist.city}`}
+                  onClick={() => {
+                    this.context.setCity(artist.city)
+                    //TODO focus
+                  }}
+                  className={`
+                    Menu__content__container__links__item
+                    Menu__content__container__links__item--${artist.city}
+                  `}
                 >
                   {artist.name}
                 </Link>

@@ -1,3 +1,5 @@
+import ExternalLink from 'components/ExternalLink'
+
 import RomanSVG from 'img/artists/Roman.svg'
 import RomanPNG from 'img/artists/Roman.jpg'
 import OlgaSVG from 'img/artists/Olga.svg'
@@ -40,8 +42,14 @@ const artists = [
     svg: RomanSVG,
     png: RomanPNG,
     aboutArtist: [
-      "Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.  https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf",
-      "Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books ‘Comrade-Thing’ (Kraft, 2010), ‘Comrade-Word’ (Kraft, 2012), ‘Texts with external objectives’ (NLO, 2015), ‘Not A Word About Politics!’ (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings have been translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.",
+      <>
+        Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.
+        <br /><br />
+        <ExternalLink newTab to="https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf">Disser.pdf</ExternalLink>
+      </>,
+      <>
+        Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books ‘Comrade-Thing’ (Kraft, 2010), ‘Comrade-Word’ (Kraft, 2012), ‘Texts with external objectives’ (NLO, 2015), ‘Not A Word About Politics!’ (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings have been translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.
+      </>,
     ],
     aboutRoute: [
       "Это получасовая запись состоит из восьми поэтических текстов, скомпонованных вместе в определенной последовательности, которую я бы обозначил как доверительную манипуляцию. Надевая наушники, вы добровольно принимаете правила предложенной поэтической игры по отстраиванию своей субъектности посредством перформативных инструкций. Тексты работают в режиме настоящего времени как пространственно-временные паттерны звучащей речи и объединены континуальностью общего саунддизайна. Поэтому, они открыты для прослушивания потенциально в любом месте и времени. Главный их вопрос: «что ты чувствуешь?» — может быть воспринят как прямой вызов к вашей перцепции, так и как спекулятивное вопрошание к вашему политическом воображению.",
@@ -51,17 +59,65 @@ const artists = [
   {
     city: "spb",
     name: ["Иван Курбаков", "Ivan Kurbakov"],
-    title: ["Северные полмира", "smell of memory, sound of oblivion"],
+    title: ["Северные полмира", "Appear in the northern hemisphere"],
     lat: 59.94572683679983,
     lng: 30.37266762914453,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Ivan.mp3",
     aboutArtist: [
-      "Иван Курбаков — писатель, музыкант, кинорежиссер. Живет в Москве.\nУчился в Литературном институте (семинар поэзии И. Ростовцевой, 2006-2011), окончил факультет кинорежиссуры Московской школы нового кино (2013-2016). Стихи и эссе публиковались в журнале [Транслит], «Лиterraтура», «Здесь», на портале Syg.ma. Автор книг стихов «Путь поет» (издательство Арго-Риск, 2019), «Сады и молнии» (издательство «всегоничего», 2020). Соредактор альманаха-огня.\nСреди сольных и совместных музыкальных проектов: Ian Kubra (cd «current double, hermetic songs» 2018); mpala garoo (кассетные релизы, винил «ou du monde» 2012, «vaya adelante» cd 2019); kon tiki gemini (кассетные релизы); «Линга Шарира» и др. Записи выходили в США, Канаде, Бельгии, Бразилии, Голландии.",
-      "Ivan Kurbakov is a Moscow-based writer, musician, and a film director.\nHe studied at the Literary Institute (I. Rostovtseva's Poetry Seminar, 2006-2011) in Moscow and at the director’s laboratory of the Moscow School of New Cinema (2013-2016). Ivan’s poems and essays were published in the magazine [Translit], «Лиterraтура», «Здесь», as well as at Syg.ma. He is an author of books of poems «Путь поет»  (Argo-Risk publishing house, 2019), «Сады и молнии» (vsegonichego publishing house, 2020) and is a co-editor of the almanac-fire (http://fajro.online/).\nIvan’s solo and collaborative music projects include: Ian Kubra (CD «current double, hermetic songs» 2018); mpala garoo (cassette releases, vinyl «ou du monde» 2012, «Vaya Adelante» CD 2019); kon tiki gemini (cassette releases); «Линга Шарира», etc. Recordings were released in the United States, Canada, Belgium, Brazil, and the Netherlands.",
+      <>
+        Иван Курбаков — писатель, музыкант, кинорежиссер. Живет в Москве.
+        <br/>
+        Учился в Литературном институте (семинар поэзии И. Ростовцевой, 2006-2011), окончил факультет кинорежиссуры Московской школы нового кино (2013-2016). Стихи и эссе публиковались в журнале [Транслит], «Лиterraтура», «Здесь», на портале Syg.ma. Автор книг стихов «Путь поет» (издательство Арго-Риск, 2019), «Сады и молнии» (издательство «всегоничего», 2020). Соредактор альманаха-огня.
+        <br/>
+        Среди сольных и совместных музыкальных проектов: Ian Kubra (cd «current double, hermetic songs» 2018); mpala garoo (кассетные релизы, винил «ou du monde» 2012, «vaya adelante» cd 2019); kon tiki gemini (кассетные релизы); «Линга Шарира» и др. Записи выходили в США, Канаде, Бельгии, Бразилии, Голландии.
+        <br/><br/>
+        почитать:<br/>
+        <ExternalLink newTab to="https://syg.ma/@ian-kubra-1">syg.ma</ExternalLink>
+        <ExternalLink newTab to="http://wordorder.ru/catalog-ru/poeziya/sady-i-molnii/">wordorder.ru</ExternalLink>
+        <ExternalLink newTab to="https://greza.space/poslepoludennyj-otdyh-budushhego/">greza.space/</ExternalLink>
+        <ExternalLink newTab to="http://fajro.online/index.html">fajro.online</ExternalLink>
+        <br/>послушать:<br/>
+        <ExternalLink newTab to="https://soundcloud.com/jungletriangle">soundcloud.com</ExternalLink>
+        <ExternalLink newTab to="https://iankubra.bandcamp.com/ ">bandcamp.com: iankubra</ExternalLink>
+        <ExternalLink newTab to="https://aestastantra.bandcamp.com/">bandcamp.com: aestastantra</ExternalLink>
+        <ExternalLink newTab to="https://aguirrerecords.bandcamp.com/album/ou-du-monde">bandcamp.com: aguirrerecords, ou-du-monde</ExternalLink>
+        <ExternalLink newTab to="https://shimmeringmoodsrecords.bandcamp.com/album/current-double-hermetic-songs">bandcamp.com: shimmeringmoodsrecords current-double-hermetic-songs</ExternalLink>
+        <ExternalLink newTab to="https://shimmeringmoodsrecords.bandcamp.com/album/vaya-adelante">bandcamp.com: shimmeringmoodsrecords vaya-adelante</ExternalLink>
+        <br/>посмотреть:<br/>
+        Pleroma (feature 54 min)<br/>
+        <ExternalLink newTab to="https://vimeo.com/128005569">vimeo.com/128005569</ExternalLink>
+        <ExternalLink newTab to="https://vimeo.com/suncalpa">vimeo.com/suncalpa</ExternalLink>
+        <ExternalLink newTab to="https://www.youtube.com/user/oudumonde">youtube</ExternalLink>
+      </>,
+      <>
+        Ivan Kurbakov is a Moscow-based writer, musician, and a film director.
+        <br/>
+        He studied at the Literary Institute (I. Rostovtseva's Poetry Seminar, 2006-2011) in Moscow and at the director’s laboratory of the Moscow School of New Cinema (2013-2016). Ivan’s poems and essays were published in the magazine [Translit], «Лиterraтура», «Здесь», as well as at Syg.ma. He is an author of books of poems «Путь поет»  (Argo-Risk publishing house, 2019), «Сады и молнии» (vsegonichego publishing house, 2020) and is a co-editor of the almanac-fire (http://fajro.online/).
+        <br />
+        Ivan’s solo and collaborative music projects include: Ian Kubra (CD «current double, hermetic songs» 2018); mpala garoo (cassette releases, vinyl «ou du monde» 2012, «Vaya Adelante» CD 2019); kon tiki gemini (cassette releases); «Линга Шарира», etc. Recordings were released in the United States, Canada, Belgium, Brazil, and the Netherlands.
+        <br/><br/>
+        something to read:<br/>
+        <ExternalLink newTab to="https://syg.ma/@ian-kubra-1">syg.ma</ExternalLink>
+        <ExternalLink newTab to="http://wordorder.ru/catalog-ru/poeziya/sady-i-molnii/">wordorder.ru</ExternalLink>
+        <ExternalLink newTab to="https://greza.space/poslepoludennyj-otdyh-budushhego/">greza.space/</ExternalLink>
+        <ExternalLink newTab to="http://fajro.online/index.html">fajro.online</ExternalLink>
+        something to listen:<br/>
+        <ExternalLink newTab to="https://soundcloud.com/jungletriangle">soundcloud.com</ExternalLink>
+        <ExternalLink newTab to="https://iankubra.bandcamp.com/ ">bandcamp.com: iankubra</ExternalLink>
+        <ExternalLink newTab to="https://aestastantra.bandcamp.com/">bandcamp.com: aestastantra</ExternalLink>
+        <ExternalLink newTab to="https://aguirrerecords.bandcamp.com/album/ou-du-monde">bandcamp.com: aguirrerecords, ou-du-monde</ExternalLink>
+        <ExternalLink newTab to="https://shimmeringmoodsrecords.bandcamp.com/album/current-double-hermetic-songs">bandcamp.com: shimmeringmoodsrecords current-double-hermetic-songs</ExternalLink>
+        <ExternalLink newTab to="https://shimmeringmoodsrecords.bandcamp.com/album/vaya-adelante">bandcamp.com: shimmeringmoodsrecords vaya-adelante</ExternalLink>
+        something to watch:<br/>
+        Pleroma (feature 54 min)<br/>
+        <ExternalLink newTab to="https://vimeo.com/128005569">vimeo.com/128005569</ExternalLink>
+        <ExternalLink newTab to="https://vimeo.com/suncalpa">vimeo.com/suncalpa</ExternalLink>
+        <ExternalLink newTab to="https://www.youtube.com/user/oudumonde">youtube</ExternalLink>
+      </>,
     ],
     aboutRoute: [
       "Северные полмира — это полубессознательная скоропись, мантра балансирующая на грани неразборчивого утробного письма и высушенной под солнцем сознания речи, в которой воображаемый адресат то слишком ясен, то практически неразличим. Письмо — это атанор, где личное рано или поздно уходит в универсальное. Речь же слышит время, пока ее произносят. Можно говорить и о тщетном усилии добиться от памяти отчетливости в различении/различии времени и пространства, любви и влюбленности, звука и запаха, образа и его отсутствия. Как и малоизвестный сейчас сирийский город Пальмира, расположенный между Дамаском и Евфратом, почти случайно употребленный кем-то из писателей для сравнения с Петербургом — был оазисом в пустыне, поражавшим архитектурной строгостью, так и охваченные метафизическим волнением письма и монологи суть оазисы-миражи, возникающие в восприятии того, кто зеркально охвачен им же.\nГород, сама этимология которого связана с границами, огороженностью пространства, остается жив благодаря человеческим встречам, а не благодаря незыблемости своей архитектуры. Город это волнение людей, короткие замыкания; пригород — транзитивная поэзия, переход (даже этот переход гласных одна в другую, Пальмира — полмира, связан с неустойчивостью границ, с людьми как переносчиками этой безграничности ) и загород —  воздушность путей, перемирие дня и ночи, их длинное размыкание, сон равнин.",
-      "«Smell of memory, sound of oblivion» is a semi-conscious rapid writing, a kind of mantra oscillating between an illegible writing coming as if from the insides and a speech dried by the sun of consciousness in which the imaginary addressee is sometimes too clear, sometimes almost indistinguishable. Writing is an athanor, where the personal becomes the universal sooner or later, yet the speech hears the time while it is being uttered. In a way, «Smell of memory, sound of oblivion» is a futile effort to recall clearly what is the difference between time and space, love and infatuation, sound and smell, an image and its absence.",
+      "«Appear in the northern hemisphere» is a semi-conscious rapid writing, a kind of mantra oscillating between an illegible writing coming as if from the insides and a speech dried by the sun of consciousness in which the imaginary addressee is sometimes too clear, sometimes almost indistinguishable. Writing is an athanor, where the personal becomes the universal sooner or later, yet the speech gives ear to time while it is being uttered. In a way, «Appear in the northern hemisphere» is a futile effort to recall clearly what is the difference between time and space, love and infatuation, sound and smell, an image and its absence.",
     ],
     multiplePoints: [
       [59.941439911759005, 30.378147371736343],
@@ -110,16 +166,16 @@ const artists = [
         Андреа Мариони родился в 1986 году, живет и работает в Биль-Бьене.<br />
         Мои практики работают как полифония: я ищу коллизии и столкновения между формами и понятиями, которые иногда превращаются в гармонии или в диссонансы. Меня интересует современное понятие «пограничной политики» (border politics) и то, как оно «работает» через объекты, отражая как общность, так и отчуждение. Я использую в основном «дешевый материал»: от мусора до повседневных бытовых предметов, также модифицирую и включаю их в свои художественные произведения. Еще одно эстетика, которая важна для меня, вдохновлена «детским творчеством» и «игрушкам», которые, по моему мнению, передают ироническую силу (или силу иронии), а не угрозу. Концептуально, мои работы состоят из следов коллективного подсознания, вытесненных воспоминаний и воплощенных табу.<br />
         <br />
-        Личный сайт: marioniandrea.art <br />
-        Кураторский проект: lumpenstation.art
+        Личный сайт: <ExternalLink newTab to="http://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
+        Кураторский проект: <ExternalLink newTab to="http://lumpenstation.art">lumpenstation.art</ExternalLink>
       </>,
       <>
         Born in 1986, lives and works in Bienne.<br />
         <br />
         My practices work like polyphonies: I look for collisions and clashes between forms and concepts which turn sometimes into harmonies or into dissonances. In general, I am interested in the contemporary notion of «border politics» and how it works through objects and oscillates between community and alienation. I use mostly «cheap material»: from trash to daily domestic goods and modify and incorporate them in the artwork. Another aesthetics that is important for me comes from «Childish art craft» and «Toys» which, to me, convey ironic power (or power of irony) rather than a violent threat. My works are composed conceptually of leftovers of the collective subconscious, repressed memories and embodied tabu. <br />
         <br />
-        Personal website: marioniandrea.art <br />
-        Artist curator: lumpenstation.art 
+        Personal website: <ExternalLink newTab to="http://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
+        Artist curator: <ExternalLink newTab to="http://lumpenstation.art">lumpenstation.art</ExternalLink>
       </>,
     ],
     aboutRoute: [
@@ -174,13 +230,13 @@ const artists = [
     aboutArtist: [
       <>
         Карла Демьер, родилась в 1980 году, изучала искусство в Женеве и художественное письмо (creative writing) в Монреале. В своей практике она работает с перформансом, письмом и звуком. Ее тексты смешивают поэзию и повествование, экспериментирование с формой и документальный монтаж. Последние книги Карлы: «Кто там?» (Qui est là?) — сборник рассказов о записи голоса и призраках (Art & Fiction, 2020) и «Авторадио» (Autoradio) — визуальная поэзия, созданная на печатной машинке (ред. Héros-Limite, 2019). С 2012 года она преподает художественное письмо в Женевском университете искусства и дизайна. Кроме того, Карла курирует литературные проекты в Женеве, среди которых ридинги Spoken worlds в Центре современного искусства в Женеве или подкаст-проект «Время чаепития» (L’Heure du thé) в арт-центре Le Grütli.
-        <br />
-        www.carlademierre.ch
+        <br /><br />
+        <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
       </>,
       <>
         Carla Demierre, born in 1980, studied art in Geneva and creative writing in Montreal. Her practice unfolds between printed, performed and recorded forms. Her texts mix poetry and narrative, formal experimentation and documentary cut-up. Her more recent books are «Qui est là?», collected stories about voice recording and ghosts (Art & Fiction, 2020) and «Autoradio», visual and typewriting poetry, (ed. Héros-Limite, 2019). Since 2012, she teaches creative writing at the Geneva University of art and design. She curates literary projects in Geneva, among which Spoken worlds readings at Center of contemporary art, or the podcast project L’Heure du thé at Le Grütli.
-        <br />
-        www.carlademierre.ch
+        <br /><br />
+        <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
       </>,
     ],
     aboutRoute: [
@@ -205,12 +261,13 @@ const artists = [
     aboutArtist: [
       <>
         Мартина Махлер (1991) получила степень бакалавра искусств в Цюрихском университете искусств (ZHdK). Затем в течение одного года училась на магистерской программе Art Praxis в Dutch Art Institute (ArtEZ) в Арнеме (Нидерланды). В своих преимущественно процессуальных перформативных проектах Мартина Махлер фокусируется на современных условиях труда, анализируя технические и психологические инструменты контроля и дисциплинирования субъекта.<br />
-        www.martinamaechler.com
+        <br /><br />
+        <ExternalLink newTab to="http://www.martinamaechler.com">martinamaechler.com</ExternalLink>
       </>,
       <>
         Martina Mächler (*1991) completed a BFA in Fine Arts at Zurich University of the Arts (ZHdK). She then studied for one year in the MA Art Praxis at the Dutch Art Institute (ArtEZ) in Arnhem(NL). In her mostly processual performative projects, Martina Mächler is focussing on modern working conditions, looking at technical and psychological means of control and disciplining of the self. 
-        <br />
-        www.martinamaechler.com
+        <br /><br />
+        <ExternalLink newTab to="http://www.martinamaechler.com">martinamaechler.com</ExternalLink>
       </>,
     ],
     aboutRoute: [
@@ -225,15 +282,27 @@ const artists = [
   {
     city: "gen",
     name: ["Франсуаз Карако", "Françoise Caraco"],
-    title: ["Перемен!", "Перемен!"],
+    title: ["Чемодан на колесиках", "Trolley suitcase"],
     lat: 46.19,
     lng: 6.11,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Francoise.mp3",
     svg: FrancoiseSVG,
     png: FrancoisePNG,
     aboutArtist: [
-      "Франсуаз Карако (р. 1972) — художница из Цюриха, Швейцария. Основой ее художественных работ являются исследования семейных историй, событий и мест, пропитанных духом истории.\nСвидетельства очевидцев, а также отрывки из собранного документального материала, звукового в том числе, уже несколько лет формируют ее художественную практику. Помимо прочего, Франсуаз уже долгое время занимается историей своей семьи. Ее интерес заключается в вопросе конструирования памяти на пересечениях индивидуального опыта и коллективного прошлого. В своих аудио и видео работах или перформансах Карако переплетает факты и вымысел, и стремится затронуть темы и обстоятельства, актуальные для сегодняшнего дня.\n\nwww.francoise.caraco.ch",
-      "Françoise Caraco, born in 1972, is a visual artist, living in Zurich, Switzerland. The basis of her artistic works is research into family histories, historical events and places steeped in history.\nThe voices of contemporary witnesses, as well as excerpts from compiled documentary material and sound, have formed her artistic work for several years now. Françoise Caraco has been dealing with her own family history for years. Her interest lies in the construction of memory in its reverberations between individual experiences and the collective past. Caraco interweaves facts and fiction in her audio and video works or performances, thereby bringing them to reflect current themes or circumstances.",
+      <>
+        Франсуаз Карако (р. 1972) — художница из Цюриха, Швейцария. Основой ее художественных работ являются исследования семейных историй, событий и мест, пропитанных духом истории.\nСвидетельства очевидцев, а также отрывки из собранного документального материала, звукового в том числе, уже несколько лет формируют ее художественную практику. Помимо прочего, Франсуаз уже долгое время занимается историей своей семьи. Ее интерес заключается в вопросе конструирования памяти на пересечениях индивидуального опыта и коллективного прошлого. В своих аудио и видео работах или перформансах Карако переплетает факты и вымысел, и стремится затронуть темы и обстоятельства, актуальные для сегодняшнего дня.
+        <br /><br />
+        <ExternalLink newTab to="http://www.francoise.caraco.ch">
+          francoise.caraco.ch
+        </ExternalLink>
+      </>,
+      <>
+        Françoise Caraco, born in 1972, is a visual artist, living in Zurich, Switzerland. The basis of her artistic works is research into family histories, historical events and places steeped in history.\nThe voices of contemporary witnesses, as well as excerpts from compiled documentary material and sound, have formed her artistic work for several years now. Françoise Caraco has been dealing with her own family history for years. Her interest lies in the construction of memory in its reverberations between individual experiences and the collective past. Caraco interweaves facts and fiction in her audio and video works or performances, thereby bringing them to reflect current themes or circumstances.
+        <br /><br />
+        <ExternalLink newTab to="http://www.francoise.caraco.ch">
+          francoise.caraco.ch
+        </ExternalLink>
+      </>,
     ],
     aboutRoute: [
       "Моя прогулка по Женеве основана на воспоминаниях юности, которую я провела в этом городе. Эти воспоминания переплетаются с дневниковыми записями моего дедушки и недавно обнаруженными документам об иммиграции сюда моего прадеда и его семьи.\nМаршрут начинается на железнодорожной станции, я иду вдоль берега озера через центр города к северу от реки, затем прохожу несколько кварталов на юге и, прежде чем вернуться на вокзал, поднимаюсь на холм к северо-западу от него и уже оттуда двигаюсь обратно, — в сторону жд путей. Все это время, следуя своему маршруту через город, я тащу за собой чемодан на колесиках. Он хорош как для поездок, так и для хранения воспоминаний. Я собрала и упаковала в него все необходимое для моего путешествия и моей художественной работы.\n\nМеня интересуют пространства мысли, которые открываются передо мной во время прогулки по городу. Словно фотографически, я регистрирую моменты погружения в свои собственные и рассказанные воспоминания и перевожу их в письмо. В проекте я сплетаю нарратив из мыслей, воспоминаний и звуков города, которые я записала во время прогулки по Женеве.",

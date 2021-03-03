@@ -40,6 +40,9 @@ const defaultMessages = {
       submit: ["отправить", "submit"],
       agree: ["нажмая на кнопку, вы соглашаетесь с политикой конфиденциальности", "by clicking submit button you agree with our privacy policy.\n*required field"],
     }
+  },
+  Player: {
+    loading: ["загрузка", "loading"],
   }
 }
 
