@@ -102,7 +102,7 @@ class StoreProvider extends React.Component {
         menuOpened: _menuOpened
       }),
 
-      currentCity: "spb",
+      currentCity: parseInt(window.location.pathname.replace('/artist/', '')) > 3 ? "gen" : "spb",
       setCity: _currentCity => this.setState({
         currentCity: _currentCity
       }),
@@ -137,7 +137,7 @@ class StoreProvider extends React.Component {
   onPopState = e => {
     if (window.location.pathname.includes('artist'))
       this.setState({
-        currentCity: parseInt(window.location.pathname.replace('/artist/')) > 3 ? "gen" : "spb"
+        currentCity: parseInt(window.location.pathname.replace('/artist/', '')) > 3 ? "gen" : "spb"
       })
   }
 

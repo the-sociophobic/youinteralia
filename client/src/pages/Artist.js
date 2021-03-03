@@ -3,6 +3,7 @@ import React from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
 import Img from 'components/Img'
+import Animation from 'components/Animation'
 import Player from 'components/Player'
 import Dropdown from 'components/Dropdown'
 import {
@@ -93,14 +94,18 @@ class Artist extends React.Component {
             </div>
 
             <div className="Artist__content__map">
-              <Img
-                cover
-                src={artist.png}
-              />
-              <Img
-                cover
-                src={artist.svg}
-              />
+              {artist.png &&
+                <Img
+                  cover
+                  src={artist.png}
+                />}
+              {artist.svg &&
+                <Img
+                  cover
+                  src={artist.svg}
+                />}
+              {artist.json &&
+                <Animation src={artist.json} />}
             </div>
 
           </div>

@@ -4,6 +4,8 @@ import RomanSVG from 'img/artists/Roman.svg'
 import RomanPNG from 'img/artists/Roman.jpg'
 import OlgaSVG from 'img/artists/Olga.svg'
 import OlgaPNG from 'img/artists/Olga.jpg'
+import * as IvanJSON from 'img/artists/Ivan.json'
+import * as AlenaJSON from 'img/artists/Alena.json'
 
 import MartinaSVG from 'img/artists/Martina.svg'
 import MartinaPNG from 'img/artists/Martina.jpg'
@@ -23,6 +25,7 @@ const artists = [
     lat: 59.90469616806995,
     lng: 30.217547243741553,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Alena.mp3",
+    json: AlenaJSON,
     aboutArtist: [
       "Алена Терешко родилась в 1986 году городе Ишим, Тюменской области, жила в Челябинске, Санкт-Петербурге.  Училась в Санкт-Петербургской Художественно-Промышленной Академии им. Штиглица и школе молодого художника Про Арте. Окончила в 2013 году. Работаю с перформансом, видео, графикой. Часто объектом моих исследований является тело. Меня интересуют традиции и современность, изображение и восприятие, вообще противоположные категории и их точки соприкосновения. Принимала участие в выставках в России и за рубежом.",
       "Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She has participated in numerous exhibitions in Russia and abroad.",
@@ -63,6 +66,7 @@ const artists = [
     lat: 59.94572683679983,
     lng: 30.37266762914453,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Ivan.mp3",
+    json: IvanJSON,
     aboutArtist: [
       <>
         Иван Курбаков — писатель, музыкант, кинорежиссер. Живет в Москве.
