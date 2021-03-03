@@ -4,7 +4,7 @@ import Ticker from 'components/Ticker'
 import Link from 'components/CustomLink'
 import {
   StoreContext,
-  FormattedMessage
+  FormattedMessage,
 } from 'components/Store'
 import secondsParse from 'utils/secondsParse'
 
@@ -38,7 +38,13 @@ class Player extends React.Component {
               {artist.canPlay ?
                 secondsParse(artist[artist.isPlaying ? "currentTime" : "duration"])
                 :
-                <FormattedMessage id="Player.loading" />
+                this.props.hideArrow ?
+                  <FormattedMessage id="Player.loading" />
+                  :
+                  artist.city === "spb" ?
+                    "загрузка"
+                    :
+                    "loading"
               }
             </div>
           </div>
