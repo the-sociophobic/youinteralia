@@ -36,8 +36,11 @@ class Ticker extends React.Component {
     this.contentResizeObs = new ResizeObserver(this.updateContentWidth.bind(this))
       .observe(this.contentRef.current)
 
-    window.requestAnimationFrame(this.animate)
+    this.animationFrameId = window.requestAnimationFrame(this.animate)
   }
+
+  componentWillUnmount = () =>
+    this.animationFrameId && window.cancelAnimationFrame(this.animationFrameId)
 
   animate = timeStamp => {
     if (this.state.contentWidth < this.state.tickerWidth) {
@@ -55,7 +58,7 @@ class Ticker extends React.Component {
       startTimeStamp: timePassed > this.state.contentWidth + this.state.tickerWidth / 2 ? timeStamp : this.state.startTimeStamp
     })
 
-    window.requestAnimationFrame(this.animate)
+    this.animationFrameId = window.requestAnimationFrame(this.animate)
   }
 
   render = () =>

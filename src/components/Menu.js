@@ -74,7 +74,7 @@ class Menu extends React.Component {
     }`}>
       <div className="Menu__content__container">
         <div className="Menu__content__container__links">
-          <Link to="about">
+          <Link to="/about">
             <FormattedMessage id="Menu.about" />
           </Link>
           <Dropdown title={getMessage(this, "Menu.artists")}>
@@ -89,10 +89,10 @@ class Menu extends React.Component {
                 </Link>
               )}
           </Dropdown>
-          <Link to="archive">
+          <Link to="/archive">
             <FormattedMessage id="Menu.archive" />
           </Link>
-          <Link to="participate">
+          <Link to="/participate">
             <FormattedMessage id="Menu.participate" />
           </Link>
         </div>

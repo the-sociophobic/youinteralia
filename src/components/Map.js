@@ -72,7 +72,7 @@ class Map extends Component {
       this.context && mapRef.current &&
         this?.context?.zoom !== mapRef?.current?.map_?.zoom &&
           this?.context?.setZoom?.(mapRef?.current?.map_?.zoom)
-    }, 100)
+    }, 200)
 
   componentWillUnmount = () =>
     clearInterval(this.watchZoomInterval)

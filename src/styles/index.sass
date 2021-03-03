@@ -295,6 +295,8 @@ $dropdown-transition: .15s
 
 
 .Player
+  *
+    text-transform: lowercase
   position: relative
   cursor: default
   height: rem(70)
@@ -542,6 +544,8 @@ $dropdown-transition: .15s
   @extend .flex-column
   @extend .justify-content-between
   height: 100%
+  @include media-breakpoint-down(lg)
+    margin-left: rem(-1)
   &__first-block,
   &__second-block
     width: calc(50% - 10px)
@@ -648,5 +652,38 @@ $dropdown-transition: .15s
   @extend .flex-lg-row
   &__desc
     @extend .col
+    @extend .px-0
+    padding-right: rem(40) !important
+    @extend .mb-5
   &__form
     @extend .col
+    @extend .px-0
+    &__submit
+      @extend .button
+      width: 100%
+      height: rem(50)
+      background-color: $dark
+      margin-bottom: rem(10)
+      color: $light
+    &__agree
+      width: 100%
+    .Link
+      text-decoration: underline !important
+
+
+
+.form-group
+  margin: 0
+  &__input
+    width: 100%
+    border-radius: 0
+    border: $border
+    height: rem(50)
+    line-height: rem(50)
+    padding: 0 12px
+    outline: none
+  &:nth-child(2n)
+    margin-bottom: rem(20)
+    .form-group__input
+      border-top: 0
+

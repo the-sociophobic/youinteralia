@@ -89,6 +89,10 @@ class StoreProvider extends React.Component {
       .reduce((a, b) => ({...a, ...b}))
     //ADD ARTISTS STATE END
 
+    const URL = window.location.pathname
+    // const history = window.localStorage.getItem('history') || [window.location.pathname]
+    // const currentHistoryIndex = window.localStorage.getItem('currentHistoryIndex') || 0
+
     this.state = {
       locale: locale,
       messages: this.parsedMessages[locale],
@@ -98,31 +102,35 @@ class StoreProvider extends React.Component {
       }),
       // getMessage: id => getMessage(this, id),
 
-      URL: "",
+      URL: URL,
       setURL: (_URL = "", pushHistory = true) => {
-        const artist = _URL.includes("artist:") && getArtist(this, _URL.split(":")[1])
+        if (_URL === this.state.URL)
+          return
 
-        console.log(this.state)
+        const artist = _URL.includes("/artist") && getArtist(this, _URL.split("t/")[1])
+
+        console.log(_URL)
         this.setState({
-          URL: _URL.replace(':', '/'),
+          URL: _URL,
           menuOpened: false,
         })
 
-        if (pushHistory)
-          this.setState({
-            history: [...this.state.history.slice(0, this.state.currentHistoryIndex + 1), _URL.replace(':', '/')],
-            currentHistoryIndex: this.state.currentHistoryIndex + 1,
-          })
+        // if (pushHistory)
+        //   this.setState({
+        //     history: [...this.state.history.slice(0, this.state.currentHistoryIndex + 1), _URL.replace(':', '/')],
+        //     currentHistoryIndex: this.state.currentHistoryIndex + 1,
+        //   })
 
         if (artist) {
           this.setState({ currentCity: artist.city })
           // this.props.mapRef?.current?.[`${artist.city}Ref`]?.
         }
 
-        window.history.pushState(this.state.history, 'youinteralia', _URL.replace(':', '/'))
+        if (pushHistory)
+          window.history.pushState(this.state.history, 'youinteralia', _URL)
       },
-      history: [window.location.pathname],
-      currentHistoryIndex: 0,
+      // history: history,
+      // currentHistoryIndex: currentHistoryIndex,
 
       zoom: 0,
       setZoom: zoom => this.setState({
@@ -151,27 +159,30 @@ class StoreProvider extends React.Component {
     })
 
     window.onpopstate = this.onPopState.bind(this)
-    window.onpushstate = this.onPushState.bind(this)    
+    window.onpushstate = this.onPushState.bind(this)
+
+
   }
 
   onPopState = e => {
-    const newIndex = clamp(this.state.currentHistoryIndex - 1, 0, e.length)
+    // const newIndex = clamp(this.state.currentHistoryIndex - 1, 0, e.length)
+    console.log(e)
+    
+    this.state.setURL(e.state && e.state.length > 1 ? e.state[e.state.length - 1] : "", false)
 
-    this.state.setURL(this.state.history[newIndex], false)
-
-    this.setState({
-      currentHistoryIndex: newIndex
-    })
+    // this.setState({
+    //   currentHistoryIndex: newIndex
+    // })
   }
 
   onPushState = e => {
-    const newIndex = clamp(this.state.currentHistoryIndex + 1, 0, e.length)
+    // const newIndex = clamp(this.state.currentHistoryIndex + 1, 0, e.length)
 
-    this.state.setURL(this.state.history[newIndex], false)
+    this.state.setURL(e.state[e.state.length - 1], false)
 
-    this.setState({
-      currentHistoryIndex: newIndex
-    })
+    // this.setState({
+    //   currentHistoryIndex: newIndex
+    // })
   }
 
   render = () =>

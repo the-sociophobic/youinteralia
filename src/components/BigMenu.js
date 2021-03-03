@@ -25,18 +25,18 @@ class BigMenu extends React.Component {
 
     switch (true) {
       case this.context.URL.includes('artist'):
-        page = <Artist artist={getArtist(this, this.context.URL.split(':')[1])} />
+        page = <Artist artist={getArtist(this, this.context.URL.split('/')[1])} />
         break
-      case this.context.URL === "about":
+      case this.context.URL === "/about":
         page = <About />
         break
-      case this.context.URL === "archive":
+      case this.context.URL === "/archive":
         page = <Archive />
         break
-      case this.context.URL === "participate":
+      case this.context.URL === "/participate":
         page = <Participate />
         break
-      case this.context.URL === "privacy":
+      case this.context.URL === "/privacy":
         page = <Privacy />
         break
       default:

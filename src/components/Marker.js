@@ -16,7 +16,7 @@ class Marker extends React.Component {
       Marker--${this.props.artist.city}
       ${this.context.zoom <= (this.context.currentCity === "spb" ? 12 : 14) && "Marker--small"}
     `}>
-      <Link to={`artist:${this.props.artist.id}`}>
+      <Link to={`/artist/${this.props.artist.id}`}>
         <div className={`Marker__dot`} />
       </Link>
 
