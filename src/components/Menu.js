@@ -89,7 +89,7 @@ class Menu extends React.Component {
               .map(artist =>
                 <Link
                   key={artist.id}
-                  to={`artist:${artist.id}`}
+                  to={`artist/${artist.id}`}
                   className={`Menu__content__container__links__item Menu__content__container__links__item--${artist.city}`}
                 >
                   {artist.name}
