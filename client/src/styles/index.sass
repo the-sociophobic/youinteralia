@@ -327,6 +327,11 @@ $dropdown-transition: .15s
       background-color: $spb
     .Marker--gen &
       background-color: $gen
+  &--average
+    transform: translate(rem(-20), rem(-20))
+    .Marker__dot
+      width: rem(40)
+      height: rem(40)
   &--small
     transform: translate(rem(-15), rem(-15))
     .Marker__dot
@@ -610,6 +615,10 @@ $dropdown-transition: .15s
     &--landscape
       width: auto
       height: 100%
+  &::after
+    content: ''
+    @extend .abs-cover
+
 
 
 

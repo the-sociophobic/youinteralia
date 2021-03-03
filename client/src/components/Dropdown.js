@@ -51,13 +51,11 @@ export default class Dropdown extends React.Component {
         >
           {this.props.title}
         </div>
-        {this.props.citySwitcher &&
+        {this.props.focus &&
           <Link
             to="/"
             className={`dropdown__title__city dropdown__title__city--${this.context.currentCity}`}
-            // onClick={() =>
-            //   this.context.setCity(this.context.currentCity === "spb" ? "gen" : "spb")
-            // }
+            onClick={() => this.props.focus()}
           >
             {this.context.currentCity}
           </Link>}

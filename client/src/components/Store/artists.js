@@ -27,12 +27,20 @@ const artists = [
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Alena.mp3",
     json: AlenaJSON,
     aboutArtist: [
-      "Алена Терешко родилась в 1986 году городе Ишим, Тюменской области, жила в Челябинске, Санкт-Петербурге.  Училась в Санкт-Петербургской Художественно-Промышленной Академии им. Штиглица и школе молодого художника Про Арте. Окончила в 2013 году. Работаю с перформансом, видео, графикой. Часто объектом моих исследований является тело. Меня интересуют традиции и современность, изображение и восприятие, вообще противоположные категории и их точки соприкосновения. Принимала участие в выставках в России и за рубежом.",
-      "Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She has participated in numerous exhibitions in Russia and abroad.",
+      <>
+        Алена Терешко родилась в 1986 году городе Ишим, Тюменской области, жила в Челябинске, Санкт-Петербурге.  Училась в Санкт-Петербургской Художественно-Промышленной Академии им. Штиглица и школе молодого художника Про Арте. Окончила в 2013 году. Работаю с перформансом, видео, графикой. Часто объектом моих исследований является тело. Меня интересуют традиции и современность, изображение и восприятие, вообще противоположные категории и их точки соприкосновения. Принимала участие в выставках в России и за рубежом.
+        <br /><br />
+        <ExternalLink newTab to="http://alenatereshko.com/">alenatereshko.com</ExternalLink>
+      </>,
+      <>
+        Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She has participated in numerous exhibitions in Russia and abroad.
+        <br /><br />
+        <ExternalLink newTab to="http://alenatereshko.com/">alenatereshko.com</ExternalLink>
+      </>,
     ],
     aboutRoute: [
-      "На Канонерском острове есть заброшенная территория. Руина имеет интересный переходный статус: территория без функции, или потерявшая свою функцию, которую  «осваивают» и присваивают люди, животные и растения, каждый может стать ее временным обладателем, вмешаться в нее.",
-      "There is an abandoned area that has been falling apart for years on the Kanonersky Island in St.Petersburg. Being a ruin, the place has an interesting transitional status: it is a functionless territory, or the one that was deprived of its function. It is the place that belongs to everyone in a way and is explored, appropriated or occupied by people, animals and plants. Anyone can become its temporary owner, interfere with it.",
+      "Остров и гавань\n\nНа Канонерском острове есть заброшенная территория. Руина имеет интересный переходный статус: территория без функции, или потерявшая свою функцию, которую  «осваивают» и присваивают люди, животные и растения, каждый может стать ее временным обладателем, вмешаться в нее.",
+      "The island and the harbour\n\nThere is an abandoned area that has been falling apart for years on the Kanonersky Island in St.Petersburg. Being a ruin, the place has an interesting transitional status: it is a functionless territory, or the one that was deprived of its function. It is the place that belongs to everyone in a way and is explored, appropriated or occupied by people, animals and plants. Anyone can become its temporary owner, interfere with it.",
     ],
   },
   {
@@ -48,15 +56,15 @@ const artists = [
       <>
         Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.
         <br /><br />
-        <ExternalLink newTab to="https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf">Disser.pdf</ExternalLink>
+        <ExternalLink newTab to="https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf">читать диссертацию</ExternalLink>
       </>,
       <>
         Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books ‘Comrade-Thing’ (Kraft, 2010), ‘Comrade-Word’ (Kraft, 2012), ‘Texts with external objectives’ (NLO, 2015), ‘Not A Word About Politics!’ (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings have been translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.
       </>,
     ],
     aboutRoute: [
-      "Это получасовая запись состоит из восьми поэтических текстов, скомпонованных вместе в определенной последовательности, которую я бы обозначил как доверительную манипуляцию. Надевая наушники, вы добровольно принимаете правила предложенной поэтической игры по отстраиванию своей субъектности посредством перформативных инструкций. Тексты работают в режиме настоящего времени как пространственно-временные паттерны звучащей речи и объединены континуальностью общего саунддизайна. Поэтому, они открыты для прослушивания потенциально в любом месте и времени. Главный их вопрос: «что ты чувствуешь?» — может быть воспринят как прямой вызов к вашей перцепции, так и как спекулятивное вопрошание к вашему политическом воображению.",
-      "This recording consists of eight poetic texts put together in a certain sequence, which I would describe as a confidential manipulation. By putting on your headphones, you voluntarily accept the rules of the proposed poetic game of asserting your subjectivity through performative instructions. The texts work in the present time mode as spatio-temporal patterns of sounding speech and are united by the continuality of a common sound design. Therefore, they can be listened to anywhere and at any time, potentially. Their main question is: «What do you feel?» — can be perceived as a direct challenge to your perception, and as a speculative enquiry into your political imagination.",
+      "Что ты чувствуешь?\n\nЭто получасовая запись состоит из восьми поэтических текстов, скомпонованных вместе в определенной последовательности, которую я бы обозначил как доверительную манипуляцию. Надевая наушники, вы добровольно принимаете правила предложенной поэтической игры по отстраиванию своей субъектности посредством перформативных инструкций. Тексты работают в режиме настоящего времени как пространственно-временные паттерны звучащей речи и объединены континуальностью общего саунддизайна. Поэтому, они открыты для прослушивания потенциально в любом месте и времени. Главный их вопрос: «что ты чувствуешь?» — может быть воспринят как прямой вызов к вашей перцепции, так и как спекулятивное вопрошание к вашему политическом воображению.",
+      "What do you feel?\n\nThis recording consists of eight poetic texts put together in a certain sequence, which I would describe as a confidential manipulation. By putting on your headphones, you voluntarily accept the rules of the proposed poetic game of asserting your subjectivity through performative instructions. The texts work in the present time mode as spatio-temporal patterns of sounding speech and are united by the continuality of a common sound design. Therefore, they can be listened to anywhere and at any time, potentially. Their main question is: «What do you feel?» — can be perceived as a direct challenge to your perception, and as a speculative enquiry into your political imagination.",
     ],
   },
   {
@@ -120,8 +128,8 @@ const artists = [
       </>,
     ],
     aboutRoute: [
-      "Северные полмира — это полубессознательная скоропись, мантра балансирующая на грани неразборчивого утробного письма и высушенной под солнцем сознания речи, в которой воображаемый адресат то слишком ясен, то практически неразличим. Письмо — это атанор, где личное рано или поздно уходит в универсальное. Речь же слышит время, пока ее произносят. Можно говорить и о тщетном усилии добиться от памяти отчетливости в различении/различии времени и пространства, любви и влюбленности, звука и запаха, образа и его отсутствия. Как и малоизвестный сейчас сирийский город Пальмира, расположенный между Дамаском и Евфратом, почти случайно употребленный кем-то из писателей для сравнения с Петербургом — был оазисом в пустыне, поражавшим архитектурной строгостью, так и охваченные метафизическим волнением письма и монологи суть оазисы-миражи, возникающие в восприятии того, кто зеркально охвачен им же.\nГород, сама этимология которого связана с границами, огороженностью пространства, остается жив благодаря человеческим встречам, а не благодаря незыблемости своей архитектуры. Город это волнение людей, короткие замыкания; пригород — транзитивная поэзия, переход (даже этот переход гласных одна в другую, Пальмира — полмира, связан с неустойчивостью границ, с людьми как переносчиками этой безграничности ) и загород —  воздушность путей, перемирие дня и ночи, их длинное размыкание, сон равнин.",
-      "«Appear in the northern hemisphere» is a semi-conscious rapid writing, a kind of mantra oscillating between an illegible writing coming as if from the insides and a speech dried by the sun of consciousness in which the imaginary addressee is sometimes too clear, sometimes almost indistinguishable. Writing is an athanor, where the personal becomes the universal sooner or later, yet the speech gives ear to time while it is being uttered. In a way, «Appear in the northern hemisphere» is a futile effort to recall clearly what is the difference between time and space, love and infatuation, sound and smell, an image and its absence.",
+      "Северные полмира\n\nСеверные полмира — это полубессознательная скоропись, мантра балансирующая на грани неразборчивого утробного письма и высушенной под солнцем сознания речи, в которой воображаемый адресат то слишком ясен, то практически неразличим. Письмо — это атанор, где личное рано или поздно уходит в универсальное. Речь же слышит время, пока ее произносят. Можно говорить и о тщетном усилии добиться от памяти отчетливости в различении/различии времени и пространства, любви и влюбленности, звука и запаха, образа и его отсутствия. Как и малоизвестный сейчас сирийский город Пальмира, расположенный между Дамаском и Евфратом, почти случайно употребленный кем-то из писателей для сравнения с Петербургом — был оазисом в пустыне, поражавшим архитектурной строгостью, так и охваченные метафизическим волнением письма и монологи суть оазисы-миражи, возникающие в восприятии того, кто зеркально охвачен им же.\nГород, сама этимология которого связана с границами, огороженностью пространства, остается жив благодаря человеческим встречам, а не благодаря незыблемости своей архитектуры. Город это волнение людей, короткие замыкания; пригород — транзитивная поэзия, переход (даже этот переход гласных одна в другую, Пальмира — полмира, связан с неустойчивостью границ, с людьми как переносчиками этой безграничности ) и загород —  воздушность путей, перемирие дня и ночи, их длинное размыкание, сон равнин.",
+      "Appear in the northern hemisphere\n\n«Appear in the northern hemisphere» is a semi-conscious rapid writing, a kind of mantra oscillating between an illegible writing coming as if from the insides and a speech dried by the sun of consciousness in which the imaginary addressee is sometimes too clear, sometimes almost indistinguishable. Writing is an athanor, where the personal becomes the universal sooner or later, yet the speech gives ear to time while it is being uttered. In a way, «Appear in the northern hemisphere» is a futile effort to recall clearly what is the difference between time and space, love and infatuation, sound and smell, an image and its absence.",
     ],
     multiplePoints: [
       [59.941439911759005, 30.378147371736343],
@@ -147,12 +155,49 @@ const artists = [
     svg: OlgaSVG,
     png: OlgaPNG,
     aboutArtist: [
-      "Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 году в соавторстве с правозащитником Андреем Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 года вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина», результатом которой стали несколько выпусков газеты «Насреддин в России» и «Мобильная дискотека» (последний — в соавторстве с баскским художником Йоном Иригойеном). С 2015 года сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести Андрея Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).\nolgajitlina.info\n\nВлада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).\nЛейла Алиева — singer-songwriter, актриса, участница лаборатории “Вокруг да около”, выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом “Плоды побегов”; 2018, СПб, сингл “Муза”; 2020, Петербург. Звукорежиссура: “Спектакль в коробочке” 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.\nИгнат Хлобыстин (род. 1995, Санкт-Петербург) — музыкант-флейтист. Студент консерватории четвертого курса, лауреат международных конкурсов. Исполняет классическую, современную академическую и импровизационную музыку. Закончил школу импровизационной музыки при Галерее экспериментального звука (сейчас Музей звука). Участник Санкт-Петербургского оркестра импровизации и трио «Печальная свадьба».",
-      "Olga Jitlina (b. 1982, Leningrad) is a graphic and performance artist, author of theater spectacles, founder and editor of the Utopian News Agency and of the Nasreddin in Russia newspaper. In 2011, together with co-author, human rights advocate Andrey Yakimov, she created a table game about labor migration called “Russia is the Country of Possibilities”. Since 2014, Jitlina, another artist Anna Tereshkina, a group of labor migrants, and representatives of creative professions have been working on the project Hodja Nasreddin Joke Contest, resulting in the publication of several issues of the newspaper Nasreddin in Russia, and in the realization of the project Mobile Discotheque (the latter co-authored with the Basque artist Jon Irigoyen). Since 2015, Jitlina has been collaborating with the Lampedusa in Hamburg group of refugee activists and opera singer Yulia Averina, bringing them together in the theatrical performance Translation based on Andrey Platonov’s novella Dzhan. Winner of the Henkel Young Artists Prize (2012) and the Lea and Hans Grundig Prize (2015).\n\nolgajitlina.info\n\nVlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the\nindependent art laboratory VOKRUG DA OKOLO. Teacher at St. Petersburg School of\nNew Cinema (Director’s Work with Actor course).\n\nLeila Alieva — a musical performer, an actress. Graduated at the Faculty of Liberal Arts and Sciences, St. PetersburgState University, Bard College NY. The selected projects: \nleila alieva. “Plody pobegov”. A debut album release. Saint Petersburg, Russia 2018\nleila alieva. “Muza” Single release.Saint Petersburg, Russia 2020\тSound-design “Play in the Box” 2021\n“Typhlo commentary on paintings by Aivazovsky and Bryullov” for Russian State Museum,\n2021\n\nIgnat Khlobystin (b. 1995, St. Petersburg) is a flautist, fourth-year student of the\nConservatoire, laureate of international competitions. Khlobystin performs classical,\ncontemporary academic and improvisational music. He graduated from the School of\nImprovisational Music at the Gallery of Experimental Sound (currently Museum of Sound).\nMember of the St. Petersburg Orchestra of Improvisation and the Pechalnaya Svadba\n(Sad Wedding) trio.",
+      <>
+        Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 г. в соавторстве с правозащитником А. Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 г. вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина». С 2015 г. сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести А. Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).
+        <br />
+        <ExternalLink newTab to="olgajitlina.info">olgajitlina.info</ExternalLink>
+        <br /><br />
+        Голос:<br />
+        Влада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).
+        <br /><br />
+        Монтаж звуков:<br />
+        Лейла Алиева — singer-songwriter, актриса, участница лаборатории “Вокруг да около”, выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом “Плоды побегов”; 2018, СПб, сингл “Муза”; 2020, Петербург. Звукорежиссура: “Спектакль в коробочке” 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.
+        <br /><br />
+        Запись звуков:<br />
+        Игнат Хлобыстин (род. 1995, Санкт-Петербург) — музыкант-флейтист. Студент консерватории четвертого курса, лауреат международных конкурсов. Исполняет классическую, современную академическую и импровизационную музыку. Закончил школу импровизационной музыки при Галерее экспериментального звука (сейчас Музей звука). Участник Санкт-Петербургского оркестра импровизации и трио «Печальная свадьба».
+      </>,
+      <>
+        Olga Jitlina (b. 1982, Leningrad) is a graphic and performance artist, author of theater productions, a founder and an editor of the Utopian News Agency and of the Nasreddin in Russia newspaper. In 2011, together with human rights advocate Andrey Yakimov she co-authored a board game about labor migration called “Russia is the Country of Possibilities”. Since 2014, Jitlina, another artist—Anna Tereshkina, a group of labor migrants, and representatives of creative professions have been working on the project Hodja Nasreddin Joke Contest, resulting in the publication of several issues of the newspaper Nasreddin in Russia, and in the realization of the project Mobile Discotheque (the latter co-authored with the Basque artist Jon Irigoyen). Since 2015, Jitlina has been collaborating with the Lampedusa in Hamburg group of refugee activists and opera singer Yulia Averina, bringing them together in the theatrical performance Translation based on Andrey Platonov’s novella Dzhan. Winner of the Henkel Young Artists Prize (2012) and the Lea and Hans Grundig Prize (2015).
+        <br />
+        <ExternalLink newTab to="olgajitlina.info">olgajitlina.info</ExternalLink>
+        <br /><br />
+        Voice:<br />
+        Vlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the<br />
+        independent art laboratory VOKRUG DA OKOLO. Teacher at St. Petersburg School of<br />
+        New Cinema (Director’s Work with Actor course).<br />
+        <br /><br />
+        Sound editing:<br />
+        Leila Alieva — a musical performer, an actress. Graduated at the Faculty of Liberal Arts and Sciences, St. PetersburgState University, Bard College NY. The selected projects: <br />
+        leila alieva. “Plody pobegov”. A debut album release. Saint Petersburg, Russia 2018<br />
+        leila alieva. “Muza” Single release.Saint Petersburg, Russia 2020<br />
+        Sound-design “Play in the Box” 2021<br />
+        “Typhlo commentary on paintings by Aivazovsky and Bryullov” for Russian State Museum, 2021
+        <br /><br />
+        Sound recording:<br />
+        Ignat Khlobystin (b. 1995, St. Petersburg) is a flautist, fourth-year student of the<br />
+        Conservatoire, laureate of international competitions. Khlobystin performs classical,<br />
+        contemporary academic and improvisational music. He graduated from the School of<br />
+        Improvisational Music at the Gallery of Experimental Sound (currently Museum of Sound).<br />
+        Member of the St. Petersburg Orchestra of Improvisation and the Pechalnaya Svadba<br />
+        (Sad Wedding) trio.
+      </>,
     ],
     aboutRoute: [
-      "Égalité — аудио-спекталь по первой части рассказа Ольги Житлиной «Адар». В ней описывается встреча и неожиданный момент родства в отчаянии с бездомным. Адресат рассказа двоится: это то оставшийся без крова человек, то отдаляющийся возлюбленный. В некотором смысле этот письмо бездомному. Говорение от первого лица в спектакле также не происходит из статичной точки. Героиня, как бродяга, блуждает по городу, впадая то в отчаяние, то в радостное возбуждение. То занимая позицию власти, то теряя почву под ногами.",
-      "Égalité is an audio-performance based on the first part of Olga Zhitlina story “Adar”. It describes a meeting with the homeless and an unexpected moment of closeness in despair. The addressee of the text is twofold: it is either a homeless person, or a distant lover. In a sense, this is a letter to the homeless. The person who starts speaking in the play also does not come from a static position. The heroine, like a tramp, wanders around the city, while falling into despair or into joyful excitation, either taking a position of power or losing ground underfoot.",
+      "Égalité\n\nÉgalité — аудио-спекталь по первой части рассказа Ольги Житлиной «Адар». В ней описывается встреча и неожиданный момент родства в отчаянии с бездомным. Адресат рассказа двоится: это то оставшийся без крова человек, то отдаляющийся возлюбленный. В некотором смысле этот письмо бездомному. Говорение от первого лица в спектакле также не происходит из статичной точки. Героиня, как бродяга, блуждает по городу, впадая то в отчаяние, то в радостное возбуждение. То занимая позицию власти, то теряя почву под ногами.",
+      "Égalité\n\nÉgalité is an audio-performance based on the first part of Olga Zhitlina story “Adar”. It describes a meeting with the homeless and an unexpected moment of closeness in despair. The addressee of the text is twofold: it is either a homeless person, or a distant lover. In a sense, this is a letter to the homeless. The person who starts speaking in the play also does not come from a static position. The heroine, like a tramp, wanders around the city, while falling into despair or into joyful excitation, either taking a position of power or losing ground underfoot.",
     ],
   },
 
@@ -184,6 +229,7 @@ const artists = [
     ],
     aboutRoute: [
       <>
+        Sideways were open<br /><br />
         не конфликт поколений, а разрыв между ними<br />
         я полон ненависти и любви.<br />
         вечеринка закончилась<br />
@@ -203,6 +249,7 @@ const artists = [
         для всех.
       </>,
       <>
+        Sideways were open<br /><br />
         it wasn’t a generational clash, but a generational gap<br />
         my hate and love feeling.<br />
         the party was over <br />
@@ -225,7 +272,7 @@ const artists = [
   {
     city: "gen",
     name: ["Карла Демьер", "Carla Demierre"],
-    title: ["Перемен!", "Writing around"],
+    title: ["Writing around", "Writing around"],
     lat: 46.225952859615674,
     lng: 6.141753032514459,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Carla.mp3",
@@ -233,11 +280,15 @@ const artists = [
     png: CarlaPNG,
     aboutArtist: [
       <>
+        Writing around
+        <br /><br />
         Карла Демьер, родилась в 1980 году, изучала искусство в Женеве и художественное письмо (creative writing) в Монреале. В своей практике она работает с перформансом, письмом и звуком. Ее тексты смешивают поэзию и повествование, экспериментирование с формой и документальный монтаж. Последние книги Карлы: «Кто там?» (Qui est là?) — сборник рассказов о записи голоса и призраках (Art & Fiction, 2020) и «Авторадио» (Autoradio) — визуальная поэзия, созданная на печатной машинке (ред. Héros-Limite, 2019). С 2012 года она преподает художественное письмо в Женевском университете искусства и дизайна. Кроме того, Карла курирует литературные проекты в Женеве, среди которых ридинги Spoken worlds в Центре современного искусства в Женеве или подкаст-проект «Время чаепития» (L’Heure du thé) в арт-центре Le Grütli.
         <br /><br />
         <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
       </>,
       <>
+        Writing around
+        <br /><br />
         Carla Demierre, born in 1980, studied art in Geneva and creative writing in Montreal. Her practice unfolds between printed, performed and recorded forms. Her texts mix poetry and narrative, formal experimentation and documentary cut-up. Her more recent books are «Qui est là?», collected stories about voice recording and ghosts (Art & Fiction, 2020) and «Autoradio», visual and typewriting poetry, (ed. Héros-Limite, 2019). Since 2012, she teaches creative writing at the Geneva University of art and design. She curates literary projects in Geneva, among which Spoken worlds readings at Center of contemporary art, or the podcast project L’Heure du thé at Le Grütli.
         <br /><br />
         <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
@@ -276,9 +327,11 @@ const artists = [
     ],
     aboutRoute: [
       <>
-        О проекте:Аудиотекст о шкафе. Отправная точка маршрута чисто символическая, но близость к воде не помешает. Запись была сделана для прослушивания в наушниках, во время передвижения по городскому пространству. (Если вы дома и не можете или не хотите двигаться, я вам предлагаю открыть окно или балконную дверь, чтобы впустить уличные звуки, лечь в удобное положение и закрыть глаза.)
+        Капля падает на пол спальни<br /><br />
+        Аудиотекст о шкафе. Отправная точка маршрута чисто символическая, но близость к воде не помешает. Запись была сделана для прослушивания в наушниках, во время передвижения по городскому пространству. (Если вы дома и не можете или не хотите двигаться, я вам предлагаю открыть окно или балконную дверь, чтобы впустить уличные звуки, лечь в удобное положение и закрыть глаза.)
       </>,
       <>
+        blob drops on a bedroom floor<br /><br />
         An audio text about a closet. The starting point of this route is merely symbolic, closeness to water is recommended. The recording was made to be listened to on headphones, while moving in space. (If you can’t or don’t feel like moving in space physically, I suggest lying in a comfortable position, with your eyes closed and either a window or balcony door opened, in order to let in different sounds, if it’s warm enough.)
       </>,
     ],
@@ -309,8 +362,8 @@ const artists = [
       </>,
     ],
     aboutRoute: [
-      "Моя прогулка по Женеве основана на воспоминаниях юности, которую я провела в этом городе. Эти воспоминания переплетаются с дневниковыми записями моего дедушки и недавно обнаруженными документам об иммиграции сюда моего прадеда и его семьи.\nМаршрут начинается на железнодорожной станции, я иду вдоль берега озера через центр города к северу от реки, затем прохожу несколько кварталов на юге и, прежде чем вернуться на вокзал, поднимаюсь на холм к северо-западу от него и уже оттуда двигаюсь обратно, — в сторону жд путей. Все это время, следуя своему маршруту через город, я тащу за собой чемодан на колесиках. Он хорош как для поездок, так и для хранения воспоминаний. Я собрала и упаковала в него все необходимое для моего путешествия и моей художественной работы.\n\nМеня интересуют пространства мысли, которые открываются передо мной во время прогулки по городу. Словно фотографически, я регистрирую моменты погружения в свои собственные и рассказанные воспоминания и перевожу их в письмо. В проекте я сплетаю нарратив из мыслей, воспоминаний и звуков города, которые я записала во время прогулки по Женеве.",
-      "On the walk through Geneva, I have followed a route to my youthful memories of this city, along lines written down by my grandfather and some contemporary documents about my great-grandfather and his family in connection with their immigration to this city.\nThe tour starts at the train station and I walk along the lakeshore, through the area of the inner city north of the river, then the part of the city south of the river, and before returning to the train station, I walk up a hill northwest of the train station, and walk from there up to the bottom of the train station.\nAll the while, walking my chosen route through this city, I drag a trolley suitcase behind me. It stands for travelling itself, but also for carrying memories. The necessary utensils are gathered in the suitcase, for the journey and my artistic exploration.\nI am interested in spaces of thought that open up to me while walking or at the chosen places in the city. With a photographic eye, I observe moments of immersion in my own and narrated memories and transfer my thoughts into written language. During my walk through Geneva, I also recorded different city sounds with my recorder.\nFor the audio piece, I weave these spaces of thought into a narrative voice that is underlaid with recorded city sounds.",
+      "Чемодан на колесиках\n\nМоя прогулка по Женеве основана на воспоминаниях юности, которую я провела в этом городе. Эти воспоминания переплетаются с дневниковыми записями моего дедушки и недавно обнаруженными документам об иммиграции сюда моего прадеда и его семьи.\nМаршрут начинается на железнодорожной станции, я иду вдоль берега озера через центр города к северу от реки, затем прохожу несколько кварталов на юге и, прежде чем вернуться на вокзал, поднимаюсь на холм к северо-западу от него и уже оттуда двигаюсь обратно, — в сторону жд путей. Все это время, следуя своему маршруту через город, я тащу за собой чемодан на колесиках. Он хорош как для поездок, так и для хранения воспоминаний. Я собрала и упаковала в него все необходимое для моего путешествия и моей художественной работы.\n\nМеня интересуют пространства мысли, которые открываются передо мной во время прогулки по городу. Словно фотографически, я регистрирую моменты погружения в свои собственные и рассказанные воспоминания и перевожу их в письмо. В проекте я сплетаю нарратив из мыслей, воспоминаний и звуков города, которые я записала во время прогулки по Женеве.",
+      "Trolley suitcase\n\nOn the walk through Geneva, I have followed a route to my youthful memories of this city, along lines written down by my grandfather and some contemporary documents about my great-grandfather and his family in connection with their immigration to this city.\nThe tour starts at the train station and I walk along the lakeshore, through the area of the inner city north of the river, then the part of the city south of the river, and before returning to the train station, I walk up a hill northwest of the train station, and walk from there up to the bottom of the train station.\nAll the while, walking my chosen route through this city, I drag a trolley suitcase behind me. It stands for travelling itself, but also for carrying memories. The necessary utensils are gathered in the suitcase, for the journey and my artistic exploration.\nI am interested in spaces of thought that open up to me while walking or at the chosen places in the city. With a photographic eye, I observe moments of immersion in my own and narrated memories and transfer my thoughts into written language. During my walk through Geneva, I also recorded different city sounds with my recorder.\nFor the audio piece, I weave these spaces of thought into a narrative voice that is underlaid with recorded city sounds.",
     ],
   },
 ]

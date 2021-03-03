@@ -125,7 +125,10 @@ class StoreProvider extends React.Component {
             })    
           }
         }
-      }
+      },
+
+      genRef: React.createRef(),
+      spbRef: React.createRef(),
     }
   }
 

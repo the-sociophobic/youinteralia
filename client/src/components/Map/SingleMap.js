@@ -18,9 +18,6 @@ class Map extends Component {
     zoom: this.props.zoom,
   }
 
-  onChange = e =>
-    this.setState({ ...e })
-
   static contextType = StoreContext
 
   mapRef = React.createRef()
@@ -41,7 +38,7 @@ class Map extends Component {
       lat={props.lat}
       lng={props.lng}
       artist={props}
-      mapRef={this.mapRef}
+      mapRef={this.props.mapRef}
       center={this.state.center}
       zoom={this.state.zoom}
       city={this.props.city}
@@ -113,7 +110,7 @@ class Map extends Component {
     <div className={`Map ${this.props.className}`}>
       <div style={{ height: '110%', width: '100%' }}>
         <GoogleMapReact
-          ref={this.mapRef}
+          ref={this.props.mapRef}
           bootstrapURLKeys={{ key: "AIzaSyDtnk19nAsbs98Rx81bCzvkF5jyD0o7W4w" }}
           center={this.state.center}
           zoom={this.state.zoom}
@@ -124,7 +121,8 @@ class Map extends Component {
             minZoom: this.props.minZoom,
             restriction: this.props.restriction,
           }}
-          onChange={e => this.onChange(e)}
+          onChange={e => this.setState({ center: e.center })}
+          onZoomAnimationStart={zoom => this.setState({ zoom: zoom })}
 
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={() => this.context.setMapLoaded()}

@@ -64,8 +64,8 @@ class Map extends Component {
 
   render = () =>
     <>
-      {this.renderCity(spb)}
-      {this.renderCity(gen)}
+      {this.renderCity({ ...spb, ref: this.context.spbRef })}
+      {this.renderCity({ ...gen, ref: this.context.genRef })}
     </>
 }
  

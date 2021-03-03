@@ -9,6 +9,7 @@ const Marker = props =>
     className={`
       Marker
       Marker--${props.artist.city}
+      ${props.zoom <= (props.city === "spb" ? 13 : 15) && "Marker--average"}
       ${props.zoom <= (props.city === "spb" ? 12 : 14) && "Marker--small"}
     `}
   >
