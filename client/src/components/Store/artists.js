@@ -280,15 +280,11 @@ const artists = [
     png: CarlaPNG,
     aboutArtist: [
       <>
-        Writing around
-        <br /><br />
         Карла Демьер, родилась в 1980 году, изучала искусство в Женеве и художественное письмо (creative writing) в Монреале. В своей практике она работает с перформансом, письмом и звуком. Ее тексты смешивают поэзию и повествование, экспериментирование с формой и документальный монтаж. Последние книги Карлы: «Кто там?» (Qui est là?) — сборник рассказов о записи голоса и призраках (Art & Fiction, 2020) и «Авторадио» (Autoradio) — визуальная поэзия, созданная на печатной машинке (ред. Héros-Limite, 2019). С 2012 года она преподает художественное письмо в Женевском университете искусства и дизайна. Кроме того, Карла курирует литературные проекты в Женеве, среди которых ридинги Spoken worlds в Центре современного искусства в Женеве или подкаст-проект «Время чаепития» (L’Heure du thé) в арт-центре Le Grütli.
         <br /><br />
         <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
       </>,
       <>
-        Writing around
-        <br /><br />
         Carla Demierre, born in 1980, studied art in Geneva and creative writing in Montreal. Her practice unfolds between printed, performed and recorded forms. Her texts mix poetry and narrative, formal experimentation and documentary cut-up. Her more recent books are «Qui est là?», collected stories about voice recording and ghosts (Art & Fiction, 2020) and «Autoradio», visual and typewriting poetry, (ed. Héros-Limite, 2019). Since 2012, she teaches creative writing at the Geneva University of art and design. She curates literary projects in Geneva, among which Spoken worlds readings at Center of contemporary art, or the podcast project L’Heure du thé at Le Grütli.
         <br /><br />
         <ExternalLink newTab to="http://www.carlademierre.ch">carlademierre.ch</ExternalLink>
@@ -296,10 +292,14 @@ const artists = [
     ],
     aboutRoute: [
       <>
+        Writing around
+        <br /><br />
         Я преподаю художественное письмо (creative writing) в Женевском университете искусства и дизайна. Весной 2020-го я не могла ничего писать, и мне было интересно, как же это удается моим студентам. Чтобы продолжать делать хоть что-то, я начала посылать им письма каждую неделю. Для writing around я записала некоторые из этих писем, сидя в своем гардеробе за занавеской с принтом патагонской флоры. Пока я сидела в шкафу, выяснилось, что там живет большой паук.<br />
         Примерно тогда же, когда мне не давалось письмо, — весной 2020-го,  я проводила много времени на своем балконе, наблюдая за птицами, кружащими вокруг эвкалипта напротив. Затем я стала различать крики птиц, доносящиеся из динамиков, во время наших разговоров со студентами. И тут я поняла, что мы вместе, что мы живем в одном пространстве и времени, даже, если сегодняшняя реальность хочет убедить нас, что это не так.
       </>,
       <>
+        Writing around
+        <br /><br />
         I teach creative writing at Geneva University of art and design. During the spring of 2020, I have not been able to write anything and I wondered how my students could do so. In order to keep doing something, I started sending them letters every week. For this sound walk, I’ve recorded some of them in my wardrobe behind a curtain with patagonian vegetation prints. Doing so, I discovered a big spider living there. Last spring, I spent a lot of time sitting in my balcony looking at birds spinning around an eucalyptus tree. Then, I started noticing bird calls behind students' voices when we were talking, and this made me feel like we were living in the same space and time, contrary to appearances.
       </>,
     ],
