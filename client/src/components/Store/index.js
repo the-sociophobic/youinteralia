@@ -183,12 +183,14 @@ const getArtist = (_this, id, locale) => {
         ,
         (value, key) =>
           Array.isArray(value) && key !== "multiplePoints" ?
-            value[
-              locale ?
-                locale === "rus" ? 0 : 1
-                :
-                determineStorage(_this).locale === "rus" ? 0 : 1
-              ]
+            addNewLines(
+              value[
+                locale ?
+                  locale === "rus" ? 0 : 1
+                  :
+                  determineStorage(_this).locale === "rus" ? 0 : 1
+                ]
+            )
             :
             value
       ),
