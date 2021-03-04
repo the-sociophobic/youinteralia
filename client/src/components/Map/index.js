@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
-import GoogleMapReact from 'google-map-react'
 
-import {
-  StoreContext,
-  getArtists,
-} from 'components/Store'
+import { StoreContext } from 'components/Store'
 import SingleMap from './SingleMap'
+import isMobile from 'utils/isMobile'
 
 
 const spb = {
   name: "spb",
-  center: {
-    lat: 59.93,
-    lng: 30.36,
-  },
-  zoom: 14,
+  center: isMobile() ?
+    {
+      lat: 59.925,
+      lng: 30.331,
+    }
+    :
+    {
+      lat: 59.93,
+      lng: 30.36,
+    },
+  zoom: isMobile() ? 12 : 14,
   maxZoom: 15 + 1,
   minZoom: 15 - 3,
   restriction: {
@@ -28,11 +31,17 @@ const spb = {
 }
 const gen = {
   name: "gen",
-  center: {
-    lat: 46.20791773163431,
-    lng: 6.14602970185338,
-  },
-  zoom: 16,
+  center: isMobile() ?
+    {
+      lat: 46.20521773163431,
+      lng: 6.14202970185338,
+    }
+    :
+    {
+      lat: 46.20791773163431,
+      lng: 6.14602970185338,
+    },
+  zoom: isMobile() ? 14 : 16,
   maxZoom: 17 + 1,
   minZoom: 17 - 3,
   restriction: {
