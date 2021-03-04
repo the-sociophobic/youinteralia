@@ -11,6 +11,7 @@ const Marker = props =>
       Marker--${props.artist.city}
       ${props.zoom <= (props.city === "spb" ? 13 : 15) && "Marker--average"}
       ${props.zoom <= (props.city === "spb" ? 12 : 14) && "Marker--small"}
+      ${props.secondaryMarker && "Marker--secondary"}
     `}
   >
     <div className={`Marker__dot`} />

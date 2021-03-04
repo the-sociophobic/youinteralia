@@ -316,6 +316,8 @@ $dropdown-transition: .15s
   @extend .d-inline-flex
   @extend .flex-row
   transform: translate(rem(-25), rem(-25))
+  &--secondary
+    transform: translate(rem(-25), rem(-25)) scale(.7)
   transition: transform $menu-transition
   &__dot
     width: rem(50)
@@ -329,11 +331,15 @@ $dropdown-transition: .15s
       background-color: $gen
   &--average
     transform: translate(rem(-20), rem(-20))
+    &.Marker--secondary
+      transform: translate(rem(-20), rem(-20)) scale(.7)
     .Marker__dot
       width: rem(40)
       height: rem(40)
   &--small
     transform: translate(rem(-15), rem(-15))
+    &.Marker--secondary
+      transform: translate(rem(-15), rem(-15)) scale(.7)
     .Marker__dot
       width: rem(30)
       height: rem(30)
@@ -361,6 +367,7 @@ $dropdown-transition: .15s
   &--hide-controls
     padding-left: rem(10)
     width: rem(70) !important
+    opacity: .9
   &__controls
     @extend .d-flex-polyfill
     @extend .flex-column
