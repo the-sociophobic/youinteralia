@@ -58,7 +58,7 @@ class Map extends Component {
               zoom: this.props.city === "spb" ? 16 : 18,
               center: {
                 lat: artist.lat,
-                lng: artist.lng,
+                lng: artist.lng + 0.003,
               }
             })
           }),
@@ -74,7 +74,7 @@ class Map extends Component {
                   zoom: this.props.city === "spb" ? 16 : 18,
                   center: {
                     lat: artist.lat,
-                    lng: artist.lng,
+                    lng: artist.lng + 0.003,
                   }
                 })
             })
@@ -89,7 +89,7 @@ class Map extends Component {
               zoom: this.props.city === "spb" ? 16 : 18,
               center: {
                 lat: artist.lat,
-                lng: artist.lng,
+                lng: artist.lng + 0.003,
               }
             })
         })

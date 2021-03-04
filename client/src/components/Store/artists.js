@@ -175,24 +175,18 @@ const artists = [
         <ExternalLink newTab to="https://olgajitlina.info">olgajitlina.info</ExternalLink>
         <br /><br />
         Voice:<br />
-        Vlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the<br />
-        independent art laboratory VOKRUG DA OKOLO. Teacher at St. Petersburg School of<br />
-        New Cinema (Director’s Work with Actor course).<br />
+        Vlada Milovskaya (b. 1990, Leningrad) is a performer and actress. Participant of the independent art laboratory VOKRUG DA OKOLO. Teacher at St. Petersburg School of New Cinema (Director’s Work with Actor course).<br />
         <br /><br />
         Sound editing:<br />
-        Leila Alieva — a musical performer, an actress. Graduated at the Faculty of Liberal Arts and Sciences, St. PetersburgState University, Bard College NY. The selected projects: <br />
+        Leila Alieva — a musical performer, an actress. Graduated at the Faculty of Liberal Arts and Sciences, St. PetersburgState University, Bard College NY. The selected projects:<br />
         leila alieva. “Plody pobegov”. A debut album release. Saint Petersburg, Russia 2018<br />
         leila alieva. “Muza” Single release.Saint Petersburg, Russia 2020<br />
         Sound-design “Play in the Box” 2021<br />
         “Typhlo commentary on paintings by Aivazovsky and Bryullov” for Russian State Museum, 2021
         <br /><br />
         Sound recording:<br />
-        Ignat Khlobystin (b. 1995, St. Petersburg) is a flautist, fourth-year student of the<br />
-        Conservatoire, laureate of international competitions. Khlobystin performs classical,<br />
-        contemporary academic and improvisational music. He graduated from the School of<br />
-        Improvisational Music at the Gallery of Experimental Sound (currently Museum of Sound).<br />
-        Member of the St. Petersburg Orchestra of Improvisation and the Pechalnaya Svadba<br />
-        (Sad Wedding) trio.
+        Ignat Khlobystin (b. 1995, St. Petersburg) is a flautist, fourth-year student of the Conservatoire, laureate of international competitions. Khlobystin performs classical, contemporary academic and improvisational music. He graduated from the School of Improvisational Music at the Gallery of Experimental Sound (currently Museum of Sound).<br />
+        Member of the St. Petersburg Orchestra of Improvisation and the Pechalnaya Svadba (Sad Wedding) trio.
       </>,
     ],
     aboutRoute: [

@@ -50,10 +50,11 @@ class Player extends React.Component {
           </div>
         }
 
-        <Ticker
-          className="Player__ticker"
-          text={`${artist.title} — ${artist.name}`}
-        />
+        {!this.props.secondaryMarker &&
+          <Ticker
+            className="Player__ticker"
+            text={`${artist.title} — ${artist.name}`}
+          />}
 
         {!this.props.hideArrow &&
           <Link
