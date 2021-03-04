@@ -11,13 +11,10 @@ import SingleMap from './SingleMap'
 const spb = {
   name: "spb",
   center: {
-    // lat: isMobile() ? 59.939 : 59.939,
-    // lng: isMobile() ? 30.368 : 30.338,
-    lat: 59.925,
-    lng: 30.331,
+    lat: 59.93,
+    lng: 30.36,
   },
-  // zoom: isMobile() ? 13.1 : 14.25,
-  zoom: 12,
+  zoom: 14,
   maxZoom: 15 + 1,
   minZoom: 15 - 3,
   restriction: {
@@ -32,12 +29,10 @@ const spb = {
 const gen = {
   name: "gen",
   center: {
-    // lat: 46.20921773163431,
-    // lng: 6.15092970185338,
-    lat: 46.20521773163431,
-    lng: 6.14202970185338,
+    lat: 46.20791773163431,
+    lng: 6.14602970185338,
   },
-  zoom: 14,
+  zoom: 16,
   maxZoom: 17 + 1,
   minZoom: 17 - 3,
   restriction: {
