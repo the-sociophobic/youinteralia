@@ -6,19 +6,16 @@ import requestAnimationFramePolyfill from 'utils/requestAnimationFramePolyfill'
 
 
 class Ticker extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      tickerWidth: 0,
-      contentWidth: 0,
-      currentContentOffset: 0,
-      startTimeStamp: 0,
-    }
-
-    this.tickerRef = React.createRef()
-    this.contentRef = React.createRef()    
+  state = {
+    tickerWidth: 0,
+    contentWidth: 0,
+    currentContentOffset: 0,
+    startTimeStamp: 0,
   }
+
+  tickerRef = React.createRef()
+  contentRef = React.createRef()
+  requestRef = React.createRef()
 
   updateTickerWidth = () =>
     this.setState({
@@ -38,11 +35,8 @@ class Ticker extends React.Component {
     this.contentResizeObs = new ResizeObserver(this.updateContentWidth.bind(this))
       .observe(this.contentRef.current)
 
-    this.animationFrameId = requestAnimationFrame(this.animate)
+    this.requestRef.current = requestAnimationFrame(this.animate)
   }
-
-  componentWillUnmount = () =>
-    this.animationFrameId && window.cancelAnimationFrame(this.animationFrameId)
 
   animate = timeStamp => {
     if (this.state.contentWidth < this.state.tickerWidth) {
@@ -60,7 +54,7 @@ class Ticker extends React.Component {
       startTimeStamp: timePassed > this.state.contentWidth + this.state.tickerWidth / 2 ? timeStamp : this.state.startTimeStamp
     })
 
-    this.animationFrameId = window.requestAnimationFrame(this.animate)
+    this.requestRef.current = requestAnimationFrame(this.animate)
   }
 
   render = () =>
