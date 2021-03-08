@@ -133,7 +133,7 @@ class StoreProvider extends React.Component {
 
       canView: !isProd(),
       startTesting: () =>
-        this.setState({ test: true }),
+        this.setState({ canView: true }),
     }
   }
 
