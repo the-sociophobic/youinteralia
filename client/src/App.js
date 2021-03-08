@@ -7,10 +7,9 @@ import {
   Route
 } from 'react-router-dom'
 
-import Map from 'components/Map'
-import Menu from 'components/Menu'
-import BigMenu from 'components/BigMenu'
 import { StoreProvider } from 'components/Store'
+import Home from 'pages/Home'
+import Test from 'pages/Test'
 
 
 class App extends React.Component {
@@ -22,12 +21,11 @@ class App extends React.Component {
       <Div100vh>
         <Router>
           <Switch>
+            <Route path="/test">
+              <Test />
+            </Route>
             <Route path="/">
-              <div className="App">
-                <Map ref={this.mapRef} />
-                <BigMenu mapRef={this.mapRef} />
-                <Menu mapRef={this.mapRef} />
-              </div>
+              <Home />
             </Route>
           </Switch>
         </Router>

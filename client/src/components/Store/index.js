@@ -5,6 +5,7 @@ import _ from 'lodash'
 import flatten from 'utils/flatten'
 import getAttribsFromFlatten from 'utils/getAttribsFromFlatten'
 import addNewLines from 'utils/addNewLines'
+import isProd from 'utils/isProd'
 import arrayToLocale from './arrayToLocale'
 import defaultMessages from './defaultMessages'
 import artists from './artists'
@@ -129,6 +130,10 @@ class StoreProvider extends React.Component {
 
       genRef: React.createRef(),
       spbRef: React.createRef(),
+
+      canView: !isProd(),
+      startTesting: () =>
+        this.setState({ test: true }),
     }
   }
 

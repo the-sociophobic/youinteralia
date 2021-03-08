@@ -1,8 +1,6 @@
 import React from 'react'
 
-import {
-  withRouter,
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import Link from 'components/CustomLink'
 import {
