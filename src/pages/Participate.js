@@ -7,15 +7,14 @@ import {
   getMessage,
 } from 'components/Store'
 import Link from 'components/CustomLink'
+import CitySelector from 'components/CitySelector'
+import FileUpload from 'components/FileUpload'
 
 
 const inputs = [
   "Participate.form.name",
   "Participate.form.email",
-  "Participate.form.city",
   "Participate.form.location",
-  "Participate.form.upload",
-  "Participate.form.link",
 ]
 
 class Participate extends React.Component {
@@ -24,7 +23,10 @@ class Participate extends React.Component {
       .map(input => ({
         [input]: ""
       }))
-      .reduce((a, b) => ({ ...a, ...b }))
+      .reduce((a, b) => ({ ...a, ...b })),
+    city: undefined,
+    fileLink: undefined,
+    fileUploading: false,
   }
 
   static contextType = StoreContext
@@ -57,7 +59,16 @@ class Participate extends React.Component {
         </div>
         <div className="Participate__form">
 
-          {mappedInputs}
+          {mappedInputs.slice(0, 2)}
+          <CitySelector
+            city={this.state.city}
+            setCity={city => this.setState({ city: city })}
+          />
+          {mappedInputs[2]}
+          <FileUpload
+            setFileLink={link => this.setState({ fileLink: link})}
+            setUploadilng={uploading => this.setState({ fileUploading: uploading})}
+          />
 
           <button className="Participate__form__submit">
             <FormattedMessage id="Participate.form.submit" />

@@ -72,7 +72,7 @@
 $dark: #474747
 $light: white
 $pale: #FBF7EE
-$big-menu-background: #F5F0E4
+$big-menu-background: $pale
 
 $spb: #7C81FF
 $spb-highlight: #4056A1
@@ -796,7 +796,27 @@ $dropdown-transition: .15s
       border-top: 0
 
 
-.Privacy
-  // width: 100%
-  // height: 100%
-  // overflow-y: scroll
+.city-selector
+  @extend .d-flex-polyfill
+  @extend .flex-row
+  width: 100%
+  border: $border
+  height: rem(50)
+  line-height: rem(50)
+  &__name
+    @extend .flex-grow-1-polyfill
+    padding: 0 12px
+  &__spb,
+  &__gen
+    @extend .noselect
+    border-left: $border
+    text-align: center
+    cursor: pointer
+    background-color: $big-menu-background
+    width: rem(145)
+    @include media-breakpoint-down(sm)
+      width: rem(83)
+  &__spb--selected
+    background-color: $spb
+  &__gen--selected
+    background-color: $gen

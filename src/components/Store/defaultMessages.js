@@ -31,10 +31,12 @@ const defaultMessages = {
   Participate: {
     desc: ["мы будем рады наполнить карты новыми маршрутами, сделанными вами.\nнет никаких ограничений, кроме того, что маршрут должен находиться в санкт-петербурге или женеве.\nаудио не должно превышать 40 минут.\nвсе маршруты будут рассмотрены нашими кураторами перед отправкой на карту.", "we are happy to fulfill the maps with new routes made by you\nthere are no rules and requirements unless:— route must be located either in saint-petersburd or in geneva.\n— audio file must not be longer than 40 min.\nall routes will be reviewed by our curators and then uploaded to the map."],
     form: {
-      name: ["имя", "name"],
-      email: ["email", "email"],
-      city: ["город", "city"],
-      location: ["место", "location"],
+      name: ["имя*", "name*"],
+      email: ["email*", "email*"],
+      city: ["город*", "city*"],
+      citySaintPetersbourg: ["Санкт-Петербург", "Saint-Petersbourg"],
+      cityGeneva: ["Женева", "Geneva"],
+      location: ["место*", "location*"],
       upload: ["загрузите свой маршрут", "upload your route"],
       link: ["или отправьте свою ссылку", "or paste the link here"],
       submit: ["отправить", "submit"],

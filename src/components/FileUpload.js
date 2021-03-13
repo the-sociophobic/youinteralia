@@ -1,28 +1,33 @@
 import React from 'react'
-import axios, { post } from 'axios'
+
+import { post } from 'utils/API'
 
 
 class FileUpload extends React.Component {
 
-  state = {
-    file: null
-  }
-
-  onChange = e =>
-    this.setState({
-      file: e.target.files[0] })
-
-  fileUpload = file => {
-    const url = 'http://example.com/file-upload'
+  onChange = async e => {
+    this.props?.setUploading?.(true)
+    
     const formData = new FormData()
 
-    formData.append('file', file)
+    formData.append('file', e.target.files[0])
 
-    return post(url, formData, { headers: { 'content-type': 'multipart/form-data' } })
+    const res = await post(
+      '/file',
+      formData,
+      { headers: { 'content-type': 'multipart/form-data' }
+    })
+
+    console.log(res)
+    this.props?.setUploading?.(false)
   }
 
   render = () =>
-    <input type="file" onChange={this.onChange} />
+    <input
+      type="file"
+      onChange={e => this.onChange(e)}
+      className="Input__file"
+    />
 }
 
 
