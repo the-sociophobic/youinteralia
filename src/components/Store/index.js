@@ -157,10 +157,11 @@ class StoreProvider extends React.Component {
   }
 
   startLoadingAudio = () =>
-    this.artistsConstants.forEach(artist => {
-      artist.audio.src = artist.src
-      artist.audio.load()
-    })
+    isProd() &&
+      this.artistsConstants.forEach(artist => {
+        artist.audio.src = artist.src
+        artist.audio.load()
+      })
 
   render = () =>
     <StoreContext.Provider value={this.state}>
