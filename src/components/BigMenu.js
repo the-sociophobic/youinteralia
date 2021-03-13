@@ -43,7 +43,11 @@ class BigMenu extends React.Component {
     }
 
     return (
-      <div className={`BigMenu ${page && "BigMenu--opened"}`}>
+      <div className={`
+        BigMenu
+        ${page && "BigMenu--opened"}
+        ${this.props.location.pathname.includes("privacy") && "BigMenu--long"}
+      `}>
         <div className="BigMenu__content">
           <div className="BigMenu__content__header">
             <Link

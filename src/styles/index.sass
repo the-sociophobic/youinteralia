@@ -453,6 +453,7 @@ $dropdown-transition: .15s
   top: 0
   right: 0
   overflow: hidden
+  background-color: $big-menu-background
   @include media-breakpoint-down(lg)
     transition: width $menu-transition
     width: 0
@@ -465,15 +466,19 @@ $dropdown-transition: .15s
   &--opened
     width: 100vw
     height: 100vh
-  background-color: $big-menu-background
+  &--long
+    overflow-y: scroll
+    &__content
+      height: auto !important
   &__content
-    width: 100vw
-    @include media-breakpoint-up(xl)
-      height: 100%
-    @include media-breakpoint-down(lg)
-      min-height: 100%
     @extend .d-flex-polyfill
     @extend .flex-column
+    width: 100vw
+    @include media-breakpoint-up(xl)
+      &:not(.BigMenu--long &)
+        height: 100%
+    @include media-breakpoint-down(lg)
+      min-height: 100%
     &__header
       width: 100%
       height: rem(90)
@@ -491,19 +496,28 @@ $dropdown-transition: .15s
           background-position: center
           background-repeat: no-repeat
           border: $border
+      .BigMenu--long &
+        position: fixed
+        top: 0
+        left: 0
     &__container
       @extend .flex-grow-1-polyfill
       width: 100%
-      @include media-breakpoint-up(xl)
-        overflow: hidden
       padding-left: rem(49)
       padding-right: rem(49)
+      @include media-breakpoint-up(xl)
+        overflow: hidden
       @include media-breakpoint-down(lg)
         padding-left: rem(21)
         padding-right: rem(21)
       @media screen and ( max-width: 350px )
         padding-left: rem(9)
         padding-right: rem(8)
+      .BigMenu--long &
+        padding-top: rem(90)
+        @include media-breakpoint-up(xl)
+          overflow: hidden
+          padding-top: rem(117)
 
 
 
@@ -782,3 +796,7 @@ $dropdown-transition: .15s
       border-top: 0
 
 
+.Privacy
+  // width: 100%
+  // height: 100%
+  // overflow-y: scroll

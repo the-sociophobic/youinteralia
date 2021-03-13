@@ -1,10 +1,12 @@
 import React from 'react'
 
+import { FormattedMessage } from 'components/Store'
+
 
 class Privacy extends React.Component {
   render = () =>
     <div className="Privacy">
-      Privacy
+      <FormattedMessage id="Privacy" />
     </div>
 }
 

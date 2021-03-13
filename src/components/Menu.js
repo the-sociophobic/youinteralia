@@ -11,11 +11,14 @@ import {
   getMessage,
   getArtists,
 } from 'components/Store'
+import ScrollToTop from 'components/ScrollToTop'
 
 
 class Menu extends React.Component {
 
   static contextType = StoreContext
+
+  scrollRef = React.createRef()
 
   componentDidMount = () =>
     this.props.history.listen((location, action) =>
@@ -125,10 +128,12 @@ class Menu extends React.Component {
     </div>
 
   render = () =>
-    <div className="Menu">
-      {this.renderContent()}
-      {this.renderHeader()}
-    </div>
+    <ScrollToTop scrollRef={this.scrollRef}>
+      <div className="Menu" ref={this.scrollRef}>
+        {this.renderContent()}
+        {this.renderHeader()}
+      </div>
+    </ScrollToTop>
 }
 
 
