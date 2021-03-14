@@ -10,7 +10,7 @@ axios.defaults.withCredentials = true
 
 const APIlink = () =>
   isProd() ?
-    "https://api.youinteralia.com"
+    "130.193.35.61:3170"
     :
     "http://localhost:3170"
 
