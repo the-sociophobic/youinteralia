@@ -10,9 +10,9 @@ axios.defaults.withCredentials = true
 
 const APIlink = () =>
   isProd() ?
-    "https://api.tochkadostupa.spb.ru"
+    "https://api.youinteralia.com"
     :
-    "http://localhost:3070"
+    "http://localhost:3170"
 
 const post = async (path, data, config = {}) =>
   (await axios.post(

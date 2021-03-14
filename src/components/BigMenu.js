@@ -11,7 +11,10 @@ import Participate from 'pages/Participate'
 import Archive from 'pages/Archive'
 import Artist from 'pages/Artist'
 import About from 'pages/About'
+import Admin from 'pages/Admin'
+import Thanks from 'pages/Thanks'
 import Privacy from 'pages/Privacy'
+
 import Footer from 'components/Footer'
 import ScrollToTop from 'components/ScrollToTop'
 
@@ -24,22 +27,29 @@ class BigMenu extends React.Component {
 
   render = () => {
     let page
+    const { pathname } = this.props.location
 
     switch (true) {
-      case this.props.location.pathname.includes('artist'):
-        page = <Artist artist={getArtist(this, this.props.location.pathname.split("/")[2])} />
+      case pathname.includes('artist'):
+        page = <Artist artist={getArtist(this, pathname.split("/")[2])} />
         break
-      case this.props.location.pathname === "/about":
+      case pathname === "/about":
         page = <About />
         break
-      case this.props.location.pathname === "/archive":
+      case pathname === "/archive":
         page = <Archive />
         break
-      case this.props.location.pathname === "/participate":
+      case pathname === "/participate":
         page = <Participate />
         break
-      case this.props.location.pathname === "/privacy":
+      case pathname === "/privacy":
         page = <Privacy />
+        break
+      case pathname === "/admin":
+        page = <Admin />
+        break
+      case pathname === "/thanks":
+        page = <Thanks />
         break
       default:
         break;
@@ -52,7 +62,7 @@ class BigMenu extends React.Component {
           className={`
             BigMenu
             ${page && "BigMenu--opened"}
-            ${this.props.location.pathname.includes("privacy") && "BigMenu--long"}
+            ${(this.props.location.pathname.includes("privacy") || this.props.location.pathname.includes("archive")) && "BigMenu--long"}
           `}
         >
           <div className="BigMenu__content">
@@ -67,7 +77,7 @@ class BigMenu extends React.Component {
               {page}
             </div>
 
-            <Footer />
+            {!this.props.location.pathname.includes("archive") && <Footer />}
           </div>
         </div>
       </ScrollToTop>

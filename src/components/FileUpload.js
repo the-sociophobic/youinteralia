@@ -19,6 +19,7 @@ class FileUpload extends React.Component {
     })
 
     console.log(res)
+    this.props.setFile(res)
     this.props?.setUploading?.(false)
   }
 

@@ -1,6 +1,8 @@
 import React from 'react'
 
 import _ from 'lodash'
+import Cookies from 'universal-cookie'
+import { deviceDetect } from 'react-device-detect'
 
 import flatten from 'utils/flatten'
 import getAttribsFromFlatten from 'utils/getAttribsFromFlatten'
@@ -9,6 +11,8 @@ import isProd from 'utils/isProd'
 import arrayToLocale from './arrayToLocale'
 import defaultMessages from './defaultMessages'
 import artists from './artists'
+import { post } from '../../utils/API'
+
 
 
 const determineStorage = _this =>
@@ -134,12 +138,54 @@ class StoreProvider extends React.Component {
       canView: !isProd(),
       startTesting: () =>
         this.setState({ canView: true }),
+
+      user: undefined,
+      checkUser: () => this.checkUser()
     }
+  }
+
+  cookies = new Cookies()
+
+  checkUser = async () => {
+    const res = await post('/login', {
+      sessionToken: this.cookies.get('sessionToken'),
+      deviceInfo: JSON.stringify(deviceDetect()),
+    })
+
+    if (res.newSessionToken)
+      this.cookies.set('sessionToken', res.newSessionToken)
+
+    this.setState({
+      sessionToken: this.cookies.get('sessionToken')
+    })
+
+    if (res.hasOwnProperty('user'))
+      this.setState({ user: res.user })
+  }
+
+  logout = async () => {
+    if (_.isEmpty(this.state.user))
+      return
+      
+    const res = await post('/logout', {
+      sessionToken: this.cookies.get('sessionToken'),
+      deviceInfo: JSON.stringify(deviceDetect())
+    })
+
+    console.log(res)
+
+    this.cookies.set('sessionToken', res.newSessionToken)
+
+    this.setState({
+      sessionToken: this.cookies.get('sessionToken'),
+      user: {}
+    })
   }
 
   componentDidMount = () => {
     window.onpopstate = this.onPopState.bind(this)
     window.onpushstate = this.onPushState.bind(this)
+    this.checkUser()
   }
 
   onPopState = e => {

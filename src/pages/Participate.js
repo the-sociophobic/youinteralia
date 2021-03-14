@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { withRouter } from 'react-router-dom'
+
 import Input from 'components/Input'
 import {
   FormattedMessage,
@@ -9,12 +11,14 @@ import {
 import Link from 'components/CustomLink'
 import CitySelector from 'components/CitySelector'
 import FileUpload from 'components/FileUpload'
+import { post } from 'utils/API'
 
 
 const inputs = [
   "Participate.form.name",
   "Participate.form.email",
   "Participate.form.location",
+  "Participate.form.link",
 ]
 
 class Participate extends React.Component {
@@ -25,8 +29,8 @@ class Participate extends React.Component {
       }))
       .reduce((a, b) => ({ ...a, ...b })),
     city: undefined,
-    fileLink: undefined,
     fileUploading: false,
+    file: undefined,
   }
 
   static contextType = StoreContext
@@ -38,10 +42,39 @@ class Participate extends React.Component {
 
     return (
       <div className="Particapate__form__agree">
-        {parts[0]}<Link to="/privacy">{linkText}</Link>{parts[1]}
+        {parts[0]}
+        <Link to="/privacy">
+          {linkText}
+        </Link>
+        {parts[1]}
       </div>
     )
   }
+
+  buttonEnabled = () =>
+    inputs
+      .map(input =>
+        this.state[input].length > 0)
+      .reduce((a, b) => a && b)
+    && this.state.city
+    && ((this.state.file && !this.state.fileUploading) || this.state["Participate.form.link"])
+
+  submit = async () => {
+    const res = await post('/participate', {
+      application: {
+        name: this.state["Participate.form.name"],
+        city: this.state.city,
+        email: this.state["Participate.form.email"],
+        route: this.state["Participate.form.location"],
+        audioURL: this.state["Participate.form.link"],
+      }
+    })
+
+    console.log(res)
+
+    this.props.history.push('/thanks')
+  }
+    
 
   render = () => {
     const mappedInputs = inputs.map(input =>
@@ -60,17 +93,24 @@ class Participate extends React.Component {
         <div className="Participate__form">
 
           {mappedInputs.slice(0, 2)}
+
           <CitySelector
             city={this.state.city}
             setCity={city => this.setState({ city: city })}
           />
           {mappedInputs[2]}
-          <FileUpload
-            setFileLink={link => this.setState({ fileLink: link})}
-            setUploadilng={uploading => this.setState({ fileUploading: uploading})}
-          />
 
-          <button className="Participate__form__submit">
+          {/* <FileUpload
+            setFile={link => this.setState({ file: link})}
+            setUploadilng={uploading => this.setState({ fileUploading: uploading})}
+          /> */}
+          {mappedInputs[3]}
+
+          <button
+            className="Participate__form__submit"
+            disabled={!this.buttonEnabled()}
+            onClick={() => this.submit()}
+          >
             <FormattedMessage id="Participate.form.submit" />
           </button>
           
@@ -83,4 +123,4 @@ class Participate extends React.Component {
 }
 
 
-export default Participate
+export default withRouter(Participate)

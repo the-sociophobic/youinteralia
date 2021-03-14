@@ -38,13 +38,24 @@ const defaultMessages = {
       cityGeneva: ["Женева", "Geneva"],
       location: ["место*", "location*"],
       upload: ["загрузите свой маршрут", "upload your route"],
-      link: ["или отправьте свою ссылку", "or paste the link here"],
+      // link: ["или отправьте свою ссылку", "or paste the link here"],
+      link: ["ссылка на аудиофайл*", "link to audiofile*"],
       submit: ["отправить", "submit"],
       agree: ["нажмая на кнопку, вы соглашаетесь с политикой конфиденциальности", "by clicking submit button you agree with our privacy policy.\n*required field"],
     }
   },
+  Thanks: {
+    text: ["Спасибо за ваше участие! Мы постараемся опубликовать ваш материал как можно скорее. Следите за обновлениями на сайте!", "Thanks for participation! We'll try to post your route as soon ass possible! Keep an eye on updates!"],
+    back: ["обратно", "back"]
+  },
   Player: {
     loading: ["загрузка", "loading"],
+  },
+  Archive: {
+    title: ["архив", "archive"],
+    desc: ["съешь ещё этих мягких французских булок, да выпей чаю", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit enim et pharetra vehicula. Phasellus eu laoreet velit. Curabitur egestas nisl a odio pellentesque sodales eu ut diam. In diam sem, dapibus non semper ac, mattis ac lectus. Mauris tincidunt purus metus, non posuere neque mollis ut. Aliquam pretium vulputate."],
+    browse: ["поиск по тегам", "browse archive by tags"],
+    nothing: ["ничего не найдено", "no items found"],
   },
   Privacy: [
     <>

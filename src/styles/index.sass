@@ -49,6 +49,9 @@
   outline: none
   border: none
   background-color: rgba(0, 0, 0, 0)
+  &:disabled
+    opacity: .25
+    cursor: not-allowed
 
 .Link
   display: inline
@@ -514,6 +517,8 @@ $dropdown-transition: .15s
         padding-left: rem(9)
         padding-right: rem(8)
       .BigMenu--long &
+        @extend .d-flex
+        @extend .flex-column
         padding-top: rem(90)
         @include media-breakpoint-up(xl)
           overflow: hidden
@@ -805,7 +810,9 @@ $dropdown-transition: .15s
   line-height: rem(50)
   &__name
     @extend .flex-grow-1-polyfill
+    @extend .noselect
     padding: 0 12px
+    background-color: $light
   &__spb,
   &__gen
     @extend .noselect
@@ -820,3 +827,97 @@ $dropdown-transition: .15s
     background-color: $spb
   &__gen--selected
     background-color: $gen
+
+
+
+.Input__file
+  @extend .button
+  width: 100%
+  border: $border
+  height: rem(50)
+  line-height: rem(50)
+  padding: 0 12px
+  content: ''
+  &::file-selector-button
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+
+
+
+.Archive
+  @extend .d-flex-polyfill
+  @extend .flex-grow-1-polyfill
+  @extend .flex-column
+  height: 100%
+  padding: 0 0 rem(124)
+  @include media-breakpoint-down(lg)
+    padding: 0 0 rem(101)
+  &__left
+    @extend .d-flex-polyfill
+    @extend .flex-grow-1-polyfill
+    @extend .flex-column
+  &__right
+
+  &__about
+    @extend .flex-grow-1-polyfill
+    @extend .d-flex
+    @extend .flex-column
+    @extend .justify-content-between
+    border: $border
+    padding: rem(20) rem(15)
+  &__tags
+    @extend .abs-cover
+    background-color: $light
+    padding: rem(120) rem(20) rem(124)
+    @include media-breakpoint-down(lg)
+      padding: rem(90) rem(20) rem(101)
+    &__item
+      @extend .button
+      display: inline-block
+      border: $border
+      border-radius: rem(100)
+      line-height: rem(32)
+      margin: 0 rem(5) rem(15) 0
+      padding: 0 rem(23) 0 rem(8)
+      position: relative
+      &::after
+        content: ''
+        width: rem(10)
+        height: rem(10)
+        @extend .def-img
+        background-image: url(./img/cross.svg)
+        position: absolute
+        top: rem(12)
+        right: rem(8)
+      &--selected
+        background-color: $dark
+        color: $light
+        &::after
+          background-image: url(./img/cross-white.svg)
+
+
+.Thanks
+  width: 100%
+  @extend .d-flex
+  @extend .flex-column
+  @extend .align-items-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  @extend .px-4
+  &__text
+    text-align: center
+    @extend .mb-5
+  &__back
+    @extend .button
+    width: rem(250)
+    background-color: $dark
+    color: $light
+    padding: rem(7) rem(15)
+    text-align: center
