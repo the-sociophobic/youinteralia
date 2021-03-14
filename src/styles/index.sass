@@ -498,8 +498,11 @@ $dropdown-transition: .15s
     @extend .flex-column
     width: 100vw
     @include media-breakpoint-up(xl)
-      &:not(.BigMenu--long &)
-        height: 100vh
+      // &:not(.BigMenu--long &)
+      //   height: 100vh
+      height: 100vh
+      .BigMenu--long &
+        height: auto
     @include media-breakpoint-down(lg)
       min-height: 100%
     &__header
