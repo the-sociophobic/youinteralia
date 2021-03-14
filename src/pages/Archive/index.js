@@ -1,9 +1,10 @@
 import React from 'react'
 
 import _ from 'lodash'
+import { Document } from 'react-pdf'
 
+import pdfImg from 'styles/img/pdf.png'
 import { FormattedMessage } from 'components/Store'
-import Img from 'components/Img'
 import Player from 'components/Player'
 import {
   StoreContext,
@@ -17,7 +18,7 @@ import items from './items'
 class Archive extends React.Component {
   state = {
     selectedTags: [],
-    zoomPressed: true,
+    searchPressed: false,
   }
 
   static contextType = StoreContext
@@ -32,16 +33,22 @@ class Archive extends React.Component {
       </div>
     </div>
 
-  renderZoom = () =>
-    <div className="Archive__zoom">
-      <div className={`Archive__zoom__`}>
-
-      </div>
+  renderSearch = () =>
+    <div
+      onClick={() => this.setState({ searchPressed: !this.state.searchPressed })}
+      className={`
+        Archive__search
+        ${this.state.selectedTags.length > 0 && "Archive__search--tags"}
+        ${(this.state.selectedTags.length === 0 && !this.state.searchPressed) && "Archive__search--full"}
+      `}
+    >
+      <div className="Archive__search__magnifier" />
 
       <div
-        className="Archive__zoom__"
-        onClick={() => this.setState({ zoomPressed: !this.state.zoomPressed })}
-      />
+        className="Archive__search__browse"
+      >
+        <FormattedMessage id="Archive.browse" />
+      </div>
     </div>
 
   renderTags = () =>
@@ -72,29 +79,58 @@ class Archive extends React.Component {
     })
   }
 
-  renderContent = () =>
-    <div className="Archive__content">
-      {items
-        .filter(item =>
-          this.state.selectedTags.length === 0 ||
-          _.intersection(item.tags, this.state.selectedTags).length > 0)
-        .map(item =>
-          <div className="Archive__content__item">
-            {item.type === "img" ?
-              <Img
-                src={item.link}
-              />
-              :
-              <Player
-                artist={getArtist(this, item.link)}
-                compact
-                hideArrow
-              />
-            }
+  renderContent = () => {
+    const filteredMappedItems = items
+      .slice(0, 25)
+      .filter(item =>
+        this.state.selectedTags.length === 0 ||
+        _.intersection(item.tags, this.state.selectedTags).length > 0)
+      .map(item =>
+        <div className="Archive__content__item">
+          {this.renderItem(item)}
+        </div>
+      )
+    const third = Math.round(filteredMappedItems.length / 3)
+    const half = Math.round(filteredMappedItems.length / 2)
+
+    return (
+      <div className="Archive__content">
+        {filteredMappedItems.length === 0 &&
+          <div className="Archive__content__nothing">
+            <FormattedMessage id="Archive.nothing" />
           </div>
-        )
-      }
-    </div>
+        }
+        <div className="Archive__content__col desktop-only">
+          {filteredMappedItems.slice(third * 2)}
+        </div>
+        <div className="Archive__content__col desktop-only">
+          {filteredMappedItems.slice(third, third * 2)}
+        </div>
+        <div className="Archive__content__col desktop-only">
+          {filteredMappedItems.slice(0, third)}
+        </div>
+
+        <div className="Archive__content__col mobile-only">
+          {filteredMappedItems.slice(0, half)}
+        </div>
+        <div className="Archive__content__col mobile-only">
+          {filteredMappedItems.slice(half)}
+        </div>
+      </div>
+    )
+  }
+
+  renderItem = item => {
+    switch(item.type) {
+      case "img":
+        return <img src={item.link} alt="" />
+      case "pdf":
+        return <img src={pdfImg} alt="" />
+        // return <Document file={item.link} />
+      default:
+        return ""
+    }
+  }
 
   renderOpenedContent = () =>
     <div className="Archive__">
@@ -106,11 +142,14 @@ class Archive extends React.Component {
     <div className="Archive">
       <div className="Archive__left">
         {this.renderAbout()}
-        {this.renderZoom()}
-        {this.state.zoomPressed && this.renderTags()}
+        {this.state.searchPressed && this.renderTags()}
       </div>
-      <div className="Archive__right">
-        {this.renderZoom()}
+        {this.renderSearch()}
+      <div className={`
+        Archive__right
+        ${(this.state.selectedTags.length > 0 && !this.state.searchPressed) && "Archive__right--visible"}
+      `}>
+        {this.renderContent()}
       </div>
     </div>
 }

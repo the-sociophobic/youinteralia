@@ -12,6 +12,8 @@ const tags = [
   "landscape",
   "suburbs",
   "body",
+  "home",
+  "map",
 ]
 
 

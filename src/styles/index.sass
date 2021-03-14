@@ -471,8 +471,10 @@ $dropdown-transition: .15s
     height: 100vh
   &--long
     overflow-y: scroll
-    &__content
-      height: auto !important
+    // &__content
+    //   height: auto !important
+    .BigMenu__content__container
+      padding: 0 !important
   &__content
     @extend .d-flex-polyfill
     @extend .flex-column
@@ -851,18 +853,87 @@ $dropdown-transition: .15s
 
 .Archive
   @extend .d-flex-polyfill
-  @extend .flex-grow-1-polyfill
+  // @extend .flex-grow-1-polyfill
+  @extend .flex-xl-row
   @extend .flex-column
-  height: 100%
-  padding: 0 0 rem(124)
-  @include media-breakpoint-down(lg)
-    padding: 0 0 rem(101)
+  height: 100vh
   &__left
     @extend .d-flex-polyfill
-    @extend .flex-grow-1-polyfill
     @extend .flex-column
+    position: relative
+    background-color: $big-menu-background
+    width: rem(432)
+    border-right: $border
+    padding: rem(117) rem(48) rem(124) rem(50)
+    @include media-breakpoint-down(lg)
+      border-right: none
+      width: 100%
+      height: 100%
+      padding: rem(90) rem(21) rem(101)
+      position: fixed
+      z-index: 12
+    @media screen and ( max-width: 350px )
+      padding-left: rem(9)
+      padding-right: rem(8)
+  &__search
+    z-index: 20
+    @extend .d-flex-polyfill
+    @extend .flex-row-reverse
+    position: fixed
+    bottom: rem(50)
+    // right: calc(100vw - #{rem(334)} + #{rem(47)})
+    right: calc(100vw - 334px - 50px)
+    border: $border
+    @include media-breakpoint-down(lg)
+      bottom: rem(20)
+      right: rem(21)
+    @media screen and ( max-width: 350px )
+      right: rem(8)
+    &__magnifier
+      z-index: 11
+      position: relative
+      @extend .button
+      width: rem(50)
+      height: rem(50)
+      background-color: $light
+      background-image: url(./img/magnifier.svg)
+      border-left: $border
+      background-position: 40% 40%
+    &__browse
+      @extend .noselect
+      cursor: pointer
+      height: rem(50)
+      width: 0
+      padding-left: 0
+      transition: width $menu-transition, padding-left $menu-transition
+      line-height: rem(50)
+      background-color: $light
+      overflow: hidden
+      white-space: nowrap
+      margin-right: rem(-1)
+    &--full
+      .Archive__search__browse
+        padding-left: rem(11)
+        width: rem(284)
+        @include media-breakpoint-down(lg)
+          width: calc(100vw - #{rem(50)} - #{rem(42)})
+        @media screen and ( max-width: 350px )
+          width: calc(100vw - #{rem(50)} - #{rem(17)})
+    &--tags
+      .Archive__search__magnifier
+        background-color: $dark
+        background-image: url(./img/magnifier-white.svg)
   &__right
-
+    @extend .flex-grow-1-polyfill
+    overflow-y: scroll
+    @include media-breakpoint-down(lg)
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: fixed
+      &--visible
+        z-index: 12
   &__about
     @extend .flex-grow-1-polyfill
     @extend .d-flex
@@ -873,7 +944,7 @@ $dropdown-transition: .15s
   &__tags
     @extend .abs-cover
     background-color: $light
-    padding: rem(120) rem(20) rem(124)
+    padding: rem(120) rem(50) rem(124)
     @include media-breakpoint-down(lg)
       padding: rem(90) rem(20) rem(101)
     &__item
@@ -899,7 +970,36 @@ $dropdown-transition: .15s
         color: $light
         &::after
           background-image: url(./img/cross-white.svg)
-
+  &__content
+    @extend .d-flex-polyfill
+    @extend .flex-row
+    @extend .flex-wrap
+    @extend .justify-content-between
+    padding: rem(50)
+    background-color: $dark
+    min-height: 100%
+    @include media-breakpoint-down(lg)
+      background-color: $big-menu-background
+      padding: rem(110) rem(21) rem(50) rem(20)
+    &__col
+      width: 30%
+      @include media-breakpoint-down(lg)
+        width: 42%
+    &__item
+      @extend .button
+      padding-bottom: 18%
+      img
+        width: 100%
+        height: auto
+    &__nothing
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(70%, -50%)
+      @include media-breakpoint-down(lg)
+        transform: translate(-50%, -50%)
+      z-index: 15
+      color: $light
 
 .Thanks
   width: 100%
@@ -921,3 +1021,17 @@ $dropdown-transition: .15s
     color: $light
     padding: rem(7) rem(15)
     text-align: center
+
+
+.Privacy
+  padding-top: rem(90)
+  @include media-breakpoint-up(xl)
+    padding-top: rem(117)
+  padding-left: rem(49)
+  padding-right: rem(49)
+  @include media-breakpoint-down(lg)
+    padding-left: rem(21)
+    padding-right: rem(21)
+  @media screen and ( max-width: 350px )
+    padding-left: rem(9)
+    padding-right: rem(8)
