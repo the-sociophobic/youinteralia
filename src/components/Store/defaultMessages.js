@@ -10,6 +10,9 @@ const defaultMessages = {
   Artist: {
     routeInfo: ["о проекте", "about the project"]
   },
+  Marker: {
+    popup: ["«северные полмира».\nпродолжение", "«appear in the northern hemisphere».\ncontinue"],
+  },
   About: {
     first: {
       title: ["идея", "idea"],

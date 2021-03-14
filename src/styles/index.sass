@@ -347,6 +347,23 @@ $dropdown-transition: .15s
     .Marker__dot
       width: rem(30)
       height: rem(30)
+  &__popup
+    font-size: rem(20)
+    position: absolute
+    top: -100%
+    left: rem(25)
+    transform: translate(-50%, -20%)
+    background-color: $light
+    text-align: center
+    padding: rem(5)
+    white-space: nowrap
+    opacity: 0
+    transition: opacity $menu-transition
+    &--show
+      opacity: 1
+    .Marker--average &,
+    .Marker--small &
+      display: none
 
 
 

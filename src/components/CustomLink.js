@@ -16,7 +16,10 @@ const _Link = ({
   disabled,
 }) =>
   disabled ?
-    <span className={`Link Link--disabled ${className}`}>
+    <span
+      className={`Link Link--disabled ${className}`}
+      onClick={() => onClick?.()}
+    >
       {children}
     </span>
     :
