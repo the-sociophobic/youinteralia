@@ -44,6 +44,7 @@
   flex: 1
 
 .button
+  @extend .noselect
   padding: 0
   cursor: pointer
   outline: none
@@ -948,6 +949,7 @@ $dropdown-transition: .15s
     @include media-breakpoint-down(lg)
       padding: rem(90) rem(20) rem(101)
     &__item
+      text-transform: lowercase
       @extend .button
       display: inline-block
       border: $border
@@ -978,6 +980,7 @@ $dropdown-transition: .15s
     padding: rem(50)
     background-color: $dark
     min-height: 100%
+    position: relative
     @include media-breakpoint-down(lg)
       background-color: $big-menu-background
       padding: rem(110) rem(21) rem(50) rem(20)
@@ -995,11 +998,18 @@ $dropdown-transition: .15s
       position: absolute
       top: 50%
       left: 50%
-      transform: translate(70%, -50%)
-      @include media-breakpoint-down(lg)
-        transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
       z-index: 15
       color: $light
+      text-align: center
+      .Link
+        text-decoration: underline
+        color: $light
+      @include media-breakpoint-down(lg)
+        color: $dark
+        .Link
+          text-decoration: underline
+          color: $dark
 
 .Thanks
   width: 100%

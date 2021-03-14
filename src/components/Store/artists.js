@@ -209,7 +209,7 @@ const artists = [
         Андреа Мариони родился в 1986 году, живет и работает в Биль-Бьене.<br />
         Мои практики работают как полифония: я ищу коллизии и столкновения между формами и понятиями, которые иногда превращаются в гармонии или в диссонансы. Меня интересует современное понятие «пограничной политики» (border politics) и то, как оно «работает» через объекты, отражая как общность, так и отчуждение. Я использую в основном «дешевый материал»: от мусора до повседневных бытовых предметов, также модифицирую и включаю их в свои художественные произведения. Еще одно эстетика, которая важна для меня, вдохновлена «детским творчеством» и «игрушкам», которые, по моему мнению, передают ироническую силу (или силу иронии), а не угрозу. Концептуально, мои работы состоят из следов коллективного подсознания, вытесненных воспоминаний и воплощенных табу.<br />
         <br />
-        Личный сайт: <ExternalLink newTab to="http://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
+        Личный сайт: <ExternalLink newTab to="https://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
         Кураторский проект: <ExternalLink newTab to="http://lumpenstation.art">lumpenstation.art</ExternalLink>
       </>,
       <>
@@ -217,7 +217,7 @@ const artists = [
         <br />
         My practices work like polyphonies: I look for collisions and clashes between forms and concepts which turn sometimes into harmonies or into dissonances. In general, I am interested in the contemporary notion of «border politics» and how it works through objects and oscillates between community and alienation. I use mostly «cheap material»: from trash to daily domestic goods and modify and incorporate them in the artwork. Another aesthetics that is important for me comes from «Childish art craft» and «Toys» which, to me, convey ironic power (or power of irony) rather than a violent threat. My works are composed conceptually of leftovers of the collective subconscious, repressed memories and embodied tabu. <br />
         <br />
-        Personal website: <ExternalLink newTab to="http://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
+        Personal website: <ExternalLink newTab to="https://marioniandrea.art">marioniandrea.art</ExternalLink> <br />
         Artist curator: <ExternalLink newTab to="http://lumpenstation.art">lumpenstation.art</ExternalLink>
       </>,
     ],
@@ -311,12 +311,12 @@ const artists = [
       <>
         Мартина Махлер (1991) получила степень бакалавра искусств в Цюрихском университете искусств (ZHdK). Затем в течение одного года училась на магистерской программе Art Praxis в Dutch Art Institute (ArtEZ) в Арнеме (Нидерланды). В своих преимущественно процессуальных перформативных проектах Мартина Махлер фокусируется на современных условиях труда, анализируя технические и психологические инструменты контроля и дисциплинирования субъекта.<br />
         <br /><br />
-        <ExternalLink newTab to="http://www.martinamaechler.com">martinamaechler.com</ExternalLink>
+        <ExternalLink newTab to="https://www.martinamaechler.com">martinamaechler.com</ExternalLink>
       </>,
       <>
         Martina Mächler (*1991) completed a BFA in Fine Arts at Zurich University of the Arts (ZHdK). She then studied for one year in the MA Art Praxis at the Dutch Art Institute (ArtEZ) in Arnhem(NL). In her mostly processual performative projects, Martina Mächler is focussing on modern working conditions, looking at technical and psychological means of control and disciplining of the self. 
         <br /><br />
-        <ExternalLink newTab to="http://www.martinamaechler.com">martinamaechler.com</ExternalLink>
+        <ExternalLink newTab to="https://www.martinamaechler.com">martinamaechler.com</ExternalLink>
       </>,
     ],
     aboutRoute: [
@@ -338,7 +338,6 @@ const artists = [
     lng: 6.14402314095441,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Francoise.mp3",
     svg: FrancoiseSVG,
-    png: FrancoisePNG,
     aboutArtist: [
       <>
         Франсуаз Карако (р. 1972) — художница из Цюриха, Швейцария. Основой ее художественных работ являются исследования семейных историй, событий и мест, пропитанных духом истории.\nСвидетельства очевидцев, а также отрывки из собранного документального материала, звукового в том числе, уже несколько лет формируют ее художественную практику. Помимо прочего, Франсуаз уже долгое время занимается историей своей семьи. Ее интерес заключается в вопросе конструирования памяти на пересечениях индивидуального опыта и коллективного прошлого. В своих аудио и видео работах или перформансах Карако переплетает факты и вымысел, и стремится затронуть темы и обстоятельства, актуальные для сегодняшнего дня.

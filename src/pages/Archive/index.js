@@ -10,9 +10,21 @@ import {
   StoreContext,
   getArtist,
 } from 'components/Store'
+import Link from 'components/CustomLink'
 
-import tags from './tags'
 import items from './items'
+
+
+const blatnye = ["Martina Mächler", "Andrea Marioni"]
+
+const tags = Array.from(
+  new Set(
+    [blatnye, ...items]
+      .reduce((a, b) =>
+        [...(a.tags || a), ...b.tags])))
+
+const isRussian = string =>
+  /[а-яА-ЯЁё]/.test(string)
 
 
 class Archive extends React.Component {
@@ -22,6 +34,16 @@ class Archive extends React.Component {
   }
 
   static contextType = StoreContext
+
+  getTags = () =>
+    tags.filter(tag =>
+      this.context.locale === "rus" ?
+        isRussian(tag) : !isRussian(tag))
+
+  getSelectedTags = () =>
+    this.state.selectedTags.filter(tag =>
+      this.context.locale === "rus" ?
+        isRussian(tag) : !isRussian(tag))
 
   renderAbout = () =>
     <div className="Archive__about">
@@ -38,8 +60,8 @@ class Archive extends React.Component {
       onClick={() => this.setState({ searchPressed: !this.state.searchPressed })}
       className={`
         Archive__search
-        ${this.state.selectedTags.length > 0 && "Archive__search--tags"}
-        ${(this.state.selectedTags.length === 0 && !this.state.searchPressed) && "Archive__search--full"}
+        ${this.getSelectedTags().length > 0 && "Archive__search--tags"}
+        ${(this.getSelectedTags().length === 0 && !this.state.searchPressed) && "Archive__search--full"}
       `}
     >
       <div className="Archive__search__magnifier" />
@@ -53,11 +75,11 @@ class Archive extends React.Component {
 
   renderTags = () =>
     <div className="Archive__tags">
-      {tags.map(tag =>
+      {this.getTags().map(tag =>
         <div
           className={`
             Archive__tags__item
-            ${this.state.selectedTags.includes(tag) && "Archive__tags__item--selected"}
+            ${this.getSelectedTags().includes(tag) && "Archive__tags__item--selected"}
           `}
           onClick={() => this.toggleTag(tag)}
         >
@@ -79,12 +101,35 @@ class Archive extends React.Component {
     })
   }
 
+  renderNothing = () =>
+    <div className="Archive__content__nothing">
+      {(() => {
+        const artists = this.getSelectedTags()
+          .filter(tag => tag.includes(" "))
+
+        if (artists.length !== 1 || !artists.some(artist => blatnye.includes(artist)))
+          return <FormattedMessage id="Archive.nothing" />
+
+        return <>
+          no result. find out about artist below<br />
+          {artists[0] === "Martina Mächler" ?
+            <Link to="https://www.martinamaechler.com">
+              martinamaechler.com
+            </Link>
+            :
+            <Link to="https://marioniandrea.art">
+              marioniandrea.art
+            </Link>
+          }
+        </>
+      })()}
+    </div>
+
   renderContent = () => {
     const filteredMappedItems = items
-      .slice(0, 25)
       .filter(item =>
-        this.state.selectedTags.length === 0 ||
-        _.intersection(item.tags, this.state.selectedTags).length > 0)
+        this.getSelectedTags().length === 0 ||
+        this.getSelectedTags().every(tag => item.tags.includes(tag)))
       .map(item =>
         <div className="Archive__content__item">
           {this.renderItem(item)}
@@ -96,10 +141,7 @@ class Archive extends React.Component {
     return (
       <div className="Archive__content">
         {filteredMappedItems.length === 0 &&
-          <div className="Archive__content__nothing">
-            <FormattedMessage id="Archive.nothing" />
-          </div>
-        }
+          this.renderNothing()}
         <div className="Archive__content__col desktop-only">
           {filteredMappedItems.slice(third * 2)}
         </div>
@@ -147,7 +189,7 @@ class Archive extends React.Component {
         {this.renderSearch()}
       <div className={`
         Archive__right
-        ${(this.state.selectedTags.length > 0 && !this.state.searchPressed) && "Archive__right--visible"}
+        ${(this.getSelectedTags().length > 0 && !this.state.searchPressed) && "Archive__right--visible"}
       `}>
         {this.renderContent()}
       </div>
