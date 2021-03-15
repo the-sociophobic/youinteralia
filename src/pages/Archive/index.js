@@ -1,6 +1,7 @@
 import React from 'react'
 
 import _ from 'lodash'
+import { withRouter } from 'react-router-dom'
 
 import { FormattedMessage } from 'components/Store'
 import { StoreContext } from 'components/Store'
@@ -11,7 +12,7 @@ import isRussian from 'utils/isRussian'
 import items from './items'
 
 
-const blatnye = ["Мартина Махлер", "Martina Mächler", "Andrea Marioni", "Andrea Marioni"]
+const blatnye = ["Мартина Махлер", "Martina Mächler", "Андреа Мариони", "Andrea Marioni"]
 
 const tags = Array.from(
   new Set(
@@ -49,13 +50,31 @@ class Archive extends React.Component {
       </div>
     </div>
 
+  renderAboutDesctop = () =>
+    this.props.location.pathname.includes("about") &&
+      <Link to="/archive/gallery">
+        <div className="Archive__about-desktop">
+          <div className="Archive__about-desktop__title">
+            <FormattedMessage id="Archive.title" />
+          </div>
+          <div className="Archive__about-desktop__browse">
+            <FormattedMessage id="Archive.browse" />
+            <div className="Archive__about-desktop__browse__magnifier" />
+          </div>
+        </div>
+      </Link>
+
   renderSearch = () =>
     <div
-      onClick={() => this.setState({ searchPressed: !this.state.searchPressed })}
+      onClick={() =>
+        this.setState({
+          searchPressed: !this.state.searchPressed })}
       className={`
         Archive__search
         ${this.getSelectedTags().length > 0 && "Archive__search--tags"}
         ${(this.getSelectedTags().length === 0 && !this.state.searchPressed) && "Archive__search--full"}
+        ${this.context.hideMenu && "Archive__search--hide"}
+        ${this.props.location.pathname.includes("about") && "Archive__search--hide-desktop"}
       `}
     >
       <div className="Archive__search__magnifier" />
@@ -100,13 +119,13 @@ class Archive extends React.Component {
       .filter(tag => tag.includes(" "))
 
     if (artists.length !== 1 || !artists.some(artist => blatnye.includes(artist)))
-      return <div className="Archive__content__nothing">
+      return <div className="Archive__gallery__nothing">
           <FormattedMessage id="Archive.nothing" />
         </div>
 
-    return <div className="Archive__content__nothing">
+    return <div className="Archive__gallery__nothing">
       no result. find out about artist below<br />
-      {artists[0] === "Martina Mächler" ?
+      {artists[0] === "Martina Mächler" || artists[0] === "Мартина Махлер" ?
         <Link to="/artist/6">
           Martina Mächler
         </Link>
@@ -118,7 +137,7 @@ class Archive extends React.Component {
     </div>
   }
 
-  renderContent = () => {
+  renderGallery = () => {
     const filteredItems = items
       .filter(item =>
         this.getSelectedTags().length === 0 ||
@@ -128,10 +147,13 @@ class Archive extends React.Component {
         <Item
           item={item}
           opened={item.link === this.state?.openedItem?.link}
-          setItem={() => this.setState({ openedItem: item })}
+          setItem={() => {
+            this.setState({ openedItem: item })
+            this.context.setHideMenu(true)
+          }}
           close={() => {
             this.setState({ openedItem: undefined })
-            console.log(this.state.openedItem)
+            this.context.setHideMenu(false)
           }}
           prev={index === 0 ? null : () => this.setState({ openedItem: filteredItems[index - 1] })}
           next={index === filteredItems.length - 1 ? null : () => this.setState({ openedItem: filteredItems[index + 1] })}
@@ -141,45 +163,61 @@ class Archive extends React.Component {
     const half = Math.round(filteredMappedItems.length / 2)
 
     return (
-      <div className="Archive__content">
+      <div className={`
+        Archive__gallery
+        ${this.props.location.pathname.includes("about") && "Archive__gallery--hide"}
+      `}>
         {filteredMappedItems.length === 0 &&
           this.renderNothing()}
-        <div className="Archive__content__col desktop-only">
+        <div className="Archive__gallery__col desktop-only">
           {filteredMappedItems.slice(third * 2)}
         </div>
-        <div className="Archive__content__col desktop-only">
+        <div className="Archive__gallery__col desktop-only">
           {filteredMappedItems.slice(third, third * 2)}
         </div>
-        <div className="Archive__content__col desktop-only">
+        <div className="Archive__gallery__col desktop-only">
           {filteredMappedItems.slice(0, third)}
         </div>
 
-        <div className="Archive__content__col mobile-only">
+        <div className="Archive__gallery__col mobile-only">
           {filteredMappedItems.slice(0, half)}
         </div>
-        <div className="Archive__content__col mobile-only">
+        <div className="Archive__gallery__col mobile-only">
           {filteredMappedItems.slice(half)}
         </div>
       </div>
     )
   }
 
+  renderDesc = () =>
+    <div className={`
+      Archive__right__desc
+      ${this.props.location.pathname.includes("about") && "Archive__right__desc--show"}
+    `}>
+      <FormattedMessage id="Archive.desc" />
+    </div>
+
+  showTags = () =>
+    this.state.searchPressed ||
+    (window.innerWidth >= 1200 && this.props.location.pathname.includes("gallery"))
 
   render = () =>
     <div className="Archive">
       <div className="Archive__left">
         {this.renderAbout()}
-        {this.state.searchPressed && this.renderTags()}
+        {this.renderAboutDesctop()}
+        {this.showTags() && this.renderTags()}
       </div>
         {this.renderSearch()}
       <div className={`
         Archive__right
         ${(this.getSelectedTags().length > 0 && !this.state.searchPressed) && "Archive__right--visible"}
       `}>
-        {this.renderContent()}
+        {this.renderGallery()}
+        {this.renderDesc()}
       </div>
     </div>
 }
 
 
-export default Archive
+export default withRouter(Archive)

@@ -14,6 +14,7 @@ const _Link = ({
   children,
   onClick,
   disabled,
+  external
 }) =>
   disabled ?
     <span
@@ -23,7 +24,7 @@ const _Link = ({
       {children}
     </span>
     :
-    to.includes('http') ?
+    to.includes('http') || external ?
       <a
         className={`Link ${className}`}
         href={to}

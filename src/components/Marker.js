@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Player from 'components/Player'
-import Link from 'components/CustomLink'
 import { FormattedMessage } from './Store'
 
 

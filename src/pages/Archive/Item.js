@@ -9,28 +9,21 @@ import {
   StoreContext,
   getArtist,
 } from 'components/Store'
+import Link from 'components/CustomLink'
 
 
 class Item extends React.Component {
-
-  state = {
-    width: 0,
-    numberOfPages: 1,
-  }
+  state = { width: 0 }
 
   static contextType = StoreContext
 
-  itemRef = React.createRef()
-
-  updateDimensions = (entries, observer) =>
-    entries.forEach(entry =>
-      this.setState({ width: entry.contentRect.width }))
+  itemRef = React.createRef()      
   
-  pageWidth = () =>
-    this.state.width || 100
-
   componentDidMount = () =>
-    this.resizeObs = new ResizeObserver(this.updateDimensions.bind(this))
+    this.resizeObs = new ResizeObserver(
+      () =>
+        this.setState({
+          width: this.itemRef?.current?.scrollWidth }))
       .observe(this.itemRef.current)
 
   render = () =>
@@ -40,40 +33,47 @@ class Item extends React.Component {
       ref={this.itemRef}
     >
       {(() => {
-        switch(this.props.item.type) {
+        const { item } = this.props
+
+        switch(item.type) {
           case 'img':
-            return <Img src={this.props.item.link} />
+            return <Img src={item.link} />
           case 'pdf':
-            return <Document
-                    file={this.props.item.link}
-                    onLoadSuccess={numberOfPages => this.setState({ numberOfPages: numberOfPages })}
-                  >
-                    {new Array(this.state.numberOfPages).map((page, index) =>
-                      <Page
-                        pageNumber={index + 1}
-                        width={this.pageWidth()}
-                      />
-                    )}
-                  </Document>
+            return <Link
+                external
+                to={item.link}
+                newTab
+                disabled={!this.props.opened}
+              >
+                <Document file={item.link}>
+                  <Page
+                    pageNumber={1}
+                    width={this.state.width || 100}
+                  />
+                </Document>
+              </Link>
           case 'mp3':
             return <Player
                 compact
-                artist={getArtist(this, this.props.item.link)}
+                artist={getArtist(this, item.link)}
               />
         }
       })()}
+
       <div
         className="Item__close"
         onClick={() => this.props?.close?.()}
       />
-      <div
-        className="Item__prev"
-        onClick={() => this.props?.prev?.()}
-      />
-      <div
-        className="Item__next"
-        onClick={() => this.props?.next?.()}
-      />
+      {this.props.prev &&
+        <div
+          className="Item__prev"
+          onClick={() => this.props?.prev?.()}
+        />}
+      {this.props.next &&
+        <div
+          className="Item__next"
+          onClick={() => this.props?.next?.()}
+        />}
     </div>
 } 
 

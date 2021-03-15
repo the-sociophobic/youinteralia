@@ -207,6 +207,7 @@ $border: 1px solid $dark
       width: 0
     position: relative
     box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
+    overflow-x: hidden
     &__container
       width: 100vw
       height: 100vh
@@ -253,6 +254,9 @@ $border: 1px solid $dark
               background-color: $gen
   .dropdown
     text-transform: lowercase
+  &--hide
+    @include media-breakpoint-down(lg)
+      display: none
 
 
 .Footer
@@ -907,6 +911,8 @@ $dropdown-transition: .15s
     // right: calc(100vw - #{rem(334)} + #{rem(47)})
     right: calc(100vw - 334px - 50px)
     border: $border
+    @include media-breakpoint-up(xl)
+      display: none
     @include media-breakpoint-down(lg)
       bottom: rem(20)
       right: rem(21)
@@ -946,6 +952,11 @@ $dropdown-transition: .15s
       .Archive__search__magnifier
         background-color: $dark
         background-image: url(./img/magnifier-white.svg)
+    &--hide
+      display: none
+    &--hide-desktop
+      @include media-breakpoint-up(xl)
+        display: none
   &__right
     @extend .flex-grow-1-polyfill
     overflow-y: scroll
@@ -957,6 +968,16 @@ $dropdown-transition: .15s
       position: fixed
       &--visible
         z-index: 12
+    &__desc
+      display: none
+      &--show
+        @include media-breakpoint-up(xl)
+          display: block
+          width: 100%
+          min-height: 100%
+          padding: rem(122) rem(134)
+          color: $light
+          background-color: $dark
   &__about
     @extend .flex-grow-1-polyfill
     @extend .d-flex-polyfill
@@ -964,6 +985,8 @@ $dropdown-transition: .15s
     @extend .justify-content-between
     border: $border
     padding: rem(20) rem(15)
+    @include media-breakpoint-up(xl)
+      display: none
   &__tags
     @extend .abs-cover
     background-color: $light
@@ -994,7 +1017,7 @@ $dropdown-transition: .15s
         color: $light
         &::after
           background-image: url(./img/cross-white.svg)
-  &__content
+  &__gallery
     @extend .d-flex-polyfill
     @extend .flex-row
     @extend .flex-wrap
@@ -1006,6 +1029,9 @@ $dropdown-transition: .15s
     @include media-breakpoint-down(lg)
       background-color: $background
       padding: rem(110) rem(21) rem(50) rem(20)
+    &--hide
+      @include media-breakpoint-up(xl)
+        display: none
     &__col
       width: 30%
       @include media-breakpoint-down(lg)
@@ -1075,6 +1101,9 @@ $dropdown-transition: .15s
             right: rem(20)
         .Item__next,
         .Item__prev
+          background-image: url(./img/arrow-up-inline.svg)
+          background-position: center
+          background-repeat: no-repeat
           bottom: rem(50)
           @include media-breakpoint-down(lg)
             bottom: rem(20)
@@ -1082,12 +1111,55 @@ $dropdown-transition: .15s
           top: rem(50)
           @include media-breakpoint-down(lg)
             top: rem(20)
+          background-image: url(./img/cross.svg)
+          background-position: center
+          background-repeat: no-repeat
         .Item__prev
+          transform: rotate(-90deg)
           left: rem(50)
           @include media-breakpoint-down(lg)
             left: rem(20)
+        .Item__next
+          transform: rotate(90deg)
         // img,
         // .react-pdf__Document
+  &__about-desktop
+    @include media-breakpoint-down(lg)
+      display: none
+    width: 100%
+    border: $border
+    margin-top: rem(5)
+    &__title,
+    &__browse
+      width: 100%
+      line-height: rem(50)
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: rem(50)
+        height: rem(50)
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+    &__title
+      padding-left: rem(15)
+      border-bottom: $border
+      &::after
+        background-image: url(./img/arrow-up.svg)
+        transform: rotate(90deg)
+    &__browse
+      padding-left: rem(11)
+      background-color: $light
+      &::after
+        background-image: url(./img/magnifier.svg)
+        border-left: $border
+        background-position: 40% 40%
+        background-size: 135%
+
+
 
 
 

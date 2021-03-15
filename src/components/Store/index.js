@@ -140,7 +140,10 @@ class StoreProvider extends React.Component {
         this.setState({ canView: true }),
 
       user: undefined,
-      checkUser: () => this.checkUser()
+      checkUser: () => this.checkUser(),
+
+      hideMenu: false,
+      setHideMenu: hideMenu => this.setState({ hideMenu: hideMenu })
     }
   }
 
