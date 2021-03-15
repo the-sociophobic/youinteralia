@@ -75,8 +75,8 @@
 // COLORS
 $dark: #474747
 $light: white
-$pale: #FBF7EE
-$big-menu-background: $pale
+$background: #FBF7EE
+$preview-background: #1C1C1C
 
 $spb: #7C81FF
 $spb-highlight: #4056A1
@@ -474,7 +474,7 @@ $dropdown-transition: .15s
   top: 0
   right: 0
   overflow: hidden
-  background-color: $big-menu-background
+  background-color: $background
   @include media-breakpoint-down(lg)
     transition: width $menu-transition
     width: 0
@@ -489,8 +489,6 @@ $dropdown-transition: .15s
     height: 100vh
   &--long
     overflow-y: scroll
-    // &__content
-    //   height: auto !important
     .BigMenu__content__container
       padding: 0 !important
   &__content
@@ -498,8 +496,6 @@ $dropdown-transition: .15s
     @extend .flex-column
     width: 100vw
     @include media-breakpoint-up(xl)
-      // &:not(.BigMenu--long &)
-      //   height: 100vh
       height: 100vh
       .BigMenu--long &
         height: auto
@@ -601,7 +597,7 @@ $dropdown-transition: .15s
               border-bottom: $border
               line-height: rem(50)
               margin-bottom: 0
-              background-color: $big-menu-background
+              background-color: $background
               @extend .d-flex-polyfill
               @extend .flex-row
               &__text
@@ -647,24 +643,28 @@ $dropdown-transition: .15s
       overflow: hidden
       
 
-.lev-img,
-.Animation
-  @extend .abs-cover
-  overflow: hidden
+.Img
   transition: opacity $menu-transition
   &--hidden
     opacity: 0
   &__img
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
     &--portrait
       width: 100%
       height: auto
     &--landscape
       width: auto
       height: 100%
+
+.Img--artist,
+.Animation
+  @extend .Img
+  @extend .abs-cover
+  overflow: hidden
+  .Img__img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
   &::after
     content: ''
     @extend .abs-cover
@@ -845,7 +845,7 @@ $dropdown-transition: .15s
     border-left: $border
     text-align: center
     cursor: pointer
-    background-color: $big-menu-background
+    background-color: $background
     width: rem(145)
     @include media-breakpoint-down(sm)
       width: rem(83)
@@ -877,7 +877,6 @@ $dropdown-transition: .15s
 
 .Archive
   @extend .d-flex-polyfill
-  // @extend .flex-grow-1-polyfill
   @extend .flex-xl-row
   @extend .flex-column
   height: 100vh
@@ -885,7 +884,7 @@ $dropdown-transition: .15s
     @extend .d-flex-polyfill
     @extend .flex-column
     position: relative
-    background-color: $big-menu-background
+    background-color: $background
     width: rem(433)
     border-right: $border
     padding: rem(117) rem(48) rem(124) rem(50)
@@ -1005,18 +1004,12 @@ $dropdown-transition: .15s
     min-height: 100%
     position: relative
     @include media-breakpoint-down(lg)
-      background-color: $big-menu-background
+      background-color: $background
       padding: rem(110) rem(21) rem(50) rem(20)
     &__col
       width: 30%
       @include media-breakpoint-down(lg)
         width: 42%
-    &__item
-      @extend .button
-      padding-bottom: 18%
-      img
-        width: 100%
-        height: auto
     &__nothing
       position: absolute
       top: 50%
@@ -1033,6 +1026,71 @@ $dropdown-transition: .15s
         .Link
           text-decoration: underline
           color: $dark
+    .Item
+      @extend .button
+      width: 100%
+      padding-bottom: 18%
+      img,
+      .react-pdf__Document
+        width: 100%
+        height: auto
+        @extend .d-flex-polyfill
+        @extend .align-items-center
+        // @extend .justify-content-center
+        .react-pdf__Page__textContent
+          @extend .d-none
+      &__close,
+      &__prev,
+      &__next
+        display: none
+      &--opened
+        @extend .d-flex-polyfill
+        @extend .align-items-center
+        @extend .justify-content-center
+        position: fixed
+        z-index: 50
+        top: 0
+        right: 0
+        width: calc(100vw - #{rem(433)})
+        @include media-breakpoint-down(lg)
+          width: 100%
+        height: 100vh
+        background-color: $preview-background
+        padding: rem(100)
+        @include media-breakpoint-down(lg)
+          padding: rem(21)
+        .Item__close,
+        .Item__prev,
+        .Item__next
+          display: block
+          background-color: $light
+          border: $border
+          width: rem(50)
+          height: rem(50)
+          position: absolute
+        .Item__close,
+        .Item__next
+          right: rem(50)
+          @include media-breakpoint-down(lg)
+            right: rem(20)
+        .Item__next,
+        .Item__prev
+          bottom: rem(50)
+          @include media-breakpoint-down(lg)
+            bottom: rem(20)
+        .Item__close
+          top: rem(50)
+          @include media-breakpoint-down(lg)
+            top: rem(20)
+        .Item__prev
+          left: rem(50)
+          @include media-breakpoint-down(lg)
+            left: rem(20)
+        // img,
+        // .react-pdf__Document
+
+
+
 
 .Thanks
   width: 100%
@@ -1068,3 +1126,9 @@ $dropdown-transition: .15s
   @media screen and ( max-width: 350px )
     padding-left: rem(9)
     padding-right: rem(8)
+
+
+
+.Previev
+  width: 100%
+  height: 100%

@@ -26,16 +26,16 @@ class Img extends React.Component {
     <div
       ref={this.containerRef}
       className={`
-        lev-img
+        Img
         ${this.props.className}
-        ${typeof this.state.portrait === "undefined" && "lev-img--hidden"}
+        ${typeof this.state.portrait === "undefined" && "Img--hidden"}
       `}
     >
       <img
         ref={this.imgRef}
         alt=""
         src={this.props.src}
-        className={`lev-img__img lev-img__img--${this.state.portrait ? "portrait" : "landscape"}`}
+        className={`Img__img Img__img--${this.state.portrait ? "portrait" : "landscape"}`}
         onLoad={this.setOrientation}
       />
     </div>

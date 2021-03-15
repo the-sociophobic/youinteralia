@@ -1,20 +1,20 @@
 import ExternalLink from 'components/ExternalLink'
 
-import RomanSVG from 'img/artists/Roman.svg'
-import RomanPNG from 'img/artists/Roman.jpg'
-import OlgaSVG from 'img/artists/Olga.svg'
-import OlgaPNG from 'img/artists/Olga.jpg'
-import * as IvanJSON from 'img/artists/Ivan.json'
-import * as AlenaJSON from 'img/artists/Alena.json'
+import RomanSVG from 'artists/img/Roman.svg'
+import RomanJPG from 'artists/img/Roman.jpg'
+import OlgaSVG from 'artists/img/Olga.svg'
+import OlgaJPG from 'artists/img/Olga.jpg'
+import * as IvanJSON from 'artists/img/Ivan.json'
+import * as AlenaJSON from 'artists/img/Alena.json'
 
-import MartinaSVG from 'img/artists/Martina.svg'
-import MartinaPNG from 'img/artists/Martina.jpg'
-import CarlaSVG from 'img/artists/Carla.svg'
-import CarlaPNG from 'img/artists/Carla.jpg'
-import AndreaSVG from 'img/artists/Andrea.svg'
-import AndreaPNG from 'img/artists/Andrea.jpg'
-import FrancoiseSVG from 'img/artists/Francoise.svg'
-import FrancoisePNG from 'img/artists/Francoise.jpg'
+import MartinaSVG from 'artists/img/Martina.svg'
+import MartinaJPG from 'artists/img/Martina.jpg'
+import CarlaSVG from 'artists/img/Carla.svg'
+import CarlaJPG from 'artists/img/Carla.jpg'
+import AndreaSVG from 'artists/img/Andrea.svg'
+import AndreaJPG from 'artists/img/Andrea.jpg'
+import FrancoiseSVG from 'artists/img/Francoise.svg'
+// import FrancoiseJPG from 'artists/img/Francoise.jpg'
 
 
 const artists = [
@@ -51,7 +51,7 @@ const artists = [
     lng: 30.286153729146147,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Roman.mp3",
     svg: RomanSVG,
-    png: RomanPNG,
+    png: RomanJPG,
     aboutArtist: [
       <>
         Роман Сергеевич Осминкин — поэт, перформер, теоретик искусства, куратор, кандидат искусствоведения. Член Союза писателей С-Петербурга с 2007. Редактор онлайн портала о современном искусстве КРАПИВА. Член редколлегии журнала «Транслит» и «Метажурнал».Автор книг «Товарищ-вещь» (2010), «Товарищ-слово» (2012), «Тексты с внеположными задачами» НЛО, 2015, «Not A Word About Politics!», Cicada Press, 2016. Идеолог и вокалист музыкального проекта «ТЕХНО-ПОЭЗИЯ», участник группы «Лаборатория поэтического акционизма». Победитель турниров СЛЭМ С-Пб 2006, 2010, фестивалей видео-поэзии “Пятая нога” 2010, 2016.Исследователь коллективного перформанса (community based, партиципаторные и перформативные практики в современном искусстве). Преподает в Школе вовлеченного искусства Что делать: и Московской Школе Новой Литературы (курс «Поэтический материализм»).Прочитать диссертацию Романа Сергеевича: «Коллективные формы художественного перформанса в России начала ХХI века» можно по ссылке.
@@ -153,7 +153,7 @@ const artists = [
     lng: 30.346385042008638,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Olga.mp3",
     svg: OlgaSVG,
-    png: OlgaPNG,
+    png: OlgaJPG,
     aboutArtist: [
       <>
         Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 г. в соавторстве с правозащитником А. Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 г. вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина». С 2015 г. сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести А. Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).
@@ -203,7 +203,7 @@ const artists = [
     lng: 6.1419300354337535,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Andrea.mp3",
     svg: AndreaSVG,
-    png: AndreaPNG,
+    png: AndreaJPG,
     aboutArtist: [
       <>
         Андреа Мариони родился в 1986 году, живет и работает в Биль-Бьене.<br />
@@ -271,7 +271,7 @@ const artists = [
     lng: 6.141753032514459,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Carla.mp3",
     svg: CarlaSVG,
-    png: CarlaPNG,
+    png: CarlaJPG,
     aboutArtist: [
       <>
         Карла Демьер, родилась в 1980 году, изучала искусство в Женеве и художественное письмо (creative writing) в Монреале. В своей практике она работает с перформансом, письмом и звуком. Ее тексты смешивают поэзию и повествование, экспериментирование с формой и документальный монтаж. Последние книги Карлы: «Кто там?» (Qui est là?) — сборник рассказов о записи голоса и призраках (Art & Fiction, 2020) и «Авторадио» (Autoradio) — визуальная поэзия, созданная на печатной машинке (ред. Héros-Limite, 2019). С 2012 года она преподает художественное письмо в Женевском университете искусства и дизайна. Кроме того, Карла курирует литературные проекты в Женеве, среди которых ридинги Spoken worlds в Центре современного искусства в Женеве или подкаст-проект «Время чаепития» (L’Heure du thé) в арт-центре Le Grütli.
@@ -306,7 +306,7 @@ const artists = [
     lng: 6.12,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Martina.mp3",
     svg: MartinaSVG,
-    png: MartinaPNG,
+    png: MartinaJPG,
     aboutArtist: [
       <>
         Мартина Махлер (1991) получила степень бакалавра искусств в Цюрихском университете искусств (ZHdK). Затем в течение одного года училась на магистерской программе Art Praxis в Dutch Art Institute (ArtEZ) в Арнеме (Нидерланды). В своих преимущественно процессуальных перформативных проектах Мартина Махлер фокусируется на современных условиях труда, анализируя технические и психологические инструменты контроля и дисциплинирования субъекта.<br />

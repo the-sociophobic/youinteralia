@@ -109,11 +109,13 @@ class Artist extends React.Component {
                 <Img
                   cover
                   src={artist.png}
+                  className="Img--artist"
                 />}
               {artist.svg &&
                 <Img
                   cover
                   src={artist.svg}
+                  className="Img--artist"
                 />}
               {artist.json &&
                 <Animation src={artist.json} />}

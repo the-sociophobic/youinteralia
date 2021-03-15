@@ -1,21 +1,17 @@
 import React from 'react'
 
 import _ from 'lodash'
-import { Document } from 'react-pdf'
 
-import pdfImg from 'styles/img/pdf.png'
 import { FormattedMessage } from 'components/Store'
-import Player from 'components/Player'
-import {
-  StoreContext,
-  getArtist,
-} from 'components/Store'
+import { StoreContext } from 'components/Store'
 import Link from 'components/CustomLink'
+import Item from './Item'
+import isRussian from 'utils/isRussian'
 
 import items from './items'
 
 
-const blatnye = ["Martina Mächler", "Andrea Marioni"]
+const blatnye = ["Мартина Махлер", "Martina Mächler", "Andrea Marioni", "Andrea Marioni"]
 
 const tags = Array.from(
   new Set(
@@ -23,14 +19,12 @@ const tags = Array.from(
       .reduce((a, b) =>
         [...(a.tags || a), ...b.tags])))
 
-const isRussian = string =>
-  /[а-яА-ЯЁё]/.test(string)
-
 
 class Archive extends React.Component {
   state = {
     selectedTags: [],
     searchPressed: false,
+    openedItem: null,
   }
 
   static contextType = StoreContext
@@ -101,40 +95,48 @@ class Archive extends React.Component {
     })
   }
 
-  renderNothing = () =>
-    <div className="Archive__content__nothing">
-      {(() => {
-        const artists = this.getSelectedTags()
-          .filter(tag => tag.includes(" "))
+  renderNothing = () => {
+    const artists = this.getSelectedTags()
+      .filter(tag => tag.includes(" "))
 
-        if (artists.length !== 1 || !artists.some(artist => blatnye.includes(artist)))
-          return <FormattedMessage id="Archive.nothing" />
+    if (artists.length !== 1 || !artists.some(artist => blatnye.includes(artist)))
+      return <div className="Archive__content__nothing">
+          <FormattedMessage id="Archive.nothing" />
+        </div>
 
-        return <>
-          no result. find out about artist below<br />
-          {artists[0] === "Martina Mächler" ?
-            <Link to="https://www.martinamaechler.com">
-              martinamaechler.com
-            </Link>
-            :
-            <Link to="https://marioniandrea.art">
-              marioniandrea.art
-            </Link>
-          }
-        </>
-      })()}
+    return <div className="Archive__content__nothing">
+      no result. find out about artist below<br />
+      {artists[0] === "Martina Mächler" ?
+        <Link to="/artist/6">
+          Martina Mächler
+        </Link>
+        :
+        <Link to="/artist/4">
+          Andrea Marioni
+        </Link>
+      }
     </div>
+  }
 
   renderContent = () => {
-    const filteredMappedItems = items
+    const filteredItems = items
       .filter(item =>
         this.getSelectedTags().length === 0 ||
         this.getSelectedTags().every(tag => item.tags.includes(tag)))
-      .map(item =>
-        <div className="Archive__content__item">
-          {this.renderItem(item)}
-        </div>
-      )
+    const filteredMappedItems = filteredItems
+      .map((item, index) =>
+        <Item
+          item={item}
+          opened={item.link === this.state?.openedItem?.link}
+          setItem={() => this.setState({ openedItem: item })}
+          close={() => {
+            this.setState({ openedItem: undefined })
+            console.log(this.state.openedItem)
+          }}
+          prev={index === 0 ? null : () => this.setState({ openedItem: filteredItems[index - 1] })}
+          next={index === filteredItems.length - 1 ? null : () => this.setState({ openedItem: filteredItems[index + 1] })}
+        />)
+      .slice(0, 42)
     const third = Math.round(filteredMappedItems.length / 3)
     const half = Math.round(filteredMappedItems.length / 2)
 
@@ -161,23 +163,6 @@ class Archive extends React.Component {
       </div>
     )
   }
-
-  renderItem = item => {
-    switch(item.type) {
-      case "img":
-        return <img src={item.link} alt="" />
-      case "pdf":
-        return <img src={pdfImg} alt="" />
-        // return <Document file={item.link} />
-      default:
-        return ""
-    }
-  }
-
-  renderOpenedContent = () =>
-    <div className="Archive__">
-
-    </div>
 
 
   render = () =>

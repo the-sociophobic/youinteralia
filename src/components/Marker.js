@@ -42,7 +42,7 @@ class Marker extends React.Component {
 
       <Player
         className={this.props.zoom <= (this.props.city === "spb" ? 13 : 15) && "Player--hidden"}
-        compact={true}
+        compact
         {...this.props}
       />
     </div>
