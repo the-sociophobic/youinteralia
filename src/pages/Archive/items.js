@@ -240,12 +240,12 @@ const items = [
   {
     type: "pdf",
     link: JitlinaPDF,
-    tags: ["Olga Jitlina", "Ольга Житлина", "writing", "письмо", "body", "тело", ],
+    tags: ["Olga Jitlina", "Ольга Житлина", "writing", "письмо", ],
   },
   {
     type: "pdf",
     link: Jitlina2PDF,
-    tags: ["Olga Jitlina", "Ольга Житлина", "writing", "письмо", "body", "тело", ],
+    tags: ["Olga Jitlina", "Ольга Житлина", "writing", "письмо", ],
   },
   {
     type: "img",
@@ -320,7 +320,7 @@ const items = [
   {
     type: "img",
     link: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/archive/Roman Osminkin/photo_8.jpg",
-    tags: ["Roman Osminkin", "Роман Осминкин", "photo", "фотография", "body", "тело", ],
+    tags: ["Roman Osminkin", "Роман Осминкин", "photo", "фотография", ],
   },
 ]
 
