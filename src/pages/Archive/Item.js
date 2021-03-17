@@ -21,7 +21,11 @@ class Item extends React.Component {
     this.resizeObs = new ResizeObserver(
       () =>
         this.setState({
-          width: this.itemRef?.current?.scrollWidth }))
+          width: this.props.opened ?
+            this.itemRef?.current?.children[0]?.offsetWidth
+            :
+            this.itemRef?.current?.offsetWidth
+          }))
       .observe(this.itemRef.current)
 
   render = () =>

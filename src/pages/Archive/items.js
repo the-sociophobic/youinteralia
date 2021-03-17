@@ -349,3 +349,7 @@ const items = [
 
 
 export default items
+  .map((item, index) => ({
+    ...item,
+    id: index + 1,
+  }))

@@ -30,6 +30,30 @@ class Archive extends React.Component {
 
   static contextType = StoreContext
 
+  componentDidMount = () =>
+    this.updateCurrentIdFromURL()
+
+  componentDidUpdate = prevProps =>
+    this.props.location !== prevProps.location &&
+      this.updateCurrentIdFromURL()
+
+  updateCurrentIdFromURL = () => {
+    const id = parseInt(
+      this.props.location.pathname
+        .replace('/archive/gallery/', '')
+        .replace('/', ''))
+
+    if (id === 0 || typeof id !== "number")
+      return
+      
+    const currentItemIndex = items.map(item => item.id).indexOf(id)
+    const currentItem = items[currentItemIndex]
+
+    this.setState({
+      openedItem: currentItem || null
+    })
+  }
+
   getTags = () =>
     tags.filter(tag =>
       this.context.locale === "rus" ?
@@ -110,8 +134,10 @@ class Archive extends React.Component {
       selectedTags: tagIndex === -1 ?
         [...selectedTags, tag]
         :
-        selectedTags.filter(elem => elem !== tag)
+        selectedTags.filter(elem => elem !== tag),
+      openedItem: null,
     })
+    this.props.history.push('/archive/gallery')
   }
 
   renderNothing = () => {
@@ -150,13 +176,21 @@ class Archive extends React.Component {
           setItem={() => {
             this.setState({ openedItem: item })
             this.context.setHideMenu(true)
+            this.props.history.push(`/archive/gallery/${item.id}`)
           }}
           close={() => {
             this.setState({ openedItem: undefined })
             this.context.setHideMenu(false)
+            this.props.history.push('/archive/gallery')
           }}
-          prev={index === 0 ? null : () => this.setState({ openedItem: filteredItems[index - 1] })}
-          next={index === filteredItems.length - 1 ? null : () => this.setState({ openedItem: filteredItems[index + 1] })}
+          prev={index === 0 ? null : () => {
+            this.setState({ openedItem: filteredItems[index - 1] })
+            this.props.history.push(`/archive/gallery/${filteredItems[index - 1].id}`)
+          }}
+          next={index === filteredItems.length - 1 ? null : () => {
+            this.setState({ openedItem: filteredItems[index + 1] })
+            this.props.history.push(`/archive/gallery/${filteredItems[index + 1].id}`)
+          }}
         />)
       .slice(0, 42)
     const third = Math.round(filteredMappedItems.length / 3)

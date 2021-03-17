@@ -37,7 +37,7 @@ const defaultMessages = {
         Первая часть проекта, в которой к участию‎ были приглашены художники из Швейцарии и России — завершена! Теперь мы предлагаем всем желающим оставить свои аудиосообщения на картах Петербурга или Женевы.
         <br />
         <br />
-        Что делать:
+        <b>Что делать:</b>
         <br />
         <br />
         1. Написать текст в форме письма, или выбрать уже существующий текст, распространяемый по лицензии creative commons и/или написанный автором, умершим более 70-и лет назад.
@@ -47,12 +47,12 @@ const defaultMessages = {
         <br />
         2. Озвучить текст своим голосом, или пригласить для озвучки другого человека. Продолжительность записи любая, но не более 30 мин. 
         <br />
-        Формат готового аудиофайла: mp3
+        <b>Формат готового аудиофайла: mp3</b>
         <br />
         <br />
         3. Отметить место в городе (Санкт-Петербург или Женева), которое, на ваш взгляд, больше всего соответствует содержанию или звучанию текста. Представьте, где должен находиться слушатель вашего сообщения и отметьте это место точкой в google maps, сделайте скриншот и прикрепите к форме справа. 
         <br />
-        Формат файлов: png, jpeg, jpg 
+        <b>Формат файлов: png, jpeg, jpg</b>
         <br />
         <br />
         Не забудьте указать свое имя и email. 
@@ -60,10 +60,12 @@ const defaultMessages = {
         Когда ваша заявка пройдет техническую модерацию, вы сможете найти свое сообщение на карте города.
         <br />
         <br />
-        PS: Пожалуйста, обратите внимание, что участие не предполагает финансового или иного вознаграждения.  
+        <b>PS:</b> Пожалуйста, обратите внимание, что участие не предполагает финансового или иного вознаграждения.  
         <br />
         <br />
-        Вам будет отказано в размещении сообщения, если оно содержит угрозы, ругательства, расистские или ксенофобские замечания, дискриминацию по признаку возраста, состояния здоровья, пола, гендера, религии, этнической или расовой принадлежности. 
+        <small>
+          Вам будет отказано в размещении сообщения, если оно содержит угрозы, ругательства, расистские или ксенофобские замечания, дискриминацию по признаку возраста, состояния здоровья, пола, гендера, религии, этнической или расовой принадлежности. 
+        </small>
       </>,
       <>
         The first part of the project, in which artists from Switzerland and Russia were invited for participation, is completed.
@@ -71,7 +73,7 @@ const defaultMessages = {
         Now we welcome everyone (artists and non-artists alike) to upload their audio messages to the maps of St. Petersburg or Geneva.
         <br />
         <br />
-        What to do:
+        <b>What to do:</b>
         <br />
         <br />
         1. Write a text in the form of a letter, or select a text distributed under a creative commons license and / or written by an author who died more than 70 years ago.
@@ -83,23 +85,24 @@ const defaultMessages = {
         <br />
         2. Voice the text yourself, or invite another person to do it. The recording can be of any length, but not longer than 30 minutes.
         <br />
-        Format of the audio file: mp3
+        <b>Format of the audio file: mp3</b>
         <br />
         <br />
         3. Mark the place in the city (St. Petersburg or Geneva) which, in your opinion, corresponds to the letter’s content or to the way it sounds. In other words, imagine the most suitable place for listening of your message and mark it on google maps, take a screenshot and attach it to the form on the right.
         <br />
-        File format: png, jpeg, jpg
+        <b>File format: png, jpeg, jpg</b>
         <br />
         Don't forget to include your name and email address.
         <br />
         After our moderator checks your message out, you will find it posted.
         <br />
         <br />
-        PS: Please note that participation is strictly voluntary and is not financially or otherwise rewarded.
+        <b>PS:</b> Please note that participation is strictly voluntary and is not financially or otherwise rewarded.
         <br />
         <br />
-        You will be denied participation if your message contains hate speech, threats, racist or xenophobic
-        remarks, discrimination based on age, health, gender, religion, ethnicity or race.
+        <small>
+          You will be denied participation if your message contains hate speech, threats, racist or xenophobic remarks, discrimination based on age, health, gender, religion, ethnicity or race.
+        </small>
       </>,
     ],
     form: {
