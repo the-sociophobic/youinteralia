@@ -13,8 +13,8 @@ import CarlaSVG from 'artists/img/Carla.svg'
 import CarlaJPG from 'artists/img/Carla.jpg'
 import AndreaSVG from 'artists/img/Andrea.svg'
 import AndreaJPG from 'artists/img/Andrea.jpg'
-import FrancoiseSVG from 'artists/img/Francoise.svg'
-// import FrancoiseJPG from 'artists/img/Francoise.jpg'
+// import FrancoiseSVG from 'artists/img/Francoise.svg'
+import FrancoiseJPG from 'artists/img/Francoise.jpg'
 
 
 const artists = [
@@ -337,7 +337,8 @@ const artists = [
     lat: 46.21155495277451,
     lng: 6.14402314095441,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Francoise.mp3",
-    svg: FrancoiseSVG,
+    // svg: FrancoiseSVG,
+    png: FrancoiseJPG,
     aboutArtist: [
       <>
         Франсуаз Карако (р. 1972) — художница из Цюриха, Швейцария. Основой ее художественных работ являются исследования семейных историй, событий и мест, пропитанных духом истории.\nСвидетельства очевидцев, а также отрывки из собранного документального материала, звукового в том числе, уже несколько лет формируют ее художественную практику. Помимо прочего, Франсуаз уже долгое время занимается историей своей семьи. Ее интерес заключается в вопросе конструирования памяти на пересечениях индивидуального опыта и коллективного прошлого. В своих аудио и видео работах или перформансах Карако переплетает факты и вымысел, и стремится затронуть темы и обстоятельства, актуальные для сегодняшнего дня.
