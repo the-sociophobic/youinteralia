@@ -23,6 +23,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-ticker": "^1.2.2",
+    "react-vimeo": "^2.0.0",
     "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.32.7",
     "universal-cookie": "^4.0.4"

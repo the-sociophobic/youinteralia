@@ -88,7 +88,9 @@ class Participate extends React.Component {
     return (
       <div className="Participate">
         <div className="Participate__desc">
-          <FormattedMessage id="Participate.desc" />
+          <div className="Participate__desc__scrollable-text">
+            <FormattedMessage id="Participate.desc" />
+          </div>
         </div>
         <div className="Participate__form">
 

@@ -3,13 +3,11 @@ import React from 'react'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack'
 import ResizeObserver from 'resize-observer-polyfill'
 
-import Player from 'components/Player'
 import Img from 'components/Img'
-import {
-  StoreContext,
-  getArtist,
-} from 'components/Store'
+import { StoreContext } from 'components/Store'
 import Link from 'components/CustomLink'
+import Youtube from 'components/Youtube'
+import Vimeo from 'components/Vimeo'
 
 
 class Item extends React.Component {
@@ -52,11 +50,18 @@ class Item extends React.Component {
                   />
                 </Document>
               </Link>
-          case 'mp3':
-            return <Player
-                compact
-                artist={getArtist(this, item.link)}
+          case 'youtube':
+            return <Youtube
+                thumbnail={!this.props.opened}
+                src={item.link}
               />
+          case 'vimeo':
+            return <Vimeo
+                thumbnail={!this.props.opened && item.thumbnail}
+                src={item.link}
+              />
+          case 'bandcamp':
+            return item.link
         }
       })()}
 

@@ -32,7 +32,76 @@ const defaultMessages = {
     }
   },
   Participate: {
-    desc: ["мы будем рады наполнить карты новыми маршрутами, сделанными вами.\nнет никаких ограничений, кроме того, что маршрут должен находиться в санкт-петербурге или женеве.\nаудио не должно превышать 40 минут.\nвсе маршруты будут рассмотрены нашими кураторами перед отправкой на карту.", "we are happy to fulfill the maps with new routes made by you\nthere are no rules and requirements unless:— route must be located either in saint-petersburd or in geneva.\n— audio file must not be longer than 40 min.\nall routes will be reviewed by our curators and then uploaded to the map."],
+    desc: [
+      <>
+        Первая часть проекта, в которой к участию‎ были приглашены художники из Швейцарии и России — завершена! Теперь мы предлагаем всем желающим оставить свои аудиосообщения на картах Петербурга или Женевы.
+        <br />
+        <br />
+        Что делать:
+        <br />
+        <br />
+        1. Написать текст в форме письма, или выбрать уже существующий текст, распространяемый по лицензии creative commons и/или написанный автором, умершим более 70-и лет назад.
+        <br />
+        Мы предполагаем, что текст будет написан от первого лица и адресован "тебе”. При этом, “ты” — не обязательно человек. Письмо может содержать обращение  к животному, растению, месту, или событию, например. Никаких ограничений нет, — то, каким содержанием наполнить “тебя” — ваше художественное решение.
+        <br />
+        <br />
+        2. Озвучить текст своим голосом, или пригласить для озвучки другого человека. Продолжительность записи любая, но не более 30 мин. 
+        <br />
+        Формат готового аудиофайла: mp3
+        <br />
+        <br />
+        3. Отметить место в городе (Санкт-Петербург или Женева), которое, на ваш взгляд, больше всего соответствует содержанию или звучанию текста. Представьте, где должен находиться слушатель вашего сообщения и отметьте это место точкой в google maps, сделайте скриншот и прикрепите к форме справа. 
+        <br />
+        Формат файлов: png, jpeg, jpg 
+        <br />
+        <br />
+        Не забудьте указать свое имя и email. 
+        <br />
+        Когда ваша заявка пройдет техническую модерацию, вы сможете найти свое сообщение на карте города.
+        <br />
+        <br />
+        PS: Пожалуйста, обратите внимание, что участие не предполагает финансового или иного вознаграждения.  
+        <br />
+        <br />
+        Вам будет отказано в размещении сообщения, если оно содержит угрозы, ругательства, расистские или ксенофобские замечания, дискриминацию по признаку возраста, состояния здоровья, пола, гендера, религии, этнической или расовой принадлежности. 
+      </>,
+      <>
+        The first part of the project, in which artists from Switzerland and Russia were invited for participation, is completed.
+        <br />
+        Now we welcome everyone (artists and non-artists alike) to upload their audio messages to the maps of St. Petersburg or Geneva.
+        <br />
+        <br />
+        What to do:
+        <br />
+        <br />
+        1. Write a text in the form of a letter, or select a text distributed under a creative commons license and / or written by an author who died more than 70 years ago.
+        <br />
+        The text should be written in the first person and should address you.
+        <br />
+        By you we don’t necessarily mean a human being. A letter may be addressed to an animal, a plant, a place, or an event, for example.
+        <br />
+        <br />
+        2. Voice the text yourself, or invite another person to do it. The recording can be of any length, but not longer than 30 minutes.
+        <br />
+        Format of the audio file: mp3
+        <br />
+        <br />
+        3. Mark the place in the city (St. Petersburg or Geneva) which, in your opinion, corresponds to the letter’s content or to the way it sounds. In other words, imagine the most suitable place for listening of your message and mark it on google maps, take a screenshot and attach it to the form on the right.
+        <br />
+        File format: png, jpeg, jpg
+        <br />
+        Don't forget to include your name and email address.
+        <br />
+        After our moderator checks your message out, you will find it posted.
+        <br />
+        <br />
+        PS: Please note that participation is strictly voluntary and is not financially or otherwise rewarded.
+        <br />
+        <br />
+        You will be denied participation if your message contains hate speech, threats, racist or xenophobic
+        remarks, discrimination based on age, health, gender, religion, ethnicity or race.
+      </>,
+    ],
     form: {
       name: ["имя*", "name*"],
       email: ["email*", "email*"],
@@ -56,7 +125,29 @@ const defaultMessages = {
   },
   Archive: {
     title: ["архив", "archive"],
-    desc: ["съешь ещё этих мягких французских булок, да выпей чаю", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit enim et pharetra vehicula. Phasellus eu laoreet velit. Curabitur egestas nisl a odio pellentesque sodales eu ut diam. In diam sem, dapibus non semper ac, mattis ac lectus. Mauris tincidunt purus metus, non posuere neque mollis ut. Aliquam pretium vulputate."],
+    desc: [
+      <>
+        Архив, с одной стороны, задает контекст прочтения проектов, созданных для «You, inter alia» и вместе с тем, — функционирует как модель для сборки, позволяющая устанавливать случайные и аффективные связи между самыми разными материалами предоставленными художниками. Другими словами, в этом разделе вы обнаружите все то, что прямо или косвенно «поддерживает» художественные высказывания и, таким образом, создает расширенное поле интерпретаций произведений в их единичности и множественности.
+        <br />
+        Функция архива заключается не только в прояснении (или, напротив, в затуманивании) смыслового поля представленных работ, но и в раскрытии перформативного измерения любого документа, фрагмента памяти, текста, звука, их обращенности к будущему и возможности его «пере-придумать» сообща.
+        <br />
+        __________
+        <br />
+        Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
+        <br />
+        Вы можете сортировать архив по одному тэгу или их комбинации, а также нажать на имя художницы или художника и увидеть все материалы, которыми она или он решил(а) поделиться с нами.
+      </>,
+      <>
+        Archive provides a contextualisation of the projects created by the artists for «You, interalia», and at the same time acts as a constellation of materials, which allows for contingent and affective connections between thought and work processes of different art practitioners to be made. In a way, it resembles an exhibition or an exposition of ‘behind-the-scenes’ of each particular artistic enunciation and as such it creates an expanded interpretative framework for the artworks in their singularity and plurality alike.
+        <br />
+        Therefore, the function of the archive is two-fold: not only it consists in the presentation of the recorded memories, past ideas or commentaries, it further (possibly, hopefully) reveals a performative potential of any document thus enabling it to become a script for the future.
+        <br />
+        __________
+        The archive is compiled from materials sent by the artists, which are either directly related to their projects published at youinteralia, or provide a broad outlook on their practice.
+        <br />
+        You are invited to browse the archive by one tag or a combination of them, or to click the artist's name to see all the materials that she or he shared with us.
+      </>
+    ],
     browse: ["поиск по тегам", "browse archive by tags"],
     nothing: ["ничего не найдено", "no items found"],
   },

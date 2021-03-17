@@ -274,8 +274,8 @@ $border: 1px solid $dark
   @media screen and ( max-width: 350px )
     padding-left: rem(16)
   &__logo
-    width: rem(131)
-    height: rem(20)
+    width: rem(186)
+    height: rem(35)
     background-image: url(./img/logo.svg)
     @extend .def-img
 
@@ -796,8 +796,12 @@ $dropdown-transition: .15s
   &__desc
     @extend .col
     @extend .px-0
-    padding-right: rem(40) !important
     @extend .mb-5
+    padding-right: rem(40) !important
+    overflow-y: scroll
+    &__scrollable-text
+      width: 100%
+      @extend .d-block
   &__form
     @extend .col
     @extend .px-0
@@ -1201,6 +1205,7 @@ $dropdown-transition: .15s
 
 
 
-.Previev
-  width: 100%
-  height: 100%
+.Youtube
+  iframe
+    width: 100%
+    height: 100%
