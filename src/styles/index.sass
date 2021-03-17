@@ -534,8 +534,7 @@ $dropdown-transition: .15s
       width: 100%
       padding-left: rem(49)
       padding-right: rem(49)
-      @include media-breakpoint-up(xl)
-        overflow: hidden
+      overflow-y: scroll
       @include media-breakpoint-down(lg)
         padding-left: rem(21)
         padding-right: rem(21)
@@ -798,10 +797,6 @@ $dropdown-transition: .15s
     @extend .px-0
     @extend .mb-5
     padding-right: rem(40) !important
-    overflow-y: scroll
-    &__scrollable-text
-      width: 100%
-      @extend .d-block
   &__form
     @extend .col
     @extend .px-0
