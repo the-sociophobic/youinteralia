@@ -27,7 +27,7 @@ const items = [
   {
     type: "img",
     link: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/archive/Francoise Caraco/map_trolley_suitcase.jpg",
-    tags: ["Françoise Caraco", "Франсуаз Карако", "блуждание", "walking around", "эскиз", "sketch", "воспоминание", "recollection", ],
+    tags: ["Françoise Caraco", "Франсуаз Карако", "эскиз", "sketch", "воспоминание", "recollection", ],
   },
   {
     type: "pdf",
@@ -37,7 +37,7 @@ const items = [
   {
     type: "img",
     link: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/archive/Francoise Caraco/trolleysuitcase_archivepictures_def.jpg",
-    tags: ["Françoise Caraco", "Франсуаз Карако", "воспоминание", "recollection", ],
+    tags: ["Françoise Caraco", "Франсуаз Карако", ],
   },
   {
     type: "img",

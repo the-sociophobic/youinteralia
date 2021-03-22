@@ -167,7 +167,7 @@ class Archive extends React.Component {
     const filteredItems = items
       .filter(item =>
         this.getSelectedTags().length === 0 ||
-        this.getSelectedTags().every(tag => item.tags.includes(tag)))
+        this.getSelectedTags().some(tag => item.tags.includes(tag)))
     const filteredMappedItems = filteredItems
       .map((item, index) =>
         <Item

@@ -1064,6 +1064,10 @@ $dropdown-transition: .15s
         // @extend .justify-content-center
         .react-pdf__Page__textContent
           @extend .d-none
+      .react-pdf__message.react-pdf__message--loading
+        width: 100%
+        padding-top: 130%
+        background-color: white
       &__close,
       &__prev,
       &__next
@@ -1084,6 +1088,8 @@ $dropdown-transition: .15s
         padding: rem(100)
         @include media-breakpoint-down(lg)
           padding: rem(21)
+        .Img
+          max-width: 500px
         .Item__close,
         .Item__prev,
         .Item__next

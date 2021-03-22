@@ -21,11 +21,8 @@ class Item extends React.Component {
     this.resizeObs = new ResizeObserver(
       () =>
         this.setState({
-          width: this.props.opened ?
-            this.itemRef?.current?.children[0]?.offsetWidth
-            :
-            this.itemRef?.current?.offsetWidth
-          }))
+          width: this.itemRef?.current?.children[0]?.offsetWidth || this.itemRef?.current?.offsetWidth
+        }))
       .observe(this.itemRef.current)
 
   render = () =>
@@ -47,7 +44,18 @@ class Item extends React.Component {
                 newTab
                 disabled={!this.props.opened}
               >
-                <Document file={item.link}>
+                <Document
+                  file={item.link}
+                  // loading={
+                  //   <div
+                  //     style={{
+                  //       width: '100%',
+                  //       paddingTop: '130%',
+                  //       backgroundColor: 'white'
+                  //     }}
+                  //   />
+                  // }
+                >
                   <Page
                     pageNumber={1}
                     width={this.state.width || 100}
