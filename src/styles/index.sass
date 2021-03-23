@@ -268,16 +268,15 @@ $border: 1px solid $dark
 
 .Footer
   background-color: $dark
-  width: 100%
-  min-height: rem(112)
-  padding-left: rem(49)
+  width: rem(432)
+  min-height: rem(155)
+  padding: rem(25) rem(49) rem(25) rem(49)
   margin-top: rem(49)
   @extend .d-flex-polyfill
   @extend .flex-column
-  @extend .justify-content-center
+  @extend .justify-content-between
   @extend .align-items-start
   @include media-breakpoint-down(lg)
-    min-height: rem(140)
     padding-left: rem(20)
     margin-top: rem(20)
   @media screen and ( max-width: 350px )
@@ -285,13 +284,16 @@ $border: 1px solid $dark
   &__logo
     width: rem(170)
     height: rem(32)
-    background-image: url(./img/logo.svg)
     @extend .def-img
+    background-image: url(./img/logo.svg)
+    &--eng
+      width: rem(115)
+      height: rem(32)
+      background-image: url(./img/logo_eng.svg)
   &__names,
   &__policy
     font-size: rem(12)
     color: $light
-    margin-top: rem(7)
   &__policy
     text-decoration: underline
     &:hover
