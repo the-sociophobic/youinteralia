@@ -14,11 +14,46 @@ import items from './items'
 
 const blatnye = ["Мартина Махлер", "Martina Mächler", "Андреа Мариони", "Andrea Marioni"]
 
-const tags = Array.from(
-  new Set(
-    [blatnye, ...items]
-      .reduce((a, b) =>
-        [...(a.tags || a), ...b.tags])))
+// const tags = Array.from(
+//   new Set(
+//     [blatnye, ...items]
+//       .reduce((a, b) =>
+//         [...(a.tags || a), ...b.tags])))
+//         console.log(tags)
+const tags = [
+  "Андреа Мариони",
+  "Andrea Marioni",
+  "блуждание",
+  "walking around",
+  "поэзия",
+  "poetry",
+  "Carla Demierre",
+  "Карла Демьер",
+  "музыка",
+  "music",
+  "Françoise Caraco",
+  "Франсуаз Карако",
+  "эскиз",
+  "sketch",
+  "воспоминание",
+  "recollection",
+  "Alena Tereshko",
+  "Алена Терешко",
+  "остров",
+  "island",
+  "Ivan Kurbakov",
+  "Иван Курбаков",
+  "Ольга Житлина",
+  "Мартина Махлер",
+  "Martina Mächler",
+  "в поисках чудесного",
+  "Olga Jitlina",
+  "in search of the miraculous",
+  "Roman Osminkin",
+  "Роман Осминкин",
+  "стрит-арт",
+  "street art",
+]
 
 
 class Archive extends React.Component {

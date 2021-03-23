@@ -143,8 +143,6 @@ const defaultMessages = {
         <br />
         Функция архива заключается не только в прояснении (или, напротив, в затуманивании) смыслового поля представленных работ, но и в раскрытии перформативного измерения любого документа, фрагмента памяти, текста, звука, их обращенности к будущему и возможности его «пере-придумать» сообща.
         <br /><br />
-        __________
-        <br /><br />
         <small className='small'>
           Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
           <br />
@@ -152,11 +150,9 @@ const defaultMessages = {
         </small>
       </>,
       <>
-        Archive provides a contextualisation of the projects created by the artists for «You, interalia», and at the same time acts as a constellation of materials, which allows for contingent and affective connections between thought and work processes of different art practitioners to be made. In a way, it resembles an exhibition or an exposition of ‘behind-the-scenes’ of each particular artistic enunciation and as such it creates an expanded interpretative framework for the artworks in their singularity and plurality alike.
+        Archive provides a contextualisation of the projects created by the artists for «You, inter alia», and at the same time acts as a constellation of materials, which allows for contingent and affective connections between thought and work processes of different art practitioners to be made. In a way, it resembles an exhibition or an exposition of ‘behind-the-scenes’ of each particular artistic enunciation and as such it creates an expanded interpretative framework for the artworks in their singularity and plurality alike.
         <br />
         Therefore, the function of the archive is two-fold: not only it consists in the presentation of the recorded memories, past ideas or commentaries, it further (possibly, hopefully) reveals a performative potential of any document thus enabling it to become a script for the future.
-        <br /><br />
-        __________
         <br /><br />
         <small className='small'>
           The archive is compiled from materials sent by the artists, which are either directly related to their projects published at youinteralia, or provide a broad outlook on their practice.
