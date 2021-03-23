@@ -5,8 +5,8 @@ const defaultMessages = {
   names: ['Алина Белишкина, Валерия Мостовая ©, 18+', 'Alina Belishkina, Valeria Mostovaya ©, 18+'],
 
   Help: {
-    text: ["Вы можете увеличивать и уменьшать масшатб карты, чтобы увидеть всех художников", "You can zoom map in and out to find all the points"],
-    button: ["Понятно", "Got it"],
+    text: ["click “+” to enlarge the map to see the content. you can also drag the map in all directions", "click “+” to enlarge the map to see the content. you can also drag the map in all directions"],
+    button: ["Okay", "Okay"],
   },
 
   Menu: {
