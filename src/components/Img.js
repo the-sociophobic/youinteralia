@@ -38,6 +38,7 @@ class Img extends React.Component {
         className={`Img__img Img__img--${this.state.portrait ? "portrait" : "landscape"}`}
         onLoad={this.setOrientation}
       />
+      {this.props.children}
     </div>
 }
 

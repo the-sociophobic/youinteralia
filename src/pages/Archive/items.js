@@ -1,10 +1,18 @@
 import AndreaPDF from 'artists/pdf/Andrea.pdf'
+import AndreaPreview from 'artists/pdf/Andrea.jpg'
 import CarlaPDF from 'artists/pdf/Carla.pdf'
+import CarlaPreview from 'artists/pdf/Carla.jpg'
 import CaracoPDF from 'artists/pdf/Caraco.pdf'
+import CaracoPreview from 'artists/pdf/Caraco.jpg'
 import KurbakovPDF from 'artists/pdf/Kurbakov.pdf'
+import KurbakovPreview from 'artists/pdf/Kurbakov.jpg'
 import JitlinaPDF from 'artists/pdf/Jitlina.pdf'
+import JitlinaPreview from 'artists/pdf/Jitlina.jpg'
 import JitlinaEngPDF from 'artists/pdf/Jitlina eng.pdf'
+import JitlinaEngPreview from 'artists/pdf/Jitlina eng.jpg'
 import RomanPDF from 'artists/pdf/Roman.pdf'
+import RomanPreview from 'artists/pdf/Roman.jpg'
+
 import KurbakovVimeoThumbnail from 'artists/video/Kurbakov vimeo thumbnail.webp'
 
 
@@ -12,11 +20,13 @@ const items = [
   {
     type: "pdf",
     link: AndreaPDF,
+    preview: AndreaPreview,
     tags: ["Андреа Мариони", "Andrea Marioni", "блуждание", "walking around", ],
   },
   {
     type: "pdf",
     link: CarlaPDF,
+    preview: CarlaPreview,
     tags: ["Carla Demierre", "Карла Демьер", "блуждание", "walking around", ],
   },
   {
@@ -32,6 +42,7 @@ const items = [
   {
     type: "pdf",
     link: CaracoPDF,
+    preview: CaracoPreview,
     tags: ["Françoise Caraco", "Франсуаз Карако", "воспоминание", "recollection", "блуждание", "walking around", ],
   },
   {
@@ -237,6 +248,7 @@ const items = [
   {
     type: "pdf",
     link: KurbakovPDF,
+    preview: KurbakovPreview,
     tags: ["Ivan Kurbakov", "Иван Курбаков", "блуждание", "walking around", "воспоминание", "recollection", ],
   },
   {
@@ -255,19 +267,23 @@ const items = [
     link: "mi9gilaV0Uk",
     tags: ["Ivan Kurbakov", "Иван Курбаков", "музыка", "music", ],
   },
-  // {
-  //   type: "bandcamp",
-  //   link: <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2756231359/size=small/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="https://aguirrerecords.bandcamp.com/album/ou-du-monde">Ou Du Monde by Mpala Garoo</a></iframe>,
-  //   tags: ["Ivan Kurbakov", "Иван Курбаков", "музыка", "music", ],
-  // },
+  {
+    type: "bandcamp",
+    link: 'https://aguirrerecords.bandcamp.com/album/ou-du-monde',
+    preview: 'https://f4.bcbits.com/img/a2486654759_16.jpg',
+    album: '2756231359',
+    tags: ["Ivan Kurbakov", "Иван Курбаков", "музыка", "music", ],
+  },
   {
     type: "pdf",
     link: JitlinaPDF,
+    preview: JitlinaPreview,
     tags: ["Ольга Житлина", "в поисках чудесного", ],
   },
   {
     type: "pdf",
     link: JitlinaEngPDF,
+    preview: JitlinaEngPreview,
     tags: ["Olga Jitlina", "in search of the miraculous", ],
   },
   {
@@ -303,6 +319,7 @@ const items = [
   {
     type: "pdf",
     link: RomanPDF,
+    preview: RomanPreview,
     tags: ["Roman Osminkin", "Роман Осминкин", "поэзия", "poetry", ],
   },
   {
