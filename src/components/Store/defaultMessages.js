@@ -2,7 +2,8 @@ const defaultMessages = {
   Header: {
   },
 
-  names: ['Алина Белишкина, Валерия Мостовая ©, 18+', 'Alina Belishkina, Valeria Mostovaya ©, 18+'],
+  names: ['Алина Белишкина, Валерия Мостовая ©, 2021', 'Alina Belishkina, Valeria Mostovaya ©, 2021'],
+  policy: ['Правила пользования сайтом и Политика Конфиденциальности', 'Terms of use & Privacy Policy'],
 
   Help: {
     text: ["click “+” to enlarge the map to see the content. you can also drag the map in all directions", "click “+” to enlarge the map to see the content. you can also drag the map in all directions"],
@@ -171,6 +172,8 @@ const defaultMessages = {
   },
   Privacy: [
     <>
+      Продолжая пользоваться сайтом, вы подтверждаете, что вам есть 18 лет
+      <br /><br />
       Политика в отношении обработки персональных данных<br />
       1. Общие положения<br />
       Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Белишкиной Алиной Юрьевной и Мостовой Валерией Владимировной (далее – Оператор).<br />
@@ -222,7 +225,7 @@ const defaultMessages = {
       8. Заключительные положения<br />
       8.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты youinteralia@gmail.com.<br />
       8.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.<br />
-      8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу http://youinteralia.com/privacy.
+      8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу http://youinteralia.com/rules.
     </>,
     <>
       At You, Inter Alia, accessible from youinteralia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by You, Inter Alia and how we use it. <br />

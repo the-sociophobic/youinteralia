@@ -42,7 +42,7 @@ class BigMenu extends React.Component {
       case pathname === "/participate":
         page = <Participate />
         break
-      case pathname === "/privacy":
+      case pathname === "/rules":
         page = <Privacy />
         break
       case pathname === "/admin":
@@ -79,7 +79,7 @@ class BigMenu extends React.Component {
               {page}
             </div>
 
-            {!this.props.location.pathname.includes("archive") && <Footer />}
+            {/* {!this.props.location.pathname.includes("archive") && <Footer />} */}
           </div>
         </div>
       </ScrollToTop>

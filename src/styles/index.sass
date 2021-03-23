@@ -267,6 +267,7 @@ $border: 1px solid $dark
 
 
 .Footer
+  background-color: $dark
   width: 100%
   min-height: rem(112)
   padding-left: rem(49)
@@ -276,7 +277,7 @@ $border: 1px solid $dark
   @extend .justify-content-center
   @extend .align-items-start
   @include media-breakpoint-down(lg)
-    min-height: rem(60)
+    min-height: rem(140)
     padding-left: rem(20)
     margin-top: rem(20)
   @media screen and ( max-width: 350px )
@@ -286,9 +287,17 @@ $border: 1px solid $dark
     height: rem(32)
     background-image: url(./img/logo.svg)
     @extend .def-img
-  &__names
-    font-size: rem(15)
-    margin-top: rem(10)
+  &__names,
+  &__policy
+    font-size: rem(12)
+    color: $light
+    margin-top: rem(7)
+  &__policy
+    text-decoration: underline
+    &:hover
+      color: $light !important
+      text-decoration: underline
+
 
 
 $dropdown-transition: .15s
@@ -545,6 +554,7 @@ $dropdown-transition: .15s
       width: 100%
       padding-left: rem(49)
       padding-right: rem(49)
+      padding-bottom: rem(80)
       overflow-y: scroll
       @include media-breakpoint-down(lg)
         padding-left: rem(21)

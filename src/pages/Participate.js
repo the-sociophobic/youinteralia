@@ -43,7 +43,7 @@ class Participate extends React.Component {
     return (
       <div className="Particapate__form__agree">
         {parts[0]}
-        <Link to="/privacy">
+        <Link to="/rules">
           {linkText}
         </Link>
         {parts[1]}
