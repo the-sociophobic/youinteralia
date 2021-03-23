@@ -30,8 +30,10 @@ class Archive extends React.Component {
 
   static contextType = StoreContext
 
-  componentDidMount = () =>
+  componentDidMount = () => {
     this.updateCurrentIdFromURL()
+    this.context.setHideBigMenuClose(true)
+  }
 
   componentDidUpdate = prevProps =>
     this.props.location !== prevProps.location &&
@@ -67,19 +69,19 @@ class Archive extends React.Component {
   renderAbout = () =>
     (!this.state.searchPressed && this.getSelectedTags().length === 0) &&
       <div className="Archive__about">
-        <div className="Archive__about__title">
-          <FormattedMessage id="Archive.title" />
-        </div>
         <div className="Archive__about__desc">
           <FormattedMessage id="Archive.desc" />
         </div>
       </div>
 
-  renderAboutDesctop = () =>
+  renderAboutDesktop = () =>
     !this.state.searchPressed &&
       <div
         className="Archive__about-desktop"
-        onClick={() => this.setState({ searchPressed: true })}
+        onClick={() => {
+          this.setState({ searchPressed: true })
+          this.context.setHideBigMenuClose(false)
+        }}
       >
         <div className="Archive__about-desktop__title">
           <FormattedMessage id="Archive.title" />
@@ -92,9 +94,10 @@ class Archive extends React.Component {
 
   renderSearch = () =>
     <div
-      onClick={() =>
-        this.setState({
-          searchPressed: !this.state.searchPressed })}
+      onClick={() => {
+        this.context.setHideBigMenuClose(this.state.searchPressed)
+        this.setState({ searchPressed: !this.state.searchPressed })}
+      }
       className={`
         Archive__search
         ${ this.getSelectedTags().length > 0 && "Archive__search--tags"}
@@ -155,16 +158,10 @@ class Archive extends React.Component {
         </div>
 
     return <div className="Archive__gallery__nothing">
-      no result. find out about artist below<br />
-      {artists[0] === "Martina Mächler" || artists[0] === "Мартина Махлер" ?
-        <Link to="/artist/6">
-          Martina Mächler
-        </Link>
-        :
-        <Link to="/artist/4">
-          Andrea Marioni
-        </Link>
-      }
+      <FormattedMessage id='Archive.findOut' /><br />
+      <Link to="/artist/6">
+        Martina Mächler
+      </Link>
     </div>
   }
 
@@ -239,7 +236,7 @@ class Archive extends React.Component {
     <div className="Archive">
       <div className="Archive__left">
         {this.renderAbout()}
-        {this.renderAboutDesctop()}
+        {this.renderAboutDesktop()}
         {this.renderTags()}
       </div>
         {this.renderSearch()}

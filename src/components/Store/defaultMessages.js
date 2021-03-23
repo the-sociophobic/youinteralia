@@ -164,6 +164,7 @@ const defaultMessages = {
     ],
     browse: ["поиск по тегам", "browse archive by tags"],
     nothing: ["ничего не найдено", "no items found"],
+    findOut: ["Ничего не найдено. Узнать о художнице по ссылке", "no result. find out about artist below"],
   },
   Privacy: [
     <>

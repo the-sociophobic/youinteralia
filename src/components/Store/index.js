@@ -143,7 +143,10 @@ class StoreProvider extends React.Component {
       checkUser: () => this.checkUser(),
 
       hideMenu: false,
-      setHideMenu: hideMenu => this.setState({ hideMenu: hideMenu })
+      setHideMenu: hideMenu => this.setState({ hideMenu: hideMenu }),
+
+      hideBigMenuClose: false,
+      setHideBigMenuClose: hideBigMenuClose => this.setState({ hideBigMenuClose: hideBigMenuClose })
     }
   }
 

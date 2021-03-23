@@ -66,12 +66,14 @@ class BigMenu extends React.Component {
           `}
         >
           <div className="BigMenu__content">
-            <div className="BigMenu__content__header">
-              <Link
-                to="/"
-                className="BigMenu__content__header__close"
-              />
-            </div>
+            {!this.context.hideBigMenuClose &&
+              <div className="BigMenu__content__header">
+                <Link
+                  to="/"
+                  className="BigMenu__content__header__close"
+                />
+              </div>
+            }
 
             <div className="BigMenu__content__container">
               {page}
