@@ -50,6 +50,8 @@ class Item extends React.Component {
                 >
                   {this.props.opened &&
                     <div className='Img--PDF__atop'>
+                      {item.tags[this.context.locale === 'rus' ? 0 : 1]}
+                      <br />
                       <FormattedMessage id='Archive.readPDF' />
                     </div>
                   }
