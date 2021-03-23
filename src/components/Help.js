@@ -25,8 +25,8 @@ class Help extends React.Component {
           className='Help__button'
           onClick={() => {
             this.setState({ opened: false })
-            this.context?.spbRef?.current?.zoom?.(-1)
-            this.context?.genRef?.current?.zoom?.(-1)
+            // this.context?.spbRef?.current?.zoom?.(-1)
+            // this.context?.genRef?.current?.zoom?.(-1)
           }}
         >
           <FormattedMessage id='Help.button' />

@@ -17,7 +17,7 @@ const spb = {
       lat: 59.93,
       lng: 30.36,
     },
-  zoom: isMobile() ? 12 : 14,
+  zoom: isMobile() ? 12 : 13,
   maxZoom: 15 + 1,
   minZoom: 15 - 3,
   restriction: {
@@ -41,7 +41,7 @@ const gen = {
       lat: 46.20791773163431,
       lng: 6.14602970185338,
     },
-  zoom: isMobile() ? 14 : 16,
+  zoom: isMobile() ? 14 : 15,
   maxZoom: 17 + 1,
   minZoom: 17 - 3,
   restriction: {
