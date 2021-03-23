@@ -274,6 +274,7 @@ $border: 1px solid $dark
   @extend .d-flex-polyfill
   @extend .flex-column
   @extend .justify-content-center
+  @extend .align-items-start
   @include media-breakpoint-down(lg)
     min-height: rem(60)
     padding-left: rem(20)
@@ -281,10 +282,13 @@ $border: 1px solid $dark
   @media screen and ( max-width: 350px )
     padding-left: rem(16)
   &__logo
-    width: rem(186)
-    height: rem(35)
+    width: rem(170)
+    height: rem(32)
     background-image: url(./img/logo.svg)
     @extend .def-img
+  &__names
+    font-size: rem(15)
+    margin-top: rem(10)
 
 
 $dropdown-transition: .15s
@@ -971,7 +975,7 @@ $dropdown-transition: .15s
       position: fixed
       &--visible
         &--desktop
-          @include media-breakpoint-up(lg)
+          @include media-breakpoint-up(xl)
             z-index: 12
         &--mobile
           @include media-breakpoint-down(lg)
@@ -1000,6 +1004,7 @@ $dropdown-transition: .15s
     // @extend .abs-cover
     background-color: $light
     padding: rem(120) rem(50) rem(124)
+    min-height: 100%
     @include media-breakpoint-down(lg)
       padding: rem(90) rem(20) rem(101)
     &__item
@@ -1219,9 +1224,27 @@ $dropdown-transition: .15s
 
 
 .Youtube
+  width: 90%
+  padding-top: calc(90% * 3 / 4)
+  position: relative
+  iframe
+    @extend .abs-cover
+  &__thumbnail
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+.vimeo
+  width: 90%
+  padding-top: calc(90% * 3 / 4)
+  position: relative
   iframe
     width: 100%
     height: 100%
+    position: absolute
+    top: 0
+    left: 0
 
 
 

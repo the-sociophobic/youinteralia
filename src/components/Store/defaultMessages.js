@@ -2,6 +2,8 @@ const defaultMessages = {
   Header: {
   },
 
+  names: ['Алина Белишкина, Валерия Мостовая ©, 18+', 'Alina Belishkina, Valeria Mostovaya ©, 18+'],
+
   Help: {
     text: ["Вы можете увеличивать и уменьшать масшатб карты, чтобы увидеть всех художников", "You can zoom map in and out to find all the points"],
     button: ["Понятно", "Got it"],
@@ -266,102 +268,103 @@ const defaultMessages = {
       8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу youinteralia.com/privacy/.
     </>,
     <>
-      Personal data processing policy:
-      <br /><br />
-      1. General Provisions
+      At You, Inter Alia, accessible from youinteralia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by You, Inter Alia and how we use it.
       <br />
-      This personal data processing policy has been drawn up in accordance with the requirements of the Federal Law of July 27, 2006. No. 152-ФЗ "On personal data" and determines the procedure for processing personal data and measures to ensure the security of personal data taken by Ivan Sergeevich Mikhailov (hereinafter referred to as the Operator).
+      If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
       <br />
-      1.1. The operator sets as its most important goal and condition for the implementation of its activities the observance of human and civil rights and freedoms when processing their personal data, including the protection of the rights to privacy, personal and family secrets.
+      This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in You, Inter Alia. This policy is not applicable to any information collected offline or via channels other than this website.
       <br />
-      1.2. This Operator's policy regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can obtain about visitors to the website youinteralia.com.
-      <br /><br />
-
-      2. Basic concepts used in the Policy
+      Consent
       <br />
-      2.1. Automated processing of personal data - processing of personal data using computer technology;
+      By using our website, you hereby consent to our Privacy Policy and agree to its terms.
       <br />
-      2.2. Blocking of personal data - a temporary cessation of the processing of personal data (unless the processing is necessary to clarify personal data);
+      Information we collect
       <br />
-      2.3. Website - a set of graphic and information materials, as well as computer programs and databases, ensuring their availability on the Internet at the network address youinteralia.com;
+      The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.
       <br />
-      2.4. Personal data information system - a set of personal data contained in databases, and information technologies and technical means ensuring their processing;
+      We may process the following personal data of the User:
       <br />
-      2.5. Depersonalization of personal data - actions as a result of which it is impossible to determine, without the use of additional information, the belonging of personal data to a specific User or other subject of personal data;
+      1. Your name
       <br />
-      2.6. Processing of personal data - any action (operation) or a set of actions (operations) performed using automation tools or without using such tools with personal data, including collection, recording, systematization, accumulation, storage, clarification (update, change), extraction, use, transfer (distribution, provision, access), depersonalization, blocking, deletion, destruction of personal data;
+      2. Email address
       <br />
-      2.7. Operator - a state body, municipal body, legal entity or individual, independently or jointly with other persons organizing and (or) carrying out the processing of personal data, as well as determining the purposes of processing personal data, the composition of personal data to be processed, actions (operations) performed with personal data;
+      3. Recorded voice
       <br />
-      2.8. Personal data - any information relating directly or indirectly to a specific or identifiable User of the website youinteralia.com;
+      4. The contents of the message and/or attachments you may send us, and any other information you may choose to provide.
       <br />
-      2.9. User - any visitor to the website youinteralia.com;
+      How we use your information
       <br />
-      2.10. Provision of personal data - actions aimed at disclosing personal data to a certain person or a certain circle of persons;
+      We use the information we collect in various ways, including to:
       <br />
-      2.11. Dissemination of personal data - any actions aimed at disclosing personal data to an indefinite circle of persons (transfer of personal data) or at acquaintance with the personal data of an unlimited number of persons, including the disclosure of personal data in the media, posting on information and telecommunication networks or providing access to personal data in any other way;
+      • Provide, operate, and maintain our website
       <br />
-      2.12. Cross-border transfer of personal data - transfer of personal data to the territory of a foreign state to the authority of a foreign state, to a foreign individual or foreign legal entity;
+      • Improve, personalize, and expand our website
       <br />
-      2.13. Destruction of personal data - any actions as a result of which personal data are destroyed irrevocably with the impossibility of further restoring the content of personal data in the personal data information system and (or) material carriers of personal data are destroyed.
-      <br /><br />
-      
-      3. The operator can process the following personal data of the User
+      • Understand and analyze how you use our website
       <br />
-      3.1. Full Name;
+      • Develop new products, services, features, and functionality
       <br />
-      3.2. Phone number;
+      • Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes
       <br />
-      3.3. E-mail address;
+      • Send you emails
       <br />
-      3.4. Also, the site collects and processes anonymized data about visitors (including cookies) using Internet statistics services (Yandex Metrica and Google Analytics and others).
+      • Find and prevent fraud
       <br />
-      3.5. The above data hereinafter in the text of the Policy are united by the general concept of Personal data.
-      <br /><br />
-      
-      4. Purposes of personal data processing
+      Log Files
       <br />
-      4.1. The purpose of processing the User's personal data is the conclusion, execution and termination of civil contracts; providing the User with access to services, information and / or materials contained on the website youinteralia.com; clarification of order details.
+      You, Inter Alia follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable.
       <br />
-      4.2. The Operator also has the right to send the User notifications about new products and services, special offers and various events. The user can always refuse to receive informationcommunication messages by sending an e-mail to the Operator at help@youinteralia.com marked “Refusal of notifications about new products and services and special offers”.
       <br />
-      4.3. Anonymized data of Users collected using Internet statistics services are used to collect information about the actions of Users on the site, improve the quality of the site and its content.
-      <br /><br />
-      
-      5. Legal basis for the processing of personal data
+      The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
       <br />
-      5.1. The Operator processes the User's personal data only if it is filled in and / or sent by the User independently through special forms located on the website youinteralia.com. By filling out the appropriate forms and / or sending his personal data to the Operator, the User agrees with this Policy.
+      Cookies and Web Beacons
       <br />
-      5.2. The Operator processes anonymized data about the User if it is allowed in the settings of the User's browser (the storage of cookies and the use of JavaScript technology are enabled).
-      <br /><br />
-      
-      6. The procedure for collecting, storing, transferring and other types of processing of personal data
+      Like any other website, You, Inter Alia uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
       <br />
-      The security of personal data processed by the Operator is ensured through the implementation of legal, organizational and technical measures necessary to fully comply with the requirements of the current legislation in the field of personal data protection.
+      For more general information on cookies, please read "What Are Cookies" from Cookie Consent.
       <br />
-      6.1. The operator ensures the safety of personal data and takes all possible measures to exclude access to personal data of unauthorized persons.
+      Advertising Partners Privacy Policies
       <br />
-      6.2. The User's personal data will never, under any circumstances, be transferred to third parties, except in cases related to the implementation of the current legislation.
+      You may consult this list to find the Privacy Policy for each of the advertising partners of You, Inter Alia.
       <br />
-      6.3. In the event of inaccuracies in personal data, the User can update them independently by sending a notification to the Operator at the Operator's e-mail address help@youinteralia.com marked "Updating personal data".
+      Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on You, Inter Alia, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
       <br />
-      6.4. The period for processing personal data is unlimited. The user can at any time revoke his consent to the processing of personal data by sending a notification to the Operator by e-mail to the Operator's email address help@youinteralia.com marked “Withdrawal of consent to the processing of personal data”.
-      <br /><br />
-      
-      7. Cross-border transfer of personal data
+      Note that You, Inter Alia has no access to or control over these cookies that are used by third-party advertisers.
       <br />
-      7.1. Before starting the cross-border transfer of personal data, the operator must make sure that the foreign state, to whose territory it is supposed to transfer personal data, provides reliable protection of the rights of subjects of personal data.
+      Third Party Privacy Policies
       <br />
-      7.2. Cross-border transfer of personal data on the territory of foreign states that do not meet the above requirements can be carried out only if there is a written consent of the subject of personal data for the cross-border transfer of his personal data and / or execution of an agreement to which the subject of personal data is a party.
-      <br /><br />
-      
-      8. Final provisions
+      You, Inter Alia's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
       <br />
-      8.1. The user can get any clarification on issues of interest regarding the processing of his personal data by contacting the Operator via email help@youinteralia.com.
+      You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
       <br />
-      8.2. This document will reflect any changes in the personal data processing policy by the Operator. The policy is valid indefinitely until it is replaced by a new version.
+      CCPA Privacy Rights (Do Not Sell My Personal Information)
       <br />
-      8.3. The current version of the Policy is freely available on the Internet at youinteralia.com / privacy /.
+      Under the CCPA, among other rights, California consumers have the right to: Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.
+      <br />
+      Request that a business delete any personal data about the consumer that a business has collected.
+      <br />
+      Request that a business that sells a consumer's personal data, not sell the consumer's personal data.
+      <br />
+      <br />
+      If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+      <br />
+      GDPR Data Protection Rights
+      <br />
+      We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
+      <br />
+      The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.
+      <br />
+      The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.
+      <br />
+      The right to erasure – You have the right to request that we erase your personal data, under certain conditions.
+      <br />
+      The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.
+      <br />
+      The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.
+      <br />
+      The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+      <br />
+      If you make a request, we have one month to respond to you. If you would like to contact us please send us letter to youinteralia@gmail.com.
     </>
   ],
 }

@@ -10,7 +10,7 @@ class Youtube extends React.Component {
     <div
       className={`Youtube ${this.props.className}`}
     >
-      {this.props.tumbnail ?
+      {this.props.thumbnail ?
         <img
           src={`https://img.youtube.com/vi/${this.props.src}/hqdefault.jpg`}
           className="Youtube__thumbnail"

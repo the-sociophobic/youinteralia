@@ -214,10 +214,10 @@ class Archive extends React.Component {
         </div>
 
         <div className="Archive__gallery__col mobile-only">
-          {filteredMappedItems.filter((item, index) => index % 3 === 0)}
+          {filteredMappedItems.filter((item, index) => index % 2 === 0)}
         </div>
         <div className="Archive__gallery__col mobile-only">
-          {filteredMappedItems.filter((item, index) => index % 3 === 1)}
+          {filteredMappedItems.filter((item, index) => index % 2 === 1)}
         </div>
       </div>
     )
