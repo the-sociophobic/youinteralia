@@ -293,7 +293,7 @@ const artists = [
         Примерно тогда же, когда мне не давалось письмо, — весной 2020-го,  я проводила много времени на своем балконе, наблюдая за птицами, кружащими вокруг эвкалипта напротив. Затем я стала различать крики птиц, доносящиеся из динамиков, во время наших разговоров со студентами. И тут я поняла, что мы вместе, что мы живем в одном пространстве и времени, даже, если сегодняшняя реальность хочет убедить нас, что это не так.
         <br />
         <br />
-        Аудио на французском языке; прочитать текст на английском вы можете <Link to="/archive/gallery/2">тут</Link>
+        Аудио на французском языке; прочитать текст на английском вы можете <Link to="/archive/2">тут</Link>
       </>,
       <>
         Writing around
@@ -301,7 +301,7 @@ const artists = [
         I teach creative writing at Geneva University of art and design. During the spring of 2020, I have not been able to write anything and I wondered how my students could do so. In order to keep doing something, I started sending them letters every week. For this sound walk, I’ve recorded some of them in my wardrobe behind a curtain with patagonian vegetation prints. Doing so, I discovered a big spider living there. Last spring, I spent a lot of time sitting in my balcony looking at birds spinning around an eucalyptus tree. Then, I started noticing bird calls behind students' voices when we were talking, and this made me feel like we were living in the same space and time, contrary to appearances.
         <br />
         <br />
-        audio is in French; you can read the text in English <Link to="/archive/gallery/2">here</Link>
+        audio is in French; you can read the text in English <Link to="/archive/2">here</Link>
       </>,
     ],
   },
@@ -373,7 +373,7 @@ const artists = [
         Меня интересуют пространства мысли, которые открываются передо мной во время прогулки по городу. Словно фотографически, я регистрирую моменты погружения в свои собственные и рассказанные воспоминания и перевожу их в письмо. В проекте я сплетаю нарратив из мыслей, воспоминаний и звуков города, которые я записала во время прогулки по Женеве.
         <br />
         <br />
-        <Link to="/archive/gallery/4">Карта, нарисованная Франсуазой</Link>
+        <Link to="/archive/4">Карта, нарисованная Франсуазой</Link>
       </>,
       <>
         Trolley suitcase
@@ -389,7 +389,7 @@ const artists = [
         For the audio piece, I weave these spaces of thought into a narrative voice that is underlaid with recorded city sounds.
         <br />
         <br />
-        <Link to="/archive/gallery/4">A map hand-drawn by Françoise</Link>
+        <Link to="/archive/4">A map hand-drawn by Françoise</Link>
       </>,
     ],
   },

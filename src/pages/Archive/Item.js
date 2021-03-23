@@ -44,18 +44,7 @@ class Item extends React.Component {
                 newTab
                 disabled={!this.props.opened}
               >
-                <Document
-                  file={item.link}
-                  // loading={
-                  //   <div
-                  //     style={{
-                  //       width: '100%',
-                  //       paddingTop: '130%',
-                  //       backgroundColor: 'white'
-                  //     }}
-                  //   />
-                  // }
-                >
+                <Document file={item.link} >
                   <Page
                     pageNumber={1}
                     width={this.state.width || 100}

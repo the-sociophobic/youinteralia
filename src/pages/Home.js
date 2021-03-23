@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import { StoreContext } from 'components/Store'
 import BigMenu from 'components/BigMenu'
+import Help from 'components/Help'
 import Menu from 'components/Menu'
 import Map from 'components/Map'
 
@@ -18,6 +19,7 @@ class Home extends React.Component {
         <Map ref={this.mapRef} />
         <BigMenu mapRef={this.mapRef} />
         <Menu mapRef={this.mapRef} />
+        <Help />
       </div>
       :
       ""

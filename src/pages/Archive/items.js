@@ -32,7 +32,7 @@ const items = [
   {
     type: "pdf",
     link: CaracoPDF,
-    tags: ["Françoise Caraco", "Франсуаз Карако", "воспоминание", "recollection", ],
+    tags: ["Françoise Caraco", "Франсуаз Карако", "воспоминание", "recollection", "блуждание", "walking around", ],
   },
   {
     type: "img",
@@ -237,7 +237,7 @@ const items = [
   {
     type: "pdf",
     link: KurbakovPDF,
-    tags: ["Ivan Kurbakov", "Иван Курбаков", "блуждание", "walking around", ],
+    tags: ["Ivan Kurbakov", "Иван Курбаков", "блуждание", "walking around", "воспоминание", "recollection", ],
   },
   {
     type: "img",

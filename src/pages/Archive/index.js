@@ -40,7 +40,7 @@ class Archive extends React.Component {
   updateCurrentIdFromURL = () => {
     const id = parseInt(
       this.props.location.pathname
-        .replace('/archive/gallery/', '')
+        .replace('/archive/', '')
         .replace('/', ''))
 
     if (id === 0 || typeof id !== "number")
@@ -65,28 +65,30 @@ class Archive extends React.Component {
         isRussian(tag) : !isRussian(tag))
 
   renderAbout = () =>
-    <div className="Archive__about">
-      <div className="Archive__about__title">
-        <FormattedMessage id="Archive.title" />
+    (!this.state.searchPressed && this.getSelectedTags().length === 0) &&
+      <div className="Archive__about">
+        <div className="Archive__about__title">
+          <FormattedMessage id="Archive.title" />
+        </div>
+        <div className="Archive__about__desc">
+          <FormattedMessage id="Archive.desc" />
+        </div>
       </div>
-      <div className="Archive__about__desc">
-        <FormattedMessage id="Archive.desc" />
-      </div>
-    </div>
 
   renderAboutDesctop = () =>
-    this.props.location.pathname.includes("about") &&
-      <Link to="/archive/gallery">
-        <div className="Archive__about-desktop">
-          <div className="Archive__about-desktop__title">
-            <FormattedMessage id="Archive.title" />
-          </div>
-          <div className="Archive__about-desktop__browse">
-            <FormattedMessage id="Archive.browse" />
-            <div className="Archive__about-desktop__browse__magnifier" />
-          </div>
+    !this.state.searchPressed &&
+      <div
+        className="Archive__about-desktop"
+        onClick={() => this.setState({ searchPressed: true })}
+      >
+        <div className="Archive__about-desktop__title">
+          <FormattedMessage id="Archive.title" />
         </div>
-      </Link>
+        <div className="Archive__about-desktop__browse">
+          <FormattedMessage id="Archive.browse" />
+          <div className="Archive__about-desktop__browse__magnifier" />
+        </div>
+      </div>
 
   renderSearch = () =>
     <div
@@ -95,10 +97,10 @@ class Archive extends React.Component {
           searchPressed: !this.state.searchPressed })}
       className={`
         Archive__search
-        ${this.getSelectedTags().length > 0 && "Archive__search--tags"}
+        ${ this.getSelectedTags().length > 0 && "Archive__search--tags"}
         ${(this.getSelectedTags().length === 0 && !this.state.searchPressed) && "Archive__search--full"}
-        ${this.context.hideMenu && "Archive__search--hide"}
-        ${this.props.location.pathname.includes("about") && "Archive__search--hide-desktop"}
+        ${ this.context.hideMenu && "Archive__search--hide"}
+        ${!this.state.searchPressed && "Archive__search--hide-desktop"}
       `}
     >
       <div className="Archive__search__magnifier" />
@@ -111,19 +113,22 @@ class Archive extends React.Component {
     </div>
 
   renderTags = () =>
-    <div className="Archive__tags">
-      {this.getTags().map(tag =>
-        <div
-          className={`
-            Archive__tags__item
-            ${this.getSelectedTags().includes(tag) && "Archive__tags__item--selected"}
-          `}
-          onClick={() => this.toggleTag(tag)}
-        >
-          {tag}
+    this.state.searchPressed &&
+      <div className="abs-cover">
+        <div className="Archive__tags">
+          {this.getTags().map(tag =>
+            <div
+              className={`
+                Archive__tags__item
+                ${this.getSelectedTags().includes(tag) && "Archive__tags__item--selected"}
+              `}
+              onClick={() => this.toggleTag(tag)}
+            >
+              {tag}
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
 
   toggleTag = tag => {
     const { selectedTags } = this.state
@@ -137,7 +142,7 @@ class Archive extends React.Component {
         selectedTags.filter(elem => elem !== tag),
       openedItem: null,
     })
-    this.props.history.push('/archive/gallery')
+    this.props.history.push('/archive')
   }
 
   renderNothing = () => {
@@ -176,48 +181,46 @@ class Archive extends React.Component {
           setItem={() => {
             this.setState({ openedItem: item })
             this.context.setHideMenu(true)
-            this.props.history.push(`/archive/gallery/${item.id}`)
+            this.props.history.push(`/archive/${item.id}`)
           }}
           close={() => {
             this.setState({ openedItem: undefined })
             this.context.setHideMenu(false)
-            this.props.history.push('/archive/gallery')
+            this.props.history.push('/archive')
           }}
           prev={index === 0 ? null : () => {
             this.setState({ openedItem: filteredItems[index - 1] })
-            this.props.history.push(`/archive/gallery/${filteredItems[index - 1].id}`)
+            this.props.history.push(`/archive/${filteredItems[index - 1].id}`)
           }}
           next={index === filteredItems.length - 1 ? null : () => {
             this.setState({ openedItem: filteredItems[index + 1] })
-            this.props.history.push(`/archive/gallery/${filteredItems[index + 1].id}`)
+            this.props.history.push(`/archive/${filteredItems[index + 1].id}`)
           }}
         />)
       .slice(0, 42)
-    const third = Math.round(filteredMappedItems.length / 3)
-    const half = Math.round(filteredMappedItems.length / 2)
 
     return (
       <div className={`
         Archive__gallery
-        ${this.props.location.pathname.includes("about") && "Archive__gallery--hide"}
+        ${this.getSelectedTags().length === 0 && "Archive__gallery--hide"}
       `}>
         {filteredMappedItems.length === 0 &&
           this.renderNothing()}
         <div className="Archive__gallery__col desktop-only">
-          {filteredMappedItems.slice(third * 2)}
+          {filteredMappedItems.filter((item, index) => index % 3 === 0)}
         </div>
         <div className="Archive__gallery__col desktop-only">
-          {filteredMappedItems.slice(third, third * 2)}
+          {filteredMappedItems.filter((item, index) => index % 3 === 1)}
         </div>
         <div className="Archive__gallery__col desktop-only">
-          {filteredMappedItems.slice(0, third)}
+          {filteredMappedItems.filter((item, index) => index % 3 === 2)}
         </div>
 
         <div className="Archive__gallery__col mobile-only">
-          {filteredMappedItems.slice(0, half)}
+          {filteredMappedItems.filter((item, index) => index % 3 === 0)}
         </div>
         <div className="Archive__gallery__col mobile-only">
-          {filteredMappedItems.slice(half)}
+          {filteredMappedItems.filter((item, index) => index % 3 === 1)}
         </div>
       </div>
     )
@@ -226,26 +229,24 @@ class Archive extends React.Component {
   renderDesc = () =>
     <div className={`
       Archive__right__desc
-      ${this.props.location.pathname.includes("about") && "Archive__right__desc--show"}
+      ${this.getSelectedTags().length === 0 && "Archive__right__desc--show"}
     `}>
       <FormattedMessage id="Archive.desc" />
     </div>
 
-  showTags = () =>
-    this.state.searchPressed ||
-    (window.innerWidth >= 1200 && this.props.location.pathname.includes("gallery"))
 
   render = () =>
     <div className="Archive">
       <div className="Archive__left">
         {this.renderAbout()}
         {this.renderAboutDesctop()}
-        {this.showTags() && this.renderTags()}
+        {this.renderTags()}
       </div>
         {this.renderSearch()}
       <div className={`
         Archive__right
-        ${(this.getSelectedTags().length > 0 && !this.state.searchPressed) && "Archive__right--visible"}
+        ${this.getSelectedTags().length > 0 && "Archive__right--visible--desktop"}
+        ${(this.getSelectedTags().length > 0 && !this.state.searchPressed) && "Archive__right--visible--mobile"}
       `}>
         {this.renderGallery()}
         {this.renderDesc()}

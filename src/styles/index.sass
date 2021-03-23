@@ -72,6 +72,12 @@
   @include media-breakpoint-down(lg)
     font-size: rem(18)
 
+.small
+  font-size: rem(16)
+  color: inherit
+  @include media-breakpoint-down(lg)
+    font-size: rem(14)
+
 // COLORS
 $dark: #474747
 $light: white
@@ -101,6 +107,7 @@ $border: 1px solid $dark
   width: 100%
   height: 100%
   @extend .default-font
+  position: relative
 
 .Map
   width: 100%
@@ -895,11 +902,12 @@ $dropdown-transition: .15s
       border-right: none
       width: 100%
       height: 100%
-      padding: rem(90) rem(21) rem(101)
+      padding: rem(90) rem(21) rem(101) rem(20)
       position: fixed
       z-index: 12
+      overflow-y: scroll
     @media screen and ( max-width: 350px )
-      padding-left: rem(9)
+      padding-left: rem(8)
       padding-right: rem(8)
   &__search
     z-index: 20
@@ -907,11 +915,8 @@ $dropdown-transition: .15s
     @extend .flex-row-reverse
     position: fixed
     bottom: rem(50)
-    // right: calc(100vw - #{rem(334)} + #{rem(47)})
-    right: calc(100vw - 334px - 50px)
+    right: calc(100vw - #{rem(334)} - #{rem(50)})
     border: $border
-    @include media-breakpoint-up(xl)
-      display: none
     @include media-breakpoint-down(lg)
       bottom: rem(20)
       right: rem(21)
@@ -939,8 +944,7 @@ $dropdown-transition: .15s
       overflow: hidden
       white-space: nowrap
       margin-right: rem(-1)
-    &--full
-      .Archive__search__browse
+      .Archive__search--full &
         padding-left: rem(11)
         width: rem(284)
         @include media-breakpoint-down(lg)
@@ -966,9 +970,15 @@ $dropdown-transition: .15s
       left: 0
       position: fixed
       &--visible
-        z-index: 12
+        &--desktop
+          @include media-breakpoint-up(lg)
+            z-index: 12
+        &--mobile
+          @include media-breakpoint-down(lg)
+            z-index: 12
     &__desc
       display: none
+      line-height: 1.25
       &--show
         @include media-breakpoint-up(xl)
           display: block
@@ -987,7 +997,7 @@ $dropdown-transition: .15s
     @include media-breakpoint-up(xl)
       display: none
   &__tags
-    @extend .abs-cover
+    // @extend .abs-cover
     background-color: $light
     padding: rem(120) rem(50) rem(124)
     @include media-breakpoint-down(lg)
@@ -1130,6 +1140,7 @@ $dropdown-transition: .15s
           display: block
           width: 75%
   &__about-desktop
+    cursor: pointer
     @include media-breakpoint-down(lg)
       display: none
     width: 100%
@@ -1211,3 +1222,34 @@ $dropdown-transition: .15s
   iframe
     width: 100%
     height: 100%
+
+
+
+.Help
+  @include media-breakpoint-down(lg)
+    width: 90%
+  border: $border
+  padding: rem(7) rem(10)
+  background-color: $background
+  @extend .d-flex-polyfill
+  @extend .flex-column
+  @extend .flex-lg-row
+  @extend .align-items-center
+  position: absolute
+  bottom: -100%
+  z-index: 20
+  left: 50%
+  transform: translateX(-50%)
+  transition: bottom $menu-transition
+  &--opened
+    bottom: rem(20) !important
+  &__text
+    @extend .flex-grow-1-polyfill
+  &__button
+    @extend .button
+    background-color: #474747
+    color: $light
+    padding: rem(4) rem(16)
+    @include media-breakpoint-down(md)
+      width: 100%
+      margin-top: rem(12)

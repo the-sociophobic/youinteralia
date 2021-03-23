@@ -116,7 +116,7 @@ class Menu extends React.Component {
                 </Link>
               )}
           </Dropdown>
-          <Link to="/archive/about">
+          <Link to="/archive">
             <FormattedMessage id="Menu.archive" />
           </Link>
           <Link to="/participate">

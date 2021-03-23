@@ -1,6 +1,12 @@
 const defaultMessages = {
   Header: {
   },
+
+  Help: {
+    text: ["Вы можете увеличивать и уменьшать масшатб карты, чтобы увидеть всех художников", "You can zoom map in and out to find all the points"],
+    button: ["Понятно", "Got it"],
+  },
+
   Menu: {
     about: ["о проекте", "about the project"],
     artists: ["художники и маршруты", "artists and routes"],
@@ -133,22 +139,27 @@ const defaultMessages = {
         Архив, с одной стороны, задает контекст прочтения проектов, созданных для «You, inter alia» и вместе с тем, — функционирует как модель для сборки, позволяющая устанавливать случайные и аффективные связи между самыми разными материалами предоставленными художниками. Другими словами, в этом разделе вы обнаружите все то, что прямо или косвенно «поддерживает» художественные высказывания и, таким образом, создает расширенное поле интерпретаций произведений в их единичности и множественности.
         <br />
         Функция архива заключается не только в прояснении (или, напротив, в затуманивании) смыслового поля представленных работ, но и в раскрытии перформативного измерения любого документа, фрагмента памяти, текста, звука, их обращенности к будущему и возможности его «пере-придумать» сообща.
-        <br />
+        <br /><br />
         __________
-        <br />
-        Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
-        <br />
-        Вы можете сортировать архив по одному тэгу или их комбинации, а также нажать на имя художницы или художника и увидеть все материалы, которыми она или он решил(а) поделиться с нами.
+        <br /><br />
+        <small className='small'>
+          Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
+          <br />
+          Вы можете сортировать архив по одному тэгу или их комбинации, а также нажать на имя художницы или художника и увидеть все материалы, которыми она или он решил(а) поделиться с нами.
+        </small>
       </>,
       <>
         Archive provides a contextualisation of the projects created by the artists for «You, interalia», and at the same time acts as a constellation of materials, which allows for contingent and affective connections between thought and work processes of different art practitioners to be made. In a way, it resembles an exhibition or an exposition of ‘behind-the-scenes’ of each particular artistic enunciation and as such it creates an expanded interpretative framework for the artworks in their singularity and plurality alike.
         <br />
         Therefore, the function of the archive is two-fold: not only it consists in the presentation of the recorded memories, past ideas or commentaries, it further (possibly, hopefully) reveals a performative potential of any document thus enabling it to become a script for the future.
-        <br />
+        <br /><br />
         __________
-        The archive is compiled from materials sent by the artists, which are either directly related to their projects published at youinteralia, or provide a broad outlook on their practice.
-        <br />
-        You are invited to browse the archive by one tag or a combination of them, or to click the artist's name to see all the materials that she or he shared with us.
+        <br /><br />
+        <small className='small'>
+          The archive is compiled from materials sent by the artists, which are either directly related to their projects published at youinteralia, or provide a broad outlook on their practice.
+          <br />
+          You are invited to browse the archive by one tag or a combination of them, or to click the artist's name to see all the materials that she or he shared with us.
+        </small>
       </>
     ],
     browse: ["поиск по тегам", "browse archive by tags"],

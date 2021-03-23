@@ -36,7 +36,7 @@ class BigMenu extends React.Component {
       case pathname === "/about":
         page = <About />
         break
-      case pathname === "/archive/about" || pathname.includes("/archive/gallery"):
+      case pathname.includes('archive'):
         page = <Archive />
         break
       case pathname === "/participate":
