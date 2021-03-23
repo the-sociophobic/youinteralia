@@ -13,7 +13,7 @@ import JitlinaEngPreview from 'artists/pdf/Jitlina eng.jpg'
 import RomanPDF from 'artists/pdf/Roman.pdf'
 import RomanPreview from 'artists/pdf/Roman.jpg'
 
-import KurbakovVimeoThumbnail from 'artists/video/Kurbakov vimeo thumbnail.webp'
+import KurbakovVimeoThumbnail from 'artists/video/Kurbakov vimeo thumbnail.jpg'
 
 
 const items = [
