@@ -47,7 +47,7 @@ const defaultMessages = {
           Художники: Карла Демьер, Андреа Мариони, Мартина Махлер, Франсуаз Карако, Алена Терешко, Роман Осминкин, Ольга Житлина, Иван Курбаков
           <br />
           <br />
-          <div className='small p-4' style={{ border: '1px solid #474747' }}>
+          <div className='small p-4' style={{ border: '1px solid white' }}>
             «You, inter alia» — это не онлайн проект, хоть он и существует в виде сайта. <br />
             Виртуальная среда для нас — это инструмент сообщения, что-то вроде библиотеки, «использование» которой не предполагает следования четким инструкциям. Вы можете слушать художников на языке вам известном (русском, английском или французском), прогуливаясь по тем маршрутам, которые они вам подготовили. Или, например, находясь в Петербурге, представить что идете по Женеве и слышите речь, обращенную к вам на языке, не вполне понятном. Наконец, вы можете сами оставить свое аудио обращение в разделе «участвовать». <br />
           </div>
@@ -80,7 +80,7 @@ const defaultMessages = {
           Artists: Carla Demierre, Аndrea Marioni, Martina Mächler, Francoise Caraco, Alena Tereshko, Roman Osminkin, Olga Jitlina, Ivan Kurbakov.
           <br />
           <br />
-          <div className='small p-4' style={{ border: '1px solid #474747' }}>
+          <div className='small p-4' style={{ border: '1px solid white' }}>
             «You, inter alia» is not an online project, although it exists as a website. For us, the virtual environment is a communication tool, something like a library, which can be «used» without following any instructions or restrictions. You can follow the routes prepared for you by the artists and listen to their contributions in a language which is familiar to you. Or, for example, while in St. Petersburg, imagine that you are walking around in Geneva and listen to a speech addressed to you in a language that is not quite known. Finally, you can share your own audio message in the «participate» section of this website.<br />
           </div>
           <br/><br/>
