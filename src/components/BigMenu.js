@@ -69,6 +69,7 @@ class BigMenu extends React.Component {
             ${page && "BigMenu--opened"}
             ${(this.props.location.pathname.includes("privacy")
               || this.props.location.pathname.includes("archive")
+              || this.props.location.pathname.includes("participate")
               || this.props.location.pathname.includes("about"))
               && "BigMenu--long"}
           `}

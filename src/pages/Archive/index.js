@@ -87,7 +87,9 @@ class Archive extends React.Component {
     const currentItem = items[currentItemIndex]
 
     this.setState({
-      openedItem: currentItem || null
+      selectedTags: currentItem?.tags || [],
+      searchPressed: currentItem ? true : false,
+      openedItem: currentItem || null,
     })
   }
 
@@ -154,7 +156,7 @@ class Archive extends React.Component {
 
   renderTags = () =>
     this.state.searchPressed &&
-      <div className="abs-cover">
+      <div className="Archive__tags__container">
         <div className="Archive__tags">
           {this.getTags().map(tag =>
             <div
@@ -174,7 +176,6 @@ class Archive extends React.Component {
     const { selectedTags } = this.state
     const tagIndex = selectedTags.indexOf(tag)
 
-
     this.setState({
       selectedTags: tagIndex === -1 ?
         [...selectedTags, tag]
@@ -182,7 +183,6 @@ class Archive extends React.Component {
         selectedTags.filter(elem => elem !== tag),
       openedItem: null,
     })
-    this.props.history.push('/archive')
   }
 
   renderNothing = () => {
@@ -272,9 +272,11 @@ class Archive extends React.Component {
   render = () =>
     <div className="Archive">
       <div className="Archive__left">
-        {this.renderAbout()}
-        {this.renderAboutDesktop()}
-        {this.renderTags()}
+        <div className='Archive__left__container'>
+          {this.renderAbout()}
+          {this.renderAboutDesktop()}
+          {this.renderTags()}
+        </div>
       </div>
         {this.renderSearch()}
       <div className={`

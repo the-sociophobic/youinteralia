@@ -1,10 +1,20 @@
 import React from 'react'
 
-import ExternalLink from 'components/ExternalLink'
-import { FormattedMessage } from 'components/Store'
+import Img from 'components/Img'
+import Link from 'components/CustomLink'
+import {
+  FormattedMessage,
+  StoreContext
+} from 'components/Store'
+
+import logo from 'styles/img/logo-dark.svg'
+import logoEng from 'styles/img/logo_eng-dark.svg'
 
 
 class About extends React.Component {
+
+  static contextType = StoreContext
+
   render = () =>
     <div className="AboutUs">
 
@@ -23,7 +33,7 @@ class About extends React.Component {
             <div className="AboutUs__second-block__columns__item__row">
               <FormattedMessage id="About.aboutUs.second.developer" />
             </div>
-            <div className="AboutUs__second-block__columns__item__row">
+            <div className="AboutUs__second-block__columns__item__row d-none d-xl-block">
               <FormattedMessage id="About.aboutUs.second.sponsor" />
             </div>
 
@@ -41,12 +51,17 @@ class About extends React.Component {
             <div className="AboutUs__second-block__columns__item__row">
               <FormattedMessage id="About.aboutUs.second.lev" />
             </div>
-            <div className="AboutUs__second-block__columns__item__row">
-              <ExternalLink
-                className="AboutUs__logo"
+            <div className="AboutUs__second-block__columns__item__row d-none d-xl-block">
+              <Link
                 to="https://prohelvetia.ru/en/"
                 newTab
-              />
+              >
+                <Img
+                  portrait
+                  src={this.context.locale === 'eng' ? logoEng : logo}
+                  className={this.context.locale === 'eng' ? 'AboutUs__logo AboutUs__logo--eng' : 'AboutUs__logo'}
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -56,11 +71,16 @@ class About extends React.Component {
         <div className="AboutUs__third-block__title">
           <FormattedMessage id="About.aboutUs.second.sponsor" />
         </div>
-        <ExternalLink
-          className="AboutUs__logo"
+        <Link
           to="https://prohelvetia.ru/en/"
           newTab
-        />
+        >
+          <Img
+            portrait
+            src={this.context.locale === 'eng' ? logoEng : logo}
+            className='AboutUs__logo'
+          />
+        </Link>
       </div>
 
     </div>

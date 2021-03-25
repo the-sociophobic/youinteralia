@@ -18,8 +18,9 @@ class Img extends React.Component {
 
   setOrientation = () =>
     this.setState({
-      portrait: this.containerRef?.current?.offsetWidth / this.containerRef?.current?.offsetHeight >
-        this.imgRef?.current?.width / this.imgRef?.current?.height
+      portrait: this.props.portrait ||
+        this.containerRef?.current?.offsetWidth / this.containerRef?.current?.offsetHeight >
+          this.imgRef?.current?.width / this.imgRef?.current?.height
     })
 
   render = () =>
