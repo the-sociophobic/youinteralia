@@ -243,8 +243,6 @@ $border: 1px solid $dark
         .Link
           line-height: rem(28)
           margin-bottom: rem(10)
-          &:last-of-type
-            margin-bottom: rem(200)
         &__item
           position: relative
           padding-left: rem(33)
@@ -773,7 +771,7 @@ $dropdown-transition: .15s
           padding: 0
           &__container
             padding: 0
-            @extend .d-flex
+            @extend .d-flex-polyfill
             @extend .flex-row
             .About__left__buttons__item
               width: 50%
@@ -796,7 +794,7 @@ $dropdown-transition: .15s
     padding-right: rem(8)
   &__buttons
     border: $border
-    @extend .d-flex
+    @extend .d-flex-polyfill
     @extend .flex-column
     margin-bottom: rem(50)
     .dropdown
@@ -811,7 +809,7 @@ $dropdown-transition: .15s
             .dropdown
               border-top: $border
               &__title
-                @extend .d-flex
+                @extend .d-flex-polyfill
                 @extend .flex-row
                 &__text
                   width: 55%
