@@ -88,9 +88,12 @@ class About extends React.Component {
               {this.renderButton('aboutUs')}
             </div>
           </div>
-          <Footer />
+          <Footer className='w-100' />
         </div>
-        <div className='About__right'>
+        <div className={`
+          About__right
+          ${this.state.currentSection === 'concept' && 'About__right--concept'}
+        `}>
           {{
             concept: this.renderConcept(),
             conversation: <Conversation />,

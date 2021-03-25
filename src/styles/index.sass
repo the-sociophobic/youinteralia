@@ -764,11 +764,15 @@ $dropdown-transition: .15s
 
 
   &__right
-    // width: 100%
     @extend .flex-grow-1-polyfill
     background-color: $light
     padding: rem(122) rem(134)
     overflow-y: scroll
+    &--concept
+      @include media-breakpoint-up(lg)
+        background-color: $dark
+        *
+          color: $light
 
 .About-mobile
   @extend .mobile-only
