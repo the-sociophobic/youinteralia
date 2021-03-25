@@ -1,3 +1,10 @@
+import img1 from 'styles/img/about/1.jpg'
+import img2 from 'styles/img/about/2.jpg'
+import img3 from 'styles/img/about/3.jpg'
+import img4 from 'styles/img/about/4.jpg'
+import img5 from 'styles/img/about/5.jpg'
+
+
 const paragraphs = [
   {
     title: 'NEWSLETTER No1 Recipe for the future',
@@ -117,6 +124,27 @@ const paragraphs = [
         </i>
         <br />
         PS. I also enclose some photos made on expired film at the beginning of this January
+        <br /><br />
+        <small className='small mb-4 w-100'>
+          <b>5 attached files</b>
+        </small>
+        <div className='row px-0'>
+          <div className='col-12 col-sm-6 col-lg-4 mb-4'>
+            <img className='w-100' src={img1} />
+          </div>
+          <div className='col-12 col-sm-6 col-lg-4 mb-4'>
+            <img className='w-100' src={img2} />
+          </div>
+          <div className='col-12 col-sm-6 col-lg-4 mb-4'>
+            <img className='w-100' src={img3} />
+          </div>
+          <div className='col-12 col-sm-6 col-lg-4 mb-4'>
+            <img className='w-100' src={img4} />
+          </div>
+          <div className='col-12 col-sm-6 col-lg-4 mb-4'>
+            <img className='w-100' src={img5} />
+          </div>
+        </div>
       </>
   },
   {
