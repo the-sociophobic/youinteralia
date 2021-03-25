@@ -38,31 +38,35 @@ class About extends React.Component {
     <>
       <div className='About-mobile'>
         <div className='About-mobile__buttons'>
-          <Dropdown block title={getMessage(this, 'About.concept.name')}>
-            {this.renderConcept()}
-          </Dropdown>
-          <Dropdown block title={getMessage(this, 'About.conversation.name')}>
-            <Dropdown
-              block
-              title={getMessage(this, 'About.conversation.name')}
-              right={
-                <Link
-                  className='About-mobile__buttons__item--download'
-                  to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
-                >
-                  <div className='About-mobile__buttons__item__text'>
-                    <FormattedMessage id='About.conversation.download' />
-                  </div>
-                </Link>
-              }
-            >
-              <Conversation />
+          <div className='About-mobile__buttons__container'>
+            <Dropdown block title={getMessage(this, 'About.concept.name')}>
+              {this.renderConcept()}
             </Dropdown>
-          </Dropdown>
-          <Dropdown block title={getMessage(this, 'About.aboutUs.name')}>
-            <AboutUs />
-          </Dropdown>
+            <Dropdown block title={getMessage(this, 'About.conversation.name')}>
+              <Dropdown
+                block
+                title={getMessage(this, 'About.conversation.name')}
+                right={
+                  <Link
+                    className='About-mobile__buttons__item--download'
+                    to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
+                  >
+                    <div className='About-mobile__buttons__item__text'>
+                      <FormattedMessage id='About.conversation.download' />
+                    </div>
+                  </Link>
+                }
+              >
+                <Conversation />
+              </Dropdown>
+            </Dropdown>
+            <Dropdown block title={getMessage(this, 'About.aboutUs.name')}>
+              <AboutUs />
+            </Dropdown>
+          </div>
         </div>
+        
+        <Footer />
       </div>
 
       <div className='About desktop-only'>

@@ -774,15 +774,28 @@ $dropdown-transition: .15s
   @extend .mobile-only
   @extend .d-flex-polyfill
   @extend .flex-column
-  padding: rem(88) rem(21) rem(88) rem(20)
+  min-height: 100vh
   @media screen and ( max-width: 350px )
     padding-left: rem(8)
     padding-right: rem(8)
+  position: relative
+  @include media-breakpoint-down(lg)
+    &::before
+      position: fixed
+      z-index: 10
+      content: ''
+      width: 100%
+      height: rem(60)
+      top: 0
+      left: 0
+      background-color: $background
   &__buttons
-    border: $border
-    @extend .d-flex-polyfill
-    @extend .flex-column
-    margin-bottom: rem(50)
+    padding: rem(88) rem(21) rem(88) rem(20)
+    @extend .mb-auto
+    &__container
+      border: $border
+      @extend .d-flex-polyfill
+      @extend .flex-column
     .dropdown
       &:last-of-type
         border-bottom: none

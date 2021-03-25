@@ -24,8 +24,69 @@ const defaultMessages = {
   },
   About: {
     concept: {
-      name: ['концепт', 'concept'],
-      text: ['Те, кому когда-либо приходилось делать в квартире ремонт, наверное, обращали внимание на старые газеты, наклеенные под обоями. Как правило, пока все статьи не перечитаешь, ничего другого делать не можешь. Интересно же — обрывки текста, чья-то жизнь... Так же и с рыбой. Пока заказчик не прочтет всё, он не успокоится. Бывали случаи, когда дизайн принимался именно из-за рыбного текста, который, разумеется, никакого отношения к работе не имел.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus est eget tellus tempor luctus. Sed enim sapien, sodales et enim finibus, consectetur egestas massa. Ut suscipit enim purus, eget accumsan massa tempor sed. In sit amet massa leo. In ut auctor ante. Sed imperdiet feugiat aliquam. Nulla imperdiet libero sem, a elementum turpis semper vehicula. Aenean tincidunt velit id velit pharetra blandit. Fusce lobortis ornare lectus eleifend posuere. Integer tempus, enim non molestie ultrices, orci ex dictum nisi, sit amet ultrices arcu augue in dui. Donec dignissim quis ex ut ornare.'],
+      name: ['концепция', 'concept'],
+      text: [
+        <span>
+          «You, inter alia» исследует пространства города и текста в практиках прогулки и письма. <br />
+          Вместе с художниками мы размышляем о возможности формирования со-присутствия в отсутствии всякого разделяемого места или вещественной, телесной близости. Нас интересует структура аффективных привязанностей и то, как они организуют переживания настоящего, как развивается совместность через текст и общий ритм: ходьбы, дыхания, звучания и жизни не рядом, но сообща. <br />
+          <br />
+          Название проекта содержит умышленную неоднозначность. Неясно, о ком идет речь: местоимение «you» может быть как единственного («ты»), так и множественного («вы») числа, а наречие «inter alia» с латинского переводится: среди прочего, в частности, в числе других, и даже мимоходом (например, в английском оно часто синонимично выражению «in passing»). То есть, ни субъект высказывания, ни адресат, ни контекст не обозначены и не прозрачны. Кто говорит или пишет? Кому? С какой целью? Эти вопросы открыты, — название только предполагает присутствие адресата в речи, при этом никак его не определяя. В то время, как слышится «ты», невозможно в точности определить место, в которое это обращение устремлено. «Твое» физическое присутствие никогда не совпадает с направлением оклика, «ты» сам по себе пустой и всякий раз по-новому, ситуативно присваиваешься, <span style={{ fontStyle: 'italic' }}>откликаешься</span> (или, по-альтюссеровски оборачиваешься) в каждом конкретном случае говорения с «тобой». <br />
+          <br />
+          В «You, inter alia» мы предложили восьми художникам из Швейцарии и России создать такие «случаи говорения», аудио послания к «тебе» и локализовать их в более или менее конкретных картографических пространствах Женевы и Санкт-Петербурга. Речевая ситуация, которую запускает название, усложняется включением еще одной составляющей проекта — голоса и звука. Создается место, где поэтика и политика письма встречаются с его акустикой. Каков звук письма? Или, каково отношение письма к речи и сводится ли последняя к единственному голосу? Голос обещает субъекта, он преследует слушателя («тебя»), чтобы тот узнал в голосе «кого-то». Кого? Нас двое (ты говоришь, а я слушаю) и в тот же самый момент, нас оказывается много больше. Нам со-присутствуют не только те, кто относится к нашему непосредственному окружению в публичном или интимном пространстве слушания, но и все те, с которыми мы думали, читали и говорили раньше. Твой голос присоединяется к этому потенциальному хору, или, скорее, самим своим звучанием делает возможным появление этого множества. Парадоксально, приобретая акустическую реализацию, речь одновременно замыкается в конкретике воплощения, но вместе с тем и открывается диалогическому пространству, возможности коллективного опыта и (со)участия.<br />
+          <br />
+          Кажется, иногда прогулке стоит быть эгоистичной, даже своевольной и одинокой (или одиночной?). В такой прогулке открывается нехитрый факт, что наши воспоминания не локализованы и функционируют как номадические убежища, укрытия или как архивы «антимузея». Тогда как музеи собирают свои коллекции в одном пространстве — наши воспоминания ускользают от фиксации, рассредотачиваются: вот лицо девушки, которое я почему-то узнаю, у этого дома я встретила тебя, звук пения птиц и детского смеха всегда напоминает мне открытые окна летом дома у родителей... Мы блуждаем по городу. Старательно обходим некоторые места, избегая нежелательных встреч, или, наоборот, кружим подолгу в ожидании, позволяя городу самому стать повествователем и зафиксировать наши воспоминания.<br />
+          Повседневность, голоса, звуки, видимые и сокрытые истории, воображение и воспоминания создают многослойный текст, в котором совпадения/узнавания проявляются аффективными вспышками, озарениями.<br />
+          <br />
+          В «Лексике рта: поэтике и политике голоса и устном воображаемом» американский художник и теоретик Брэндон Лабелл пишет, что звук учит, как не быть собой; как нарушать границы, преодолевать язык и как относить свое тело к телу другого. Звук указывает как исчезнуть, но также и как возникнуть, в новом месте. Звук смещает. «Он сворачивает и разворачивает меня, в качестве тебя». <small className='small'>1.</small><br />
+          <br />
+          Как это смещение функционирует в восьми конкретных опытах слушания и передвижения по городу? Какие формы (со)участия нам открываются? И где находит себе место слушатель («ты»): в акустико-речевой ситуации обращения, в топографической системе, которую он осваивает и присваивает своей прогулкой или в зазоре между двумя — в контактной зоне, где речь и место переплетаются, разворачиваясь новой географией двух городов? <br />
+          <br />
+          <br />
+          Алина Белишкина и Валерия Мостовая<br />
+          <br />
+          Художники: Карла Демьер, Андреа Мариони, Мартина Махлер, Франсуаз Карако, Алена Терешко, Роман Осминкин, Ольга Житлина, Иван Курбаков
+          <br />
+          <br />
+          <div className='small p-4' style={{ border: '1px solid #474747' }}>
+            «You, inter alia» — это не онлайн проект, хоть он и существует в виде сайта. <br />
+            Виртуальная среда для нас — это инструмент сообщения, что-то вроде библиотеки, «использование» которой не предполагает следования четким инструкциям. Вы можете слушать художников на языке вам известном (русском, английском или французском), прогуливаясь по тем маршрутам, которые они вам подготовили. Или, например, находясь в Петербурге, представить что идете по Женеве и слышите речь, обращенную к вам на языке, не вполне понятном. Наконец, вы можете сами оставить свое аудио обращение в разделе «участвовать». <br />
+          </div>
+          <br/><br/>
+          <small className='small'>1.</small> перевод по: LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.
+        </span>,
+        <span>
+          «You, inter alia» explores space of the city and that of the text through practices of walking and writing. <br />
+          Together with the artists, we speculate whether the co-presence can be constituted in the absence of any physically shared place and with the lack of material and tangible proximity. We are interested in the structures of affective attachments and how they organize lived experiences of the present, how togetherness develops through the text and out of a shared rhythm of walking, breathing, sounding, and living not side by side, but yet in concert.<br />
+          <br />
+          The title of the project is deliberately ambiguous. It is not clear who or what is actually implied or talked about: the pronoun «you» can be either singular or plural, while the latin adverb «inter alia» stands for «among other things», «in particular», and sometimes even «in passing». That is, neither the subject of the utterance, nor the receiver, nor the context are explicitly defined. Who speaks or writes? To whom? For what purpose? These questions are open and the title only suggests the presence of the addressee of the speech, yet does not designate it in any way. Even when «you» is being heard distinctly, it is impossible to establish where exactly this call or longing is directed to. «Your» physical presence never coincides with the direction of the call and «you» are each time constituted anew, receiving and adopting a certain subject position by responding, or (in the Althusserian way) by turning around to «answer» the call. <br />
+          <br />
+          For «You, inter alia», we invited eight artists from Switzerland and Russia to produce addresses to «you» in the form of the voiced letters or writings and localize them in more or less specific cartographic coordinates of Geneva and St. Petersburg. The ambiguity or disturbance triggered by the title is only complicated by one more crucial component of the project—voice and sound. The place where poetics and politics of writing meets its phonics is thereby created. <br />
+          What is the sound of writing? Or, what is the relation of writing to speech, and does the latter amount to a single voice? The voice promises a subject, it haunts the listener, compelling «you» to recognize in the voice a «someone». Who is that someone? There are two of us (you speaking and me listening) and at the same time, there are more than that. We are co-present not only with those who belong to our immediate environment in public or intimate space of listening, but also with those with whom we have been thinking, reading, and speaking, ever. Your voice joins this potential chorus, or rather, by its very sounding, makes the actualisation of this multitude possible. Paradoxically, acquiring an acoustic realization, speech gets simultaneously constrained within the particularities of its «embodiment», and at the same time opens up to the dialogical space, to the possibility of collective experience and participation.<br />
+          <br />
+          <br />
+          <span style={{ fontStyle: 'italic' }}>
+            It seems that sometimes a walk must be solitary indeed. In such a walk, one is confronted with the simple fact, that memories are not localized and function as nomadic shelters, or as archives of what once was called an «antimuseum». While museums collect things in one particular place, our memories on the contrary escape fixation and scatter around instead: there is the face of a girl I immediately recognise, without even knowing; there is a house where first met you; there (everywhere) is the sound of birds singing and children laughing, which reminds me of how the windows were open day and night at my parents’ home during the summer…<br />
+            We wonder around. We deliberately keep away from some places, avoiding unwanted encounters, or we meander back and forth instead, waiting for something (who knows what) allowing the city itself to become a narrator and to pin down our memories.<br />
+            The everyday life, voices, sounds, known and hidden histories, imaginations and memories create a multi-layered text in which coincidences and recognitions are manifested by affective flashes and insights.<br />
+          </span>
+          <br />
+          In his <span style={{ fontStyle: 'italic' }}>Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary</span> Аmerican artist and theorist Brandon LaBell writes that sound teaches you how not to be yourself; how to trespass certain boundaries, how to supplement languages, and how to relate your body to the bodies of others. The sound shifts and displaces. It «communicates how to depart, but also how to arrive, elsewhere. It literally enfolds and unfolds me, as a you» <small className='small'>1.</small><br />
+          <br />
+          How does this displacement function within eight specific experiences of listening and moving around the city? What forms of participation do they offer to us? And where does the listener («you») find a place for him or herself: in the interpellative situation of the vocal address, in the topographical system that he appropriates by his walk, or in the gap between the two—in the contact zone, where speech and place are intertwined and unfold as a new geography of the two cities?<br />
+          <br />
+          <br />
+          Alina Belishkina and Valeria Mostovaya<br />
+          <br />
+          Artists: Carla Demierre, Аndrea Marioni, Martina Mächler, Francoise Caraco, Alena Tereshko, Roman Osminkin, Olga Jitlina, Ivan Kurbakov.
+          <br />
+          <br />
+          <div className='small p-4' style={{ border: '1px solid #474747' }}>
+            «You, inter alia» is not an online project, although it exists as a website. For us, the virtual environment is a communication tool, something like a library, which can be «used» without following any instructions or restrictions. You can follow the routes prepared for you by the artists and listen to their contributions in a language which is familiar to you. Or, for example, while in St. Petersburg, imagine that you are walking around in Geneva and listen to a speech addressed to you in a language that is not quite known. Finally, you can share your own audio message in the «participate» section of this website.<br />
+          </div>
+          <br/><br/>
+          <small className='small'>1.</small> LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.
+        </span>
+      ],
     },
     conversation: {
       name: ['разговор', 'conversation'],

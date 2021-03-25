@@ -15,7 +15,7 @@ class Footer extends React.Component {
   static contextType = StoreContext
 
   render = () =>
-    <div className="Footer">
+    <div className={`Footer ${this.props.className}`}>
       <ExternalLink to="https://prohelvetia.ru/en/" newTab >
         <Img
           portrait
