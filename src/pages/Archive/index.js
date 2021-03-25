@@ -44,6 +44,7 @@ const tags = [
   "Ivan Kurbakov",
   "Иван Курбаков",
   "Ольга Житлина",
+  "стрит-арт",
   "Мартина Махлер",
   "Martina Mächler",
   "в поисках чудесного",
@@ -51,7 +52,6 @@ const tags = [
   "in search of the miraculous",
   "Roman Osminkin",
   "Роман Осминкин",
-  "стрит-арт",
   "street art",
 ]
 
@@ -103,9 +103,11 @@ class Archive extends React.Component {
 
   renderAbout = () =>
     (!this.state.searchPressed && this.getSelectedTags().length === 0) &&
-      <div className="Archive__about">
-        <div className="Archive__about__desc">
-          <FormattedMessage id="Archive.desc" />
+      <div className=''>
+        <div className="Archive__about">
+          <div className="Archive__about__desc">
+            <FormattedMessage id="Archive.desc" />
+          </div>
         </div>
       </div>
 

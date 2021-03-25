@@ -160,6 +160,14 @@ $border: 1px solid $dark
       width: calc(100vw - 40 / 16 * 1rem)
       top: rem(20)
       left: rem(20)
+      // &::before
+      //   content: ''
+      //   position: absolute
+      //   left: -5px
+      //   top: rem(-101)
+      //   width: calc(100% + 10px)
+      //   height: rem(100)
+      //   background-color: $background
     @media screen and ( max-width: 350px )
       width: calc(100vw - 16 / 16 * 1rem)
       left: rem(8)
@@ -232,10 +240,11 @@ $border: 1px solid $dark
         @extend .flex-column
         @extend .flex-grow-1-polyfill
         @extend .align-items-start
-        a
+        .Link
           line-height: rem(28)
-          &:not(&:last-of-type)
-            margin-bottom: rem(10)
+          margin-bottom: rem(10)
+          &:last-of-type
+            margin-bottom: rem(200)
         &__item
           position: relative
           padding-left: rem(33)
@@ -277,13 +286,15 @@ $border: 1px solid $dark
   @extend .justify-content-between
   @extend .align-items-start
   @include media-breakpoint-down(lg)
+    width: 100%
+    min-height: rem(175)
     padding-left: rem(20)
     margin-top: rem(20)
   @media screen and ( max-width: 350px )
     padding-left: rem(16)
   &__logo
     width: rem(170)
-    height: rem(32)
+    height: rem(31.913636)
     @extend .def-img
     background-image: url(./img/logo.svg)
     &--eng
@@ -304,6 +315,8 @@ $border: 1px solid $dark
 
 
 $dropdown-transition: .15s
+.dropdown--opened > .dropdown__title > .dropdown__title__text::after
+  transform: translateY(-50%)
 .dropdown
   @extend .d-flex-polyfill
   @extend .flex-column
@@ -329,8 +342,6 @@ $dropdown-transition: .15s
         height: rem(23)
         background-image: url(./img/arrow-up-inline.svg)
         @extend .def-img
-        .dropdown--opened &
-          transform: translateY(-50%)
   &__content
     width: 100%
     overflow: hidden
@@ -341,6 +352,49 @@ $dropdown-transition: .15s
       width: 100%
       @extend .d-flex-polyfill
       @extend .flex-column
+
+  &--block
+    position: relative
+    z-index: 9
+    border-bottom: $border
+  .dropdown--block &
+    &--opened
+      @extend .flex-lg-grow-1
+    &__title
+      width: 100%
+      border-bottom: $border
+      line-height: rem(50)
+      margin-bottom: 0
+      background-color: $background
+      @extend .d-flex-polyfill
+      @extend .flex-row
+      &__text
+        @extend .flex-grow-1-polyfill
+        @extend .noselect
+        padding-left: rem(13)
+        position: relative
+        text-transform: lowercase
+        &::after
+          right: rem(14)
+      &__city
+        width: rem(77)
+        text-align: center
+        border-left: $border
+        &--spb
+          background-color: $spb
+        &--gen
+          background-color: $gen
+    &__content
+      margin-top: -1px
+      padding-left: rem(15)
+      padding-right: rem(15)
+      overflow-y: scroll
+      line-height: 1.25
+      &__container
+        hyphens: auto
+        .Link
+          text-decoration: underline
+
 
 
 .Marker
@@ -613,46 +667,7 @@ $dropdown-transition: .15s
             left: 0
             width: 100%
             height: 100%
-          .dropdown
-            position: relative
-            z-index: 9
-            border-bottom: $border
-            &--opened
-              @extend .flex-lg-grow-1
-            &__title
-              width: 100%
-              border-bottom: $border
-              line-height: rem(50)
-              margin-bottom: 0
-              background-color: $background
-              @extend .d-flex-polyfill
-              @extend .flex-row
-              &__text
-                @extend .flex-grow-1-polyfill
-                @extend .noselect
-                padding-left: rem(13)
-                position: relative
-                text-transform: lowercase
-                &::after
-                  right: rem(14)
-              &__city
-                width: rem(77)
-                text-align: center
-                border-left: $border
-                &--spb
-                  background-color: $spb
-                &--gen
-                  background-color: $gen
-            &__content
-              margin-top: -1px
-              padding-left: rem(15)
-              padding-right: rem(15)
-              overflow-y: scroll
-              line-height: 1.25
-              &__container
-                hyphens: auto
-                .Link
-                  text-decoration: underline !important
+
             
 
       .Player
@@ -701,10 +716,132 @@ $dropdown-transition: .15s
 
 
 
-
 .About
   @extend .d-flex-polyfill
-  @extend .flex-xl-row
+  @extend .flex-row
+  height: 100vh
+  &__left
+    @extend .d-flex-polyfill
+    @extend .flex-column
+    position: relative
+    background-color: $background
+    width: rem(433)
+    &__buttons
+      padding: rem(117) rem(48) rem(124) rem(50)
+      @extend .mb-auto
+      &__content
+        border: $border
+      &__item
+        text-decoration: none !important
+        width: 100%
+        // border-bottom: $border
+        line-height: rem(50)
+        margin-bottom: 0
+        background-color: $background
+        @extend .d-flex-polyfill
+        @extend .flex-row
+        &__text
+          @extend .flex-grow-1-polyfill
+          @extend .noselect
+          padding-left: rem(13)
+          position: relative
+          text-transform: lowercase
+          &::after
+            content: ''
+            position: absolute
+            @extend .def-img
+            background-image: url(./img/arrow-up.svg)
+            transform: translateY(-50%) rotate(90deg)
+            width: rem(50)
+            height: rem(50)
+            right: 0
+            top: 50%
+        .About__left__buttons__item--current &
+          &__text
+            &::after
+              background-color: $dark
+              background-image: url(./img/arrow-up-white.svg)
+        .About__left__buttons__item--download &
+          &__text
+            border-right: $border
+            &::after
+              transform: translateY(-50%) rotate(180deg)
+      .dropdown
+        border-top: $border
+        &__content
+          padding: 0
+          &__container
+            padding: 0
+            @extend .d-flex
+            @extend .flex-row
+            .About__left__buttons__item
+              width: 50%
+
+
+  &__right
+    // width: 100%
+    @extend .flex-grow-1-polyfill
+    background-color: $light
+    padding: rem(122) rem(134)
+    overflow-y: scroll
+
+.About-mobile
+  @extend .mobile-only
+  @extend .d-flex-polyfill
+  @extend .flex-column
+  padding: rem(88) rem(21) rem(88) rem(20)
+  @media screen and ( max-width: 350px )
+    padding-left: rem(8)
+    padding-right: rem(8)
+  &__buttons
+    border: $border
+    @extend .d-flex
+    @extend .flex-column
+    margin-bottom: rem(50)
+    .dropdown
+      &:last-of-type
+        border-bottom: none
+      &:nth-of-type(2)
+        .dropdown__content
+          // border-top: $border
+          padding: 0
+          &__container
+            padding: 0
+            .dropdown
+              border-top: $border
+              &__title
+                @extend .d-flex
+                @extend .flex-row
+                &__text
+                  width: 55%
+                  border-right: $border
+                .About-mobile__buttons__item--download
+                  width: 45%
+                  display: block
+                  text-decoration: none
+                  padding-left: rem(13)
+                  &::after
+                    content: ''
+                    position: absolute
+                    @extend .def-img
+                    background-image: url(./img/arrow-up.svg)
+                    transform: translateY(-50%) rotate(180deg)
+                    width: rem(50)
+                    height: rem(50)
+                    right: 0
+                    top: 50%
+
+  .AboutUs
+    font-size: rem(13)
+    &__second-block__columns__item
+      &:first-of-type
+          width: 30%
+
+
+
+.AboutUs
+  @extend .d-flex-polyfill
+  // @extend .flex-xl-row
   @extend .flex-column
   @extend .justify-content-between
   height: 100%
@@ -712,12 +849,9 @@ $dropdown-transition: .15s
     margin-left: rem(-1)
   &__first-block,
   &__second-block
-    width: calc(50% - 10px)
-    height: 100%
-    @include media-breakpoint-down(lg)
-      width: 100%
-      height: auto
-      margin-bottom: rem(20)
+    width: 100%
+    height: auto
+    margin-bottom: rem(20)
     border: $border
     background-color: $light
   &__first-block
@@ -755,6 +889,10 @@ $dropdown-transition: .15s
         @extend .d-flex-polyfill
         @extend .flex-column
         position: relative
+        &:first-child
+          .AboutUs__second-block__columns__item__row
+            &:first-child
+              height: rem(100)
         &__row
           width: 100%
           height: rem(50)
@@ -764,13 +902,13 @@ $dropdown-transition: .15s
           &:not(&:last-child)
             @include media-breakpoint-up(xl)
               border-bottom: $border
-          &:last-child  
-            bottom: 0
-            left: 0
-            position: absolute
-            width: 100%
-            height: rem(100)
-            @extend .desktop-only
+          // &:last-child
+          //   bottom: 0
+          //   left: 0
+          //   position: absolute
+          //   width: 100%
+          //   height: rem(100)
+          //   @extend .desktop-only
         &:first-of-type
           @include media-breakpoint-up(xl)
             border-right: $border
@@ -796,6 +934,48 @@ $dropdown-transition: .15s
     @extend .def-img
 
 
+
+.Conversation
+  background-color: $light
+  &__paragraph
+    @extend .mb-5
+    &__title
+      // width: 100%
+      padding: rem(15) rem(17) rem(15) rem(50)
+      border: $border
+      @include media-breakpoint-down(lg)
+        border-left: none
+        border-right: none
+      &__text
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: rem(-33)
+          width: rem(23)
+          height: rem(23)
+          border-radius: rem(100)
+          background-color: $dark
+        margin-bottom: rem(10)
+      &__small,
+      &__from,
+      &__to
+        font-size: rem(14)
+      &__small
+        margin-bottom: rem(10)
+      &__from
+        margin-bottom: rem(3)
+      &__to
+        margin-bottom: rem(12)
+      &__date
+        font-size: rem(14)
+        text-align: right
+    &__text
+      font-size: rem(17)
+      padding: rem(20) 0
+      @include media-breakpoint-down(lg)
+        padding: rem(20) rem(15)
               
             
 .Ticker
@@ -834,7 +1014,7 @@ $dropdown-transition: .15s
     &__agree
       width: 100%
     .Link
-      text-decoration: underline !important
+      text-decoration: underline
 
 
 
@@ -977,6 +1157,14 @@ $dropdown-transition: .15s
     &--hide-desktop
       @include media-breakpoint-up(xl)
         display: none
+    // &::after
+    //   content: ''
+    //   bottom: -100%
+    //   left: 0
+    //   @extend .mobile-only
+    //   background-color: $background
+    //   width: 100%
+    //   height: rem(20)
   &__right
     @extend .flex-grow-1-polyfill
     overflow-y: scroll

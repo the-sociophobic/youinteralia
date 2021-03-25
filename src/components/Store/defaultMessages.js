@@ -23,22 +23,35 @@ const defaultMessages = {
     popup: ["«северные полмира».\nпродолжение", "«appear in the northern hemisphere».\ncontinue"],
   },
   About: {
-    first: {
-      title: ["идея", "idea"],
-      body: ["съешь ещё этих мягких французских булок, да выпей чаю", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."],
+    concept: {
+      name: ['концепт', 'concept'],
+      text: ['Те, кому когда-либо приходилось делать в квартире ремонт, наверное, обращали внимание на старые газеты, наклеенные под обоями. Как правило, пока все статьи не перечитаешь, ничего другого делать не можешь. Интересно же — обрывки текста, чья-то жизнь... Так же и с рыбой. Пока заказчик не прочтет всё, он не успокоится. Бывали случаи, когда дизайн принимался именно из-за рыбного текста, который, разумеется, никакого отношения к работе не имел.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus est eget tellus tempor luctus. Sed enim sapien, sodales et enim finibus, consectetur egestas massa. Ut suscipit enim purus, eget accumsan massa tempor sed. In sit amet massa leo. In ut auctor ante. Sed imperdiet feugiat aliquam. Nulla imperdiet libero sem, a elementum turpis semper vehicula. Aenean tincidunt velit id velit pharetra blandit. Fusce lobortis ornare lectus eleifend posuere. Integer tempus, enim non molestie ultrices, orci ex dictum nisi, sit amet ultrices arcu augue in dui. Donec dignissim quis ex ut ornare.'],
     },
-    second: {
-      team: ["команда", "team"],
-      curators: ["кураторы:", "curators:"],
-      designer: ["дизайнер:", "designer:"],
-      developer: ["разработчик:", "developer:"],
-      sponsor: ["спосор:", "sponsor:"],
+    conversation: {
+      name: ['разговор', 'conversation'],
+      download: ['скачать', 'download'],
+      read: ['читать', 'read'],
+    },
+    aboutUs: {
+      name: ['о нас', 'about us'],
 
-      alina: ["aлина белишкина", "alina belishkina"],
-      lera: ["лера мостовая", "lera mostovaya"],
-      arina: ["арина поздняк", "arina pozdnyak"],
-      lev: ["лев васильев", "lev vasilyev"],
-    }
+      first: {
+        title: ["идея", "idea"],
+        body: ["съешь ещё этих мягких французских булок, да выпей чаю", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."],
+      },
+      second: {
+        team: ["команда", "team"],
+        curators: ["кураторы:", "curators:"],
+        designer: ["дизайнер:", "designer:"],
+        developer: ["разработчик:", "developer:"],
+        sponsor: ["спосор:", "sponsor:"],
+  
+        alina: ["aлина белишкина", "alina belishkina"],
+        lera: ["лера мостовая", "lera mostovaya"],
+        arina: ["арина поздняк", "arina pozdnyak"],
+        lev: ["лев васильев", "lev vasilyev"],
+      }
+    },
   },
   Participate: {
     desc: [
@@ -125,7 +138,7 @@ const defaultMessages = {
       // link: ["или отправьте свою ссылку", "or paste the link here"],
       link: ["ссылка на аудиофайл*", "link to audiofile*"],
       submit: ["отправить", "submit"],
-      agree: ["нажмая на кнопку, вы соглашаетесь с политикой конфиденциальности", "by clicking submit button you agree with our privacy policy.\n*required field"],
+      agree: ["нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и условиями пользования сайтом", "by clicking submit button you agree with our privacy policy & terms of use.\n*required field"],
     }
   },
   Thanks: {

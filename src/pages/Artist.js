@@ -78,8 +78,7 @@ class Artist extends React.Component {
                   </Dropdown>
                   <Dropdown
                     block
-                    focus={() => {
-                      console.log(this.context[`${artist.city}Ref`]?.current)
+                    focus={() =>
                       this.context[`${artist.city}Ref`]?.current?.setState?.({
                         zoom: artist.city === "spb" ? 16 : 18,
                         center: {
@@ -87,7 +86,7 @@ class Artist extends React.Component {
                           lng: artist.lng,
                         }
                       })
-                    }}
+                    }
                     title={artist.name}
                     opened={this.state.artistInfoOpened}
                     toggleOpened={() => this.toggleArtistInfo()}

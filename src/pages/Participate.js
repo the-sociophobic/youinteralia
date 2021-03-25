@@ -37,7 +37,7 @@ class Participate extends React.Component {
 
   renderAgreeLine = () => {
     const line = getMessage(this, "Participate.form.agree")
-    const linkText = this.context.locale === "rus" ? "политикой конфиденциальности" : "privacy policy"
+    const linkText = this.context.locale === "rus" ? "политикой конфиденциальности и условиями пользования сайтом" : "privacy policy & terms of use"
     const parts = line.split(linkText)
 
     return (

@@ -51,6 +51,7 @@ export default class Dropdown extends React.Component {
         >
           {this.props.title}
         </div>
+        {this.props.right}
         {this.props.focus &&
           <Link
             to="/"

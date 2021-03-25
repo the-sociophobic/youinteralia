@@ -25,6 +25,11 @@ class BigMenu extends React.Component {
 
   scrollRef = React.createRef()
 
+  componentDidUpdate = prevProps =>
+    this.props.location !== prevProps.location &&
+      this.props.location.pathname !== '/archive' &&
+        this.context.setHideBigMenuClose(false)
+
   render = () => {
     let page
     const { pathname } = this.props.location
@@ -62,7 +67,10 @@ class BigMenu extends React.Component {
           className={`
             BigMenu
             ${page && "BigMenu--opened"}
-            ${(this.props.location.pathname.includes("privacy") || this.props.location.pathname.includes("archive")) && "BigMenu--long"}
+            ${(this.props.location.pathname.includes("privacy")
+              || this.props.location.pathname.includes("archive")
+              || this.props.location.pathname.includes("about"))
+              && "BigMenu--long"}
           `}
         >
           <div className="BigMenu__content">
@@ -78,8 +86,6 @@ class BigMenu extends React.Component {
             <div className="BigMenu__content__container">
               {page}
             </div>
-
-            {/* {!this.props.location.pathname.includes("archive") && <Footer />} */}
           </div>
         </div>
       </ScrollToTop>
