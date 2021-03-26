@@ -12,7 +12,8 @@ const paragraphs = [
     from: 'YouInterAlia (Alina and Lera)',
     to: 'Alena, Andrea, Carla, Françoise, Ivan, Martina, Olga, Roman',
     date: '18 dec. 2020, 16:01',
-    text: <>
+    text: click =>
+      <>
         I have become very anxious recently. They say that having some kind of a blueprint or a recipe for the future—an instruction to follow—usually helps to overcome fears or feelings of uncertainty, just like making lists supposedly does. This makes me think of one performance artist who was obsessed with making lists. Probably, for her that was a choreographic practice of some sort. What will/should/could/ this become for me, or for you?
         <br />
         <br />
@@ -34,7 +35,8 @@ const paragraphs = [
     from: 'Alena',
     to: 'Andrea, Carla, Françoise, Ivan, Martina, Olga, Roman, YouInterAlia (Alina and Lera)',
     date: '30 dec. 2020, 19:27',
-    text: <>
+    text: click =>
+      <>
         It was Friday, December 18, 2020. I was cycling in the rain and listening to the audiobook at the same time. It was «History» of Herodotus, but I was reading «Man without properties» by Meisel the day before. And my thoughts were somewhere between the Lydians, Medes, Persians and Austria at the beginning of the 20th century. I went to a meeting in one gallery and it’s surprising that there we started talking about Christmas, and one of the interlocutors said that her husband is Persian and they would not celebrate Christmas, but “Yelda”, that is, the longest night (Zaroastristic holiday). They will eat melons, juicy fruits and other traditional food for the holly day. I was amazed at the softness of the shape of her hand holding the cup, and the smell of her hair with some kind of incense, while she spoke. I thought about the Turks and their bright beauty. We spoke Russian, by the way. In the «man without properties» I was just at the place of the description of the beauty-cousin of the protagonist, whom he calls «the beauty-hydra», and writes about some nodules on the neck covered with thin delicate skin (I am attracted by this detail probably because I did not understand in any way what it means and how it looks).
         <br />
         <br />
@@ -49,7 +51,8 @@ const paragraphs = [
     from: 'Olga',
     to: 'Alena, Andrea, Carla, Françoise, Ivan, Martina, Roman, YouInterAlia (Alina and Lera)',
     date: '04 jan. 2021, 22:04',
-    text: <>
+    text: click =>
+      <>
         Hi there!<br />
         <br />
         Sorry it took me so long to start this correspondence. It feels pretty unnatural to address a group of people most of whom I don’t know at all and who know nothing about me. I had a big temptation to write a letter to Roman Osminkin who is my old friend and whose posts I follow from time to time on Facebook but rarely find time to respond.<br />
@@ -68,10 +71,11 @@ const paragraphs = [
     from: 'Roman',
     to: 'Alena, Andrea, Carla, Françoise, Ivan, Martina, Olga, YouInterAlia (Alina and Lera)',
     date: '04 jan. 2021, 23:05',
-    text: <>
+    text: click =>
+      <>
         Olya Jitlina, thank you very much for such an honest letter, you are a big heart.<br />
         <br />
-        Dear colleagues, hello, I don’t know any of you, except for Olya Jitlina and Alena Tereshko. But it’s not that important now. It does not matter in this case, since one of the exposed conditions of our relationship today is the situation of weak communities on the other side of the family. Platform capitalism has won, but completely unintended, weak, translocal, horizontal, affective, emotional, aesthetic, situational, short-term and other communities and connections arise within it. This is the aleatory materialism of coincidences, about which Althusser wrote, relying on Lenin. These are not fanclubs or sects, but parainstitutions that can corrode capitalist hierarchies and recode the corporate mode of production. But this does not happen by itself. We are all vulnerable and precarious in different ways in different parts of the world. And it is important to understand and be aware of your privileges on the one hand and worries and fears on the other. There are no ready-made recipes for the future, but there are specific connections of our thinking bodies, biosocial substances with a specific situation in time and space. The pandemic has laid bare our living and working conditions. Our background behind our back during a zoom conference is part of the common space, today it is political and aesthetic. Therefore, the only thing I can offer is to be open, not to close, not to withdraw into oneself in solipsism, not to close in the illusion of the past, to seek a dialogue with others. We are not alone, we are united by the common matter of life, today this has become especially evident. Excuse my English, I’m writing with a google translate assistant, this is another corporation invention that helps us find common ground)).<br />
+        Dear colleagues, hello, I don’t know any of you, except for Olya Jitlina and Alena Tereshko. But it’s not that important now. <span onClick={click}>It does not matter in this case, since one of the exposed conditions of our relationship today is the situation of weak communities on the other side of the family. Platform capitalism has won, but completely unintended, weak, translocal, horizontal, affective, emotional, aesthetic, situational, short-term and other communities and connections arise within it. This is the aleatory materialism of coincidences, about which Althusser wrote, relying on Lenin. These are not fanclubs or sects, but parainstitutions that can corrode capitalist hierarchies and recode the corporate mode of production. But this does not happen by itself. We are all vulnerable and precarious in different ways in different parts of the world. And it is important to understand and be aware of your privileges on the one hand and worries and fears on the other. There are no ready-made recipes for the future, but there are specific connections of our thinking bodies, biosocial substances with a specific situation in time and space. The pandemic has laid bare our living and working conditions. Our background behind our back during a zoom conference is part of the common space, today it is political and aesthetic. Therefore, the only thing I can offer is to be open, not to close, not to withdraw into oneself in solipsism, not to close in the illusion of the past, to seek a dialogue with others. We are not alone, we are united by the common matter of life, today this has become especially evident. Excuse my English, I’m writing with a google translate assistant, this is another corporation invention that helps us find common ground)).</span><br />
         <br />
         <i>Yours, Roman Sergeevich</i>
       </>
@@ -81,7 +85,8 @@ const paragraphs = [
     from: 'Carla',
     to: 'Alena, Andrea, Françoise, Ivan, Martina, Olga, Roman, YouInterAlia (Alina and Lera)',
     date: '18 jan. 2021, 16:04',
-    text: <>
+    text: click =>
+      <>
         Hello,<br />
         <br />
         I have often thought of you without ever finding the time to sit down to write to you. You compose in my mind a line of floating letters that I cannot attach to any voice or face (except that of Andrea I know).<br />
@@ -106,7 +111,8 @@ const paragraphs = [
     from: 'Ivan',
     to: 'Alena, Andrea, Carla, Françoise, Martina, Olga, Roman, YouInterAlia (Alina and Lera)',
     date: '27 jan. 2021, 19:44',
-    text: <>
+    text: click =>
+      <>
         Hello,<br />
         and thank you, that was a special reading—such a diversity of conditions and surroundings.<br />
         <br />
@@ -151,7 +157,8 @@ const paragraphs = [
     from: 'Andrea',
     to: 'Alena, Carla, Françoise, Ivan, Martina, Olga, Roman, YouInterAlia (Alina and Lera)',
     date: '04 feb. 2021, 02:03',
-    text: <>
+    text: click =>
+      <>
         Hi there,<br />
         As Carla said, she’s the only one to knows me and same to me. Like everyone, this blind date messages are for me in the same time strange but I’m a gamer and I find the whole process playful.<br />
         <br />
@@ -188,7 +195,8 @@ const paragraphs = [
     from: 'Françoise',
     to: 'Alena, Andrea, Carla, Ivan, Martina, Olga, Roman, YouInterAlia (Alina and Lera)',
     date: '09 feb. 2021, 12:09',
-    text: <>
+    text: click =>
+      <>
         Dear all!<br />
         <br />
         I don’t know any of you, and although I don’t know you, I often thought of you when I was passing through Geneva.<br />
