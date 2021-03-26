@@ -27,10 +27,10 @@ class FUCKINGDUMB extends React.Component {
       || (browserName === 'Safari' && parseFloat(browserVersion) < 14)
       || (browserName === 'Chrome' && parseFloat(browserVersion) < 85))
     {
-      this.setState({
-        opened: true,
-        browser: browserName + ' ' + browserVersion
-      })
+      // this.setState({
+      //   opened: true,
+      //   browser: browserName + ' ' + browserVersion
+      // })
       this.context.setOldBrowser(true)
     }
   }

@@ -99,7 +99,7 @@ class Menu extends React.Component {
           </Link>
           <Dropdown
             title={getMessage(this, "Menu.artists")}
-            maxHeight={600}
+            maxHeight={400}
           >
             {getArtists(this)
               .map(artist =>

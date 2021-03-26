@@ -27,7 +27,7 @@ class App extends React.Component {
             </Route>
             <Route path="/">
               <Home />
-              {/* <FUCKINGDUMB /> */}
+              <FUCKINGDUMB />
             </Route>
           </Switch>
         </Router>

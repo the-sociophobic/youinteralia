@@ -27,17 +27,18 @@ export default class Dropdown extends React.Component {
       .observe(this.contentRef.current)
   }
 
+  polyfill = () =>
+    this.context.oldBrowser && !this.props.block
+
   updateContentHeight = () =>
     // this.setState({ contentHeight: this.contentRef.current && (this.contentRef.current.clientHeight + 2) })
     this.setState({
-      contentHeight: this.context.oldBrowser && !this.props.block ?
-        600
-        :
-        this.contentRef?.current?.clientHeight
+      contentHeight: this.contentRef?.current?.clientHeight
     })
 
   toggleOpened = () =>
-    (this.props.toggleOpened || (() => this.setState({ opened: !this.state.opened })))()
+    !this.polyfill() &&
+      (this.props.toggleOpened || (() => this.setState({ opened: !this.state.opened })))()
 
   render = () =>
     <div className={`
@@ -71,7 +72,7 @@ export default class Dropdown extends React.Component {
       <div
         className="dropdown__content"
         style={{
-          height: (this.props.opened || this.state.opened) ?
+          height: (this.props.opened || this.state.opened || this.polyfill()) ?
             (typeof this.props.maxHeight !== "undefined" ?
               this.props.maxHeight
               :
