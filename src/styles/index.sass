@@ -237,6 +237,7 @@ $border: 1px solid $dark
           line-height: rem(28)
           margin-bottom: rem(10)
         &__item
+          text-transform: lowercase
           position: relative
           padding-left: rem(33)
           &::before
@@ -715,6 +716,8 @@ $dropdown-transition: .15s
   &::after
     content: ''
     @extend .abs-cover
+  &--scaled
+    transform: scale(1.45)
 
 
 
@@ -1633,3 +1636,10 @@ $dropdown-transition: .15s
         background-color: $light
         border: $border
         color: $dark
+
+
+
+
+.scale-07
+  transform: scale(.9)
+  margin-bottom: rem(2) !important

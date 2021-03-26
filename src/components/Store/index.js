@@ -148,7 +148,7 @@ class StoreProvider extends React.Component {
       hideBigMenuClose: false,
       setHideBigMenuClose: hideBigMenuClose => this.setState({ hideBigMenuClose: hideBigMenuClose }),
 
-      oldBrowser: false,
+      oldBrowser: true,
       setOldBrowser: oldBrowser => this.setState({ oldBrowser: oldBrowser }),
     }
   }

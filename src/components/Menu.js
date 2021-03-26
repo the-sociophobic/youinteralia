@@ -43,7 +43,7 @@ class Menu extends React.Component {
       this.props.location.pathname === "/youinteralia"
     )
 
-  renderArtists = () =>
+  renderArtists = className =>
     getArtists(this)
       .map(artist =>
         <Link
@@ -54,6 +54,7 @@ class Menu extends React.Component {
             //TODO focus
           }}
           className={`
+            ${className}
             Menu__content__container__links__item
             Menu__content__container__links__item--${artist.city}
           `}
@@ -117,10 +118,10 @@ class Menu extends React.Component {
           </Link>
           {this.context.oldBrowser ?
             <>
-              <div className='mb-3'>
+              <div className='mb-1'>
                 {getMessage(this, "Menu.artists")}
               </div>
-              {this.renderArtists()}
+              {this.renderArtists('scale-07')}
             </>
             :
             <Dropdown

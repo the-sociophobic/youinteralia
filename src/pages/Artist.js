@@ -122,13 +122,13 @@ class Artist extends React.Component {
                 <Img
                   cover
                   src={artist.png}
-                  className="Img--artist"
+                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
                 />}
               {artist.svg &&
                 <Img
                   cover
                   src={artist.svg}
-                  className="Img--artist"
+                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
                 />}
               {artist.json &&
                 <Animation src={artist.json} />}
