@@ -135,7 +135,8 @@ class StoreProvider extends React.Component {
       genRef: React.createRef(),
       spbRef: React.createRef(),
 
-      canView: !isProd(),
+      // canView: !isProd(),
+      canView: true,
       startTesting: () =>
         this.setState({ canView: true }),
 
