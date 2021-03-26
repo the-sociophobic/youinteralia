@@ -2,7 +2,7 @@ const defaultMessages = {
   FUCKINGDUMB: {
     ie: ['К сожалению, вы зашли на сайт через internet explorer. Современный сайты не поддерживают работу с ним. Скачайте браузер, который обновлялся меньше 10 лет назад, чтобы просматривать youinteralia.com', 'Unfortunately you are using internet explorer. Modern sites do not work with it. Download real browser to continue to youinteralia.com'],
     text0: ['Вы используете устаревшую версию браузера (', 'You are using old version of browser ('],
-    text1: ['). На сайте много новых технологий, поэтому он может некорректно работать с вашей версией браузера.', '). Site uses many new technologies and may not properly work in your browser.'],
+    text1: ['). чтобы сайт отображался корректно, рекомендуем вам обновить chrome', '). We urge you to update browser before continuing.'],
     chrome: ['Реккомендуем скачать Google Chrome', 'We recommend Google Chrome'],
     howTo: ['Как обновить браузер?', 'How to update browser?'],
     ok: ['я понимаю, что сайт может работать некорректно с моим браузером, но всё равно хочу продолжить', 'I understand, that site may work badly in my browser, but still want to continue'],

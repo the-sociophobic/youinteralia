@@ -65,13 +65,17 @@ class FUCKINGDUMB extends React.Component {
                 <br />
               </>
             }
-            <Link
-              to='https://www.google.com/chrome/'
-            >
-              <FormattedMessage id='FUCKINGDUMB.chrome' />
-            </Link>
-            <br />
-            <br />
+            {browserName !== 'Chrome' &&
+              <>
+                <Link
+                  to='https://www.google.com/chrome/'
+                >
+                  <FormattedMessage id='FUCKINGDUMB.chrome' />
+                </Link>
+                <br />
+                <br />
+              </>
+            }
             <input
               type="checkbox"
               checked={this.state.check}
