@@ -97,7 +97,10 @@ class Menu extends React.Component {
           <Link to="/about">
             <FormattedMessage id="Menu.about" />
           </Link>
-          <Dropdown title={getMessage(this, "Menu.artists")}>
+          <Dropdown
+            title={getMessage(this, "Menu.artists")}
+            maxHeight={600}
+          >
             {getArtists(this)
               .map(artist =>
                 <Link
