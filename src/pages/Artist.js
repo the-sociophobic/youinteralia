@@ -8,7 +8,8 @@ import Player from 'components/Player'
 import Dropdown from 'components/Dropdown'
 import {
   StoreContext,
-  getMessage
+  getMessage,
+  FormattedMessage
 } from 'components/Store'
 
 
@@ -24,6 +25,7 @@ class Artist extends React.Component {
       routeInfoOpened: !isMobile(),
       artistInfoOpened: false,
       textHeight: 0,
+      detailsOpened: false,
     }
 
     this.textRef = React.createRef()
@@ -50,6 +52,18 @@ class Artist extends React.Component {
       routeInfoOpened: !isMobile() ? this.state.artistInfoOpened : this.state.routeInfoOpened,
       artistInfoOpened: !this.state.artistInfoOpened,
     })
+
+  renderJitlinaDetails = () =>
+    this.props.artist.name.match(/Olga Jitlina|Ольга Житлина/) &&
+      <div
+        onClick={() => this.setState({ detailsOpened: !this.state.detailsOpened })}
+        className={`
+          Artist__content__map__details
+          ${this.state.detailsOpened && 'Artist__content__map__details--opened'}
+        `}
+      >
+        <FormattedMessage id={this.state.detailsOpened ? 'Artist.Olga' : 'Artist.details'} />
+      </div>
 
   render = () => {
     const { artist } = this.props
@@ -118,6 +132,7 @@ class Artist extends React.Component {
                 />}
               {artist.json &&
                 <Animation src={artist.json} />}
+              {this.renderJitlinaDetails()}
             </div>
 
           </div>

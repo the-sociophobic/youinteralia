@@ -11,11 +11,13 @@ class Youtube extends React.Component {
       className={`Youtube ${this.props.className}`}
     >
       {this.props.thumbnail ?
-        <img
-          src={`https://img.youtube.com/vi/${this.props.src}/hqdefault.jpg`}
-          className="Youtube__thumbnail"
-          alt=""
-        />
+        <div className='Youtube Youtube--thumbnail'>
+          <img
+            src={`https://img.youtube.com/vi/${this.props.src}/hqdefault.jpg`}
+            className="Youtube__thumbnail"
+            alt=""
+          />
+        </div>
         :
         this.props.autoplay ?
           <iframe

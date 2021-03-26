@@ -668,6 +668,24 @@ $dropdown-transition: .15s
         width: 100%
       position: relative
       overflow: hidden
+      &__details
+        cursor: pointer
+        background-color: $light
+        border: $border
+        height: rem(50)
+        position: absolute
+        top: rem(20)
+        right: rem(20)
+        line-height: rem(50)
+        padding: 0 rem(20)
+        z-index: 20
+        &--opened
+          line-height: 1.25
+          width: 80%
+          height: 70%
+          overflow-y: scroll
+          padding: rem(20)
+
       
 
 .Img
@@ -723,7 +741,7 @@ $dropdown-transition: .15s
         // border-bottom: $border
         line-height: rem(50)
         margin-bottom: 0
-        background-color: $background
+        // background-color: $background
         @extend .d-flex-polyfill
         @extend .flex-row
         &__text
@@ -759,9 +777,9 @@ $dropdown-transition: .15s
           &__container
             padding: 0
             @extend .d-flex-polyfill
-            @extend .flex-row
-            .About__left__buttons__item
-              width: 50%
+            // @extend .flex-row
+            // .About__left__buttons__item
+            //   width: 50%
 
 
   &__right
@@ -873,6 +891,8 @@ $dropdown-transition: .15s
       padding: rem(18) rem(14) rem(21)
     @media screen and ( max-width: 350px )
       padding: rem(18) rem(14) rem(8)
+    @include media-breakpoint-up(xl)
+      border-bottom: 3px solid $dark
     &__title
       width: 100%
       height: rem(50)
@@ -902,16 +922,11 @@ $dropdown-transition: .15s
           line-height: rem(50)
           @include media-breakpoint-up(xl)
             padding-left: rem(15)
-          &:not(&:last-child)
-            @include media-breakpoint-up(xl)
-              border-bottom: $border
-          // &:last-child
-          //   bottom: 0
-          //   left: 0
-          //   position: absolute
-          //   width: 100%
-          //   height: rem(100)
-          //   @extend .desktop-only
+          // &:not(&:last-child)
+          //   @include media-breakpoint-up(xl)
+          //     border-bottom: $border
+          &:last-child
+            padding-bottom: rem(55)
         &:first-of-type
           @include media-breakpoint-up(xl)
             border-right: $border
@@ -1306,6 +1321,7 @@ $dropdown-transition: .15s
       @extend .button
       width: 100%
       padding-bottom: 18%
+      position: relative
       img,
       .react-pdf__Document
         width: 100%
@@ -1359,7 +1375,8 @@ $dropdown-transition: .15s
               white-space: nowrap
         .Item__close,
         .Item__prev,
-        .Item__next
+        .Item__next,
+        .Item__author
           display: block
           background-color: $light
           border: $border
@@ -1372,7 +1389,8 @@ $dropdown-transition: .15s
           @include media-breakpoint-down(lg)
             right: rem(20)
         .Item__next,
-        .Item__prev
+        .Item__prev,
+        .Item__author
           background-image: url(./img/arrow-up-inline.svg)
           background-position: center
           background-repeat: no-repeat
@@ -1393,6 +1411,11 @@ $dropdown-transition: .15s
             left: rem(20)
         .Item__next
           transform: rotate(90deg)
+        .Item__author
+          background-image: none
+          width: auto
+          line-height: rem(50)
+          padding: 0 rem(20)
         .Link
           display: block
           width: 75%
@@ -1487,7 +1510,7 @@ $dropdown-transition: .15s
     top: 0
     left: 0
 
-.vimeo
+.Vimeo
   width: 90%
   padding-top: calc(90% * 3 / 4)
   position: relative
@@ -1497,6 +1520,34 @@ $dropdown-transition: .15s
     position: absolute
     top: 0
     left: 0
+
+.Bandcamp,
+.Youtube,
+.Vimeo
+  &--thumbnail,
+  &__thumbnail
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+  &--thumbnail
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      width: rem(55)
+      height: rem(55)
+      background-color: $light
+      border-radius: rem(100)
+      background-image: url(./img/play.svg)
+      @extend .def-img
+      background-size: 150%
+      // z-index: 1000
+
+.Bandcamp--thumbnail
+  padding-top: 100%
 
 
 

@@ -17,7 +17,51 @@ const defaultMessages = {
     participate: ["участвовать", "participate"],
   },
   Artist: {
-    routeInfo: ["о проекте", "about the project"]
+    routeInfo: ["о проекте", "about the project"],
+    details: ['ориентиры', 'details'],
+    Olga: [
+      <>
+        Точки, где часто проводили время исчезнувшие в последствии бездомные:<br />
+        <br />
+        <b>Выход из метро Гостиный двор</b><br />
+        Женщина среднего возраста или пожилая. Непонятно. Обычно сидела между дверями, а в теплые дни -- перед выходом. Среди множества своих пакетов и сумок. Иногда спала, иногда что-то бормотала или напевала себе под нос. Ноги распухшие, замотаны чем-то очень грязным, вроде портянок. Всегда с розовым газовым платком. Как будто на облаке. <br />
+        <br />
+        <b>Улица Марата (напротив Музея Арктики и Антарктики)<br />Недействующая автобусная остановка</b><br />
+        Всю позднюю весну и часть лета там жила женщина. Если пройти мимо она обязательно что нибудь крикнет, поприветствует тебя каким нибудь ругательством. Мне кажется, ей нравилась эта остановка. Можно было разложить повсюду свои мешки с тряпками, прилечь, остановка была на солнечной стороне. Воняло там конкретно. Ее подкармливали продавщицы из магазина напротив. Суп, чай, списанные пирожки. Через какое-то время остановку снесли. Пока скамейку не снесли она с нее ни разу не поднялась. Было лишь два положения: сидя и лежа. <br />
+        59.927617, 30.352895<br />
+        <br />
+        <b>Подъезд дома Марата 33</b><br />
+        <b>Владимирский собор</b><br />
+        Девушка с книгами. Светлые волосы, голубые грустные глаза. Одета в черные лохмотья похожие на истрепавшуюся рясу. Она приносила продукты в подъезд и оставляла их там. Колбаса, яйца хлеб, огурцы. Я думаю, эти пакеты ей оставляли люди, которые хотели ее накормить. Но она не ела и не разговаривала ни с кем. Она все время молчала и отворачивала голову. Иногда она пила чай в булочной внутри дома. Она кого-то ждала. Я видела ее у метро Владимирская, стоящую рядом с бабушками, продающими овощи и цветы. Еще, у Владимирского собора. Она была с пакетами, но не большими тюками, а с пакетами, в которых лежали книги. Интересно, что это за книги. Она слонялась тут возможно больше трех лет. Потом исчезла. Булочная закрылась.<br />
+        <br />
+        <b>Марата 33</b><br />
+        <b>Кузнечный рынок</b><br />
+        <b>Пекарня Вольчека на Кузнечном</b><br />
+        Мужчина с серебристой бородой. Он жил на Марата 33 в 3й квартире. Сейчас там хостел. На карте он отмечен как гест хауз. Я до сих пор вижу его на Кузнечном переулке. Он стоит у Кузнечного рынка или пьет чай в пекарне Вольчека. Он был довольно бодр, когда я увидела его первый раз. Бодр и пьян.  Сейчас он тоже пьет, но он скукожился, сморщился, руки трясутся. Он больше не кокетничает с проходящими. Просто смотрит сквозь тебя. Не узнает.<br />
+        59.926030, 30.351806 
+      </>
+      , 
+      <>
+        The points where the subsequently disappeared homeless often spent their time:<br />
+        <br />
+        <b>Exit from the metro station Gostiny Dvor</b><br />
+        Middle-aged or elderly woman. Unclear. She usually sat between the doors, and on warm days - before going out. Among its many packages and bags. Sometimes she slept, sometimes she mumbled or hummed to herself. My legs are swollen, wrapped in something very dirty, like footcloths. Always with a pink gauze shawl. As if on a cloud.<br />
+        <br />
+        <b>Marata Street (opposite the Arctic and Antarctic Museum)<br />Inactive bus stop</b><br />
+        A woman lived there all late spring and part of the summer. If you pass by, she will definitely shout something, greet you with some kind of curse. I think she liked this stop. You could spread your bags of rags everywhere, lie down, the stop was on the sunny side. It stank there specifically. She was fed by saleswomen from the store opposite. Soup, tea, discarded pies. After some time, the stop was demolished. Until the bench was taken down, she never got up from it. There were only two positions: sitting and lying.<br />
+        59.927617, 30.352895<br />
+        <br />
+        <b>Entrance to the house of Marata 33</b><br />
+        <b>St. Vladimir's Cathedral</b><br />
+        Girl with books. Blond hair, blue sad eyes. She is dressed in black rags that look like a frayed cassock. She brought food to the porch and left it there. Sausage, eggs, bread, cucumbers. I think these bags were left to her by people who wanted to feed her. But she didn't eat or talk to anyone. She was silent all the time and turned her head away. Sometimes she drank tea at the bakery inside the house. She was waiting for someone. I saw her at the Vladimirskaya metro station, standing next to the grandmothers selling vegetables and flowers. Also, at the Vladimir Cathedral. She was with bags, but not large bales, but with bags in which there were books. I wonder what these books are. She'd been hanging around here for perhaps over three years. Then she disappeared. The bakery has closed.<br />
+        <br />
+        <b>Marata 33</b><br />
+        <b>Blacksmith market</b><br />
+        <b>Volchek's bakery on Kuznechny</b><br />
+        A man with a silver beard. He lived on Marata 33 in the 3rd apartment. Now there is a hostel. It is marked on the map as a guest house. I still see him on Kuznechny Lane. He stands at the Blacksmith Market or drinks tea at Volczek's bakery. He was quite cheerful when I saw him for the first time. Cheerful and drunk. Now he drinks too, but he has shrunk, wrinkled, his hands are shaking. He no longer flirts with passers-by. Just looking right through you. Doesn't know.<br />
+        59.926030, 30.351806
+      </>
+    ],
   },
   Marker: {
     popup: ["«северные полмира».\nпродолжение", "«appear in the northern hemisphere».\ncontinue"],
@@ -113,6 +157,9 @@ const defaultMessages = {
         lev: ["лев васильев", "lev vasilyev"],
       }
     },
+    about2: {
+      name: ['eng', 'about']
+    }
   },
   Participate: {
     desc: [

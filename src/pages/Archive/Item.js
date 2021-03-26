@@ -50,8 +50,6 @@ class Item extends React.Component {
                 >
                   {this.props.opened &&
                     <div className='Img--PDF__atop'>
-                      {item.tags[0] === 'Olga Jitlina' ? 'Olga Jitlina' : item.tags[this.context.locale === 'rus' ? 0 : 1]}
-                      <br />
                       <FormattedMessage id='Archive.readPDF' />
                     </div>
                   }
@@ -70,7 +68,12 @@ class Item extends React.Component {
           case 'bandcamp':
             if (this.props.opened)
               return <BandcampPlayer album={item.album} />
-            return <Img src={item.preview} />
+            return <div className='Bandcamp Bandcamp--thumbnail'>
+                <Img
+                  src={item.preview}
+                  className='Bandcamp__thumbnail'
+                />
+              </div>
           default:
             return <></>
         }
@@ -90,6 +93,15 @@ class Item extends React.Component {
           className="Item__next"
           onClick={() => this.props?.next?.()}
         />}
+      {this.props.opened &&
+        <div className="Item__author">
+          {this.props.item.tags[0] === 'Olga Jitlina' ?
+            'Olga Jitlina'
+            :
+            this.props.item.tags[this.context.locale === 'rus' ? 0 : 1]
+          }
+        </div>
+      }
     </div>
 } 
 

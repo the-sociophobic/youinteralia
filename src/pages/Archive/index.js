@@ -86,11 +86,16 @@ class Archive extends React.Component {
     const currentItemIndex = items.map(item => item.id).indexOf(id)
     const currentItem = items[currentItemIndex]
 
-    this.setState({
-      selectedTags: currentItem?.tags || [],
-      searchPressed: currentItem ? true : false,
-      openedItem: currentItem || null,
-    })
+    if (currentItem) {
+      this.setState({
+        selectedTags: this.state.selectedTags.length > 0 ?
+          this.state.selectedTags
+          :
+          currentItem?.tags,
+        openedItem: currentItem,
+      })
+      this.context.setHideMenu(true)
+    }
   }
 
   getTags = () =>
@@ -141,7 +146,7 @@ class Archive extends React.Component {
         Archive__search
         ${ this.getSelectedTags().length > 0 && "Archive__search--tags"}
         ${(this.getSelectedTags().length === 0 && !this.state.searchPressed) && "Archive__search--full"}
-        ${ this.context.hideMenu && "Archive__search--hide"}
+        ${ this.state.openedItem && "Archive__search--hide"}
         ${!this.state.searchPressed && "Archive__search--hide-desktop"}
       `}
     >
@@ -220,7 +225,6 @@ class Archive extends React.Component {
           close={() => {
             this.setState({ openedItem: undefined })
             this.context.setHideMenu(false)
-            this.props.history.push('/archive')
           }}
           prev={index === 0 ? null : () => {
             this.setState({ openedItem: filteredItems[index - 1] })

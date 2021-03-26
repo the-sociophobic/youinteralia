@@ -6,6 +6,7 @@ import Footer from 'components/Footer'
 
 import Conversation from './Conversation'
 import AboutUs from './AboutUs'
+import About2 from './About2'
 import Link from 'components/CustomLink'
 
 
@@ -59,6 +60,14 @@ class About extends React.Component {
               >
                 <Conversation />
               </Dropdown>
+              {
+                <Dropdown
+                  className=''
+                  block
+                  title={getMessage(this, 'About.about2.name')}
+                >
+                  <About2 />
+                </Dropdown>}
             </Dropdown>
             <Dropdown block title={getMessage(this, 'About.aboutUs.name')}>
               <AboutUs />
@@ -74,16 +83,50 @@ class About extends React.Component {
           <div className='About__left__buttons'>
             <div className='About__left__buttons__content'>
               {this.renderButton('concept')}
-              <Dropdown block title={getMessage(this, 'About.conversation.name')}>
-                <Link
-                  className='About__left__buttons__item About__left__buttons__item--download'
-                  to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
-                >
-                  <div className='About__left__buttons__item__text'>
-                    <FormattedMessage id='About.conversation.download' />
+              <Dropdown
+                block
+                title={getMessage(this, 'About.conversation.name')}
+                left={this.context.locale === 'rus' &&
+                  <div
+                    style={{
+                      width: '35%',
+                      borderRight: '1px solid #474747'
+                    }}
+                    className={`
+                      About__left__buttons__item
+                      ${'about2' === this.state.currentSection
+                        && 'About__left__buttons__item--current'}
+                    `}
+                    onClick={() => this.setState({ currentSection: 'about2' })}
+                  >
+                    <div className='About__left__buttons__item__text'>
+                      eng
+                    </div>
                   </div>
-                </Link>
-                {this.renderButton('conversation')}
+                }
+              >
+                <div className='row'>
+                  <div className='col-6'>
+                    <Link
+                      className='About__left__buttons__item About__left__buttons__item--download'
+                      to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
+                    >
+                      <div className='About__left__buttons__item__text'>
+                        <FormattedMessage id='About.conversation.download' />
+                      </div>
+                    </Link>
+                  </div>
+                  <div className='col-6'>
+                    {this.renderButton('conversation')}
+                  </div>
+                </div>
+                {this.context.locale === 'eng' &&
+                  <div className='row' style={{ borderTop: '1px solid #474747' }}>
+                    <div className='col-12'>
+                      {this.renderButton('about2')}
+                    </div>
+                  </div>
+                }
               </Dropdown>
               {this.renderButton('aboutUs')}
             </div>
@@ -97,7 +140,8 @@ class About extends React.Component {
           {{
             concept: this.renderConcept(),
             conversation: <Conversation />,
-            aboutUs: <AboutUs />
+            aboutUs: <AboutUs />,
+            about2: <About2 />
           }[this.state.currentSection]}
         </div>
       </div>
