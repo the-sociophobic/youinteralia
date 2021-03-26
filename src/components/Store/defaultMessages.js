@@ -1,5 +1,12 @@
 const defaultMessages = {
-  Header: {
+  FUCKINGDUMB: {
+    ie: ['К сожалению, вы зашли на сайт через internet explorer. Современный сайты не поддерживают работу с ним. Скачайте браузер, который обновлялся меньше 10 лет назад, чтобы просматривать youinteralia.com', 'Unfortunately you are using internet explorer. Modern sites do not work with it. Download real browser to continue to youinteralia.com'],
+    text0: ['Вы используете устаревшую версию браузера (', 'You are using old version of browser ('],
+    text1: ['). На сайте много новых технологий, поэтому он может некорректно работать с вашей версией браузера.', '). Site uses many new technologies and may not properly work in your browser.'],
+    chrome: ['Реккомендуем скачать Google Chrome', 'We recommend Google Chrome'],
+    howTo: ['Как обновить браузер?', 'How to update browser?'],
+    ok: ['я понимаю, что сайт может работать некорректно с моим браузером, но всё равно хочу продолжить', 'I understand, that site may work badly in my browser, but still want to continue'],
+    continue: ['продолжить', 'continue'],
   },
 
   names: ['Алина Белишкина, Валерия Мостовая ©, 2021', 'Alina Belishkina, Valeria Mostovaya ©, 2021'],
@@ -18,7 +25,7 @@ const defaultMessages = {
   },
   Artist: {
     routeInfo: ["о проекте", "about the project"],
-    details: ['ориентиры', 'details'],
+    details: ['детали', 'details'],
     Olga: [
       <>
         Точки, где часто проводили время исчезнувшие в последствии бездомные:<br />
@@ -133,23 +140,20 @@ const defaultMessages = {
       ],
     },
     conversation: {
-      name: ['разговор', 'conversation'],
-      download: ['скачать', 'download'],
-      read: ['читать', 'read'],
+      name: [<>беседа<sup><small>eng</small></sup></>, 'conversation'],
+      download: ['download', 'download'],
+      read: ['read', 'read'],
     },
     aboutUs: {
       name: ['о нас', 'about us'],
 
-      first: {
-        title: ["идея", "idea"],
-        body: ["съешь ещё этих мягких французских булок, да выпей чаю", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."],
-      },
       second: {
-        team: ["команда", "team"],
+        team: ["над проектом работали", "team"],
+        idea: ["идея:", "idea:"],
         curators: ["кураторы:", "curators:"],
-        designer: ["дизайнер:", "designer:"],
-        developer: ["разработчик:", "developer:"],
-        sponsor: ["спосор:", "sponsor:"],
+        designer: ["дизайн:", "design:"],
+        developer: ["вэб-разработка:", "web-development:"],
+        sponsor: ["при поддержке:", "sponsor:"],
   
         alina: ["aлина белишкина", "alina belishkina"],
         lera: ["лера мостовая", "lera mostovaya"],
@@ -158,7 +162,7 @@ const defaultMessages = {
       }
     },
     about2: {
-      name: ['eng', 'about']
+      name: ['about', 'about']
     }
   },
   Participate: {

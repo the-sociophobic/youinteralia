@@ -25,6 +25,9 @@ class About extends React.Component {
         <div className="AboutUs__second-block__columns">
           <div className="AboutUs__second-block__columns__item">
             <div className="AboutUs__second-block__columns__item__row">
+              <FormattedMessage id="About.aboutUs.second.idea" />
+            </div>
+            <div className="AboutUs__second-block__columns__item__row">
               <FormattedMessage id="About.aboutUs.second.curators" />
             </div>
             <div className="AboutUs__second-block__columns__item__row">
@@ -39,6 +42,9 @@ class About extends React.Component {
 
           </div>
           <div className="AboutUs__second-block__columns__item">
+            <div className="AboutUs__second-block__columns__item__row">
+              <FormattedMessage id="About.aboutUs.second.alina" />
+            </div>
             <div className="AboutUs__second-block__columns__item__row">
               <FormattedMessage id="About.aboutUs.second.alina" />
             </div>

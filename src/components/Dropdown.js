@@ -28,7 +28,13 @@ export default class Dropdown extends React.Component {
   }
 
   updateContentHeight = () =>
-    this.setState({ contentHeight: this.contentRef.current && this.contentRef.current.clientHeight })
+    // this.setState({ contentHeight: this.contentRef.current && (this.contentRef.current.clientHeight + 2) })
+    this.setState({
+      contentHeight: this.context.oldBrowser && !this.props.block ?
+        600
+        :
+        this.contentRef?.current?.clientHeight
+    })
 
   toggleOpened = () =>
     (this.props.toggleOpened || (() => this.setState({ opened: !this.state.opened })))()

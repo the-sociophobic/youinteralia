@@ -329,8 +329,10 @@ $dropdown-transition: .15s
         @extend .def-img
   &__content
     width: 100%
-    overflow: hidden
     transition: height $dropdown-transition
+    overflow: hidden
+    .dropdown--opened &
+      overflow-y: visible
     &__container
       padding-top: rem(10)
       padding-bottom: rem(20)
@@ -814,6 +816,9 @@ $dropdown-transition: .15s
       background-color: $background
   &__buttons
     padding: rem(88) rem(21) rem(88) rem(20)
+    @media screen and ( max-width: 350px )
+      padding-left: rem(0)
+      padding-right: rem(0)
     @extend .mb-auto
     &__container
       border: $border
@@ -914,8 +919,12 @@ $dropdown-transition: .15s
         position: relative
         &:first-child
           .AboutUs__second-block__columns__item__row
-            &:first-child
-              height: rem(100)
+            &:nth-child(2)
+              height: rem(80)
+        &:nth-child(2)
+          .AboutUs__second-block__columns__item__row
+            &:nth-child(2)
+              height: rem(30)
         &__row
           width: 100%
           height: rem(50)
@@ -997,7 +1006,12 @@ $dropdown-transition: .15s
       @include media-breakpoint-down(lg)
         padding: rem(20) rem(15)
               
-            
+.About2,
+.Concept
+  font-size: rem(17)
+
+
+
 .Ticker
   overflow: hidden
   position: relative
@@ -1580,3 +1594,41 @@ $dropdown-transition: .15s
     @include media-breakpoint-down(md)
       width: 100%
       margin-top: rem(12)
+
+
+
+
+
+.FUCKINGDUMB
+  width: 100vw
+  height: 100vh
+  background-color: $background
+  position: fixed
+  z-index: 1000000
+  top: 0
+  left: 0
+  &__text
+    top: 50%
+    left: 50%
+    max-width: 30vw
+    @include media-breakpoint-down(lg)
+      max-width: 90vw
+      width: 90vw
+    position: absolute
+    transform: translate(-50%, -50%)
+    @extend .p-4
+    background-color: $light
+    border: $border
+    .Link
+      text-decoration: underline
+      text-align: center
+    .button
+      width: 100%
+      height: rem(50)
+      margin-bottom: rem(10)
+      background-color: $dark
+      color: $light
+      &--locale
+        background-color: $light
+        border: $border
+        color: $dark

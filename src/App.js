@@ -7,6 +7,7 @@ import {
   Route
 } from 'react-router-dom'
 
+import FUCKINGDUMB from 'components/FUCKINGDUMB'
 import { StoreProvider } from 'components/Store'
 import Home from 'pages/Home'
 import Test from 'pages/Test'
@@ -26,6 +27,7 @@ class App extends React.Component {
             </Route>
             <Route path="/">
               <Home />
+              <FUCKINGDUMB />
             </Route>
           </Switch>
         </Router>
