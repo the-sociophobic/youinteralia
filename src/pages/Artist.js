@@ -54,7 +54,7 @@ class Artist extends React.Component {
     })
 
   renderJitlinaDetails = () =>
-    this.props.artist.name.match(/Olga Jitlina|Ольга Житлина/) &&
+    this.props.artist.name.match(/Ольга Житлина/) &&
       <div
         onClick={() => this.setState({ detailsOpened: !this.state.detailsOpened })}
         className={`
