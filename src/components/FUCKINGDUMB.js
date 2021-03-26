@@ -36,6 +36,9 @@ class FUCKINGDUMB extends React.Component {
   }
 
   render = () =>
+    true ?
+    ""
+    :
     <div className={`FUCKINGDUMB ${!this.state.opened && 'd-none'}`}>
       <div className='FUCKINGDUMB__text'>
         <button

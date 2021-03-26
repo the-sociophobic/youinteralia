@@ -43,6 +43,24 @@ class Menu extends React.Component {
       this.props.location.pathname === "/youinteralia"
     )
 
+  renderArtists = () =>
+    getArtists(this)
+      .map(artist =>
+        <Link
+          key={artist.id}
+          to={`/artist/${artist.id}`}
+          onClick={() => {
+            this.context.setCity(artist.city)
+            //TODO focus
+          }}
+          className={`
+            Menu__content__container__links__item
+            Menu__content__container__links__item--${artist.city}
+          `}
+        >
+          {artist.name}
+        </Link>
+      )
 
   renderHeader = () =>
     <div className="Menu__header">
@@ -97,28 +115,21 @@ class Menu extends React.Component {
           <Link to="/about">
             <FormattedMessage id="Menu.about" />
           </Link>
-          <Dropdown
-            title={getMessage(this, "Menu.artists")}
-            maxHeight={400}
-          >
-            {getArtists(this)
-              .map(artist =>
-                <Link
-                  key={artist.id}
-                  to={`/artist/${artist.id}`}
-                  onClick={() => {
-                    this.context.setCity(artist.city)
-                    //TODO focus
-                  }}
-                  className={`
-                    Menu__content__container__links__item
-                    Menu__content__container__links__item--${artist.city}
-                  `}
-                >
-                  {artist.name}
-                </Link>
-              )}
-          </Dropdown>
+          {this.context.oldBrowser ?
+            <>
+              <div className='mb-3'>
+                {getMessage(this, "Menu.artists")}
+              </div>
+              {this.renderArtists()}
+            </>
+            :
+            <Dropdown
+              title={getMessage(this, "Menu.artists")}
+              maxHeight={400}
+            >
+              {this.renderArtists()}
+            </Dropdown>
+          }
           <Link to="/archive">
             <FormattedMessage id="Menu.archive" />
           </Link>
