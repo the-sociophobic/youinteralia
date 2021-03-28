@@ -73,7 +73,7 @@
     font-size: rem(18)
 
 .small
-  font-size: rem(16)
+  font-size: rem(15)
   color: inherit
   @include media-breakpoint-down(lg)
     font-size: rem(14)
@@ -996,6 +996,9 @@ $dropdown-transition: .15s
     cursor: pointer
     &--hide
       @extend .d-none
+      width: 0 !important
+      height: 0 !important
+      opacity: 0
     &__block
       width: 50vw
       @include media-breakpoint-down(lg)

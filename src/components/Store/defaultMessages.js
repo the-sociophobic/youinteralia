@@ -156,7 +156,7 @@ const defaultMessages = {
         curators: ["кураторы", "curators"],
         designer: ["дизайн", "design"],
         developer: ["вэб-разработка", "web-development"],
-        sponsor: ["при поддержке", "sponsor"],
+        sponsor: ["при поддержке", "with the support of the"],
   
         alina: ["aлина белишкина", "alina belishkina"],
         lera: ["валерия мостовая", "valeria mostovaya"],

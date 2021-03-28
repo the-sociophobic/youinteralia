@@ -118,7 +118,7 @@ class Menu extends React.Component {
       <div className="Menu__content__container">
         <div
           className="Menu__content__container__links"
-          style={this.context.oldBrowser && this.state.dropdownOpened ? { height: '555px' } : {}}
+          style={this.context.oldBrowser && this.state.dropdownOpened ? { height: '600px' } : {}}
         >
           <Link to="/about">
             <FormattedMessage id="Menu.about" />
