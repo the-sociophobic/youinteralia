@@ -102,7 +102,7 @@ class About extends React.Component {
       <div
         className={`
           AboutUs__popup
-          ${this.state.leraShow && 'AboutUs__popup--hide'}
+          ${!this.state.leraShow && 'AboutUs__popup--hide'}
         `}
         onClick={() => this.setState({ leraShow: false })}
       >
@@ -118,7 +118,7 @@ class About extends React.Component {
       <div
         className={`
           AboutUs__popup
-          ${this.state.alinaShow && 'AboutUs__popup--hide'}
+          ${!this.state.alinaShow && 'AboutUs__popup--hide'}
         `}
         onClick={() => this.setState({ alinaShow: false })}
       >
