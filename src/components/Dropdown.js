@@ -38,7 +38,10 @@ export default class Dropdown extends React.Component {
 
   toggleOpened = () =>
     !this.polyfill() &&
-      (this.props.toggleOpened || (() => this.setState({ opened: !this.state.opened })))()
+      (this.props.toggleOpened || (() => {
+        this.setState({ opened: !this.state.opened })
+        this.props?.setDropdownOpened?.(!this.state.opened)
+      }))()
 
   render = () =>
     <div className={`

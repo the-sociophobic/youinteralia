@@ -16,6 +16,10 @@ import ScrollToTop from 'components/ScrollToTop'
 
 class Menu extends React.Component {
 
+  state = {
+    dropdownOpened: false
+  }
+
   static contextType = StoreContext
 
   scrollRef = React.createRef()
@@ -112,13 +116,17 @@ class Menu extends React.Component {
       ${this.context.menuOpened && "Menu__content--opened"}
     `}>
       <div className="Menu__content__container">
-        <div className="Menu__content__container__links">
+        <div
+          className="Menu__content__container__links"
+          style={this.context.oldBrowser && this.state.dropdownOpened ? { height: '555px' } : {}}
+        >
           <Link to="/about">
             <FormattedMessage id="Menu.about" />
           </Link>
           <Dropdown
             title={getMessage(this, "Menu.artists")}
             maxHeight={400}
+            setDropdownOpened={value => this.setState({ dropdownOpened: value })}
           >
             {this.renderArtists()}
           </Dropdown>
