@@ -210,14 +210,14 @@ $border: 1px solid $dark
       width: 100vw
     transition: width $menu-transition
     &:not(&--opened)
-      overflow: hidden
+      overflow-x: hidden
       width: 0
     position: relative
     box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
     overflow-x: hidden
     &__container
       width: 100vw
-      height: 100vh
+      min-height: 100vh
       @extend .d-flex-polyfill
       @extend .flex-column
       &__links
@@ -232,7 +232,8 @@ $border: 1px solid $dark
         @extend .d-flex-polyfill
         @extend .flex-column
         @extend .flex-grow-1-polyfill
-        @extend .align-items-start
+        // @extend .align-items-start
+        // min-height: rem(300)
         .Link
           line-height: rem(28)
           margin-bottom: rem(10)

@@ -116,21 +116,12 @@ class Menu extends React.Component {
           <Link to="/about">
             <FormattedMessage id="Menu.about" />
           </Link>
-          {this.context.oldBrowser ?
-            <>
-              <div className='mb-1'>
-                {getMessage(this, "Menu.artists")}
-              </div>
-              {this.renderArtists('scale-07')}
-            </>
-            :
-            <Dropdown
-              title={getMessage(this, "Menu.artists")}
-              maxHeight={400}
-            >
-              {this.renderArtists()}
-            </Dropdown>
-          }
+          <Dropdown
+            title={getMessage(this, "Menu.artists")}
+            maxHeight={400}
+          >
+            {this.renderArtists()}
+          </Dropdown>
           <Link to="/archive">
             <FormattedMessage id="Menu.archive" />
           </Link>
