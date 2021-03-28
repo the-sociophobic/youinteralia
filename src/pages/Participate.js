@@ -47,6 +47,8 @@ class Participate extends React.Component {
           {linkText}
         </Link>
         {parts[1]}
+        <br />
+        {this.context.locale === 'eng' && '*required field'}
       </div>
     )
   }

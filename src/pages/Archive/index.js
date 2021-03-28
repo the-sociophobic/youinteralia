@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom'
 import { FormattedMessage } from 'components/Store'
 import { StoreContext } from 'components/Store'
 import Link from 'components/CustomLink'
+import Footer from 'components/Footer'
 import Item from './Item'
 import isRussian from 'utils/isRussian'
 
@@ -281,6 +282,7 @@ class Archive extends React.Component {
           {this.renderAboutDesktop()}
           {this.renderTags()}
         </div>
+        {!this.state.searchPressed && <Footer />}
       </div>
         {this.renderSearch()}
       <div className={`

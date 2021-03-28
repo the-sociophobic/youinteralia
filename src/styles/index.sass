@@ -728,6 +728,8 @@ $dropdown-transition: .15s
   @extend .d-flex-polyfill
   @extend .flex-row
   height: 100vh
+  @include media-breakpoint-down(lg)
+    border-color: $dark !important
   &__left
     @extend .d-flex-polyfill
     @extend .flex-column
@@ -790,9 +792,9 @@ $dropdown-transition: .15s
   &__right
     @extend .flex-grow-1-polyfill
     background-color: $light
-    padding: rem(122) rem(134)
+    padding: rem(49) rem(134) rem(122)
     overflow-y: scroll
-    &--concept
+    &--dark
       @include media-breakpoint-up(lg)
         background-color: $dark
         *
@@ -861,10 +863,10 @@ $dropdown-transition: .15s
                     top: 50%
 
   .AboutUs
-    font-size: rem(13)
+    font-size: rem(16)
     &__second-block__columns__item
       &:first-of-type
-          width: 30%
+        max-width: 45%
 
 
 
@@ -898,7 +900,10 @@ $dropdown-transition: .15s
     @include media-breakpoint-down(lg)
       padding: rem(18) rem(14) rem(21)
     @media screen and ( max-width: 350px )
-      padding: rem(18) rem(14) rem(8)
+      padding: rem(18) rem(10) rem(8)
+      margin-left: rem(-15)
+      margin-right: rem(-16)
+      width: auto
     @include media-breakpoint-up(xl)
       border-bottom: 3px solid $dark
     &__title
@@ -908,14 +913,14 @@ $dropdown-transition: .15s
       @include media-breakpoint-up(xl)
         padding-left: rem(15)
         border-bottom: $border
-      @include media-breakpoint-down(lg)
-        margin-bottom: rem(150)
     &__columns
       width: 100%
       @extend .flex-grow-1-polyfill
       @extend .d-flex-polyfill
       @extend .flex-row
       &__item
+        @extend .pt-4
+        @extend .pb-2
         @extend .flex-grow-1-polyfill
         @extend .d-flex-polyfill
         @extend .flex-column
@@ -924,6 +929,8 @@ $dropdown-transition: .15s
           .AboutUs__second-block__columns__item__row
             &:nth-child(2)
               height: rem(80)
+              @include media-breakpoint-down(lg)
+                height: rem(60)
         &:nth-child(2)
           .AboutUs__second-block__columns__item__row
             &:nth-child(2)
@@ -937,8 +944,14 @@ $dropdown-transition: .15s
           // &:not(&:last-child)
           //   @include media-breakpoint-up(xl)
           //     border-bottom: $border
+          @include media-breakpoint-down(lg)
+            line-height: rem(30)
+            height: rem(30)
           &:last-child
+            padding-top: rem(25)
             padding-bottom: rem(55)
+            height: rem(150)
+            line-height: rem(30)
         &:first-of-type
           @include media-breakpoint-up(xl)
             border-right: $border
@@ -951,8 +964,15 @@ $dropdown-transition: .15s
     background-color: $light
     @extend .mobile-only
     padding: rem(10) rem(14) rem(16)
+    @media screen and ( max-width: 350px )
+      padding: rem(18) rem(10) rem(8)
+      margin-left: rem(-15)
+      margin-right: rem(-16)
+      width: auto
+    .Link
+      text-decoration: none !important
     &__title
-      margin-bottom: rem(150)
+      margin-bottom: rem(50)
   &__logo
     display: block
     width: 60%
@@ -964,6 +984,47 @@ $dropdown-transition: .15s
     @extend .def-img
     &--eng
       width: 42%
+  &__popup
+    position: fixed
+    z-index: 4000
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    // background-color: rgba(0, 0, 0, .5)
+    cursor: pointer
+    &--hide
+      @extend .d-none
+    &__block
+      width: 50vw
+      @include media-breakpoint-down(lg)
+        width: 60%
+      @include media-breakpoint-down(md)
+        width: 92%
+      background-color: $background
+      border: $border
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      padding: rem(70) rem(30) rem(50)
+      @include media-breakpoint-down(lg)
+        padding: rem(60) rem(20) rem(30)
+      box-shadow: 0 rem(29) rem(60) rgba(0, 0, 0, .29)
+      font-size: rem(18)
+      max-height: 80vh
+      overflow-y: scroll
+      &__close
+        position: absolute
+        top: rem(10)
+        right: rem(10)
+        width: rem(50)
+        height: rem(50)
+        background-image: url(./img/cross.svg)
+        background-position: center
+        background-repeat: no-repeat
+        cursor: pointer
+        
 
 
 
@@ -1055,9 +1116,10 @@ $dropdown-transition: .15s
   &__desc
     @extend .col
     @extend .px-0
-    padding-top: rem(120)
+    margin-top: rem(120)
     padding-bottom: rem(80)
     padding-right: rem(40) !important
+    font-size: rem(17)
     @include media-breakpoint-up(lg)
       overflow-y: scroll
   &__form
@@ -1065,6 +1127,8 @@ $dropdown-transition: .15s
     @extend .px-0
     padding-top: rem(120)
     padding-bottom: rem(80)
+    @include media-breakpoint-down(lg)
+      padding-top: rem(0)
     &__submit
       @extend .button
       width: 100%
@@ -1166,6 +1230,11 @@ $dropdown-transition: .15s
     @media screen and ( max-width: 350px )
       padding-left: rem(8)
       padding-right: rem(8)
+    .Footer
+      @extend .desktop-only
+      position: absolute
+      left: 0
+      bottom: 0
     &__container
       padding-top: rem(30)
       width: 100%
@@ -1249,12 +1318,13 @@ $dropdown-transition: .15s
     &__desc
       display: none
       line-height: 1.25
+      font-size: rem(17)
       &--show
         @include media-breakpoint-up(xl)
           display: block
           width: 100%
           min-height: 100%
-          padding: rem(46) rem(134)
+          padding: rem(49) rem(134)
           color: $light
           background-color: $dark
   &__about
@@ -1643,3 +1713,13 @@ $dropdown-transition: .15s
 .scale-07
   transform: scale(.9)
   margin-bottom: rem(2) !important
+
+
+
+
+.box
+  @extend .small
+  @extend .p-4
+  border: 1px solid $light
+  @include media-breakpoint-down(lg)
+    border: 1px solid $dark

@@ -62,7 +62,13 @@ class Artist extends React.Component {
           ${this.state.detailsOpened && 'Artist__content__map__details--opened'}
         `}
       >
-        <FormattedMessage id={this.state.detailsOpened ? 'Artist.Olga' : 'Artist.details'} />
+        {this.state.detailsOpened ?
+          <small className='small'>
+            <FormattedMessage id='Artist.Olga' />
+          </small>
+          :
+          <FormattedMessage id='Artist.details' />
+        }
       </div>
 
   render = () => {
@@ -122,13 +128,13 @@ class Artist extends React.Component {
                 <Img
                   cover
                   src={artist.png}
-                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
+                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
                 />}
               {artist.svg &&
                 <Img
                   cover
                   src={artist.svg}
-                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
+                  className={`Img--artist ${artist.name.match(/Франсуаз Карако|Françoise Caraco/) && 'Img--artist--scaled'}`}
                 />}
               {artist.json &&
                 <Animation src={artist.json} />}

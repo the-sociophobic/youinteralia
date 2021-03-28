@@ -13,6 +13,11 @@ import logoEng from 'styles/img/logo_eng-dark.svg'
 
 class About extends React.Component {
 
+  state = {
+    leraShow: false,
+    alinaShow: false,
+  }
+
   static contextType = StoreContext
 
   render = () =>
@@ -42,13 +47,25 @@ class About extends React.Component {
 
           </div>
           <div className="AboutUs__second-block__columns__item">
-            <div className="AboutUs__second-block__columns__item__row">
+            <div
+              style={{ cursor: 'pointer' }}
+              onClick={() => this.setState({ alinaShow: true })}
+              className="AboutUs__second-block__columns__item__row"
+            >
               <FormattedMessage id="About.aboutUs.second.alina" />
             </div>
-            <div className="AboutUs__second-block__columns__item__row">
+            <div
+              style={{ cursor: 'pointer' }}
+              onClick={() => this.setState({ alinaShow: true })}
+              className="AboutUs__second-block__columns__item__row"
+            >
               <FormattedMessage id="About.aboutUs.second.alina" />
             </div>
-            <div className="AboutUs__second-block__columns__item__row">
+            <div
+              style={{ cursor: 'pointer' }}
+              onClick={() => this.setState({ leraShow: true })}
+              className="AboutUs__second-block__columns__item__row"
+            >
               <FormattedMessage id="About.aboutUs.second.lera" />
             </div>
             <div className="AboutUs__second-block__columns__item__row">
@@ -62,11 +79,7 @@ class About extends React.Component {
                 to="https://prohelvetia.ru/en/"
                 newTab
               >
-                <Img
-                  portrait
-                  src={this.context.locale === 'eng' ? logoEng : logo}
-                  className={this.context.locale === 'eng' ? 'AboutUs__logo AboutUs__logo--eng' : 'AboutUs__logo'}
-                />
+                <FormattedMessage id="About.aboutUs.second.prohelvetia" />
               </Link>
             </div>
           </div>
@@ -81,12 +94,41 @@ class About extends React.Component {
           to="https://prohelvetia.ru/en/"
           newTab
         >
-          <Img
-            portrait
-            src={this.context.locale === 'eng' ? logoEng : logo}
-            className='AboutUs__logo'
-          />
+          <FormattedMessage id="About.aboutUs.second.prohelvetia" />
         </Link>
+      </div>
+
+
+      <div
+        className={`
+          AboutUs__popup
+          ${!this.state.leraShow && 'AboutUs__popup--hide'}
+        `}
+        onClick={() => this.setState({ leraShow: false })}
+      >
+        <div className='AboutUs__popup__block'>
+          <div
+            className='AboutUs__popup__block__close'
+            onClick={() => this.setState({ leraShow: false })}
+          />
+          <FormattedMessage id='About.aboutUs.second.leraAbout' />
+        </div>
+      </div>
+
+      <div
+        className={`
+          AboutUs__popup
+          ${!this.state.alinaShow && 'AboutUs__popup--hide'}
+        `}
+        onClick={() => this.setState({ alinaShow: false })}
+      >
+        <div className='AboutUs__popup__block'>
+          <div
+            className='AboutUs__popup__block__close'
+            onClick={() => this.setState({ alinaShow: false })}
+          />
+          <FormattedMessage id='About.aboutUs.second.alinaAbout' />
+        </div>
       </div>
 
     </div>

@@ -31,7 +31,7 @@ const defaultMessages = {
         Точки, где часто проводили время исчезнувшие в последствии бездомные:<br />
         <br />
         <b>Выход из метро Гостиный двор</b><br />
-        Женщина среднего возраста или пожилая. Непонятно. Обычно сидела между дверями, а в теплые дни -- перед выходом. Среди множества своих пакетов и сумок. Иногда спала, иногда что-то бормотала или напевала себе под нос. Ноги распухшие, замотаны чем-то очень грязным, вроде портянок. Всегда с розовым газовым платком. Как будто на облаке. <br />
+        Женщина среднего возраста или пожилая. Непонятно. Обычно сидела между дверями, а в теплые дни — перед выходом. Среди множества своих пакетов и сумок. Иногда спала, иногда что-то бормотала или напевала себе под нос. Ноги распухшие, замотаны чем-то очень грязным, вроде портянок. Всегда с розовым газовым платком. Как будто на облаке. <br />
         <br />
         <b>Улица Марата (напротив Музея Арктики и Антарктики)<br />Недействующая автобусная остановка</b><br />
         Всю позднюю весну и часть лета там жила женщина. Если пройти мимо она обязательно что нибудь крикнет, поприветствует тебя каким нибудь ругательством. Мне кажется, ей нравилась эта остановка. Можно было разложить повсюду свои мешки с тряпками, прилечь, остановка была на солнечной стороне. Воняло там конкретно. Ее подкармливали продавщицы из магазина напротив. Суп, чай, списанные пирожки. Через какое-то время остановку снесли. Пока скамейку не снесли она с нее ни разу не поднялась. Было лишь два положения: сидя и лежа. <br />
@@ -85,25 +85,27 @@ const defaultMessages = {
           <br />
           В «You, inter alia» мы предложили восьми художникам из Швейцарии и России создать такие «случаи говорения», аудио послания к «тебе» и локализовать их в более или менее конкретных картографических пространствах Женевы и Санкт-Петербурга. Речевая ситуация, которую запускает название, усложняется включением еще одной составляющей проекта — голоса и звука. Создается место, где поэтика и политика письма встречаются с его акустикой. Каков звук письма? Или, каково отношение письма к речи и сводится ли последняя к единственному голосу? Голос обещает субъекта, он преследует слушателя («тебя»), чтобы тот узнал в голосе «кого-то». Кого? Нас двое (ты говоришь, а я слушаю) и в тот же самый момент, нас оказывается много больше. Нам со-присутствуют не только те, кто относится к нашему непосредственному окружению в публичном или интимном пространстве слушания, но и все те, с которыми мы думали, читали и говорили раньше. Твой голос присоединяется к этому потенциальному хору, или, скорее, самим своим звучанием делает возможным появление этого множества. Парадоксально, приобретая акустическую реализацию, речь одновременно замыкается в конкретике воплощения, но вместе с тем и открывается диалогическому пространству, возможности коллективного опыта и (со)участия.<br />
           <br />
-          Кажется, иногда прогулке стоит быть эгоистичной, даже своевольной и одинокой (или одиночной?). В такой прогулке открывается нехитрый факт, что наши воспоминания не локализованы и функционируют как номадические убежища, укрытия или как архивы «антимузея». Тогда как музеи собирают свои коллекции в одном пространстве — наши воспоминания ускользают от фиксации, рассредотачиваются: вот лицо девушки, которое я почему-то узнаю, у этого дома я встретила тебя, звук пения птиц и детского смеха всегда напоминает мне открытые окна летом дома у родителей... Мы блуждаем по городу. Старательно обходим некоторые места, избегая нежелательных встреч, или, наоборот, кружим подолгу в ожидании, позволяя городу самому стать повествователем и зафиксировать наши воспоминания.<br />
-          Повседневность, голоса, звуки, видимые и сокрытые истории, воображение и воспоминания создают многослойный текст, в котором совпадения/узнавания проявляются аффективными вспышками, озарениями.<br />
+          <i>
+            Кажется, иногда прогулке стоит быть эгоистичной, даже своевольной и одинокой (или одиночной?). В такой прогулке открывается нехитрый факт, что наши воспоминания не локализованы и функционируют как номадические убежища, укрытия или как архивы «антимузея». Тогда как музеи собирают свои коллекции в одном пространстве — наши воспоминания ускользают от фиксации, рассредотачиваются: вот лицо девушки, которое я почему-то узнаю, у этого дома я встретила тебя, звук пения птиц и детского смеха всегда напоминает мне открытые окна летом дома у родителей... Мы блуждаем по городу. Старательно обходим некоторые места, избегая нежелательных встреч, или, наоборот, кружим подолгу в ожидании, позволяя городу самому стать повествователем и зафиксировать наши воспоминания.<br />
+            Повседневность, голоса, звуки, видимые и сокрытые истории, воображение и воспоминания создают многослойный текст, в котором совпадения/узнавания проявляются аффективными вспышками, озарениями.<br />
+          </i>
           <br />
-          В «Лексике рта: поэтике и политике голоса и устном воображаемом» американский художник и теоретик Брэндон Лабелл пишет, что звук учит, как не быть собой; как нарушать границы, преодолевать язык и как относить свое тело к телу другого. Звук указывает как исчезнуть, но также и как возникнуть, в новом месте. Звук смещает. «Он сворачивает и разворачивает меня, в качестве тебя». <small className='small'>1.</small><br />
+          В «Лексике рта: поэтике и политике голоса и устном воображаемом» американский художник и теоретик Брэндон Лабелл пишет, что звук учит, как не быть собой; как нарушать границы, преодолевать язык и как относить свое тело к телу другого. Звук указывает как исчезнуть, но также и как возникнуть, в новом месте. Звук смещает. «Он сворачивает и разворачивает меня, в качестве тебя». <sup><small>1.</small></sup><br />
           <br />
           Как это смещение функционирует в восьми конкретных опытах слушания и передвижения по городу? Какие формы (со)участия нам открываются? И где находит себе место слушатель («ты»): в акустико-речевой ситуации обращения, в топографической системе, которую он осваивает и присваивает своей прогулкой или в зазоре между двумя — в контактной зоне, где речь и место переплетаются, разворачиваясь новой географией двух городов? <br />
           <br />
+          <div className='d-inline-block mb-3 pb-4' style={{ borderBottom: '1px solid white' }}>
+            Алина Белишкина и Валерия Мостовая
+          </div><br />
+          <div style={{ lineHeight: 1.25, fontSize: '13px' }} ><sup style={{ fontSize: '11px' }}>1.</sup> перевод по: LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.</div>
           <br />
-          Алина Белишкина и Валерия Мостовая<br />
           <br />
-          Художники: Карла Демьер, Андреа Мариони, Мартина Махлер, Франсуаз Карако, Алена Терешко, Роман Осминкин, Ольга Житлина, Иван Курбаков
-          <br />
-          <br />
-          <div className='small p-4' style={{ border: '1px solid white' }}>
+          <div className='box'>
             «You, inter alia» — это не онлайн проект, хоть он и существует в виде сайта. <br />
             Виртуальная среда для нас — это инструмент сообщения, что-то вроде библиотеки, «использование» которой не предполагает следования четким инструкциям. Вы можете слушать художников на языке вам известном (русском, английском или французском), прогуливаясь по тем маршрутам, которые они вам подготовили. Или, например, находясь в Петербурге, представить что идете по Женеве и слышите речь, обращенную к вам на языке, не вполне понятном. Наконец, вы можете сами оставить свое аудио обращение в разделе «участвовать». <br />
           </div>
           <br/><br/>
-          <small className='small'>1.</small> перевод по: LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.
+          Художники: Карла Демьер, Андреа Мариони, Мартина Махлер, Франсуаз Карако, Алена Терешко, Роман Осминкин, Ольга Житлина, Иван Курбаков
         </span>,
         <span>
           «You, inter alia» explores space of the city and that of the text through practices of walking and writing. <br />
@@ -121,21 +123,22 @@ const defaultMessages = {
             The everyday life, voices, sounds, known and hidden histories, imaginations and memories create a multi-layered text in which coincidences and recognitions are manifested by affective flashes and insights.<br />
           </span>
           <br />
-          In his <span style={{ fontStyle: 'italic' }}>Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary</span> Аmerican artist and theorist Brandon LaBell writes that sound teaches you how not to be yourself; how to trespass certain boundaries, how to supplement languages, and how to relate your body to the bodies of others. The sound shifts and displaces. It «communicates how to depart, but also how to arrive, elsewhere. It literally enfolds and unfolds me, as a you» <small className='small'>1.</small><br />
+          In his <span style={{ fontStyle: 'italic' }}>Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary</span> Аmerican artist and theorist Brandon LaBell writes that sound teaches you how not to be yourself; how to trespass certain boundaries, how to supplement languages, and how to relate your body to the bodies of others. The sound shifts and displaces. It «communicates how to depart, but also how to arrive, elsewhere. It literally enfolds and unfolds me, as a you» <sup><small>1.</small></sup><br />
           <br />
           How does this displacement function within eight specific experiences of listening and moving around the city? What forms of participation do they offer to us? And where does the listener («you») find a place for him or herself: in the interpellative situation of the vocal address, in the topographical system that he appropriates by his walk, or in the gap between the two—in the contact zone, where speech and place are intertwined and unfold as a new geography of the two cities?<br />
           <br />
           <br />
-          Alina Belishkina and Valeria Mostovaya<br />
+          <div className='d-inline-block mb-3 pb-4' style={{ borderBottom: '1px solid white' }}>
+            Alina Belishkina and Valeria Mostovaya
+          </div><br />
+          <div style={{ lineHeight: 1.25, fontSize: '13px' }} ><sup style={{ fontSize: '11px' }}>1.</sup> LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.</div>
           <br />
-          Artists: Carla Demierre, Аndrea Marioni, Martina Mächler, Francoise Caraco, Alena Tereshko, Roman Osminkin, Olga Jitlina, Ivan Kurbakov.
           <br />
-          <br />
-          <div className='small p-4' style={{ border: '1px solid white' }}>
+          <div className='box'>
             «You, inter alia» is not an online project, although it exists as a website. For us, the virtual environment is a communication tool, something like a library, which can be «used» without following any instructions or restrictions. You can follow the routes prepared for you by the artists and listen to their contributions in a language which is familiar to you. Or, for example, while in St. Petersburg, imagine that you are walking around in Geneva and listen to a speech addressed to you in a language that is not quite known. Finally, you can share your own audio message in the «participate» section of this website.<br />
           </div>
           <br/><br/>
-          <small className='small'>1.</small> LaBelle, Brandon. Preface. In Lexicon of the Mouth: Poetics and Politics of Voice and the Oral Imaginary, x. New York: Bloomsbury, 2014.
+          Artists: Carla Demierre, Аndrea Marioni, Martina Mächler, Francoise Caraco, Alena Tereshko, Roman Osminkin, Olga Jitlina, Ivan Kurbakov.
         </span>
       ],
     },
@@ -149,16 +152,38 @@ const defaultMessages = {
 
       second: {
         team: ["над проектом работали", "team"],
-        idea: ["идея:", "idea:"],
-        curators: ["кураторы:", "curators:"],
-        designer: ["дизайн:", "design:"],
-        developer: ["вэб-разработка:", "web-development:"],
-        sponsor: ["при поддержке:", "sponsor:"],
+        idea: ["идея", "idea"],
+        curators: ["кураторы", "curators"],
+        designer: ["дизайн", "design"],
+        developer: ["вэб-разработка", "web-development"],
+        sponsor: ["при поддержке", "sponsor"],
   
         alina: ["aлина белишкина", "alina belishkina"],
-        lera: ["лера мостовая", "lera mostovaya"],
+        lera: ["валерия мостовая", "valeria mostovaya"],
         arina: ["арина поздняк", "arina pozdnyak"],
         lev: ["лев васильев", "lev vasilyev"],
+        prohelvetia: ['Швейцарский совет по культуре Про Гельвеция', 'Swiss Arts Council Pro Helvetia'],
+
+        alinaAbout: [
+          <>
+            Алина Белишкина<br /><br />
+            педагог, куратор и художница. Училась на магистерской программе кураторских исследований (CuMMA) университета Аалто, Хельсинки. С 2011 преподает теорию и практики современного искусства в различных образовательных институциях Санкт-Петербурга. Куратор и участница международных и российских выставок и программ (Исследовательский павильон 57-й Венецианской биеннале, BBX crit sessions, documenta studies, Кассель и проч.) Участница художественного коллектива ХудКружок, была со-куратором симпозиума* 2го Кураторского формуа (ГЦСИ Санкт-Петербург) в 2020 году.
+          </>,
+          <>
+            Alina Belishkina<br /><br />
+            educator, artist and curator. Since 2011 she has been teaching contemporary art theory at various institutions in St. Petersburg and Moscow. In her pedagogical practice she follows the principles of collective knowledge production and incorporates artistic strategies borrowed from gallery education legacies. Alina studied at the Curating and Mediating MA program in Helsinki and curated and participated in a number of international and local projects: research pavilion of the 57th Venice Biennale, BBX crit sessions as part of the 10th Berlin Biennale for Contemporary Art, 4th Moscow Summer curatorial school and many others. Alina is a member of artistic and curatorial collective HudKruzhok and co-curated symposium* of the 2nd Curatorial forum (NCCA in St.Petersburg) in 2020.
+          </>
+        ],
+        leraAbout: [
+          <>
+            Валерия Мостовая<br /><br />
+            педагог, куратор. Закончила СПбГУКИ (2011) и магистратуру программу СПбГУ по арт-критике и кураторским исследованиям (Факультет свободных искусств и наук, 2015). Участница художественного коллектива ХудКружок, со-куратор образовательной платформы «РЯДОМ» (2017). С 2016 года Валерия придумывает и координирует образовательные проекты для подростков в различных культурных институциях и образовательные проекты для сценаристов кино.
+          </>,
+          <>
+            Valeria Mostovaya<br /><br />
+            educator, curator. Born in 1988 in Khabarovsk, currently lives and works in St. Petersburg. Graduated from St. Petersburg State University of Culture and Arts (2011) and got an MA in art criticism and curatorial studies at The Faculty of Liberal Arts and Sciences (Smolny College) of St. Petersburg State University (2015). Member of artistic and curatorial collective HudKruzhok, co-curator of the educational platform RYADOM. Since 2016 Valeria facilitates educational projects for teenagers in cultural institutions and educational projects for screenwriters.
+          </>
+        ]
       }
     },
     about2: {
@@ -250,7 +275,7 @@ const defaultMessages = {
       // link: ["или отправьте свою ссылку", "or paste the link here"],
       link: ["ссылка на аудиофайл*", "link to audiofile*"],
       submit: ["отправить", "submit"],
-      agree: ["нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и условиями пользования сайтом", "by clicking submit button you agree with our privacy policy & terms of use.\n*required field"],
+      agree: ["нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и условиями пользования сайтом", "by clicking submit button you agree with our privacy policy & terms of use."],
     }
   },
   Thanks: {
@@ -266,13 +291,11 @@ const defaultMessages = {
       <>
         Архив, с одной стороны, задает контекст прочтения проектов, созданных для «You, inter alia» и вместе с тем, — функционирует как модель для сборки, позволяющая устанавливать случайные и аффективные связи между самыми разными материалами предоставленными художниками. Другими словами, в этом разделе вы обнаружите все то, что прямо или косвенно «поддерживает» художественные высказывания и, таким образом, создает расширенное поле интерпретаций произведений в их единичности и множественности.
         <br />
-        Функция архива заключается не только в прояснении (или, напротив, в затуманивании) смыслового поля представленных работ, но и в раскрытии перформативного измерения любого документа, фрагмента памяти, текста, звука, их обращенности к будущему и возможности его «пере-придумать» сообща.
+        Функция архива заключается не только в прояснении (или, напротив, в затуманивании) смысла работ, но и в раскрытии перформативного измерения любого документа, фрагмента памяти, текста, звука, их обращенности к будущему и возможности его «пере-придумать» сообща.
         <br /><br />
-        <small className='small'>
-          Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
-          <br />
-          Вы можете сортировать архив по одному тэгу или их комбинации, а также нажать на имя художницы или художника и увидеть все материалы, которыми она или он решил(а) поделиться с нами.
-        </small>
+        Архив составлен из отобранных художниками материалов, которые или непосредственно связаны с их проектами для youinteralia, или раскрывают их практику в целом.
+        <br />
+        Вы можете сортировать архив по одному тэгу или их комбинации, а также нажать на имя художницы или художника и увидеть все материалы, которыми она или он решил(а) поделиться с нами.
       </>,
       <>
         Archive provides a contextualisation of the projects created by the artists for «You, inter alia», and at the same time acts as a constellation of materials, which allows for contingent and affective connections between thought and work processes of different art practitioners to be made. In a way, it resembles an exhibition or an exposition of ‘behind-the-scenes’ of each particular artistic enunciation and as such it creates an expanded interpretative framework for the artworks in their singularity and plurality alike.

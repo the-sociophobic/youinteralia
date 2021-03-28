@@ -47,12 +47,19 @@ class About extends React.Component {
             </Dropdown>
             <Dropdown block title={getMessage(this, 'About.conversation.name')}>
               <Dropdown
+                className=''
                 block
-                title={getMessage(this, 'About.conversation.name')}
+                title={getMessage(this, 'About.about2.name')}
+              >
+                <About2 />
+              </Dropdown>
+              <Dropdown
+                block
+                title={getMessage(this, 'About.conversation.read')}
                 right={
                   <Link
                     className='About-mobile__buttons__item--download'
-                    to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
+                    to='https://drive.google.com/file/d/1NJ6-ZcyY3tMUZozAnycqTG70gNex6vKq/view?usp=sharing'
                   >
                     <div className='About-mobile__buttons__item__text'>
                       <FormattedMessage id='About.conversation.download' />
@@ -62,14 +69,6 @@ class About extends React.Component {
               >
                 <Conversation />
               </Dropdown>
-              {
-                <Dropdown
-                  className=''
-                  block
-                  title={getMessage(this, 'About.about2.name')}
-                >
-                  <About2 />
-                </Dropdown>}
             </Dropdown>
             <Dropdown block title={getMessage(this, 'About.aboutUs.name')}>
               <AboutUs />
@@ -89,11 +88,16 @@ class About extends React.Component {
                 block
                 title={getMessage(this, 'About.conversation.name')}
               >
+                <div className='row' style={{ borderTop: '1px solid #474747' }}>
+                  <div className='col-12' style={{ borderBottom: '1px solid #474747' }}>
+                    {this.renderButton('about2')}
+                  </div>
+                </div>
                 <div className='row'>
                   <div className='col-6'>
                     <Link
                       className='About__left__buttons__item About__left__buttons__item--download'
-                      to='https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/conversation.pdf'
+                      to='https://drive.google.com/file/d/1NJ6-ZcyY3tMUZozAnycqTG70gNex6vKq/view?usp=sharing'
                     >
                       <div className='About__left__buttons__item__text'>
                         <FormattedMessage id='About.conversation.download' />
@@ -104,11 +108,6 @@ class About extends React.Component {
                     {this.renderButton('conversation')}
                   </div>
                 </div>
-                <div className='row' style={{ borderTop: '1px solid #474747' }}>
-                  <div className='col-12'>
-                    {this.renderButton('about2')}
-                  </div>
-                </div>
               </Dropdown>
               {this.renderButton('aboutUs')}
             </div>
@@ -117,7 +116,7 @@ class About extends React.Component {
         </div>
         <div className={`
           About__right
-          ${this.state.currentSection === 'concept' && 'About__right--concept'}
+          ${this.state.currentSection.match(/concept|about2/) && 'About__right--dark'}
         `}>
           {{
             concept: this.renderConcept(),
