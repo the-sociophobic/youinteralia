@@ -37,11 +37,10 @@ export default class Dropdown extends React.Component {
     })
 
   toggleOpened = () =>
-    !this.polyfill() &&
-      (this.props.toggleOpened || (() => {
-        this.setState({ opened: !this.state.opened })
-        this.props?.setDropdownOpened?.(!this.state.opened)
-      }))()
+    (this.props.toggleOpened || (() => {
+      this.setState({ opened: !this.state.opened })
+      this.props?.setDropdownOpened?.(!this.state.opened)
+    }))()
 
   render = () =>
     <div className={`
@@ -75,7 +74,7 @@ export default class Dropdown extends React.Component {
       <div
         className="dropdown__content"
         style={{
-          height: (this.props.opened || this.state.opened || this.polyfill()) ?
+          height: (this.props.opened || this.state.opened) ?
             (typeof this.props.maxHeight !== "undefined" ?
               this.props.maxHeight
               :
