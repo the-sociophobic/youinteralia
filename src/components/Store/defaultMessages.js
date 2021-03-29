@@ -113,7 +113,7 @@ const defaultMessages = {
           <br />
           The title of the project is deliberately ambiguous. It is not clear who or what is actually implied or talked about: the pronoun «you» can be either singular or plural, while the latin adverb «inter alia» stands for «among other things», «in particular», and sometimes even «in passing». That is, neither the subject of the utterance, nor the receiver, nor the context are explicitly defined. Who speaks or writes? To whom? For what purpose? These questions are open and the title only suggests the presence of the addressee of the speech, yet does not designate it in any way. Even when «you» is being heard distinctly, it is impossible to establish where exactly this call or longing is directed to. «Your» physical presence never coincides with the direction of the call and «you» are each time constituted anew, receiving and adopting a certain subject position by responding, or (in the Althusserian way) by turning around to «answer» the call. <br />
           <br />
-          For «You, inter alia», we invited eight artists from Switzerland and Russia to produce addresses to «you» in the form of the voiced letters or writings and localize them in more or less specific cartographic coordinates of Geneva and St. Petersburg. The ambiguity or disturbance triggered by the title is only complicated by one more crucial component of the project—voice and sound. The place where poetics and politics of writing meets its phonics is thereby created. <br />
+          For «You, inter alia», we invited eight artists from Switzerland and Russia to produce addresses to «you» in the form of the voiced letters or writings and to localize them within more or less specific cartographic coordinates of Geneva and St. Petersburg. The ambiguity or disturbance triggered by the title is only complicated by one more crucial component of the project—voice and sound. The place where poetics and politics of writing meets its phonics is thereby created. <br />
           What is the sound of writing? Or, what is the relation of writing to speech, and does the latter amount to a single voice? The voice promises a subject, it haunts the listener, compelling «you» to recognize in the voice a «someone». Who is that someone? There are two of us (you speaking and me listening) and at the same time, there are more than that. We are co-present not only with those who belong to our immediate environment in public or intimate space of listening, but also with those with whom we have been thinking, reading, and speaking, ever. Your voice joins this potential chorus, or rather, by its very sounding, makes the actualisation of this multitude possible. Paradoxically, acquiring an acoustic realization, speech gets simultaneously constrained within the particularities of its «embodiment», and at the same time opens up to the dialogical space, to the possibility of collective experience and participation.<br />
           <br />
           <br />
@@ -237,9 +237,9 @@ const defaultMessages = {
         <br />
         1. Write a text in the form of a letter, or select a text distributed under a creative commons license and / or written by an author who died more than 70 years ago.
         <br />
-        The text should be written in the first person and should address you.
+        The text should be written in the first person and should address «you».
         <br />
-        By you we don’t necessarily mean a human being. A letter may be addressed to an animal, a plant, a place, or an event, for example.
+        By «you» we don’t necessarily mean a human being. A letter may be addressed to an animal, a plant, a place, or an event, for example.
         <br />
         <br />
         2. Voice the text yourself, or invite another person to do it. The recording can be of any length, but not longer than 30 minutes.
