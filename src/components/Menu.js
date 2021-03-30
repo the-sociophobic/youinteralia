@@ -12,6 +12,7 @@ import {
   getArtists,
 } from 'components/Store'
 import ScrollToTop from 'components/ScrollToTop'
+import { registerListeners, unregisterListeners } from 'utils/preventMobileScrolling'
 
 
 class Menu extends React.Component {
@@ -23,11 +24,18 @@ class Menu extends React.Component {
   static contextType = StoreContext
 
   scrollRef = React.createRef()
+  menuRef = React.createRef()
 
-  componentDidMount = () =>
+  componentDidMount = () => {
+    registerListeners(this.menuRef.current)
+    
     this.props.history.listen((location, action) =>
       action == "PUSH" && this.context.setMenu(false))
+  }
 
+  componentWillUnmount = () =>
+    unregisterListeners(this.menuRef.current)
+  
   toggleLang = () =>
     this.context.setLocale(
       this.context.locale === "eng" ? "rus" : "eng")
@@ -111,10 +119,13 @@ class Menu extends React.Component {
     </div>
 
   renderContent = () =>
-    <div className={`
-      Menu__content
-      ${this.context.menuOpened && "Menu__content--opened"}
-    `}>
+    <div
+      ref={this.scrollRef}
+      className={`
+        Menu__content
+        ${this.context.menuOpened && "Menu__content--opened"}
+      `}
+    >
       <div className="Menu__content__container">
         <div
           className="Menu__content__container__links"
@@ -145,7 +156,7 @@ class Menu extends React.Component {
     <ScrollToTop scrollRef={this.scrollRef}>
       <div
         className={`Menu ${this.context.hideMenu && "Menu--hide"}`}
-        ref={this.scrollRef}
+        ref={this.menuRef}
       >
         {this.renderContent()}
         {this.renderHeader()}
