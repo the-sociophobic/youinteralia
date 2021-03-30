@@ -153,15 +153,15 @@ class Menu extends React.Component {
     </div>
 
   render = () =>
-    <ScrollToTop scrollRef={this.scrollRef}>
-      <div
-        className={`Menu ${this.context.hideMenu && "Menu--hide"}`}
-        ref={this.menuRef}
-      >
+    <div
+      className={`Menu ${this.context.hideMenu && "Menu--hide"}`}
+      ref={this.menuRef}
+    >
+      <ScrollToTop scrollRef={this.scrollRef}>
         {this.renderContent()}
-        {this.renderHeader()}
-      </div>
-    </ScrollToTop>
+      </ScrollToTop>
+      {this.renderHeader()}
+    </div>
 }
 
 
