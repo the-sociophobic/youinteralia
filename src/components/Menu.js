@@ -28,13 +28,16 @@ class Menu extends React.Component {
 
   componentDidMount = () => {
     registerListeners(this.menuRef.current)
+    registerListeners(this.scrollRef.current)
     
     this.props.history.listen((location, action) =>
       action == "PUSH" && this.context.setMenu(false))
   }
 
-  componentWillUnmount = () =>
+  componentWillUnmount = () => {
     unregisterListeners(this.menuRef.current)
+    unregisterListeners(this.scrollRef.current)
+  }
   
   toggleLang = () =>
     this.context.setLocale(
