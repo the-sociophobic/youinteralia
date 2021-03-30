@@ -200,24 +200,24 @@ $border: 1px solid $dark
           &--gen
             background-color: $gen
   &__content
-    min-height: 100vh
+    height: 100vh
     width: rem(432)
     background-color: $light
     @extend .d-flex-polyfill
     @extend .flex-column
     overflow-y: scroll
+    // overflow-x: hidden
+    position: relative
+    box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
+    transition: width $menu-transition
     @include media-breakpoint-down(lg)
       width: 100vw
-    transition: width $menu-transition
     &:not(&--opened)
       overflow-x: hidden
       width: 0
-    position: relative
-    box-shadow: 0 4px 25px rgba(71, 71, 71, .1)
-    overflow-x: hidden
     &__container
       width: 100vw
-      min-height: 100vh
+      // min-height: 100vh
       @extend .d-flex-polyfill
       @extend .flex-column
       &__links
