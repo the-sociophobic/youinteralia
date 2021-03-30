@@ -162,7 +162,7 @@ const defaultMessages = {
         lera: ["валерия мостовая", "valeria mostovaya"],
         arina: ["арина поздняк", "arina pozdnyak"],
         lev: ["лев васильев", "lev vasilyev"],
-        prohelvetia: ['Швейцарский совет по культуре Про Гельвеция', 'Swiss Arts Council Pro Helvetia'],
+        prohelvetia: [<>Швейцарский совет по культуре Про&nbsp;Гельвеция</>, <>Swiss Arts Council Pro&nbsp;Helvetia</>],
 
         alinaAbout: [
           <>
@@ -268,7 +268,7 @@ const defaultMessages = {
       name: ["имя*", "name*"],
       email: ["email*", "email*"],
       city: ["город*", "city*"],
-      citySaintPetersbourg: ["Санкт-Петербург", "Saint-Petersbourg"],
+      citySaintPetersbourg: ["Петербург", "St. Petersbourg"],
       cityGeneva: ["Женева", "Geneva"],
       location: ["место*", "location*"],
       upload: ["загрузите свой маршрут", "upload your route"],
