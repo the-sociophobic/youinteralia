@@ -33,7 +33,7 @@ const artists = [
         <Link newTab to="http://alenatereshko.com/">alenatereshko.com</Link>
       </>,
       <>
-        Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She is participated in numerous exhibitions in Russia and abroad.
+        Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She participated in numerous exhibitions in Russia and abroad.
         <br /><br />
         <Link newTab to="http://alenatereshko.com/">alenatereshko.com</Link>
       </>,
