@@ -33,7 +33,7 @@ const artists = [
         <Link newTab to="http://alenatereshko.com/">alenatereshko.com</Link>
       </>,
       <>
-        Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She has participated in numerous exhibitions in Russia and abroad.
+        Alena Tereshko was born in 1986 in the city of Ishim, Tyumen region. Lived in Chelyabinsk and now is based in St. Petersburg. Alena studied at The Saint Petersburg Stieglitz State Academy of Art and Design and at the “School for Young Artists” programme of The Pro Arte Foundation. Her art practice is quite diverse, as she works with performance art, video, and graphics. Often, in her artistic research she focuses on a body and its representation. Alena is particularly interested in the intertwinement of contemporaneity and tradition, in the relation between images and perception and generally, in opposite categories and their points of contact. She is participated in numerous exhibitions in Russia and abroad.
         <br /><br />
         <Link newTab to="http://alenatereshko.com/">alenatereshko.com</Link>
       </>,
@@ -59,7 +59,7 @@ const artists = [
         <Link newTab to="https://disser.herzen.spb.ru/Preview/Vlojenia/000000610_Disser.pdf">читать диссертацию</Link>
       </>,
       <>
-        Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books ‘Comrade-Thing’ (Kraft, 2010), ‘Comrade-Word’ (Kraft, 2012), ‘Texts with external objectives’ (NLO, 2015), ‘Not A Word About Politics!’ (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings have been translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.
+        Roman Osminkin is a Saint Petersburg based poet, art-theorist, playwright, short-story writer, performer and video-artist. Holds a PhD in Art History. Member of the St.Petersburg Writers Union since 2007. Teaches at the School of Engaged Art (Chto Delat) and Moscow School of New Literature. Member of the editorial board of the «Translit» and media about art «K.R.A.P..I.V.A.». Author of poetry and short prose books «Comrade-Thing» (Kraft, 2010), «Comrade-Word» (Kraft, 2012), «Texts with external objectives» (NLO, 2015), «Not A Word About Politics!» (Cicada Press, NY, 2016). Poetry and prose published in New Literary Observer (Russia), N+1 Magazine (New-York); Kapital (Slovakia), Schreibheft (Deutsch); Poetry Anthology: Nieuwe poëzie uit Rusland #4, «The Animated Reader» (New Museum’s 2015 Triennial), Třídit slova. Literatura a konceptuální tendence 1949–2015. Osminkin’s writings are translated into English, Dutch, Italian, German, Polish, Czech, Ukrainian, Slovenian and Finnish.
       </>,
     ],
     aboutRoute: [
@@ -153,18 +153,18 @@ const artists = [
     lng: 30.346385042008638,
     src: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/audio/Olga.mp3",
     svg: OlgaSVG,
-    png: OlgaJPG,
+    // png: OlgaJPG,
     aboutArtist: [
       <>
-        Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 г. в соавторстве с правозащитником А. Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 г. Вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина». С 2015 г. сотрудничает с группой беженцев-активистов «Лампедуза» в Гамбурге и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести А. Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).
+        Ольга Житлина (1982, Ленинград) — художница, автор перформансов и театральных постановок, основательница и редактор Агентства Утопических Новостей, газеты «Насреддин в России». В 2011 г. в соавторстве с правозащитником А. Якимовым создала настольную игру о трудовой миграции «Россия — страна возможностей». С 2014 г. Вместе с художницей Анной Терешкиной и группой трудовых мигрантов и представителей творческих профессий занимается проектом «Конкурс шутки Ходжи Насреддина». С 2015 г. сотрудничает с группой беженцев-активистов «Лампедуза в Гамбурге» и оперной певицей Юлией Авериной, объединив их в спектакле «Перевод» по повести А. Платонова «Джан». Лауреат молодежной премии Henkel (2012) и премии им. Леи и Ханса Грундиг (2015).
         <br />
         <Link newTab to="https://olgajitlina.info">olgajitlina.info</Link>
         <br /><br />
         Голос:<br />
-        Влада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «ВОКРУГ ДА ОКОЛО». Преподавательница СПБШНК (курс «Работа режиссера с актером»).
+        Влада Миловская (род. 1990, Ленинград) — перформерка, актриса. Участница независимой художественной лаборатории «Вокруг да около». Преподавательница СПБШНК (курс «Работа режиссера с актером»).
         <br /><br />
         Монтаж звуков:<br />
-        Лейла Алиева — singer-songwriter, актриса, участница лаборатории “Вокруг да около”, выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом “Плоды побегов”; 2018, СПб, сингл “Муза”; 2020, Петербург. Звукорежиссура: “Спектакль в коробочке” 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.
+        Лейла Алиева — singer-songwriter, актриса, участница лаборатории «Вокруг да около», выпускница факультета искусств и гуманитарных наук СПбГУ. Музыкальные работы: дебютный альбом «Плоды побегов»; 2018, СПб, сингл «Муза»; 2020, Петербург. Звукорежиссура: «Спектакль в коробочке» 2020, СПб. Тифлокомментарий к картинам Айвазовского и Брюллова для Русского музея, 2020, СПб.
         <br /><br />
         Запись звуков:<br />
         Игнат Хлобыстин (род. 1995, Санкт-Петербург) — музыкант-флейтист. Студент консерватории четвертого курса, лауреат международных конкурсов. Исполняет классическую, современную академическую и импровизационную музыку. Закончил школу импровизационной музыки при Галерее экспериментального звука (сейчас Музей звука). Участник Санкт-Петербургского оркестра импровизации и трио «Печальная свадьба».
@@ -215,7 +215,7 @@ const artists = [
       <>
         Born in 1986, lives and works in Bienne.<br />
         <br />
-        My practices work like polyphonies: I look for collisions and clashes between forms and concepts which turn sometimes into harmonies or into dissonances. In general, I am interested in the contemporary notion of «border politics» and how it works through objects and oscillates between community and alienation. I use mostly «cheap material»: from trash to daily domestic goods and modify and incorporate them in the artwork. Another aesthetics that is important for me comes from «Childish art craft» and «Toys» which, to me, convey ironic power (or power of irony) rather than a violent threat. My works are composed conceptually of leftovers of the collective subconscious, repressed memories and embodied tabu. <br />
+        My practices work like polyphonies: I look for collisions and clashes between forms and concepts which turn sometimes into harmonies or into dissonances. In general, I am interested in the contemporary notion of «border politics» and how it works through objects and oscillates between community and alienation. I use mostly «cheap material»: from trash to daily domestic goods and modify and incorporate them in the artwork. Another aesthetics that is important for me comes from «Childish art craft» and «Toys» which, to me, convey ironic power (or power of irony) rather than a violent threat. My works are composed conceptually of leftovers of the collective subconscious, repressed memories and embodied taboo. <br />
         <br />
         Personal website: <Link newTab to="https://marioniandrea.art">marioniandrea.art</Link> <br />
         Artist curator: <Link newTab to="http://lumpenstation.art">lumpenstation.art</Link>
