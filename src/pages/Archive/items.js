@@ -31,7 +31,7 @@ const items = [
   },
   {
     type: "img",
-    link: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/archive/Carla Demierre/Writing around_image.JPG",
+    link: "http://cdn.tochkadostupa.spb.ru/the_sociophobic/youinteralia/archive/Carla Demierre/Writing around_image.jpg",
     tags: ["Карла Демьер", "Carla Demierre", ],
   },
   {
