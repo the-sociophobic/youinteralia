@@ -53,7 +53,7 @@ class Player extends React.Component {
         {!this.props.secondaryMarker &&
           <Ticker
             className="Player__ticker"
-            text={`${artist.title} — ${artist.name}`}
+            text={`${artist.title} — ${artist.name} ${artist.additional || ''}`}
           />}
 
         {!this.props.hideArrow &&

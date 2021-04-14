@@ -148,6 +148,7 @@ const artists = [
   {
     city: "spb",
     name: ["Ольга Житлина", "Olga Jitlina"],
+    additional: ['в соавторстве с Владой Миловской, Лейлой Алиевой и Игнатом Хлобыстиным', 'co-authored with Vlada Milovskaya, Leila Alieva and Ignat Okhlobystin'],
     title: ["Égalité", "Égalité"],
     lat: 59.92811584324123,
     lng: 30.346385042008638,
