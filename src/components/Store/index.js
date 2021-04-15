@@ -163,7 +163,7 @@ class StoreProvider extends React.Component {
     })
 
     if (res.newSessionToken)
-      this.cookies.set('sessionToken', res.newSessionToken, { sameSite: 'lax' })
+      this.cookies.set('sessionToken', res.newSessionToken, { sameSite: 'lax', path: '/' })
 
     this.setState({
       sessionToken: this.cookies.get('sessionToken')
@@ -184,7 +184,7 @@ class StoreProvider extends React.Component {
 
     console.log(res)
 
-    this.cookies.set('sessionToken', res.newSessionToken, { sameSite: 'lax' })
+    this.cookies.set('sessionToken', res.newSessionToken, { sameSite: 'lax', path: '/' })
 
     this.setState({
       sessionToken: this.cookies.get('sessionToken'),
