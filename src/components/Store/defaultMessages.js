@@ -279,7 +279,7 @@ const defaultMessages = {
     }
   },
   Thanks: {
-    text: ["Спасибо за ваше участие! Мы постараемся опубликовать ваш материал как можно скорее. Следите за обновлениями на сайте!", "Thanks for participation! We'll try to post your route as soon ass possible! Keep an eye on updates!"],
+    text: ["Спасибо, ваша заявка принята! После технической модерации, ваше сообщение появится на сайте. Следите за обновлениями!", "Thanks for participation! Your route will be posted after review. Keep an eye on updates!"],
     back: ["обратно", "back"]
   },
   Player: {
